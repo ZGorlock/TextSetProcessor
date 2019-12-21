@@ -1,0 +1,21 @@
+Adelie Penguin
+African Penguin
+Chinstrap Penguin
+Crested Penguins
+Emperor Penguin
+Galapagos Penguin
+Gentoo Penguin
+Humboldt Penguin
+Kairuku
+King Penguin
+Little Penguin
+Macaroni Penguin
+Magellanic Penguin
+Palaeeudyptes
+Palaeeudyptinae
+Paraptenodytes
+Royal Penguin
+Southern Rockhopper Penguin
+Waitaha Penguin
+Yellow Eyed Penguin
+Yelloweyed Penguin

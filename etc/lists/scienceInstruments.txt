@@ -1,0 +1,33 @@
+Accelerometer
+Ammeter
+Anemometer
+Caliper
+Calorimeter
+DNA Sequencer
+Dynamometer
+Electrometer
+Electroscope
+Electrostatic Analyzer
+Ellipsometer
+Eudiometer
+Gravimeter
+Hydrometer
+Inclinometer
+Interferometer
+Magnetograph
+Magnetometer
+Manometer
+Mass Spectrometer
+Micrometer
+Microscope
+NMR Spectrometer
+Ohmmeter
+Oscilloscope
+Seismometer
+Spectrogram
+Spectrometer
+Telescope
+Theodolite
+Thermocouple
+Thermometer
+Voltmeter

@@ -1,0 +1,21 @@
+Convertible
+Sportscar
+Coupe
+Crossover
+Diesel Fuel
+Full Size Car
+Fullsize Car
+Hatchback
+Hybrid Electric Vehicle
+Hybrid Vehicle
+Limousine
+Luxury Vehicle
+Minivan
+Pickup Truck
+Roadster
+Sedan
+Sport Utility Vehicle
+Sports Car
+Station Wagon
+Truck
+Van

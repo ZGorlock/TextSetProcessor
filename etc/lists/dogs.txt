@@ -1,0 +1,53 @@
+Akita
+American Bulldog
+American Bully
+American Staddordshire Terrier
+Australian Kelpie
+Australian Shepherd
+Beagle
+Bichon Frise
+Border Collie
+Boston Terrier
+Bull Terrier
+Bulldog
+Cane Corso
+Cavalier King Charels Spaniel
+Chihuahua
+Chow Chow
+Cocker Spaniel
+Corgi
+Dachshund
+Dobermann
+English Cocker Spaniel
+English Mastiff
+French Bulldog
+German Shepherd
+Golden Retriever
+Great Dane
+Greyhound
+Jack Russel Terrier
+Labrador Retriever
+Maltese
+Mexican Hairless Dog
+Miniature Pinscher
+Newfoundland Dog
+Papillon
+Pekingese
+Pembroke Welsh Corgi
+Pit Bull
+Pomeranian
+Poodle
+Pug
+Rottweiler
+Samoyed
+Sarabi Mastiff
+Shar Pei
+Shiba Inu
+Shih Tzu
+Siberian Husky
+St Bernard
+Terrier
+Weimaraner
+West Highland White Terrier
+Whippet
+Yorkshire Terrier

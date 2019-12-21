@@ -1,0 +1,12 @@
+Bing
+Cortana
+Groove Music
+HoloLens
+Internet Explorer
+OneDrive
+Outlook
+PowerPoint
+Skype
+Visual Studio
+Windows
+Xbox

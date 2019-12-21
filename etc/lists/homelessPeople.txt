@@ -1,0 +1,12 @@
+Almsperson
+Bag Lady
+Beggar
+Bum
+Derelict
+Destitute
+Drifter
+Hobo
+Panhandler
+Tramp
+Vagabond
+Vagrant

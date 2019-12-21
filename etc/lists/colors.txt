@@ -1,0 +1,14 @@
+Blue
+Brown
+Crimson
+Cyan
+Fuchsia
+Gray
+Green
+Magenta
+Orange
+Pink
+Purple
+Red
+Teal
+Yellow

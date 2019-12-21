@@ -1,0 +1,226 @@
+Aardvark
+African Elephant
+African Lion
+African Wild Dog
+Anteater
+Ape
+Arabian Camel
+Arctic Fox
+Arctic Hare
+Armadillo
+Asian Elephant
+Asian Lion
+AyeAye
+Baboon
+Bactrian Camel
+Bat
+Bear
+Beaver
+Beluga Whale
+Bengal Tiger
+Black Bear
+Black Footed Ferret
+Black Rhinoceros
+BlackFooted Ferret
+Blue Whale
+Bobcat
+Bottlenose Dolphin
+Bovinae
+Brown Bear
+Buffalo
+California Sea Lion
+Camel
+Camelids
+Canidae
+Caribou
+Carnivores
+Cat
+Cetaceans
+Cheetah
+Chimpanzee
+Chipmunk
+Cingulata
+Clouded Leopard
+Colugo
+Common Vampire Bat
+Common Wombat
+Cottontail Rabbit
+Cougar
+Coyote
+Deer
+Dingo
+Dog
+Dolphin
+Domestic Cat
+Domestic Dog
+Dugong
+Earless Seal
+Eastern Gray Kangaroo
+Echidna
+Elephant
+Elephant Seal
+Elephants
+Elk
+Erinaceidae
+Even Toed Ungulates
+Eventoed Ungulates
+Felidae
+Fennec Fox
+Ferret
+Fossa
+Fox
+Fur Seal
+Gazelle
+Gelada
+Gerbil
+Giant Anteater
+Giant Panda
+Giant River Otter
+Gibbon
+Giraffe
+Goat
+Golden Lion Tamarin
+Gorilla
+Gray Whale
+Grizzly Bear
+Groundhog
+Hamster
+Harbor Porpoise
+Hare
+Harp Seal
+Hawaiian Monk Seal
+Hedgehog
+Hippopotamus
+Horse
+Horses
+Howler Monkey
+Humpback Whale
+Hyena
+Impala
+Indian Rhinoceros
+Jaguar
+Killer Whale
+Kinkajou
+Koala
+Lagomorphs
+Lemming
+Lemur
+Lemurs
+Leopard
+Leopard Seal
+Leporids
+Lion
+Little Red Flying Fox
+Llama
+Lynx
+Manatee
+Mandrill
+Marsupial
+Meerkat
+Mole Rat
+Mongoose
+Monkey
+Monotreme
+Moose
+Mountain Goat
+Mountain Gorilla
+Mountain Lion
+Mouse Lemur
+Musk Ox
+MuskOx
+Mustelids
+Narwhal
+North American River Otter
+Nutria
+Oceanic Dolphin
+Ocelot
+Odd Toed Ungulates
+Oddtoed Ungulates
+Opossum
+Orangutan
+Orca
+Orca Killer Whale
+Otter
+Ozark Big Eared Bat
+Ozark BigEared Bat
+Pachydermata
+Panda
+Pangolin
+Peccary
+Pinniped
+Platypus
+Polar Bear
+Porcupine
+Porpoise
+Prairie Dog
+Primate
+Proboscis Monkey
+Pronghorn
+Przewalskis Horse
+Rabbit
+Raccoon
+Rat
+Red Fox
+Red Kangaroo
+Red Leaf Monkey
+Red Panda
+Red Uakari
+Rhesus Monkey
+Rhinoceros
+Right Whale
+Ring Tailed Lemur
+RingTailed Lemur
+Ringed Seal
+Rocky Mountain Bighorn Sheep
+Rodent
+Sea Cows
+Sea Lion
+Sea Otter
+Seal
+Sheep
+Siberian Tiger
+Sifaka
+Skunk
+Skunks
+Sloth
+Sloth Bear
+Snow Leopard
+Snowshoe Hare
+Spectacled Bear
+Sperm Whale
+Spider Monkey
+Spotted Hyena
+Squirrel
+Steller Sea Lion
+Sumatran Rhinoceros
+Sumatran Tiger
+Sun Bear
+Tamarin
+Tapir
+Tasmanian Devil
+Theria
+Thomsons Gazelle
+Three Toed Sloth
+ThreeToed Sloth
+Tiger
+Two Toed Sloth
+TwoToed Sloth
+Uakari
+Ungulate
+Wallaby
+Walrus
+Warthog
+Water Buffalo
+Weddell Seal
+Western Lowland Gorilla
+Whale
+White Eared Kob
+White Rhinoceros
+White Tailed Deer
+WhiteEared Kob
+WhiteTailed Deer
+Wildebeest
+Wolf
+Wolverine
+Wombat
+Zebra

@@ -1,0 +1,72 @@
+kinesiologists
+kinesiology
+otolaryngologist
+otolaryngology
+Allergist
+Anesthesiologist
+Anesthesiology
+Anesthetist
+Cardiologist
+Cardiology
+Colon Surgeon
+Colon Surgery
+Critical Care Medicine Specialist
+Dermatologist
+Dermatology
+Emergency Medicine Specialist
+Endocrinologist
+Endocrinology
+Gastroenterologist
+Gastroenterology
+General Surgeon
+Geriatric Medicine Specialist
+Gynecologist
+Gynecology
+Hematologist
+Hematology
+Hospice
+Immunologist
+Immunology
+Infectious Disease Specialist
+Internist
+Medical Geneticist
+Medicine Specialist
+Nephrologist
+Nephrology
+Neurologist
+Neurology
+Obstetrician
+Oncologist
+Oncology
+Ophthalmologist
+Ophthalmology
+Osteopath
+Palliative Medicine Specialist
+Pathologist
+Pediatrician
+Pediatrist
+Pediatry
+Physiatrist
+Physiatry
+Physician
+Plastic Surgeon
+Plastic Surgery
+Podiatrist
+Podiatry
+Preventive Medicine Specialist
+Psychiatrist
+Psychiatry
+Pulmonologist
+Pulmonology
+Radiologist
+Radiology
+Rectal Surgeon
+Rectal Surgery
+Rheumatologist
+Rheumatology
+Sleep Medicine Specialist
+Sports Medicine Specialist
+Surgeon
+Surgery
+Urologist
+Urology

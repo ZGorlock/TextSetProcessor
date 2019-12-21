@@ -1,0 +1,27 @@
+Acoustic Bass
+Acoustic Bass Guitar
+Acoustic Electric
+Acoustic Electric Guitar
+Acousticelectric
+Acousticelectric Guitar
+Archtop Guitar
+Classical Guitar
+Electric Guitar
+Flamenco
+Flamenco Guitar
+Ibanez
+Resonator Guitar
+Semi Acoustic
+Semi Acoustic Guitar
+Semiacoustic
+Semiacoustic Guitar
+Steel Guitar
+Steel String Acoustic
+Steel String Acoustic Guitar
+Steelstring Acoustic
+Steelstring Acoustic Guitar
+Twelve String
+Twelve String Guitar
+Twelvestring
+Twelvestring Guitar
+Upright Bass

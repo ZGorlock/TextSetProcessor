@@ -1,0 +1,10 @@
+Bearing
+Bolt
+Bushing
+Coupling
+Fastener
+Gear
+Hinge
+Nail
+Screw
+Spring

@@ -1,0 +1,10 @@
+Freeboard
+Gunwale
+Hull
+Mast
+Oar
+Poopdeck
+Port
+Propeller
+Sail
+Starboard

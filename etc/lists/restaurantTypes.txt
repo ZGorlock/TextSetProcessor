@@ -1,0 +1,29 @@
+Bistro
+Brasserie
+Buffet
+Cafe
+Cafeteria
+Chiringuito
+Chophouse
+Churrascaria
+Deli
+Diner
+Eatery
+Eating House
+Fast Food
+Food Court
+Food Truck
+Gastropub
+Lunch Counter
+Osteria
+Pizza Parlor
+Pizzaria
+Sandwich Bar
+Steakhouse
+TakeOut
+Tavern
+Teahouse
+Teppanyaki
+Tex Mex
+Texmex
+Trattoria

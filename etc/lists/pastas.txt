@@ -1,0 +1,56 @@
+Agnolotti
+Bigoli
+Bucatini
+Calamarata
+Campanelle
+Cannelloni
+Capelli Dangelo
+Capellini
+Cappelletti
+Casarecce
+Cavatappi
+Cavatelli
+Conchiglie
+Ditalini
+Farfalle
+Fettuccine
+Fregula
+Fusilli
+Garganelli
+Gemelli
+Lasagne
+Linguine
+Macaroni
+Mafaldine
+Manicotti
+Maultasche
+Mezzelune
+Orecchiette
+Orzo
+Paccheri
+Pappardelle
+Penne
+Pici
+Pizzoccheri
+Ptitim
+Ravioli
+Ribbon Pasta
+Rigatoni
+Rotini
+Scialatelli
+Shaped Pasta
+Soup Pasta
+Spaghetti
+Spaghetti Alla Chitarra
+Spatzle
+Strand Pasta
+Strozzapreti
+Stuffed Pasta
+Tagliatelle
+Taglierini
+Tortellini
+Tortelloni
+Trofie
+Tubular Pasta
+Vermicelli
+Ziti

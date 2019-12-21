@@ -1,0 +1,7 @@
+Five of a Kind
+Four of a Kind
+Full House
+High Card
+Royal Flush
+Straight Flush
+Three of a Kind

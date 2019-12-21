@@ -1,0 +1,9 @@
+Forward Center
+Forwardcenter
+Point Forward
+Point Guard
+Power Forward
+Shooting Guard
+Small Forward
+Swingman
+Tweener

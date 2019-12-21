@@ -1,0 +1,84 @@
+Applied Science
+Applied Scientist
+Astronomer
+Astronomy
+Astrophysicist
+Astrophysics
+Biochemist
+Biochemistry
+Biologist
+Biology
+Botanist
+Botany
+Chemist
+Chemistry
+Climatologist
+Climatology
+Computer Science
+Computer Scientist
+Decision Theorist
+Decision Theory
+Earth Science
+Earth Scientist
+Ecologist
+Ecology
+Electrochemist
+Electrochemistry
+Engineer
+Engineering
+Entomologist
+Entomology
+Geologist
+Geology
+Geophysicist
+Geophysics
+Herpetologist
+Herpetology
+Human Biologist
+Human Biology
+Ichthyologist
+Ichthyology
+Immunologist
+Immunology
+Logic
+Logician
+Mathematician
+Mathematics
+Meteorologist
+Meteorology
+Microbiologist
+Microbiology
+Mineralogist
+Mineralogy
+Mycologist
+Mycology
+Oceonographer
+Oceonography
+Ornithologist
+Ornithology
+Paleontologist
+Paleontology
+Physical Science
+Physical Scientist
+Physicist
+Physics
+Radiologist
+Radiology
+Seismologist
+Seismology
+Social Science
+Social Scientist
+Space Science
+Space Scientist
+Statistician
+Statistics
+Systems Theorist
+Systems Theory
+Theoretical Computer Science
+Theoretical Computer Scientist
+Virologist
+Virology
+Volcanologist
+Volcanology
+Zoologist
+Zoology

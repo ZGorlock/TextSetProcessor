@@ -1,0 +1,24 @@
+Battery Backup
+CPU
+Card Reader
+Data Cable
+Daughterboard
+Disk Drive
+Flash Drive
+Floppy Disk Drive
+Graphics Card
+HDD
+Hard Drive
+Keyboard
+Monitor
+Motherboard
+Network Card
+Optical Drive
+RAM
+SSD
+Solid State Drive
+SolidState Drive
+Sound Card
+Tape Drive
+Video Card
+Webcam

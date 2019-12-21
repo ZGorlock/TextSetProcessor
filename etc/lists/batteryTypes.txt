@@ -1,0 +1,15 @@
+Alkaline
+Carbon Zinc
+CarbonZinc
+Lithium Cobalt Oxide
+Lithium Ion
+Lithium Iron Phosphate
+Lithium Manganese Oxide
+Lithium Nickel Manganese Cobalt Oxide
+Lithium Tianate
+LithiumCobalt Oxide
+LithiumIon
+LithiumIron Phosphate
+LithiumManganese Oxide
+LithiumNickel Manganese Cobalt Oxide
+LithiumTianate

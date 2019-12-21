@@ -1,0 +1,14 @@
+Attacking Midfielder
+BoxtoBox Midfielder
+Center Back
+Central Midfielder
+Defending Midfielder
+Goalkeeper
+Holding Midfielder
+Left Fullback
+Left Midfielder
+Playmaker
+Right Fullback
+Right Midfielder
+Striker
+Winger

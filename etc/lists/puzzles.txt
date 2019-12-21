@@ -1,0 +1,7 @@
+Crossword
+Jigsaw Puzzle
+Knights Tour
+Nurikabe
+Rebus
+Riddle
+Sudoku

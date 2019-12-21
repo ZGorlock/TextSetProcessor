@@ -1,0 +1,35 @@
+Amputate
+Amputation
+Appendectomy
+Arthroscopy
+Biopsy
+Cataract Surgery
+Catherization
+Cauterization
+Cauterize
+Cesarean Section
+Cholecystectomy
+Colectomy
+Coronary Bypass
+Craniotomy
+Curettage
+Debridement
+Endarterectomy
+Endoscopy
+Gastrectomy
+Heart Bypass
+Hemorrhoidectomy
+Hernia Repair
+Hysterectomy
+Hysteroscopy
+Mastectomy
+Maxillofacial
+Microsurgery
+Neurosurgery
+Prostatectomy
+Skin Graft
+Tonsillectomy
+Tracheostomy
+Tracheotomy
+Transplant
+Triple Bypass

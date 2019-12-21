@@ -1,0 +1,11 @@
+Airfoil
+Alleron
+Cockpit
+Empenna
+Fuselage
+Horizontal Stabilizer
+Landing Gear
+Slat
+Turbine Engine
+Vertical Stabilizer
+Winglet

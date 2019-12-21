@@ -1,0 +1,13 @@
+Delta
+Fjord
+Lagoon
+Lake
+Ocean
+Pond
+Pool
+Puddle
+Reservoir
+River
+Sea
+Wadi
+Wetland

@@ -1,0 +1,41 @@
+AK 47
+AK47
+Assault Rifle
+Battle Rifle
+Beretta
+Berthier
+Browning
+Brunswick
+Carbine
+Carcano
+Colt
+Desert Eagle
+Enfield
+Glock
+Handgun
+Heckler and Kock
+Kammerlader
+Karabiner
+Level
+M16
+M4
+Machine Gun
+Magnum Research
+Manchester Rifle
+Mannlicher
+Mauser
+Meunier
+Mossberg
+Murata
+Musket
+Remington
+Revolver
+Rifle
+Ruger
+Shotgun
+Smith Wesson
+Smith and Wesson
+Sniper Rifle
+Submachine Gun
+Walther
+Winchester

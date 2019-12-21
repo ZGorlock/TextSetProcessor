@@ -1,0 +1,119 @@
+Antiprism
+Archimedean Solid
+Cube
+Cuboctahedron
+Cubohemioctahedron
+Decahedron
+Deltahedron
+Deltoidal Hexecontahedron
+Deltoidal Icositetrahedron
+Disdyakis Dodecahedron
+Disdyakis Triacontahedron
+Dodecadodecahedron
+Dodecahedron
+Enneahedron
+Great Deltoidal Hexecontahedron
+Great Deltoidal Icositetrahedron
+Great Dirhombicosidodecacron
+Great Dirhombicosidodecahedron
+Great Disdyakis Dodecahedron
+Great Disdyakis Triacontahedron
+Great Ditrigonal Dodecacronic Hexecontahedron
+Great Dodecacronic Hexecontahedron
+Great Dodecahedron
+Great Dodecahemicosacron
+Great Dodecahemicosahedron
+Great Dodecahemidodecahedron
+Great Dodecicosacron
+Great Hexacronic Icositetrahedron
+Great Hexagonal Hexecontahedron
+Great Icosacronic Hexecontahedron
+Great Icosidodecahedron
+Great Icosihemidodecacron
+Great Icosihemidodecahedron
+Great Inverted Pentagonal Hexecontahedron
+Great Pentagonal Hexecontahedron
+Great Pentagrammic Hexecontahedron
+Great Pentakis Dodecahedron
+Great Rhombic Triacontahedron
+Great Rhombidodecacron
+Great Rhombihexacron
+Great Stellapentakis Dodecahedron
+Great Triakis Icosahedron
+Great Triakis Octahedron
+Great Triambic Icosahedron
+Great Truncated Icosidodecahedron
+Gyroelongated Square Bipyramid
+Hendecahedron
+Heptahedron
+Hexahedron
+Hexahemioctacron
+Icosahedron
+Icosidodecahedron
+Medial Deltoidal Hexecontahedron
+Medial Disdyakis Triacontahedron
+Medial Hexagonal Hexecontahedron
+Medial Icosacronic Hexecontahedron
+Medial Inverted Pentagonal Hexecontahedron
+Medial Pentagonal Hexecontahedron
+Medial Rhombic Triacontahedron
+Near Miss Johnson Solid
+Nearmiss Johnson Solid
+Octahedron
+Octahemioctahedron
+Pentagonal Antiprism
+Pentagonal Hexecontahedron
+Pentagonal Icositetrahedron
+Pentagonal Prism
+Pentagrammic Antiprism
+Pentahedron
+Pentakis Dodecahedron
+Platonic Solid
+Prism
+Rhombic Dodecahedron
+Rhombic Triacontahedron
+Rhombicosacron
+Rhombicosahedron
+Rhombicosidodecahedron
+Rhombicuboctahedron
+Rhombidodecadodecahedron
+Semiregular Polyhedron
+Small Ditrigonal Dodecacronic Hexecontahedron
+Small Dodecahemicosacron
+Small Dodecahemicosahedron
+Small Dodecahemidodecacron
+Small Dodecahemidodecahedron
+Small Dodecicosacron
+Small Hexacronic Icositetrahedron
+Small Hexagonal Hexecontahedron
+Small Hexagrammic Hexecontahedron
+Small Icosacronic Hexecontahedron
+Small Icosihemidodecacron
+Small Icosihemidodecahedron
+Small Rhombidodecacron
+Small Rhombihexacron
+Small Stellapentakis Dodecahedron
+Small Triambic Icosahedron
+Snub Cube
+Snub Disphenoid
+Snub Dodecadodecahedron
+Snub Dodecahedron
+Tetradecahedron
+Tetrahedron
+Tetrahemihexacron
+Tetrahemihexahedron
+Tetrakis Hexahedron
+Triakis Icosahedron
+Triakis Octahedron
+Triakis Tetrahedron
+Triaugmented Triangular Prism
+Tridyakis Icosahedron
+Truncated Cube
+Truncated Dodecadodecahedron
+Truncated Dodecahedron
+Truncated Great Dodecahedron
+Truncated Icosahedron
+Truncated Octahedron
+Truncated Tetrahedron
+Waterman Polyhedron
+Zonohedron

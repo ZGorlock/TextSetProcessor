@@ -1,0 +1,11 @@
+Airliner
+Amphibious Aircraft
+Biplane
+Floatplane
+Jet
+Monoplane
+Seaplane
+Tiltrotor
+Triplane
+Turboprop
+Ultralight Aviation

@@ -1,0 +1,30 @@
+Archmage
+Caster
+Cleric
+Conjurur
+Divination
+Divinator
+Elemental Master
+Enchanter
+Enchantress
+Faith Healer
+Mage
+Magic User
+MagicUser
+Magician
+Necromancer
+Necromancy
+Seer
+Shamen
+Sorcerer
+Sorceress
+Sorcery
+Spellcaster
+Summoner
+Summoning
+Warlock
+Wicca
+Wiccan
+Witch
+Witchdoctor
+Wizard

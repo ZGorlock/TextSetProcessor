@@ -1,0 +1,9 @@
+Americano
+Caffe
+Cappuccino
+Espresso
+Frappuccino
+Latte
+Macchiato
+Mocha
+Mochaccino

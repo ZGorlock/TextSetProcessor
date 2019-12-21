@@ -1,0 +1,14 @@
+Andorian
+Bajoran
+Borg
+Breen
+Cardassian
+Ferengi
+Gorn
+Klingon
+Orion
+Romulan
+Species 8472
+Vidiian
+Vulcan
+Xindi

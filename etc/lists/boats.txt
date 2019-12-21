@@ -1,0 +1,34 @@
+Airboat
+Canoe
+Catamaran
+Cruise Ship
+Ferry
+Ferryboat
+Fireboat
+Full Rigged Pinnace
+Gondola
+Gunboat
+Jon Boat
+Kayak
+Lifeboat
+Missile Boat
+Motorboat
+Patrol Boat
+Pontoon
+Rigid Hulled Inflatable Boat
+Rigidhulled Inflatable Boat
+Rodney Boat
+Rowboat
+Sailboat
+Schooner
+Scow
+Ship
+Skiff
+Speedboat
+Steamboat
+Superyacht
+Trawler
+Trimaran
+Tugboat
+Watercraft
+Yacht

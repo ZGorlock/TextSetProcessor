@@ -1,0 +1,7 @@
+Aorta
+Left Atrium
+Mitral
+Pulmonic
+Right Atrium
+Tricuspid
+Ventricle

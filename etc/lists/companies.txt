@@ -1,0 +1,508 @@
+3M
+ABB
+AIA Group
+AIRBUS
+ANZ
+ASML Holding
+AT&T
+AXA Group
+AbbVie
+Abbott Laboratories
+Accenture
+Adidas
+Aegon
+Aflac
+Agricultural Bank of China
+Air Liquide
+Alibaba
+Allianz
+Allstate
+Alphabet
+Altria Group
+Amazon
+America Movil
+American Airlines Group
+American Electric
+American Express
+American International Group
+Ameriprise Financial
+AmerisourceBergen
+Amgen
+Anglo American
+Anheuser Busch InBev
+AnheuserBusch InBev
+Anhui Conch Cement
+Anthem
+Apple
+Applied Materials
+ArcelorMittal
+Archer Daniels Midland
+AstraZeneca
+Automatic Data Processing
+Aviva
+BAE Systems
+BASF
+BB&T
+BBVA Banco Bilbao Vizcaya
+BCE
+BHP Group
+BMW Group
+BNP Paribas
+BP
+BT Group
+Baidu
+Banco Bradesco
+Banco Do Brasil
+Bank Mandiri
+Bank Rakyat Indonesia (BRI)
+Bank of America
+Bank of Beijing
+Bank of China
+Bank of Communications
+Bank of Jiangsu
+Bank of Montreal
+Bank of New York Mellon
+Bank of Nova Scotia
+Bank of Shanghai
+Banorte
+Baoshan Iron and Steel
+Barclays
+Bayer
+Becton Dickinson
+Berkshire Hathaway
+Biogen
+BlackRock
+Boeing
+Booking Holdings
+Bouygues
+Bridgestone
+Bristol Myers Squibb
+BristolMyers Squibb
+British American Tobacco
+Broadcom
+Brookfield Asset Management
+CITIC
+CK Asset Holdings
+CK Hutchison
+CNH Industrial
+CNOOC
+CNP Assurances
+CRH
+CRRC
+CSX
+CTBC Financial
+CVS Health
+CaixaBank
+Canadian Imperial Bank
+Canadian National Railway
+Canadian Natural Resources
+Canon
+Capital One Financial
+Carnival
+Caterpillar
+Cathay Financial
+Celgene
+Centene
+Central Japan Railway
+Charles Schwab
+Charter Communications
+Chevron
+China Cinda Asset Management
+China Citic Bank
+China Communications Construction
+China Construction Bank
+China Everbright Bank
+China Evergrande Group
+China Life Insurance
+China Merchants Bank
+China Merchants Shekou Industrial Zone Holdings
+China Minsheng Banking
+China Mobile
+China Pacific Insurance
+China Railway Construction
+China Railway Group
+China Resources Land
+China Shenhua Energy
+China State Construction Engineering
+China Telecom
+China Unicom
+China Vanke
+China Yangtze Power
+China Zheshang Bank
+Christian Dior
+Chubb
+Cigna
+Cisco Systems
+Citic Securities
+Citigroup
+Coca Cola
+CocaCola
+Comcast
+Commerzbank
+Commonwealth Bank
+Compass Group
+ConocoPhillips
+Consolidated Edison
+Continental
+Costco Wholesale
+Couche Tard
+Country Garden Holdings
+Credit Agricole
+Credit Suisse Group
+Cummins
+DBS
+DNB
+Dai Ichi Life Insurance
+Daiichi Life Insurance
+Daikin Industries
+Daimler
+Daiwa House Industry
+Danaher
+Danone
+Danske Bank
+Deere and Company
+Dell Technologies
+Delta Air Lines
+Denso
+Deutsche Lufthansa
+Deutsche Post
+Deutsche Telekom
+Diageo
+Discover Financial Services
+Dominion Resources
+DowDuPont
+Duke Energy
+EDF
+ENGIE
+EOG Resources
+EON
+EXOR
+East Japan Railway
+Eaton
+Ecopetrol
+Eli Lilly
+Emerson Electric
+Enbridge
+Enel
+Eni
+Equinor
+Erste Group Bank
+EssilorLuxottica
+Etisalat
+Exelon
+ExxonMobil
+Facebook
+Fannie Mae
+Fast Retailing
+FedEx
+Femsa
+Fiat Chrysler Automobiles
+Fifth Third Bank
+First Abu Dhabi Bank
+FirstRand
+Ford Motor
+Fosun International
+Freddie Mac
+Freeport McMoRan
+FreeportMcMoRan
+Fresenius
+Fubon Financial
+Gazprom
+General Dynamics
+General Electric
+General Mills
+General Motors
+Generali Group
+Gilead Sciences
+GlaxoSmithKline
+Glencore International
+Goldman Sachs Group
+Gree Electric Appliances
+Greenland Holdings Group
+Grupo ACS
+HCA Healthcare
+HDFC
+HDFC Bank
+HP
+HSBC Holdings
+Halliburton
+Hana Financial Group
+Hartford Financial Services
+HeidelbergCement
+Heineken
+Henkel
+Hewlett Packard Enterprise
+Hitachi
+Home Depot
+Hon Hai Precision
+Honda Motor
+Honeywell International
+Huaxia Bank
+Humana
+Hyundai Mobis
+Hyundai Motor
+IBM
+ICBC
+ICICI Bank
+ING Group
+Iberdrola
+Imperial Brands
+Indian Oil
+Inditex
+Industrial Bank
+Intel
+IntercontinentalExchange
+International Airlines
+International Paper
+Intesa Sanpaolo
+Itau Unibanco Holding
+Itochu
+JPMorgan Chase
+JXTG Holdings
+Japan Post Holdings
+Japan Tobacco
+Jardine Matheson
+Johnson Controls International
+Johnson and Johnson
+KB Financial Group
+KBC Group
+KDDI
+KIA Motors
+Kering
+Kinder Morgan
+Komatsu
+Kroger
+Kweichow Moutai
+LG Chem
+LOreal
+LafargeHolcim
+Larsen and Toubro
+Las Vegas Sands
+Legal and General Group
+Lennar
+Lincoln National
+Linde
+Lloyds Banking Group
+Lockheed Martin
+Longfor Group Holdings
+Lowes
+LukOil
+LyondellBasell Industries
+MS&AD Insurance
+Macquarie Group
+Magna International
+Manulife
+Marathon Petroleum
+Marriott International
+Marsh and McLennan
+Marubeni
+Mastercard
+Maybank
+McDonalds
+Medtronic
+Merck and Co
+MetLife
+Michelin Group
+Micron Technology
+Microsoft
+Midea Group
+Mitsubishi
+Mitsubishi Chemical
+Mitsubishi Electric
+Mitsubishi UFJ Financial
+Mitsui
+Mitsui Fudosan
+Mizuho Financial
+Moller Maersk
+MollerMaersk
+Mondelez International
+Morgan Stanley
+Munich Re
+NAB National Australia Bank
+NN Group
+NTPC
+Naspers
+National Commercial Bank
+National Grid
+Natixis
+Nestle
+Netflix
+New China Life Insurance
+New World Development
+NextEra Energy
+Nike
+Nippon Steel
+Nippon Telegraph and Tel
+Nissan Motor
+Nordea Bank
+Norfolk Southern
+Northrop Grumman
+Novartis
+Novatek
+Novo Nordisk
+OMV Group
+Occidental Petroleum
+Oil and Natural Gas
+Oracle
+Orange
+Orix
+Orsted
+Oversea Chinese Banking
+OverseaChinese Banking
+PNC Financial Services
+PTT PCL
+Paccar
+Panasonic
+PayPal
+Peoples Insurance
+PepsiCo
+Pernod Ricard
+PetroChina
+Petrobras
+Peugeot
+Pfizer
+Philip Morris International
+Philips
+Phillips 66
+Ping an Insurance Group
+Poly Developments and Holdings Group
+Posco
+Postal Savings Bank of China (PSBC)
+Poste Italiane
+Power Construction Corporation of China
+Power Corp of Canada
+Principal Financial Group
+Procter and Gamble
+Progressive
+Prudential
+Prudential Financial
+Qatar National Bank
+Qualcomm
+RBC
+Raytheon
+Reckitt Benckiser Group
+Reliance Industries
+Renault
+Repsol
+Richemont
+Rio Tinto
+Roche Holding
+Rosneft
+Royal Ahold Delhaize NV
+Royal Bank of Scotland
+Royal Dutch Shell
+SAIC Motor
+SAP
+SEB AB
+SK Holdings
+SK Hynix
+SK Innovation
+SK Telecom
+Safran
+Salesforcecom
+Sampo
+Samsung C&T
+Samsung Electronics
+Samsung Life Insurance
+Sanofi
+Santander
+Saudi Basic Industries
+Saudi Telecom
+Sberbank
+Schlumberger
+Schneider Electric
+Sempra Energy
+Seven and I Holdings
+Shanghai Pudong Development
+Shin Etsu Chemical
+ShinEtsu Chemical
+Shinhan Financial Group
+Siemens
+SingTel
+Sinopec
+Societe Generale
+Softbank
+Sompo
+Sony
+Southern Company
+Southwest Airlines
+Standard Bank Group
+Standard Chartered
+Starbucks
+State Bank of India
+State Street
+Stryker
+Subaru
+Sumitomo
+Sumitomo Mitsui Financial
+Sumitomo Mitsui Trust
+Sun Hung Kai Properties
+Sun Life Financial
+SunTrust Banks
+Sunac China Holdings
+Suncor Energy
+Suningcom
+Surgutneftegas
+Suzuki Motor
+Svenska Handelsbanken
+Swedbank
+Swire Pacific
+Swiss Life Holding
+Swiss Re
+Synchrony Financial
+Sysco
+TD Bank Group
+TJX Cos
+Taiwan Semiconductor
+Takeda Pharmaceutical
+Talanx
+Target
+Tata Consultancy Services
+Telefonica
+Telstra
+Tencent Holdings
+Tesco
+Texas Instruments
+Thermo Fisher Scientific
+Tokio Marine Holdings
+Tokyo Electric Power
+Toshiba
+Total
+Toyota Industries
+Toyota Motor
+Toyota Tsusho
+TransCanada
+Transneft
+Travelers
+Tyson Foods
+UBS
+US Bancorp
+UniCredit
+Unilever
+Union Pacific
+United Continental Holdings
+United Overseas Bank
+United Parcel Service
+United Technologies
+UnitedHealth Group
+VINCI
+VTB Bank
+Vale
+Valero Energy
+Verizon Communications
+Visa
+Vodafone
+Volkswagen Group
+Volvo Group
+WPP
+Walgreens Boots Alliance
+Walmart
+Walt Disney
+Waste Management
+Wells Fargo
+Westpac Banking Group
+Wilmar International
+Woolworths
+Xcel Energy
+Xiaomi
+Zurich Insurance Group

@@ -1,0 +1,24 @@
+Barstool
+Bed
+Bench
+Bookcase
+Cabinet
+Chair
+Couch
+Cupboard
+Desk
+Drawer
+Dresser
+Entertainment Center
+Footstool
+Futon
+Hutch
+Lazyboy
+Love Seat
+Nightstand
+Ottoman
+Recliner
+Stool
+Table
+Tuffet
+Workbench

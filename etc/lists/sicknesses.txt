@@ -1,0 +1,53 @@
+Alzheimers
+pinkeye
+Bronchiolitis
+Bronchitis
+Cancer
+Cataract
+Chicken Pox
+Cholelithiasis
+Cold Sore
+Common Cold
+Cough
+Dementia
+Dengue Fever
+Diabetes
+Disease
+Earache
+Ebola
+Embolism
+Emphysema
+Epstein Barr
+EpsteinBarr
+Fever
+Flu
+Gallstone
+Glaucoma
+HIV
+Hanta Fever
+Headache
+Hepatitis
+Herpes
+Hyperlipoproteinemia
+Infection
+Influenza
+Lyme
+Measles
+Mumps
+Osteoporosis
+Parkinsons
+Polio
+Rabies
+Rash
+Rubella
+SARS
+Sinusitis
+Smallpox
+Sore Throat
+Staph
+Stenosis
+Tetanus
+UTI
+Urinary Tract Infection
+Vertigo
+Zika

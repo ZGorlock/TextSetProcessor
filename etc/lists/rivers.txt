@@ -1,0 +1,52 @@
+Allegheny River
+Amazon River
+Amu Darya
+Amur River
+Angara River
+Brahmaputra River
+Chenab River
+Colorado River
+Congo River
+Danube
+Dnieper
+Essequibo River
+Euphrates
+Ganges
+Godavari River
+Indus River
+Irrawaddy River
+Irtysh River
+Japura River
+Mahanadi
+Mekong
+Mississippi River
+Missouri River
+Narmada River
+Niger River
+Nile
+Ob River
+Ohio River
+Orinoco
+Paraguay River
+Parana River
+Purus River
+Putumayo River
+Rhine
+Rio De La Plata
+Rio Grande
+Saint Lawrence River
+Salween River
+Sao Francisco River
+Shatt Al Arab
+Shatt AlArab
+Sutlej
+Tennessee River
+Tigris
+Tocantins River
+Volga River
+Yamuna
+Yangtze
+Yellow River
+Yenisei River
+Yukon River
+Zambezi

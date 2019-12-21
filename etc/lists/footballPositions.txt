@@ -1,0 +1,9 @@
+Fullback
+Left/Right Offensive Guard
+Left/Right Offensive Tackle
+Quarterback
+Right Offensive Guard
+Right Offensive Tackle
+Running Back
+Tight End
+Wide Receiver

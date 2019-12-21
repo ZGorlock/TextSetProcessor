@@ -1,0 +1,7 @@
+Backhoe
+Bulldozer
+Crane
+Dump Truck
+Front Loader
+Steamroller
+Trencher

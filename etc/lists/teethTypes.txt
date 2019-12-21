@@ -1,0 +1,7 @@
+Bicuspid
+Canine
+Fang
+Incisor
+Molar
+Premolar
+Tush

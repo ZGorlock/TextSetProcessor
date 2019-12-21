@@ -1,0 +1,57 @@
+Ada Lovelace
+Adi Shamir
+Alan Kay
+Alan Turing
+Alfred Aho
+Barbara Liskov
+Bill Joy
+Bjarne Stroustrup
+Brendan Eich
+Brian Kernighan
+Butler Lampson
+Claude Shannon
+Dennis Ritchie
+Dijkstra
+Donald Knuth
+Edgar F Codd
+Edsger W Dijkstra
+Frances Allen
+Fred Brooks
+Geoffrey Hinton
+Grace Hopper
+Guido Van Rossum
+James Gosling
+Jim Gray
+John Backus
+John Mauchly
+John McCarthy
+John Von Neumann
+Judea Pearl
+Ken Thompson
+Kenneth E Iverson
+Konrad Zuse
+Larry Page
+Leslie Lamport
+Levenshtein
+Marissa Mayer
+Mark Zuckerberg
+Marvin Minsky
+Michael O Rabin
+Neumann
+Niklaus Wirth
+Peter Naur
+Radia Perlman
+Richard M Karp
+Robert E Kahn
+Ronald Rivest
+Sergey Brin
+Sophie Wilson
+Stephen Cook
+Steve Wozniak
+Tim Berners Lee
+Tim BernersLee
+Tony Hoare
+Turing
+Vint Cerf
+Von Neumann
+Yukihiro Matsumoto

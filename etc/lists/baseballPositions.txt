@@ -1,0 +1,28 @@
+Catcher
+Center Field
+Center Fielder
+Centerfield
+Centerfielder
+Designated Hitter
+First Baseman
+Infield
+Infielder
+Left Field
+Left Fielder
+Leftfield
+Leftfielder
+Middle Relief Pitcher
+Outfield
+Outfielder
+Pinch Hitter
+Pinch Runner
+Pitcher
+Relief Pitcher
+Right Field
+Right Fielder
+Rightfield
+Rightfielder
+Second Baseman
+Shortstop
+Starting Pitcher
+Third Baseman

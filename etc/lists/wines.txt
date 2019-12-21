@@ -1,0 +1,32 @@
+Cabernet
+Cabernet Franc
+Cabernet Sauvignon
+Carmenere
+Chardonnay
+Chenin Blanc
+Chianti DOCG
+Fortified Wine
+Gamay
+Gewurztraminer
+Grenache
+Gruner Veltliner
+Malbec
+Merlot
+Muscat
+Nebbiolo
+Petit Verdot
+Petite Sirah
+Pinot Blanc
+Pinot Gris
+Pinot Noir
+Riesling
+Sangria
+Sauvignon
+Sauvignon Blanc
+Semillon
+Sherry
+Shiraz
+Sparkling Wine
+Viognier
+White Wine
+Zinfandel

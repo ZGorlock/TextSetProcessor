@@ -1,0 +1,55 @@
+AICA
+Amygdala
+Anterior Cerebral
+Anterior Fossa
+Axon
+Basal Ganglia
+Brainstem
+Broca Area
+Cerebellum
+Cerebrum
+Choroid Plexus
+Cingulate Gyrus
+Circle of Willis
+Cisterna Magna
+Common Carotid
+Corpus Callosum
+Cranial
+Cranium
+External Carotid
+Foramen Magnum
+Frontal Lobe
+Grey Matter
+Gyrus
+Hippocampus
+Hypothalamus
+Internal Carotid
+Leteral Ventricles
+Medulla
+Middle Cerebral
+Middle Fossa
+Motor Cortex
+Motor Strip
+Neurotransmitter
+Occipital Lobe
+Opthalmic
+PICA
+Parietal Lobe
+Pericallosal
+Pineal Gland
+Pituitary Gland
+Pons
+Posterior Cerebral
+Posterior Communicating Basilar
+Posterior Fossa
+Prefrontal Cortex
+Putamen
+Sensory Strip
+Sulcus
+Superior Cerebellar
+Synapse
+Temporal Lobe
+Thalamus
+Vertebral
+Wernicke Area
+White Matter

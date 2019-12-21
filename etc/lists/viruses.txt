@@ -1,0 +1,67 @@
+Adenoviruses
+Betaarterivirus Suid 1
+Bovine Alphaherpesvirus
+Bovine Alphaherpesvirus 1
+Canine Parvovirus
+Coxsackievirus
+Cyprinid Herpesvirus
+Cyprinid Herpesvirus 3
+Dengue
+Epstein Barr
+EpsteinBarr
+Escherichia
+Escherichia T4
+Feline Calicivirus
+Feline Immunodeficiency
+Feline Leukemia
+Foot and Mouth Disease
+Footandmouth Disease
+HIV
+Hepacivirus
+Hepacivirus C
+Hepatitis
+Hepatitis A
+Hepatitis B
+Herpes
+Herpesvirus
+Human Herpesvirus
+Human Herpesvirus 2
+Human Herpesvirus 5
+Human Immunodeficiency
+Human Immunodeficiency 1
+Human Immunodeficiency 2
+Human Metapneumovirus
+Human Polyomavirus
+Human Polyomavirus 2
+Indiana Vesiculovirus
+Influenza
+Influenza A
+Influenza a Subtype H9N2
+Kaposis Sarcoma Associated Herpesvirus
+Kaposis Sarcomaassociated Herpesvirus
+M13 Bacteriophage
+Macacine Alphaherpesvirus
+Macacine Alphaherpesvirus 1
+Measles Morbillivirus
+Middle East Respiratory Syndrome Related Coronavirus
+Middle East Respiratory Syndromerelated Coronavirus
+Mumps
+Mumps Rubulavirus
+Murine Leukemia
+Murine Respirovirus
+Nipah
+Norwalk
+Parvovirus B19
+Porcine Circovirus
+Rabies
+Ross River
+Rous Sarcoma
+SARS Coronavirus
+SV40
+Simian Immunodeficiency
+Sindbis
+Tomato Yellow Leaf Curl
+Triple E
+Vaccinia
+Varicella Zoster
+Variola

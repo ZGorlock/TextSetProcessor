@@ -1,0 +1,24 @@
+Bash
+COBOL
+CSS
+Cascading Style Sheet
+HTML
+HyperText Markup Language
+Hypertext Preprocessor
+Java
+Java Script
+JavaFX
+JavaScript
+Kotlin
+Machine Code
+Maven
+Microcode
+NET Framework
+PHP
+Perl
+Python
+SQL
+Structured Query Language
+TypeScript
+Visual Basic
+Visual C

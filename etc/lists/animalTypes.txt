@@ -1,0 +1,7 @@
+Amphibian
+Arthropod
+Bird
+Fish
+Herptile
+Mammal
+Reptile

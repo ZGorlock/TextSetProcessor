@@ -1,0 +1,17 @@
+Cnf
+Co
+Com
+Doc
+Docx
+Html
+Ini
+Jpg
+Mp3
+Mp4
+Net
+Orc
+Org
+Pdf
+Png
+Txt
+Uk

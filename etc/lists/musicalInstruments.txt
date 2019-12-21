@@ -1,0 +1,60 @@
+Accordion
+Bagpipes
+Banjo
+Bass Guitar
+Bassoon
+Berimbau
+Bongo
+Cello
+Clarinet
+Cor Anglais
+Cornet
+Cymbal
+Didgeridoo
+Double Bass
+Drum Kit
+Euphonium
+Flute
+French Horn
+Glass Harmonica
+Glockenspiel
+Gong
+Guitar
+Hammered Dulcimer
+Harmonica
+Harp
+Harpsichord
+Hurdy Gurdy
+Jew’s Harp
+Kalimba
+Lute
+Lyre
+Mandolin
+Marimba
+Melodica
+Oboe
+Ocarina
+Octobass
+Organ
+Pan Pipes
+Pennywhistle
+Piano
+Piccolo
+Pungi
+Recorder
+Saxophone
+Sitar
+Synthesizer
+Tambourine
+Theremin
+Timpani
+Triangle
+Trombone
+Trumpet
+Tuba
+Ukulele
+Viola
+Violin
+Whamola
+Xylophone
+Zither
