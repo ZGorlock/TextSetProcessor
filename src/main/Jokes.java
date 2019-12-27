@@ -117,9 +117,6 @@ public class Jokes {
      * @param args Arguments to the Main Method.
      */
     public static void main(String[] args) {
-//        List<Joke> jokes = readJokes(new File("jokes/reddit/source/3 - fixed/fixed-fix.json"));
-//        outputJokes(new File("a.json"), jokes);
-    
         setup();
         processJokes();
     }
@@ -426,6 +423,7 @@ public class Jokes {
     public static int outputJokes(File out, List<Joke> jokes) {
         List<String> text = new ArrayList<>();
         text.add("{");
+        text.add("    \"count\": " + jokes.size() + ",");
         text.add("    \"jokes\": [");
         boolean firstJoke = true;
         for (Joke joke : jokes) {
@@ -444,13 +442,14 @@ public class Jokes {
         
         File outFix = new File(out.getAbsolutePath().replace(".json", "-fix.json"));
         Filesystem.deleteFile(outFix);
-        
+    
+        List<Joke> jokeFix = jokes.stream().filter(j -> !j.fix.isEmpty()).sorted(Comparator.comparingInt(j -> -j.fix.size())).collect(Collectors.toList());
         List<String> fix = new ArrayList<>();
         List<String> fixText = new ArrayList<>();
         fixText.add("{");
+        fixText.add("    \"count\": " + jokeFix.size() + ",");
         fixText.add("    \"jokes\": [");
         int fixCount = 0;
-        List<Joke> jokeFix = jokes.stream().filter(j -> !j.fix.isEmpty()).sorted(Comparator.comparingInt(j -> -j.fix.size())).collect(Collectors.toList());
         for (Joke joke : jokeFix) {
             fix.addAll(joke.fix);
             if (fixCount > 0) {

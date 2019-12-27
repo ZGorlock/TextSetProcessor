@@ -3,20 +3,25 @@ Bellatrix Lestrange
 Dementor
 Dobby
 Dumbledore
+Professor Dumbledore
 Hagrid
 Hedwig
 Hermione
 Luna Lovegood
 Malfoy
 McGonagall
-Merperson
+Professor McGonagall
 Muggle
 Neville Longbottom
 Remus Lupin
+Professor Lupin
 Severus Snape
+Professor Snape
 Sirius Black
 Snape
 Solores Umbridge
 Sorting Hat
 Voldemort
 Weasley
+Professor Trelawney
+Sybill Trelawney

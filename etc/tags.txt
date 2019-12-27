@@ -116,12 +116,12 @@ Birth Control                   ,Condom,Durex,IUD,The Pill,Trojan
 Birthday                        ,Birth Day -dontDoY
 Bisexual                        ,Swing Both Ways -nsfw
 Biting                          ,Chew,Chewing,Chomp,Chompin,Gnaw,Gnawing
-Black                   Blacker ,Blackest -nsfw
+Black                           ,Blacker,Blackest -nsfw
 Black Eye                       ,Shiner
 Black People                    ,Black Guy,Black Man,Black Men,Black Person,Burrhead,Coon,Ebonic,Golliwogg,He Was Black,Jigaboo,Jiggabo,Jungle Bunny,Negra,Negro,Nig Nog,NigNog,Nigga,Nigger,Nigglet,Niggress,Niglet,Nigra,Nigrah,Porch Monkey,She Was Black,They Were Black -nsfw
 Black Plague                    ,Plague Doctor,Plague Mask
 Blacksmith                      ,Anvil,Forge,Ironwork,Ironworker,Ironworking,Metalwork,Metalworker,Metalworking,Silverwork,Silverworker,Silverworking,Smithing
-Blindness                       ,Blind,Blinded,Helen Keller,Braille -dontDoS
+Blindness                       ,Blind,Blinded,Helen Keller,Braille,Color Blind,Colorblind,Color Blindness,Colorblindness -dontDoS
 Blonde                          
 Blood                           ,Bleed,Bleeding,Bloodcell,Hemoglobin
 Blowjob                         ,Fellatio -nsfw
@@ -289,13 +289,13 @@ Diaper                          ,Huggies -dontDoER
 Diarrhea                        ,Diuretic
 Dick Cheney                     -dontDoY
 Dictionary                      
-Diet                            ,Dieted,Dieter,Dieting
+Diet                            ,Dieted,Dieter,Dieting,Weightwatchers
 Dildo                           -nsfw
 Dinner                          ,Dinnertime,Supper,Suppertime -dontDoER
 Dinosaur                        
 Directions                      ,GPS,Map,Mapquest,Navigate,Navigating,Navigation,Navigator,Roadmap
 Dirty                           -nsfw -dontDoY
-Disability                      ,Deformed,Deformity,Disabled,Down Syndrome,Mental Illness,Mentally Ill,Retard,Retarded,Tard,Wheelchair
+Disability                      ,Deformed,Deformity,Disabled,Down Syndrome,Quadriplegic,Paraplegic,Mental Illness,Mentally Ill,Retard,Retarded,Tard,Wheelchair
 Disappointment                  ,Disapoint,Disapointed,Disapointing
 Disaster                        ,Disastrous -dontDoER
 Disgusting                      ,Gross -nsfw -dontDoING
@@ -406,7 +406,7 @@ Funeral
 Furniture                       
 Future                          
 Gambling                        ,Bet,Betting,Casino,Dice,Jackpot,Lottery,Lotto,Powerball,Raffle,Scratch Off,Scratchoff
-Game of Thrones                 -dontDoS -dontDoES
+Game of Thrones                 ,GameOfThrones -dontDoS -dontDoES
 Game                            ,Cybergame,Gamed,Gamer,Gaming,Highscore,Hiscore,Ubisoft,Videogame
 Gardening                       ,Botanist,Botany,Fertilizer,Landscape,Landscaping,Replant,Trowel
 Gay                             ,Bisexual,Bisexuality,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Dyke,Lesbo,Fag,Faggot,Genderfluid,Genderqueer,Queer,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
@@ -528,7 +528,7 @@ Isaac Newton
 Israel                          ,Israeli,Israelite,Shimon Peres
 Italy                           ,Gondola,Italian,Veneto,Venice
 Ivanka Trump                    
-Jail                            ,Behind Bars,Cellblock,Cellmate,Convict,Felon,Guantanamo,Imprison,Imprisonment,Incarcerate,Incarcerated,Inmate,Jailbreak,Jailer,Jailguard,Jailhouse,Prison,Prisonbreak,Prisoner,Probabtion,Solitary Confinement,Supermax
+Jail                            ,Mugshot,Behind Bars,Cellblock,Cellmate,Convict,Felon,Guantanamo,Imprison,Imprisonment,Incarcerate,Incarcerated,Inmate,Jailbreak,Jailer,Jailguard,Jailhouse,Prison,Prisonbreak,Prisoner,Probabtion,Solitary Confinement,Supermax
 Jamaica                         ,Jamaican
 James Bond                      ,Casino Royal,Goldfinger
 Japan                           ,Jap,Japanese,Kanji,Kimono,Kyoto,Osaka,Samurai,Shogun,Tokyo
@@ -747,7 +747,7 @@ Pessimist                       ,Cynic,Cynical,Cynicality,Cynically,Nihilism,Nih
 Pet                             ,Animal Doctor,PetFriendly,Petco,Petshop,Petsmart,Vet,Veterinarian,Veterinary
 Pharmacy                        ,Apothecary,Drug Store,Drugstore,Pharmacist,Pharmacology
 Philosophy                      ,Epistemological,Epistemologically,Epistemologist,Epistemology,Esoteric,Esoterical,Esoterically,Metaphysical,Metaphysically,Metaphysics
-Photography                     ,Camera,Lens,Lenses,Lighting,Photo,Picture,Video,Videography,GoPro -dontDoY
+Photography                     ,Camera,Lens,Lenses,Lighting,Photo,Picture,Video,Videography,GoPro,Selfie,Mugshot -dontDoY
 Physical Therapy                ,Physical Therapist,Physiotheraphy,Physiotherapist -dontDoY
 Physics                         ,Physicist
 Piano                           ,Pianissimo,Pianist
@@ -792,7 +792,7 @@ Princess                        -dontDoS
 Probability                     ,Probably,Statistic,Statistically
 Profanity                       ,Curse,Cursing,Dirty Word,Expletive,Explict,Obscenity,Profane,Vularity,Vulgar -nsfw
 Professor                       ,Academician,Lecturer -dontDoOR
-Programming                     ,Algorithm,Antivirus,Byte,Coding,Computer Program,Computer Science,Computer Scientist,Computer Virus,Debug,Debugger,Debugging,Gigabyte,Kilobyte,Machine Code,Megabyte,Microprocessor,Parser,Petabyte,Programmer,Software,Subprogram,Subroutine,Terrabyte,Web Design,Word Processor,Zetabyte,Foobar -dontDoING
+Programming                     ,Algorithm,Antivirus,Byte,Multithreaded,Multithreading,Coding,Computer Program,Computer Science,Computer Scientist,Computer Virus,Debug,Debugger,Debugging,Gigabyte,Kilobyte,Machine Code,Megabyte,Microprocessor,Parser,Petabyte,Programmer,Software,Subprogram,Subroutine,Terrabyte,Web Design,Word Processor,Zetabyte,Foobar -dontDoING
 Prostitution                    ,Brothel,Call Girl,Courtesan,Floozie,Floozy,Hooker,Pimp,Prositute,Sex Tourism,Sex Tourist,Sex Traffic,Sex Trafficking,Sex Worker,Streetwalker,Whorehouse -nsfw
 Protestant                      ,Protestantism
 Psychiatry                      
@@ -995,7 +995,7 @@ Turkey                          ,Gobbler,Poult,Turk,Turkies,Turkish -dontDoY
 Turtle                          ,Tortise,Tortiseshell,Turtleshell
 Twin                            ,Monozygotic,Multiple Birth
 Two Liner                       -minor -dontDoER
-Typing                          ,Backspace,Control Key,Court Reporter,Enter Key,Escape Key,Keyboard,Shift Key,Stenograph,Typeface,Typeset,Typewrite,Typewriter,Typist,Typological,Typologically,Typologist,Typology -dontDoING
+Typing                          ,Backspace,Control Key,Court Reporter,Enter Key,Escape Key,Keyboard,Shift Key,Stenograph,Typeface,Typeset,Typewrite,Typewriter,Typist,Typer,Typological,Typologically,Typologist,Typology -dontDoING
 Tyrannosaurus Rex               ,T Rex,TRex
 Ugly                            ,Grotesque,Hideous,Scrofulous,Uglier,Uglies,Ugliest,Ugliness,Unattractive,Unightly,Unlovely,Unpicturesque,Wretched -dontDoY
 Unemployed                      ,Fired,Jobless,Laid Off,LaidOff,Out Of Work,Unemploy,Unemployment
@@ -1018,7 +1018,7 @@ Ventriloquist                   ,Puppeteer,Ventriloquism
 Veterinarian                    ,Animal Doctor,Pet Doctor,Vet,Veterinary
 Viagra                          -nsfw
 Vibrator                        -nsfw -dontDoOR
-Video Game                      ,Arcade Game,Computer Game,Cybergame,Electronic Game,Game Console,Game Controller,Gamer,Ubisoft,Videogame
+Video Game                      ,Arcade Game,Computer Game,Cybergame,ESport,E SportElectronic Game,Game Console,Game Controller,Gamer,Ubisoft,Videogame
 Vietnam                         ,Viet Cong,Vietnamese
 Viking                          ,Jorvik,Longship,Norse -dontDoING
 Virgin Mary                     ,Assumption Of Mary,Immaculate Conception,Virgin Birth -dontDoY

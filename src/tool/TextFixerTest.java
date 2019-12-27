@@ -25,6 +25,7 @@ public final class TextFixerTest {
     public static void main(String[] args) {
         TextFixer textFixer = TextFixer.getInstance();
         textFixer.load();
+        System.out.println("Ready");
         
         Scanner in = new Scanner(System.in);
         String test;

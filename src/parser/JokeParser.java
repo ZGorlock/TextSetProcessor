@@ -556,7 +556,7 @@ public final class JokeParser {
                     test.contains("BLEW UP") || test.contains("EDIT") || test.contains("HANDWRITING") || test.contains("TOLD ME") || test.contains("CAKEDAY") || test.contains("CAKE DAY") ||
                     test.contains("HEARD THIS") || test.contains("HEARD IT") || test.contains("FIRST TIME") || test.contains("HAHA") || test.contains("MY FIRST") || test.contains("AMIRIGHT") ||
                     test.contains("JOKE") || test.contains("THIS SITE") || test.contains("1.") || test.contains("B.)") || test.contains("2)") || test.contains("TRUE STORY") || test.contains("APRIL FOOL") ||
-                    test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") ||
+                    test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") || 
                     test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") ||
                     test.contains("MODS") || test.contains(">") || test.contains("<") || test.contains("U/") || test.contains("_") || test.contains("  - ") ||
                     test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") || 
@@ -582,7 +582,8 @@ public final class JokeParser {
                     test.matches(".*I'?M\\sSO\\sLONELY[^a-zA-Z0-9]*$") ||
                     test.matches(".*GET\\sIT[^a-zA-Z0-9]*$") ||
                     test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
-                    test.matches(".*I'?LL\\sSHOW\\sMYSELF.+$")) {
+                    test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
+                    test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$")) {
                     continue;
                 }
                 if (test.replaceAll("[^\\x00-\\x7F]", "")

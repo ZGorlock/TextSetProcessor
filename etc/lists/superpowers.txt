@@ -12,3 +12,5 @@ Supersuit
 Telepathy
 X Ray Vision
 Xray Vision
+Warg
+Warged

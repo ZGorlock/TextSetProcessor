@@ -207,15 +207,14 @@ public final class SpellChecker {
             }
             if (testWord.startsWith("'") && testWord.endsWith("'")) {
                 word = testWord.replaceAll("^'", "").replaceAll("'$", "");
-                testWord = word;
             } else {
                 word = testWord.replaceAll("^'", "");
-                testWord = word;
             }
+            testWord = word;
             if (fix.contains(word)) {
                 continue;
             }
-            if (testWord.toLowerCase().startsWith("o'") || testWord.toLowerCase().startsWith("m'")) {
+            if (testWord.toLowerCase().startsWith("o'") || testWord.toLowerCase().startsWith("m'") || testWord.startsWith("Mc")) {
                 continue;
             }
             testWord = word.replaceAll("'?[sS]?$", "");
