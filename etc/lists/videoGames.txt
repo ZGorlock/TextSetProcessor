@@ -63,6 +63,8 @@ Dragons Dogma
 Dune 2
 Dungeons and Dragons
 ESPN NFL 2K5
+Elder Scrolls
+Elder Scrolls 5
 Electroplankton
 Elite Beat Agents
 Eve Online
@@ -123,6 +125,7 @@ Hunt the Wumpus
 I Have No Mouth and I Must Scream
 Ikaruga
 International Karate
+Jackbox Party Pack
 Jet Grind Radio
 Jetpack Joyride
 Jumpman Junior
@@ -137,6 +140,7 @@ Koronis Rift
 Left 4 Dead
 Left 4 Dead 2
 Legacy of Kain
+Legend of Zelda
 LittleBigPlanet
 Lumines
 MVP Baseball 2005
@@ -185,6 +189,7 @@ Nights Into Dreams
 Ninja Gaiden
 No Mans Sky
 NoMansSky
+Oregon Trail
 Overwatch
 Pac Man
 PacMan
@@ -227,6 +232,7 @@ Rocket League
 RollerCoaster Tycoon
 Runescape
 Samurai Shodown
+Secret of Monkey Island
 Shadow Hearts
 Shadow of the Colossus
 Shantae and the Pirates Curse
@@ -246,6 +252,7 @@ Soulcalibur
 Soulcalibur 2
 Spelunky
 SplitSecond
+Stanley Parable
 Star Craft
 Star Raiders
 StarCraft
@@ -283,6 +290,7 @@ Tekken
 Tekken 3
 Tempest 2000
 Tenchu
+Terraria
 Tetris
 The Elder Scrolls
 The Elder Scrolls 5
@@ -314,8 +322,10 @@ Warcraft 3
 WarioWare
 Wii Sports
 Wing Commander
+Witcher
 Wolfenstein
 Wolfenstein 3D
+World Ends With You
 World of Warcraft
 Yakuza 0
 Zelda

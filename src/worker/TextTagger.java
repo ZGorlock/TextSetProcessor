@@ -290,7 +290,7 @@ public final class TextTagger {
         addListToTag(tags.get("Fish"), "fishes", "sharks");
         addListToTag(tags.get("Flower"), "flowers", "flowerParts");
         addListToTag(tags.get("Fly"), "flies");
-        addListToTag(tags.get("Food"), "candies", "cheeses", "chocolates", "chocolates", "desserts", "food", "fruits", "restaurants", "vegetables");
+        addListToTag(tags.get("Food"), "candies", "cheeses", "chocolates", "chocolates", "desserts", "food", "fruits", "pastas", "restaurants", "vegetables");
         addListToTag(tags.get("Football"), "footballPlayers", "footballPositions", "footballTeams");
         addListToTag(tags.get("Frog"), "frogs");
         addListToTag(tags.get("Fruit"), "fruits");

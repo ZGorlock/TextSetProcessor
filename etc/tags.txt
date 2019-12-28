@@ -32,7 +32,7 @@ Anal Sex                ,Anal Lube,Buttsex -nsfw
 Anatomy                 ,Cadaver,Dissect,Dissected,Dissection,Human Body,Ligament,Neuroanatomy,Osteological,Osteologically,Osteologist,Osteology,Phyiologically,Physiological,Physiologist,Physiology,Skeleton,Tendon
 Anesthesia              ,Anesthetic
 Angel                   
-Animal                  ,Animalistic,Aquarium,Crocodile Hunter,Fauna,Menagerie,PETA,RSPCA,Roadkill,Steve Irwin,Zoo,Zookeeper,Zookeeping,Zoological Garden
+Animal                  ,Animalistic,Aquarium,Bearfucker,Bestiality,Chickenfucker,Cowfucker,Crocodile Hunter,Dogfucker,Fauna,Goatfucker,Horsefucker,Menagerie,PETA,Pigfucker,RSPCA,Roadkill,Sheepfucker,Steve Irwin,Zoo,Zookeeper,Zookeeping,Zoological Garden,Zoophile,Zoophilia,Zoophiliac
 Animal Cruelty          ,PETA,People For The Ethical Treatment Of Animals -nsfw
 Anne Frank              
 Anniversary             
@@ -91,7 +91,7 @@ Bathroom                ,Bath,Bathe,Bathtub,Body Wash,Bodywash,Shampoo,Shower,Sh
 Batman                  ,Batcave,Batmobile,Gotham City,The Joker
 Battery                 
 Battle                  ,Battled
-Beach                   ,Beachfront,Boardwalk,Sand Dune,Sandbank,Sandbar
+Beach                   ,Beachfront,Boardwalk,Sand Castle,Sand Dune,Sandbank,Sandbar,Tide Pool,Tidepool
 Bean                    
 Bear                    ,Grizzly
 Beard                   ,Neckbeard
@@ -230,9 +230,9 @@ Colorado                ,Coloradoan
 Color                   ,Colorblind,Colour,Colourblind,Coloured,Colouring,Rainbow
 Comedian                ,Comedy,SNL
 Communism               ,Kim Jong Un,Kim JongUn,Lenin,Marx,Marxist,Marxists,Stalin
-Computer                ,Antivirus,Application,Bash,Bill Gates,Blog,Blogger,Blogging,Browser,Clippy,Debian,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Macintosh,Melinda Gates,Microsoft,Network Switch,Outlook,PC,Phish,Phishing,Router,SSH,Screensaver,Server,Software,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
+Computer                ,Antivirus,Application,Bash,Bill Gates,Blog,Blogger,Blogging,Browser,Clippy,Debian,Executable,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Macintosh,Melinda Gates,Microsoft,Network Switch,Outlook,Overclock,Overclocked,Overclocking,PC,Phish,Phishing,Router,SSH,Screensaver,Server,Software,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
 Condom                  ,Durex,Trojan -nsfw
-Confession              ,Confess,Confessed
+Confession              ,Confess,Confessed,Confessing,Confessor
 Confucius               -dontDoS
 Congress                ,Congressman,Congressmen,Congresswoman,Congresswomen,Senate,Senator -dontDoS
 Conservative            
@@ -270,7 +270,7 @@ Dating                  ,Eharmony
 Daughter                -dontDoER
 Dead Baby               ,Abortion,Miscarage,Stillbirth,Stillborn -nsfw
 Deafness                ,Deaf,Deafen,Deafened,Helen Keller -dontDoS
-Death                   ,Coroner,Corpse,Cremate,Cremation,Dead,Dying,Funeral,Grave,Graveside,Gravesite,Mortician,Mortuary,Mourning
+Death                   ,Coroner,Corpse,Cremate,Cremation,Dead,Dying,Funeral,Grave,Graveside,Gravesite,Mortician,Mortuary,Mourning,Necromaniac,Necrophile,Necrophilia,Necrophiliac,Necrophilic
 Debt                    ,Borrow,Borrowed,Collateral,Debtee,Debtor,Down Payment,Financed,Foreclose,Foreclosing,Foreclosure,Indebted,Indebtedness,Lend,Loan,Loanee,Loaner,Loanword,Mortgage,Mortgaged,Mortgagee,Mortgager,Owe,Owed,Repayment,Repossess,Repossessed,Repossession
 Deep                    -minor
 Deformity               ,Deformed
@@ -315,15 +315,15 @@ Donut                   ,Dunkin,Krispy Kreme
 Drawing                 ,Acrylic,Airbrush,Canvas,Crayola,Draw,Easel,Fingerpaint,Fingerpainting,Graffiti,Paint,Paintbrush,Painting,Spraypaint,Watercolor,Watercolour -dontDoING
 Dream                   ,Nightmare
 Dress                   -dontDoS
-Drinking                ,Alcohol,Alcoholic,Barista,Coffee,Decaf,Drunk,Drunkedly,Shot Glass,Shotglass,Starbucks
+Drinking                ,Alcohol,Alcoholic,Barista,Breathalyze,Breathalyzed,Breathalyzer,Coffee,Decaf,Drunk,Drunkedly,Shot Glass,Shotglass,Starbucks
 Drivers License         ,DMV
 Driving                 ,Carsick,DMV,Driver,Drover,Gridlock,Road,Speed Limit,Speeder,Speeding,Stoplight,Stopsign,Traffic
 Drone                   
 Drowning                
 Drug                    ,Addict,Crackhead,Medicament,Methhead,Narcotic,OD,OD'd,Overdose,Overdosed,Pharma,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Trippy,Tweak,Tweaker,Tweeking -nsfw
 Drum                    ,Drummer,Drumming,Drumset
-Drunk                   ,Alcoholic,Drunkedly
-Dry Cleaner             
+Drunk                   ,Alcoholic,Breathalyze,Breathalyzed,Breathalyzer,Drunkedly
+Dry Cleaner             ,Drycleaner
 Duck                    ,Duckling,Quack,Quacking
 Dwarf                   ,Dwarve,Dwarven,Dwarves,Dwarvish,Midget
 Dynamite                ,TNT
@@ -409,8 +409,8 @@ Gambling                ,Bet,Betting,Casino,Dice,Jackpot,Lottery,Lotto,Powerball
 Game of Thrones         ,GameOfThrones -dontDoS -dontDoES
 Game                    ,Cybergame,Gamed,Gamer,Gaming,Highscore,Hiscore,Ubisoft,Videogame
 Gardening               ,Botanist,Botany,Fertilizer,Landscape,Landscaping,Replant,Trowel
-Gay                     ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
-Gender                  ,Asexual,Asexuality,Bisexual,Bisexuality,Cis,Cisgender,Cross Dress,Cross Dressed,Cross Dresser,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Crossdressed,Dyke,Fag,Faggot,Female,Feminine,Gay,Genderfluid,Genderqueer,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Male,Masculine,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite -dontDoER
+Gay                     ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
+Gender                  ,Asexual,Asexuality,Bisexual,Bisexuality,Cis,Cisgender,Cross Dress,Cross Dressed,Cross Dresser,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Crossdressed,Dyke,Fag,Faggot,Female,Feminine,Gay,Genderfluid,Genderqueer,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Male,Masculine,Metrosexual,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite -dontDoER
 Genetics                ,Adenine,Chromosome,Codon,Cytosine,DNA,Deoxyribonucleic Acid,Double Helix,Gene,Genealogy,Genetical,Genomic,Guanine,Helicase,Nucleotide,Purine,Pyrimidine,Telomere,Thymine,mRNA
 Genie                   
 Genocide                ,Anne Frank,Auschwitz,Concentatration Camp,Gas Chamber,Gasroom,Genocidal,Holocaust -nsfw
@@ -469,7 +469,7 @@ Helicopter              ,Autogiro,Chopper,Copter,Whirlybird -dontDoER
 Hell                    
 Hemorrhoid              ,Hemorrhoidectomy
 Heroin                  -nsfw
-Herptile                ,Alligator,Amphibian,Caiman,Cold Blooded,ColdBlooded,Croc,Crocodile,Crocodilian,Dinosaur,Frog,Froggy,Froglike,Gator,Reptile,Reptilia,Reptilian,Ribbit,Ribbiting,Scaly,Serpent,Serpentine,Serpentlike,Slithery,Snake,Snakebite,Snakelike,Snakevenom,Toad,Toadlike,Toady,Tortise,Tortiseshell,Turtle,Turtleshell
+Herptile                ,Alligator,Amphibian,Caiman,Cold Blooded,ColdBlooded,Croc,Crocodile,Crocodilian,Dinosaur,Frog,Froggy,Froglike,Gator,Herpetarium,Herpetologist,Reptile,Reptilia,Reptilian,Ribbit,Ribbiting,Scaly,Serpent,Serpentine,Serpentlike,Slithery,Snake,Snakebite,Snakelike,Snakevenom,Toad,Toadlike,Toady,Tortise,Tortiseshell,Turtle,Turtleshell
 High School             ,Highschool,Highschooler,Junior College
 Hillary Clinton         
 Hinduism                ,Hindu,Hinduistic
@@ -486,7 +486,7 @@ Holy Water              -dontDoER
 Home School             ,Homeschool,Homeschooled,Homeschooler,Homeschooling
 Homeless                ,Homelessness -dontDoS
 Homework                
-Homosexual              ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw
+Homosexual              ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw
 Honeymoon               ,Newlywed
 Horse                   ,Donkey,Equine,Esquestrian,Horseshoe,Mare,Mule,Pony,Saddle,Saddlepack,Spurs,Stalion,Warhorse
 Horse Racing            ,Horse Track,Horserace,Horsetrack,Jockey
@@ -567,7 +567,7 @@ Lady Diana              ,Diana
 Lamp                    ,Lampshade,Night Light,Nightlight
 Land Mine               ,Claymore
 Language                ,Bilingual,Linguist,Linguistic,Polylingual,Trilingual
-Laundry                 ,Dry Cleaner,Dry Cleaning,Drying Machine,Laundromat,Perm Press,Permanent Press,Washing Machine -dontDoY
+Laundry                 ,Dry Cleaner,Dry Cleaning,Drycleaner,Drying Machine,Laundromat,Perm Press,Permanent Press,Washing Machine -dontDoY
 Law                     ,911,Adjudicate,Bailiff,Bystander,Constable,Constabulary,Cop,Court,Courthouse,Crime,Criminal,Decree,Defendent,Eyewitness,Felon,Felony,Gangbanger,Gavel,Gendarmerie,Gendarmery,Judge,Judged,Judicial,Judiciary,Jurist,Juror,Jury,LAPD,Lawyer,Mafia,Magistrate,Misdemeanor,Mob,Officer,Onlooker,PD,Paramilitary,Perceiver,Percipient,Plead The 5th,Plead The Fifth,Prosecutor,Sentencing,Spectated,Spectator,Statute,Testifier,Testify,Testimony,Thug,Thuggish,Thuglike,Verdict,Warrant,Witness
 Lawyer                  ,Law School,School Of Law -dontDoER
 Laxative                
@@ -709,7 +709,7 @@ Number                  ,Countable,Digit,Enumerate,Enumerated,Infinity,Math,Math
 Nun                     ,Abbess,Abbey,Carmelite,Cloister,Convent,Mother Teresa,Nunnery
 Nurse                   ,Midwife,Nursed,Nursing
 Nursing Home            
-Ocean                   ,Atlantic,Beach,Beachfront,Boardwalk,Cetacean,Coral,Crustaceans,Fin,Fish,Fishlike,Gill,Hydrosphere,Ichthyological,Ichthyologically,Ichthyologist,Ichthyology,Marine,Oceanic,Offshore,Pacific,Sand Dune,Sandbank,Sandbar,Sea,Seafloor,Seafood,Sealife,Seashell,Seasick,Seaward,Seawater,Shark
+Ocean                   ,Atlantic,Beach,Beachfront,Boardwalk,Cetacean,Coral,Crustaceans,Fin,Fish,Fishlike,Gill,Hydrosphere,Ichthyological,Ichthyologically,Ichthyologist,Ichthyology,Marine,Oceanic,Offshore,Pacific,Sand Castle,Sand Dune,Sandbank,Sandbar,Sea,Seafloor,Seafood,Sealife,Seashell,Seasick,Seaward,Seawater,Shark,Tide Pool,Tidepool
 Office                  ,Boss,Classifieds,Coworker,Cubicle,Employ,Employed,Employee,Employment,Fired,Hire,Hired,Intern,Interning,Internship,Job,Jobless,Laid Off,LaidOff,Management,Manager,Managerial,Managing,Occupation,Office,Out Of Work,Paperwork,Secretaire,Secretarial,Secretary,Undersecretary,Unemploy,Unemployed,Unemployment,Workplace
 Oklahoma                ,Oklahoman,Oklahomian
 Old People              ,Ageism,Alzheimer,Elderly,Geriatric,Gerontologist,Gerontology,Oldnapping,Pension,Retire,Retired,Retiree,Retirement,Senescence
@@ -739,7 +739,7 @@ Pasta                   ,Noodle
 Peace                   ,Amity,Armistice,Conciliation,Nonviolence,Pacification,Pact,Peaceful,Peacefulness,Serenity,Tranquility,Tranquillity,Truce
 Pedophilia              ,Child Porn,Child Pornography,Kiddie Porn,Kiddy Porn,Paedo,Paedophile,Paedophilia,Paedophilic,Pedo,Pedophile,Pedophilic -nsfw
 Penguin                 
-Penis                   ,Ballsack,Boner,Cock,Dick,Erection,Foreskin,Gonad,Hard On,Manhood,Micropenis,Nutsack,Pecker,Penile,Phallic,Phallus,Pisser,Schlong,Scrotum,Spermatic,Spermatogenesis,Testicle,Testis,Wiener -nsfw -dontDoS
+Penis                   ,Ballsack,Cock,Dick,Erection,Foreskin,Gonad,Manhood,Micropenis,Nutsack,Pecker,Penile,Phallic,Phallus,Pisser,Schlong,Scrotum,Semen,Spermatic,Spermatogenesis,Testicle,Testis,Wiener -nsfw -dontDoS
 Pepsi                   ,PesiCo
 Period                  ,Menstruating,Menstruation,Mentruate,PMS,Premenstrual Syndrome,Tampax,Tampon -nsfw
 Pervert                 -nsfw
@@ -747,7 +747,7 @@ Pessimist               ,Cynic,Cynical,Cynicality,Cynically,Nihilism,Nihilist,Ni
 Pet                     ,Animal Doctor,PetFriendly,Petco,Petshop,Petsmart,Vet,Veterinarian,Veterinary
 Pharmacy                ,Apothecary,Drug Store,Drugstore,Pharmacist,Pharmacology
 Philosophy              ,Epistemological,Epistemologically,Epistemologist,Epistemology,Esoteric,Esoterical,Esoterically,Metaphysical,Metaphysically,Metaphysics
-Photography             ,Camera,GoPro,Lens,Lenses,Lighting,Mugshot,Photo,Picture,Selfie,Video,Videography -dontDoY
+Photography             ,Camera,GoPro,Lens,Lenses,Lighting,Mugshot,Photo,Photoshoot,Picture,Screenshot,Selfie,Video,Videography -dontDoY
 Physical Therapy        ,Physical Therapist,Physiotheraphy,Physiotherapist -dontDoY
 Physics                 ,Physicist
 Piano                   ,Pianissimo,Pianist
@@ -792,7 +792,7 @@ Princess                -dontDoS
 Probability             ,Probably,Statistic,Statistically
 Profanity               ,Curse,Cursing,Dirty Word,Expletive,Explict,Obscenity,Profane,Vularity,Vulgar -nsfw
 Professor               ,Academician,Lecturer -dontDoOR
-Programming             ,Algorithm,Antivirus,Byte,Coding,Computer Program,Computer Science,Computer Scientist,Computer Virus,Debug,Debugger,Debugging,Foobar,Gigabyte,Kilobyte,Machine Code,Megabyte,Microprocessor,Multithreaded,Multithreading,Parser,Petabyte,Programmer,Software,Subprogram,Subroutine,Terrabyte,Web Design,Word Processor,Zetabyte -dontDoING
+Programming             ,Algorithm,Antivirus,Byte,Coding,Computer Program,Computer Science,Computer Scientist,Computer Virus,Database,Debug,Debugger,Debugging,Foobar,Gigabyte,Kilobyte,Machine Code,Megabyte,Microprocessor,Multithreaded,Multithreading,Parser,Petabyte,Programmer,QA Tester,QA Testing,Software,Subprogram,Subroutine,Terrabyte,Web Design,Web Designer,Word Processor,Zetabyte -dontDoING
 Prostitution            ,Brothel,Call Girl,Courtesan,Floozie,Floozy,Hooker,Pimp,Prositute,Sex Tourism,Sex Tourist,Sex Traffic,Sex Trafficking,Sex Worker,Streetwalker,Whorehouse -nsfw
 Protestant              ,Protestantism
 Psychiatry              
@@ -840,7 +840,7 @@ Roommate                ,Dorm,Dormitory,Flatmate,Housemate,Room Mate,Roomie,Room
 Rorschach               ,Blot Test,Inkblot
 Royalty                 ,Crown,Duchess,Emporer,King,Kingdom,Majesty,Monarch,Monarchical,Prince,Princess,Queen,Queenhood,Queenly,Royal,Royally,Royalty
 Rules                   ,Guideline,Principle -dontDoES
-Running                 ,Jog,Jogger,Jogging,Run,Runner,Sprint,Sprinter,Sprinting -dontDoING
+Running                 ,Jog,Jogger,Jogging,Marathon,Marathoner,Marathoning,Run,Runner,Sprint,Sprinter,Sprinting -dontDoING
 Russia                  ,KGB,Moscow,Putin,Russian
 Russian Roulette        
 Sadist                  ,Sadism,Sadistically -nsfw
@@ -953,7 +953,7 @@ Tattoo                  ,Scarification
 Tax                     ,Capitation,IRS,Internal Revenue Service,Surtax,Tariff,Taxation,Taxpayer,Tithe
 Taxi                    
 Teacher                 ,Educator,Guru,Instructor,Lecturer,Schoolteacher,Tutor
-Technology              ,AI,Android,Antivirus,Application,Artificial Intelligence,Automaton,Bash,Bill Gates,Binary,Bionic,Biotechnology,Blog,Blogger,Blogging,Bluetooth,Bot,Browser,Clippy,Computer,Cyber,Cyborg,Debian,Droid,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Hexidecimal,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Machine,Macintosh,Melinda Gates,Microsoft,Nanotechnology,Network Switch,Outlook,PC,Password,Phish,Phishing,Robot,Robotics,Router,SSH,Screensaver,Server,Software,Tech,Techy,Transhumanism,Transhumanistic,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
+Technology              ,AI,Android,Antivirus,Application,Artificial Intelligence,Automaton,Bash,Bill Gates,Binary,Bionic,Biotechnology,Blog,Blogger,Blogging,Bluetooth,Bot,Browser,Clippy,Computer,Cyber,Cyborg,Debian,Droid,Executable,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Hexidecimal,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Machine,Macintosh,Melinda Gates,Microsoft,Nanotechnology,Network Switch,Outlook,Overclock,Overclocked,Overclocking,PC,Password,Phish,Phishing,Robot,Robotics,Router,SSH,Screensaver,Server,Software,Tech,Techy,Transhumanism,Transhumanistic,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
 Teddy Bear              ,Stuffed Bear
 Teen                    ,Adolescent,Preteen,Puberty,Teenage,Teenaged,Teenager
 Teeth                   ,Dental,Dentin,Dentist,Dentistry,Dentition,Denture,Enamel,Mastication,Orthodontist,Tooth,Toothbrush,Toothed,Toothless,Toothpick,Toothsome

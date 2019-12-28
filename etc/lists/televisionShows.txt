@@ -23,6 +23,7 @@ Blue Planet
 Blue Planet II
 BoJack Horseman
 Boardwalk Empire
+Bob Newhart Show
 Brass Eye
 Breaking Bad
 Broad City
@@ -35,32 +36,44 @@ Carnivale
 Castle Rock
 Chappelles Show
 Class of 92 Out of Their League
+Colbert Report
 Columbo
 Curb Your Enthusiasm
+Daily Show
 Daredevil
 Dawsons Creek
+Day Today
 Deadwood
+Defiant Ones
+Dick Van Dyke Show
 Doctor Who
 Downton Abbey
 Eastbound and Down
+Ed Sullivan Show
 Family Guy
 Fargo
 Father Ted
 Fawlty Towers
 Feud Bette and Joan
 Flight of the Conchords
+Flintstones
 Frasier
 Freaks and Geeks
+Fresh Prince of BelAir
 Friday Night Lights
 Futurama
 Game of Thrones
 Garth Marenghis Darkplace
 Generation Kill
+Golden Girls
 Gunsmoke
+Handmaids Tale
 Hannibal
 Happy Days
+Haunting of Hill House
 Hey Arnold
 Hill Street Blues
+Honeymooners
 Horace and Pete
 House MD
 House of Cards
@@ -71,27 +84,34 @@ Im Alan Partridge
 In Living Color
 Inspector Morse
 Its Always Sunny In Philadelphia
+Jeffersons
 Jeopardy
+Jinx the Life and Deaths of Robert Durst
 Kenan and Kel
 Key and Peele
 Knowing Me Knowing You With Alan Partridge
+Larry Sanders Show
 Late Night With Conan OBrien
 Late Night With David Letterman
 Law and Order
+League of Gentlemen
 Leaving Neverland
 Lilyhammer
 Lois and Clark the New Adventures of Superman
 Mad Men
 Making a Murderer
 Malcolm In the Middle
+Mary Tyler Moore Show
 Master of None
 Masters of Sex
 Mindhunter
+Moaning of Life
 Monty Pythons Flying Circus
 Moone Boy
 Mork and Mindy
 Mr Robot
 Mr Show
+Muppet Show
 My SoCalled Life
 Mystery Science Theater 3000
 NYPD Blue
@@ -112,10 +132,13 @@ Portlandia
 Project Greenlight
 Quantum Leap
 Real Time With Bill Maher
+Ren and Stimpy Show
 Renford Rejects
 Rick and Morty
 Robot Chicken
+Rockford Files
 Round the Twist
+Royle Family
 Rugrats
 Saturday Night Live
 Seinfeld
@@ -123,7 +146,9 @@ Sesame Street
 Sex and the City
 Sherlock
 Show Me a Hero
+Simpsons
 Smallville
+Sopranos
 South Park
 Star Trek
 Star Trek the Original Series
@@ -165,10 +190,16 @@ The World at War
 The XFiles
 The Young Pope
 This is England 86
+Tonight Show
 Trigger Happy TV
 True Detective
+Twilight Zone
 Twin Peaks
+Walking Dead
 Westworld
 Wild Wild Country
 Workaholics
+World at War
+XFiles
+Young Pope
 Your Show of Shows

@@ -131,7 +131,6 @@ public class Jokes {
             jokeParser.load();
         }
         
-        
         if (doProcessStep.get(ProcessStep.FIX.ordinal())) {
             textTagger.load();
             textFixer.load();

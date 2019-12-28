@@ -82,12 +82,11 @@ public final class SpellChecker {
         
         List<String> buildDict = Filesystem.readLines(new File("etc/dicts/dict.txt"));
         
-        buildDict.addAll(Filesystem.readLines(new File("etc/dicts/names.txt")));
-        
         List<String> additionalDict = new ArrayList<>();
-        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/famousPeople.txt")));
         additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/cities.txt")));
         additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/countries.txt")));
+        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/famousPeople.txt")));
+        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/names.txt")));
         additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/subCountries.txt")));
         for (File list : Filesystem.listFiles(new File("etc/lists/"), var -> true)) {
             additionalDict.addAll(Filesystem.readLines(list));

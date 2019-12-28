@@ -3,6 +3,7 @@
 20000 Leagues Under the Sea
 2001 a Space Odyssey
 2666
+42nd Parallel
 A Bend In the River
 A Christmas Carol
 A Clockwork Orange
@@ -22,7 +23,14 @@ A Tree Grows In Brooklyn
 A Wrinkle In Time
 Absalom Absalom
 Adolphe
+Adventures of Augie March
+Adventures of Huckleberry Finn
+Adventures of Sherlock Holmes
+Adventures of Tom Sawyer
+Aeneid
 Aesops Fables
+Age of Innocence
+Alexandria Quartet
 Alice Munro Selected Stories
 Alice Through the Looking Glass
 Alices Adventures In Wonderland
@@ -31,6 +39,7 @@ Alices Adventures In Wonderland and Through the LookingGlass
 All Quiet On the Western Front
 All the Kings Men
 All the Pretty Horses
+Amazing Adventures of Kavalier & Clay
 American Pastoral
 An American Tragedy
 Angelas Ashes
@@ -43,36 +52,53 @@ As I Lay Dying
 At SwimTwoBirds
 Atlas Shrugged
 Austerlitz
+Bacchae
 Balzac and the Little Chinese Seamstress
 Barchester Towers
 Bartleby the Scrivener
 Bastard Out of Carolina
+Beast In the Jungle
+Bell Jar
 Beowulf
 Berenice
 Berlin AlexanderPlatz
 Bleak House
+Blithedale Romance
 Blood Meridian
 Bonfire of the Vanities
+Book Thief
+Book of Disquiet
 Bouvard and Pecuchet
 Brave New World
 Breakfast at Tiffanys
 Breakfast of Champions
 Brideshead Revisited
+Brief and Wondrous Life of Oscar Wao
 Brighton Rock
+Brothers Karamazov
 Buddenbrooks
 Burmese Days
 Call It Sleep
+Call of the Wild
 Candide
+Canterbury Tales
 Carry On Jeeves
+Catcher In the Rye
 Charlottes Web
+Charterhouse of Parma
 Children of Gebelawi
 Childrens and Household Tales
+Chronicles of Narnia
 City of Bones
 Cloud Atlas
 Confessions of Zeno
+Count of Monte Cristo
 Cousin Bette
 Crime and Punishment
+Crying of Lot 49
+Custom of the Country
 Cyrano De Bergerac
+Da Vinci Code
 Dangerous Liaisons
 Daphnis and Chloe
 Darkness at Noon
@@ -80,6 +106,12 @@ David Copperfield
 De Rerum Natura
 Death Comes for the Archbishop
 Death In Venice
+Death of Ivan Ilyich
+Death of Virgil
+Death of the Heart
+Decameron
+Devil To Pay In the Backlands
+Divine Comedy
 Doctor Faustus
 Doctor Zhivago
 Don Quixote
@@ -90,11 +122,16 @@ Enders Game
 Epic of Gilgamesh
 Ethan Frome
 Eugenie Grandet
+Eustace Diamonds
+Faerie Queene
 Fahrenheit 451
 Farenheit 451
 Father Goriot
 Fathers and Sons
+Fault In Our Stars
+Fellowship of the Ring
 Finnegans Wake
+Flowers of Evil
 For Whom the Bell Tolls
 Forbidden Colors
 Fountainhead
@@ -103,31 +140,50 @@ Gargantua and Pantagruel
 Germany a Winter Tale
 Germinal
 Gimpel the Fool
+Girl With the Dragon Tattoo
+Giving Tree
 Go Tell It On the Mountain
+Golden Bowl
+Golden Compass
+Golden Notebook
 Gone With the Wind
+Good Soldier Svejk
+Grapes of Wrath
 Gravitys Rainbow
+Great Gatsby
 Green Eggs and Ham
 Gullivers Travels
 Gypsy Ballads
 Hamlet
+Handmaids Tale
 Harry Potter and the Deathly Hallows
 Harry Potter and the Order of the Phoenix
 Harry Potter and the Philosophers Stone
 Harry Potter and the Sorcerers Stone
+Heart is a Lonely Hunter
 Heart of Darkness
 Hedda Gabler
 Henderson the Rain King
 Herzog
 Hippolytus
 His Dark Materials
+Hitchhikers Guide To the Galaxy
 HoraceEpistles Odes and Satires
+Horse and His Boy
+Hound of the Baskervilles
 House of Mirth
+House of the SYugiojhpirits
 Howards End
 Humboldts Gift
+Hunchback of Notre Dame
+Hunger Games
 I Claudius
+Iceman Cometh
 If On a Winters Night a Traveler
 Iliad
 Im Not Stiller
+Imaginary Invalid
+Importance of Being Earnest
 Infinite Jest
 JRR Tolkien 4 Book Boxed Set the Hobbit and the Lord of the Rings
 JRR Tolkien 4Book Boxed Set the Hobbit and the Lord of the Rings
@@ -136,43 +192,67 @@ Jakob Von Gunten
 Jane Eyre
 Jesus Son
 John Keats the Complete Poems
+Journals of Andre Gide
 Journey To the End of the Night
 Journey To the West
 Jude the Obscure
+Killer Angels
 King Lear
+Kite Runner
 Kokoro
 Krapps Last Tape
 Lady Chatterleys Lover
+Last Chronicle of Barset
+Last of the Mohicans
 Le Cid
 Le Morte DArthur
 Les Miserables
 Life of Pi
 Light In August
+Lightning Thief
+Lion the Witch and the Wardrobe
 Little Dorritt
+Loneliness of the LongDistance Runner
 Long Days Journey Into Night
 Look Homeward Angel
 Lord Jim
 Lord of the Flies
+Lord of the Rings
 Los Siete Locos
 Love In the Time of Cholera
+Lovely Bones
 Lyrical Ballads
 Lysistrata
 MacBeth
 Madame Bovary
+Magicians Nephew
+Makioka Sisters
+Maltese Falcon
+Man Who Loved Children
+Man Without Qualities
 Manon Lescaut
+Marriage of Cadmus and Harmony
 Masnavi
+Master and Margarita
 Matilda
+Mayor of Casterbridge
 Medea
 Memoirs of Hadrian
 Memoirs of a Geisha
 Midnights Children
+Mill On the Floss
 Moby Dick
+Moon and the Bonfires
 Mother Courage and Her Children
 Mourning Becomes Electra
 Murder On the Orient Express
 My Antonia
 My Name is Aram
 My Sisters Keeper
+Naked and the Dead
+Name of the Rose
+Narrow Road To the Deep North
+Nibelungen Lied
 Njals Saga
 Nostromo
 Oblomov
@@ -180,35 +260,56 @@ Oedipus Rex
 Oedipus at Colonus
 Of Mice and Men
 Old Man and the Sea
+Old Wives Tale
 Oliver Twist
 Omeros
 One Day In the Life of Ivan Denisovtich
 One Flew Over the Cuckoos Nest
 One Hundred Years of Solitude
 One Thousand and One Nights
+Oresteia
 Othello
 Pale Fire
 Paradise Lost
 Parzival
 Paul Celan Selections
 Pedro Paramo
+Perks of Being a Wallflower
+Phantom Tollbooth
 Phedre
 Philoctetes Sophocles
 Pickwick Papers
+Picture of Dorian Gray
+Pillars of the Earth
 Pippi Longstocking
+Plum In the Golden Vase
+Poisonwood Bible
 Portnoys Complaint
 Pride and Prejudice
+Prime of Miss Jean Brodie
 Prince Caspian
+Princess Bride
+Princess of Cleves
 Prometheus Bound
+Prussian Officer
 Rabbit Redux
 Rabbit is Rich
+Radetzky March
+Recognition of Sakuntala
+Red Badge of Courage
+Rime of the Ancient Mariner
 Robinson Crusoe
 Romance of the Three Kingdoms
 Romeo and Juliet
 Rubaiyat of Omar Khayyam
+Satanic Verses
+Scarlet Letter
+School for Wives
+Seance and Other Stories
 Season of Migration To the North
 Seven Against Thebes
 Shahnameh
+Short Happy Life of Frances Macomber
 Siddhartha
 Silas Marner
 Six Characters In Search of an Author
@@ -218,9 +319,15 @@ Song of Solomon
 Songs of Innocence and of Experience
 Sons and Lovers
 Sophies World
+Sorrows of Young Werther
+Sound and the Fury
+Sound of the Mountain
 Steppenwolf
+Strange Case of Dr Jekyll and Mr Hyde
 Stranger In a Strange Land
+Tale of Genji
 Tartuffe
+Temple of the Golden Pavilion
 Tender is the Night
 Tess of the Durbervilles
 The 42nd Parallel
@@ -279,7 +386,7 @@ The Heart is a Lonely Hunter
 The Hitchhikers Guide To the Galaxy
 The Horse and His Boy
 The Hound of the Baskervilles
-The House of the Spirits
+The House of the SYugiojhpirits
 The Hunchback of Notre Dame
 The Hunger Games
 The Iceman Cometh
@@ -357,25 +464,37 @@ The Wonderful Wizard of Oz
 The World According To Garp
 The WouldBe Gentleman
 Their Eyes Were Watching God
+Three Musketeers
+Time Travelers Wife
 To Kill a Mockingbird
 Tom Sawyer
 Treasure Island
 Tristan and Isolde
 Tristram Shandy
+Turn of the Screw
 Twilight
 Ulysses
+Unbearable Lightness of Being
 Uncle Toms Cabin
 Uncle Vanya
 Vampire Academy
+Voyage of the Dawn Treader
 Waiting for Godot
 War and Peace
+War of the End of the World
+War of the Worlds
 Water for Elephants
 Watership Down
 Where the Wild Things Are
 Wide Sargasso Sea
+Wind In the Willows
+Wind Up Bird Chronicle
 Winnie the Pooh
 WinnieThePooh
+Woman In White
 Women of Trachis
+Wonderful Wizard of Oz
+World According To Garp
 Wuthering Heights
 Young Torless
 Zorba the Greek

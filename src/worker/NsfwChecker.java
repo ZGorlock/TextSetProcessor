@@ -93,7 +93,7 @@ public final class NsfwChecker {
         
         nsfw.addAll(Filesystem.readLines(new File("etc/dicts/nsfw.txt")));
         
-        dontDoStartNsfw.addAll(Arrays.asList("coon", "tit", "ass", "arse", "cock", "fuh"));
+        dontDoStartNsfw.addAll(Arrays.asList("coon", "tit", "ass", "arse", "fuh"));
         dontDoEndNsfw.addAll(Arrays.asList("anal", "ass", "crap", "homo", "muff", "prick", "tit", "fuh"));
         
         System.out.println("(" + nsfw.size() + " Words)");

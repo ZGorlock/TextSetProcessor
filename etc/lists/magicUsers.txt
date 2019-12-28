@@ -8,6 +8,8 @@ Elemental Master
 Enchanter
 Enchantress
 Faith Healer
+Herbologist
+Herbology
 Mage
 Magic User
 MagicUser

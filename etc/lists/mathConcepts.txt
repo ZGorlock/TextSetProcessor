@@ -26,6 +26,9 @@ Arithmetic Operation
 Arrangement Number
 Associative Law of Multiplication
 Associative Property
+Asymptote
+Asymptotic
+Asymptotically
 Automorphic Number
 Axes
 Axiom

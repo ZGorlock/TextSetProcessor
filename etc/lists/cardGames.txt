@@ -42,4 +42,5 @@ Tricktaking Game
 Truco
 Uno
 Whist
+Yu Gi Oh
 Yugioh
