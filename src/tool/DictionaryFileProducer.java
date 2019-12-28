@@ -1,5 +1,5 @@
 /*
- * File:    DictionaryProducer.java
+ * File:    DictionaryFileProducer.java
  * Package: tool
  * Author:  Zachary Gill
  */
@@ -17,7 +17,7 @@ import utility.StringUtility;
 /**
  * Produces the dictionary file.
  */
-public class DictionaryProducer {
+public class DictionaryFileProducer {
     
     //Main Method
     
