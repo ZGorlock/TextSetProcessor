@@ -583,7 +583,8 @@ public final class JokeParser {
                     test.matches(".*GET\\sIT[^a-zA-Z0-9]*$") ||
                     test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
                     test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
-                    test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$")) {
+                    test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
+                    test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$")) {
                     continue;
                 }
                 if (test.replaceAll("[^\\x00-\\x7F]", "")
