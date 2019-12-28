@@ -1,10 +1,10 @@
 Bogeyman
 Boogeyman
 Chupacabra
-Godzilla
-Mothra
-Lycanthrope
-Lycan
-Werewolf
 Frankenstein
+Godzilla
+Lycan
+Lycanthrope
+Mothra
 Vampire
+Werewolf

@@ -6,6 +6,7 @@ Artistic Gymnastics
 Athlete
 Backstroke
 Badminton
+Ballgame
 Base Hit
 Baseball
 Baseball Bat
@@ -39,10 +40,16 @@ Discus Throw
 Diving
 Dodgeball
 Dribble
+Dribbling
 Equestrianism
+FIFA
 Fencing
+Field Goal
 Figure Skating
+Fly Ball
 Football
+Foul Ball
+Free Shot
 Free Throw
 Freediving
 Freestyle Swimming
@@ -63,15 +70,18 @@ Karate
 Kayaking
 Kendo
 Kickball
+Kickboxer
 Kickboxing
 Kung Fu
 Lacrosse
+Liverpool
 Long Jump
 Marathon
 Medal
 Mixed Martial Arts
 Mma
 Mountaineering
+NFL
 Olympic Games
 Olympic Pool
 Olympic Swimming
@@ -80,7 +90,9 @@ Paddle
 Paddleboarding
 Penalty
 Pitcher
+Play Ball
 Player
+Playoffs
 Pole Vault
 Polo
 Powerlifting
@@ -105,12 +117,20 @@ Ski Boot
 Skibobbing
 Skiing
 Slam Dunk
+Snow Board
+Snow Ski
+Snowboard
+Snowboarder
+Snowboarding
+Snowski
 Soccer
 Softball
 Sportsmanship
 Sprinting
 Stadium
 Sumo
+Super Bowl
+Superbowl
 Surfing
 Swimmer
 Swimming
@@ -122,6 +142,7 @@ Team
 Tennis
 Time Out
 Timeout
+Touchdown
 Tournament
 Track
 Trail Running
@@ -135,5 +156,7 @@ Volleyball
 Water Polo
 Water Sports
 Weightlifting
+Wimbledon
 Winter Sports
+World Cup
 Wrestling

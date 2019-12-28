@@ -1,5 +1,4 @@
 Accordion
-Sax
 Bagpipes
 Banjo
 Bass Guitar
@@ -43,6 +42,7 @@ Piano
 Piccolo
 Pungi
 Recorder
+Sax
 Saxophone
 Sitar
 Synthesizer

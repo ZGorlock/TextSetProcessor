@@ -1,5 +1,4 @@
 Convertible
-Sportscar
 Coupe
 Crossover
 Diesel Fuel
@@ -16,6 +15,7 @@ Roadster
 Sedan
 Sport Utility Vehicle
 Sports Car
+Sportscar
 Station Wagon
 Truck
 Van

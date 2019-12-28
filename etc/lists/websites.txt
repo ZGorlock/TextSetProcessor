@@ -17,8 +17,10 @@ Kik
 LinkedIn
 MSN
 MapQuest
+MySpace
 Netflix
 Pinterest
+PirateBay
 Quora
 Reddit
 Tumblr
@@ -26,4 +28,3 @@ Twitter
 Wikipedia
 Yahoo
 YouTube
-PirateBay

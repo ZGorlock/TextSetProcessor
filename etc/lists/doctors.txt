@@ -1,9 +1,3 @@
-kinesiologists
-epidimiologist
-epidimiology
-kinesiology
-otolaryngologist
-otolaryngology
 Allergist
 Anesthesiologist
 Anesthesiology
@@ -18,6 +12,8 @@ Dermatology
 Emergency Medicine Specialist
 Endocrinologist
 Endocrinology
+Epidimiologist
+Epidimiology
 Gastroenterologist
 Gastroenterology
 General Surgeon
@@ -31,6 +27,8 @@ Immunologist
 Immunology
 Infectious Disease Specialist
 Internist
+Kinesiologists
+Kinesiology
 Medical Geneticist
 Medicine Specialist
 Nephrologist
@@ -43,6 +41,8 @@ Oncology
 Ophthalmologist
 Ophthalmology
 Osteopath
+Otolaryngologist
+Otolaryngology
 Palliative Medicine Specialist
 Pathologist
 Pediatrician

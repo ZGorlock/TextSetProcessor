@@ -1,5 +1,4 @@
 Amputate
-colonoscopy
 Amputation
 Appendectomy
 Arthroscopy
@@ -11,6 +10,7 @@ Cauterize
 Cesarean Section
 Cholecystectomy
 Colectomy
+Colonoscopy
 Coronary Bypass
 Craniotomy
 Curettage

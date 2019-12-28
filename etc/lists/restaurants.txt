@@ -1,5 +1,3 @@
-Five Guys
-FiveGuys
 Applebees
 Arbys
 Baskin Robbins
@@ -31,6 +29,7 @@ Einstein Bros
 El Pollo Loco
 Famous Daves
 Five Guys
+FiveGuys
 Fuddruckers
 Golden Corral
 Hardee

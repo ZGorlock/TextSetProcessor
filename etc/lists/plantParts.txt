@@ -1,5 +1,4 @@
 Apical Bud
-Pinecone
 Axillary Bud
 Branch
 Cellulose
@@ -10,6 +9,7 @@ Interode
 Lateral Root
 Leaf
 Phloem
+Pinecone
 Pollen
 Root
 Root System

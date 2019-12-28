@@ -3,6 +3,7 @@ BoxtoBox Midfielder
 Center Back
 Central Midfielder
 Defending Midfielder
+Goal Keeper
 Goalkeeper
 Holding Midfielder
 Left Fullback

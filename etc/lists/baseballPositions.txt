@@ -1,10 +1,18 @@
+1st Base
+2nd Base
+3rd Base
+4th Base
 Catcher
 Center Field
 Center Fielder
 Centerfield
 Centerfielder
 Designated Hitter
+Dugout
+First Base
 First Baseman
+Fourth Base
+Home Plate
 Infield
 Infielder
 Left Field
@@ -22,7 +30,9 @@ Right Field
 Right Fielder
 Rightfield
 Rightfielder
+Second Base
 Second Baseman
 Shortstop
 Starting Pitcher
+Third Base
 Third Baseman

@@ -36,6 +36,7 @@ Dissociative Identity Disorder
 Dual Persnoalities
 Dyslexia
 Dyslexic
+Dysmorphia
 Dysthymia
 Eating Disorder
 Epilepsy
@@ -63,7 +64,6 @@ Obsessive Compulsive Disorder
 ObsessiveCompulsive Disorder
 Oppositional Defiant Disorder
 PTSD
-Synesthesia
 Panic Disorder
 Paranoia
 Paranoid
@@ -87,7 +87,7 @@ Split Personalities
 Stockholm
 Stockholm Syndrome
 Stress Disorder
+Synesthesia
 Tourettes
 Trichotillomania
 Trichotillomaniac
-dysmorphia

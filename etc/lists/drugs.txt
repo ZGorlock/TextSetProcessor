@@ -1,4 +1,3 @@
-Shroom
 Acamprosate
 Actiq
 Adderall
@@ -97,6 +96,7 @@ Roxicodone
 Ryzolt
 Secobarbital
 Seconal
+Shroom
 Steroids
 Sublimaze
 Suboxone

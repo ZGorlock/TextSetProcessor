@@ -17,8 +17,6 @@ Hodor
 Jamie Lannister
 Joffrey Baratheon
 John Snow
-Wun Wun
-WunWun
 Jorah Mormont
 Khal Drogo
 Khaleesi
@@ -47,4 +45,6 @@ Tywin Lannister
 Walder Frey
 Whitewalker
 Wildling
+Wun Wun
+WunWun
 Ygritte

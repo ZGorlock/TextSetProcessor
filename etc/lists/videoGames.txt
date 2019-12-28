@@ -1,7 +1,3 @@
-PokemonGo
-Pokemon Go
-NoMansSky
-No Mans Sky
 30 Flights of Loving
 A Mind Forever Voyaging
 Age of Empires
@@ -187,6 +183,8 @@ Myst 4
 NBA 2K12
 Nights Into Dreams
 Ninja Gaiden
+No Mans Sky
+NoMansSky
 Overwatch
 Pac Man
 PacMan
@@ -206,6 +204,7 @@ Pokemon
 Pokemon Go
 Pokemon Gold and Silver
 Pokemon X and Y
+PokemonGo
 Pong
 Prince of Persia
 Psychonauts

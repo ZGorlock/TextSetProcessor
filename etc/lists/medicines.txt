@@ -11,7 +11,6 @@ Advil
 Aimovig
 Albuterol
 Aldactone
-pedialyte
 Alendronate
 Aleve
 Allegra
@@ -602,6 +601,7 @@ Pantoprazole
 Paracetamol
 Paroxetine
 Paxil
+Pedialyte
 Penicillin
 Pepcid
 Pepto Bismol

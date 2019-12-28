@@ -1,5 +1,4 @@
 Alzheimers
-pinkeye
 Bronchiolitis
 Bronchitis
 Cancer
@@ -36,6 +35,7 @@ Measles
 Mumps
 Osteoporosis
 Parkinsons
+Pinkeye
 Polio
 Rabies
 Rash

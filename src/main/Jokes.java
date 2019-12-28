@@ -464,7 +464,7 @@ public class Jokes {
             Filesystem.writeLines(outFix, fixText);
         }
         
-        File outFixList = new File(out.getAbsolutePath().replace(".json", "-fixList.json"));
+        File outFixList = new File(out.getAbsolutePath().replace(".json", "-fixList.txt"));
         Filesystem.deleteFile(outFixList);
         if (fixCount > 0) {
             fix = ListUtility.sortListByNumberOfOccurrences(fix);
