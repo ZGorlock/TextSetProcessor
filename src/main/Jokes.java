@@ -22,6 +22,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import parser.JokeParser;
 import pojo.Joke;
+import resource.ConsoleProgressBar;
 import utility.Filesystem;
 import utility.ListUtility;
 import utility.StringUtility;
@@ -174,13 +175,17 @@ public class Jokes {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            System.out.print(jokeSet + "... ");
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
+            progressBar.update(0);
             long subStartTime = System.currentTimeMillis();
             List<Joke> jokes = parseJokeSet(jokeSet.name());
             File parsedDirectory = new File("jokes/" + jokeSet.name().toLowerCase() + "/source/2 - parsed");
             Filesystem.createDirectory(parsedDirectory);
             outputJokes(new File(parsedDirectory, "parsed.json"), jokes);
-            System.out.println(jokes.size() + " jokes (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            progressBar.total = jokes.size();
+            progressBar.update(jokes.size());
+            progressBar.print();
+            System.out.println(" (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
         }
         
         System.out.println("Parsed Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
@@ -228,14 +233,17 @@ public class Jokes {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            System.out.print(jokeSet + "... ");
             long subStartTime = System.currentTimeMillis();
             List<Joke> jokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/source/2 - parsed/parsed.json"));
-            jokes.parallelStream().forEach(Jokes::fixJoke);
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), jokes.size(), "jokes");
+            progressBar.update(0);
+            jokes.parallelStream().forEach(e -> fixJoke(e, progressBar));
             File fixedDirectory = new File("jokes/" + jokeSet.name().toLowerCase() + "/source/3 - fixed");
             Filesystem.createDirectory(fixedDirectory);
             int fixCount = outputJokes(new File(fixedDirectory, "fixed.json"), jokes);
-            System.out.println(jokes.size() + " jokes " + (fixCount > 0 ? (": " + fixCount + " to fix ") : "") + "(" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            progressBar.update(jokes.size());
+            progressBar.print();
+            System.out.println(" " + (fixCount > 0 ? (": " + fixCount + " to fix ") : "") + "(" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
         }
         
         System.out.println("Fixed Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
@@ -247,10 +255,11 @@ public class Jokes {
      *
      * @param joke The joke to fix.
      */
-    private static void fixJoke(Joke joke) {
+    private static void fixJoke(Joke joke, ConsoleProgressBar progressBar) {
         joke.text = textFixer.cleanText(joke.text);
         joke.fix.addAll(spellChecker.checkForSpelling(joke.text));
         joke.fix.sort(Comparator.naturalOrder());
+        progressBar.addOne();
     }
     
     
@@ -271,7 +280,6 @@ public class Jokes {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            System.out.println(jokeSet + "... ");
             long duration = 0;
             
             File taggedDirectory = new File("jokes/" + jokeSet.name().toLowerCase() + "/source/4 - tagged");
@@ -297,6 +305,9 @@ public class Jokes {
                 outputJokes(taggedFile, tagged);
             }
             
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), work.size() + tagged.size(), "jokes");
+            progressBar.update(tagged.size());
+            
             List<Integer> hashes = new ArrayList<>();
             for (Joke joke : tagged) {
                 hashes.add(joke.hash);
@@ -314,6 +325,7 @@ public class Jokes {
                         continue;
                     }
                     tagJoke(joke);
+                    progressBar.addOne();
                     count++;
                     tagged.add(joke);
                     hashes.add(joke.hash);
@@ -331,6 +343,8 @@ public class Jokes {
             Filesystem.deleteFile(taggedWorkFile);
             Filesystem.deleteFile(taggedTimeFile);
             
+            progressBar.update(tagged.size());
+            progressBar.print();
             System.out.println(jokeSet + "... " + tagged.size() + " jokes (" + (duration / 1000) + "s)");
         }
         
@@ -366,11 +380,16 @@ public class Jokes {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            System.out.print(jokeSet + "... ");
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
+            progressBar.update(0);
             long subStartTime = System.currentTimeMillis();
+            int size = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/4 - tagged/tagged.json")).size();
             Filesystem.copyFile(new File("jokes/" + jokeSet.name().toLowerCase() + "/4 - tagged/tagged.json"), 
                     new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
-            System.out.println("(" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            progressBar.total = size;
+            progressBar.update(size);
+            progressBar.print();
+            System.out.println(" (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
         }
         
         System.out.println("Compiled Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
@@ -396,10 +415,15 @@ public class Jokes {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            System.out.print(jokeSet + "... ");
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
+            progressBar.update(0);
             long subStartTime = System.currentTimeMillis();
-            jokes.addAll(readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json")));
-            System.out.println("(" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
+            jokes.addAll(jokeSetJokes);
+            progressBar.total = jokeSetJokes.size();
+            progressBar.update(jokeSetJokes.size());
+            progressBar.print();
+            System.out.println(" (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
         }
         
         Collections.shuffle(jokes);

@@ -143,14 +143,14 @@ public final class SpellChecker {
                 buildDict.add(tagDictEntry);
             }
         }
-    
+        
         List<String> nsfwDict = Filesystem.readLines(new File("etc/dicts/nsfw.txt"));
         nsfwDict = nsfwDict.stream().map(String::toLowerCase).collect(Collectors.toList());
         nsfwDict = ListUtility.removeDuplicates(nsfwDict);
         nsfwDict.sort(Comparator.naturalOrder());
         Filesystem.writeLines(new File("etc/dicts/nsfw.txt"), nsfwDict);
         buildDict.addAll(nsfwDict);
-    
+        
         List<String> contractionDict = Filesystem.readLines(new File("etc/dicts/dict-contractions.txt"));
         contractionDict = contractionDict.stream().map(String::toLowerCase).collect(Collectors.toList());
         contractionDict = ListUtility.removeDuplicates(contractionDict);
