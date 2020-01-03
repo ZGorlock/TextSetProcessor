@@ -13,7 +13,9 @@ Kotlin
 Machine Code
 Maven
 Microcode
+MySQL
 NET Framework
+NoSQL
 PHP
 Perl
 Python

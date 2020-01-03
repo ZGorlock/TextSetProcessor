@@ -5,6 +5,7 @@ Frankenstein
 Godzilla
 Lycan
 Lycanthrope
+Minotaur
 Mothra
 Vampire
 Werewolf

@@ -556,16 +556,16 @@ public final class JokeParser {
                     test.contains("BLEW UP") || test.contains("EDIT") || test.contains("HANDWRITING") || test.contains("TOLD ME") || test.contains("CAKEDAY") || test.contains("CAKE DAY") ||
                     test.contains("HEARD THIS") || test.contains("HEARD IT") || test.contains("FIRST TIME") || test.contains("HAHA") || test.contains("MY FIRST") || test.contains("AMIRIGHT") ||
                     test.contains("JOKE") || test.contains("THIS SITE") || test.contains("1.") || test.contains("B.)") || test.contains("2)") || test.contains("TRUE STORY") || test.contains("APRIL FOOL") ||
-                    test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") || 
+                    test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") ||
                     test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") ||
                     test.contains("MODS") || test.contains(">") || test.contains("<") || test.contains("U/") || test.contains("_") || test.contains("  - ") ||
-                    test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") || 
+                    test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") ||
                     test.contains(".ORG") || test.contains(".NET") || test.contains(".GOV") || test.contains("AUTHOR") || test.contains(":)") || test.contains(":/") || test.contains(":P") ||
                     test.contains(":|") || test.contains("O.O") || test.contains(":D") || test.contains(":(") || test.contains("D:") || test.contains("[REQUEST]") || test.contains("PLS") || test.contains("PLZ") ||
                     test.contains(":-)") || test.contains(":-(") || test.contains("XD") || test.contains("TRANSLATED") || test.contains("LOL") || test.contains("KEK") || test.contains("#") ||
                     test.contains("[") || test.contains("]") || test.contains("PS.") || test.contains("PUNCH LINE") || test.contains("LMAO") || test.contains("PEPE") || test.contains("(") || test.contains(")") ||
                     test.contains("PUNCHLINE") || test.contains("MYSELF OUT") || test.contains("//") || test.contains("AYY") || test.contains("JK") || test.contains("WTF") || test.contains("DEEZ") ||
-                    test.contains("BTW") || test.contains("SMH") || test.contains("I MADE THIS ONE UP") || test.contains("I MADE THIS UP") || test.contains("I HEARD THIS") ||test.contains("LEL") || test.contains("AMIRITE") ||
+                    test.contains("BTW") || test.contains("SMH") || test.contains("I MADE THIS ONE UP") || test.contains("I MADE THIS UP") || test.contains("I HEARD THIS") || test.contains("LEL") || test.contains("AMIRITE") ||
                     test.contains("BADUMTSS") || test.contains("BA DUM TSS") || test.contains("TIFU") || test.contains("INB4") || test.contains("TLDR") || test.contains("OUT LOUD") || test.contains("HATE ME") ||
                     test.contains("SLAP ME") || test.contains("SMACK ME") || test.contains("4CHAN") || test.contains("SEE TITLE") || test.contains("CLICKBAIT") || test.contains("CLICK BAIT") || test.contains("HUEHUE")) {
                     continue;
@@ -586,7 +586,8 @@ public final class JokeParser {
                     test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
                     test.matches(".*MADE\\sTHIS((ONE|JOKE)\\s)?\\sUP.*$") ||
                     test.matches(".*OUT[^a-zA-Z]*$") ||
-                    test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$")) {
+                    test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||
+                    test.matches(".*HATE\\sMYSELF[^a-zA-Z0-9]*$")) {
                     continue;
                 }
                 if (test.replaceAll("[^\\x00-\\x7F]", "")
@@ -650,7 +651,7 @@ public final class JokeParser {
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-
+        
         if (rewrite) {
             out.add("]");
             Filesystem.writeLines(new File("jokes/reddit/source/1 - cleaned/cleaned.json"), out);
