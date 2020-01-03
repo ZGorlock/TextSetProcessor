@@ -31,7 +31,7 @@ public final class ListCleaner {
     public static void main(String[] args) {
         TextFixer textFixer = TextFixer.getInstance();
         textFixer.load();
-
+        
         List<File> files = Filesystem.listFiles(new File("etc/lists/"), var -> true);
         files.add(new File("etc/dicts/cities.txt"));
         files.add(new File("etc/dicts/countries.txt"));
@@ -39,7 +39,7 @@ public final class ListCleaner {
         files.add(new File("etc/dicts/names.txt"));
         files.add(new File("etc/dicts/subCountries.txt"));
         files.add(new File("etc/other/fileExtensions.txt"));
-
+        
         for (File f : files) {
             List<String> a = Filesystem.readLines(f);
             List<String> b = new ArrayList<>();

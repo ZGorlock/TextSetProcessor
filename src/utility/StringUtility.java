@@ -1,6 +1,6 @@
 /*
  * File:    StringUtility.java
- * Package: dla.resource.utility
+ * Package: utility
  * Author:  Zachary Gill
  */
 

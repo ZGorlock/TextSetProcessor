@@ -27,7 +27,7 @@ public class DictionaryFileProducer {
      * @param args Arguments to the main method.
      */
     public static void main(String[] args) {
-        Filesystem.writeLines(new File("etc/dicts/dict.txt"), 
+        Filesystem.writeLines(new File("etc/dicts/dict.txt"),
                 Filesystem.getFiles(new File("etc/dicts/original")).stream()
                           .map(Filesystem::readLines)
                           .flatMap(Collection::stream)

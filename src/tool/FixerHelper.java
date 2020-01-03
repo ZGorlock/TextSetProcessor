@@ -9,7 +9,6 @@ package tool;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -107,7 +106,7 @@ public final class FixerHelper {
                     waitForReset = true;
                 }
             }
-        
+            
             @Override
             public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
                 int code = nativeKeyEvent.getRawCode();
@@ -123,7 +122,7 @@ public final class FixerHelper {
                         break;
                 }
             }
-        
+            
             @Override
             public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent) {
             }

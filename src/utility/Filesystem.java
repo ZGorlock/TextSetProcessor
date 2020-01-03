@@ -1,6 +1,6 @@
 /*
  * File:    Filesystem.java
- * Package: dla.resource.access
+ * Package: utility
  * Author:  Zachary Gill
  */
 
@@ -1668,7 +1668,7 @@ public final class Filesystem {
                 long chksum = 0;
                 for (File fd : getFilesRecursively(f)) {
                     chksum += FileUtils.checksumCRC32(fd);
-                    chksum %= Integer.MAX_VALUE;
+                    chksum %= Long.MAX_VALUE;
                 }
                 return chksum;
             } else {

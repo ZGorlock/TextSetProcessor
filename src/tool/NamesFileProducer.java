@@ -27,7 +27,7 @@ public class NamesFileProducer {
      * @param args Arguments to the main method.
      */
     public static void main(String[] args) {
-        Filesystem.writeLines(new File("etc/dicts/names.txt"), 
+        Filesystem.writeLines(new File("etc/dicts/names.txt"),
                 Filesystem.getFiles(new File("etc/dicts/original/names")).stream()
                           .map(Filesystem::readLines)
                           .flatMap(Collection::stream)

@@ -13,7 +13,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.json.simple.JSONArray;
@@ -38,27 +40,41 @@ public class Jokes {
     
     //Enums
     
-    
     /**
      * An enumerations of joke sets that can be processed.
      */
     private enum JokeSet {
-        Quirkology,
-        Jokeriot,
-        StupidStuff,
-        Wocka,
-        Reddit
+        Quirkology("quirkology"),
+        Jokeriot("jokeriot"),
+        StupidStuff("stupidstuff"),
+        Wocka("wocka"),
+        Reddit("reddit");
+        
+        public File directory;
+        
+        JokeSet(String directoryName) {
+            directory = new File("jokes/" + directoryName);
+        }
     }
     
     /**
      * An enumeration of steps that can be performed during the processing.
      */
     private enum ProcessStep {
-        PARSE,
-        FIX,
-        TAG,
-        COMPILE,
-        MERGE
+        PARSE("/source/1 - cleaned", "/source/2 - parsed/parsed.json"),
+        FIX("/source/2 - parsed/parsed.json", "/source/3 - fixed/fixed.json"),
+        TAG("/source/3 - fixed/fixed.json", "/source/4 - tagged/tagged.json"),
+        COMPILE("/source/4 - tagged/tagged.json", "/<jokeSet>.json"),
+        MERGE("/../~", "/../jokes.json");
+        
+        public String in;
+        
+        public String out;
+        
+        ProcessStep(String in, String out) {
+            this.in = in;
+            this.out = out;
+        }
     }
     
     
@@ -67,7 +83,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
      */
-    private static final List<Boolean> doJokeSet = Arrays.asList(false, false, false, false, true);
+    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, true);
     
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
@@ -75,14 +91,39 @@ public class Jokes {
     private static final List<Boolean> doProcessStep = Arrays.asList(true, true, false, false, false);
     
     /**
-     * The number of jokes to tag before saving the state.
+     * A flag indicating whether or not to perform a clean start.
      */
-    private static final int tagChunkSize = 100;
+    private static final boolean doCleanStart = false;
     
     /**
-     * The timestamp of the startup time of the Joke Processor.
+     * The file to save the time of processing steps in.
      */
-    private static final long startupTime = System.currentTimeMillis();
+    private static final File timeFile = new File("etc/state/jokes.txt");
+    
+    /**
+     * The file to save the time of processing steps in.
+     */
+    private static final Map<String, Long> timeData = new LinkedHashMap<>();
+    
+    /**
+     * The total processing time.
+     */
+    private static long totalTime = 0L;
+    
+    /**
+     * The number of available processor cores.
+     */
+    private static final int numCores = Runtime.getRuntime().availableProcessors();
+    
+    /**
+     * The number of jokes to fix before saving the state.
+     */
+    private static final int fixChunkSize = 100 * numCores;
+    
+    /**
+     * The number of jokes to tag before saving the state.
+     */
+    private static final int tagChunkSize = 25 * numCores;
     
     /**
      * The reference to the Joke Parser.
@@ -127,6 +168,8 @@ public class Jokes {
      */
     private static void setup() {
         System.out.println("Starting Up...");
+        long startupTime = System.currentTimeMillis();
+        
         if (doProcessStep.get(ProcessStep.PARSE.ordinal())) {
             jokeParser.load();
         }
@@ -140,9 +183,16 @@ public class Jokes {
             textTagger.load();
             nsfwChecker.load();
         }
-        System.out.println("Started Up in " + ((System.currentTimeMillis() - startupTime) / 1000) + "s");
-        System.out.println();
         
+        if (doCleanStart) {
+            Filesystem.writeStringToFile(timeFile, "");
+        }
+        readTimeFile();
+        
+        long endStartupTime = ((System.currentTimeMillis() - startupTime) / 1000);
+        totalTime += endStartupTime;
+        System.out.println("Started Up in " + endStartupTime + "s");
+        System.out.println();
     }
     
     /**
@@ -168,26 +218,41 @@ public class Jokes {
         }
         
         System.out.println("Parsing Jokes...");
-        long startTime = System.currentTimeMillis();
+        long parseTime = 0L;
         
         for (JokeSet jokeSet : JokeSet.values()) {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
+            
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
-            long subStartTime = System.currentTimeMillis();
-            List<Joke> jokes = parseJokeSet(jokeSet.name());
-            File parsedDirectory = new File("jokes/" + jokeSet.name().toLowerCase() + "/source/2 - parsed");
-            Filesystem.createDirectory(parsedDirectory);
-            outputJokes(new File(parsedDirectory, "parsed.json"), jokes);
-            progressBar.total = jokes.size();
-            progressBar.update(jokes.size());
+            
+            long subParseTime = getSaveProcessTime(jokeSet, ProcessStep.PARSE);
+            File parsedFile = new File(jokeSet.directory + ProcessStep.PARSE.out);
+            
+            if (subParseTime < 0) {
+                Filesystem.deleteDirectory(parsedFile.getParentFile());
+                Filesystem.createDirectory(parsedFile.getParentFile());
+                long subParseStartTime = System.currentTimeMillis();
+                List<Joke> jokes = parseJokeSet(jokeSet.name());
+                Filesystem.createDirectory(parsedFile.getParentFile());
+                outputJokes(parsedFile, jokes);
+                long subParseEndTime = System.currentTimeMillis();
+                subParseTime = ((subParseEndTime - subParseStartTime) / 1000);
+                setSaveProcessTime(jokeSet, ProcessStep.PARSE, subParseTime);
+            }
+            parseTime += subParseTime;
+            int size = readJokes(parsedFile).size();
+            
+            progressBar.setTotal(size);
+            progressBar.update(size);
             progressBar.print();
-            System.out.println(" (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            System.out.println(" (" + subParseTime + "s)");
         }
         
-        System.out.println("Parsed Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
+        totalTime += parseTime;
+        System.out.println("Parsed Jokes in " + parseTime + "s");
         System.out.println();
     }
     
@@ -226,33 +291,101 @@ public class Jokes {
         }
         
         System.out.println("Fixing Jokes...");
-        long startTime = System.currentTimeMillis();
+        long fixTime = 0L;
         
         for (JokeSet jokeSet : JokeSet.values()) {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            long subStartTime = System.currentTimeMillis();
-            List<Joke> jokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/source/2 - parsed/parsed.json"));
-            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), jokes.size(), "jokes");
+            
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
-            jokes.parallelStream().forEach(e -> fixJoke(e, progressBar));
-            File fixedDirectory = new File("jokes/" + jokeSet.name().toLowerCase() + "/source/3 - fixed");
-            Filesystem.createDirectory(fixedDirectory);
-            int fixCount = outputJokes(new File(fixedDirectory, "fixed.json"), jokes);
-            progressBar.update(jokes.size());
+            
+            long subFixTime = getSaveProcessTime(jokeSet, ProcessStep.FIX) * 1000;
+            File fixedFile = new File(jokeSet.directory + ProcessStep.FIX.out);
+            File fixedWorkFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-work.json"));
+            File fixedFixFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-fix.json"));
+            File fixedFixListFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-fixList.json"));
+            File fixedBackupFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-bak.json"));
+            File fixedWorkBackupFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-work-bak.json"));
+            File fixedFixBackupFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-fix-bak.json"));
+            File fixedFixListBackupFile = new File(jokeSet.directory + ProcessStep.FIX.out.replace(".json", "-fixList-bak.json"));
+            
+            if (subFixTime < 0 || fixedWorkFile.exists()) {
+                if (subFixTime < 0) {
+                    Filesystem.deleteDirectory(fixedFile.getParentFile());
+                }
+                Filesystem.createDirectory(fixedFile.getParentFile());
+                
+                List<Joke> work = new ArrayList<>();
+                List<Joke> fixed = new ArrayList<>();
+                if (fixedWorkFile.exists()) {
+                    if (fixedFile.exists()) {
+                        fixed = readJokes(fixedFile);
+                    }
+                    if (fixedFixFile.exists()) {
+                        fixed.addAll(readJokes(fixedFixFile));
+                    }
+                    work = readJokes(fixedWorkFile);
+                } else {
+                    work = readJokes(new File(jokeSet.directory + ProcessStep.FIX.in));
+                    outputJokes(fixedWorkFile, work);
+                    outputJokes(fixedFile, fixed);
+                }
+                
+                progressBar.setTotal(work.size() + fixed.size());
+                progressBar.setInitialProgress(fixed.size());
+                progressBar.update(fixed.size());
+                
+                while (!work.isEmpty()) {
+                    long chunkStartTime = System.currentTimeMillis();
+                    List<Joke> currentWork = work.subList(0, Math.min(fixChunkSize, work.size()));
+                    currentWork.parallelStream().forEach(joke -> Jokes.fixJoke(joke, progressBar));
+                    fixed.addAll(currentWork);
+                    currentWork.clear();
+                    long chunkEndTime = System.currentTimeMillis();
+                    long chunkTime = chunkEndTime - chunkStartTime;
+                    subFixTime += chunkTime;
+                    
+                    Filesystem.copyFile(fixedFile, fixedBackupFile, true);
+                    Filesystem.copyFile(fixedWorkFile, fixedWorkBackupFile, true);
+                    if (fixedFixFile.exists()) {
+                        Filesystem.copyFile(fixedFixFile, fixedFixBackupFile, true);
+                    }
+                    if (fixedFixListFile.exists()) {
+                        Filesystem.copyFile(fixedFixListFile, fixedFixListBackupFile, true);
+                    }
+                    outputJokes(fixedFile, fixed);
+                    outputJokes(fixedWorkFile, work);
+                    setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
+                }
+                Filesystem.deleteFile(fixedWorkFile);
+                Filesystem.deleteFile(fixedBackupFile);
+                Filesystem.deleteFile(fixedWorkBackupFile);
+                Filesystem.deleteFile(fixedFixBackupFile);
+                Filesystem.deleteFile(fixedFixListBackupFile);
+                setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
+            }
+            fixTime += (subFixTime / 1000);
+            int fixSize = fixedFixFile.exists() ? readJokes(fixedFixFile).size() : 0;
+            int size = readJokes(fixedFile).size() + fixSize;
+            
+            progressBar.setTotal(size);
+            progressBar.update(size);
             progressBar.print();
-            System.out.println(" " + (fixCount > 0 ? (": " + fixCount + " to fix ") : "") + "(" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            System.out.println(" " + (fixSize > 0 ? (": " + fixSize + " to fix ") : "") + "(" + (subFixTime / 1000) + "s)");
         }
         
-        System.out.println("Fixed Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
+        totalTime += fixTime;
+        System.out.println("Fixed Jokes in " + fixTime + "s");
         System.out.println();
     }
     
     /**
      * Fixes a joke.
      *
-     * @param joke The joke to fix.
+     * @param joke        The joke to fix.
+     * @param progressBar The progress bar.
      */
     private static void fixJoke(Joke joke, ConsoleProgressBar progressBar) {
         joke.text = textFixer.cleanText(joke.text);
@@ -273,92 +406,90 @@ public class Jokes {
         }
         
         System.out.println("Tagging Jokes...");
-        long startTime = System.currentTimeMillis();
+        long tagTime = 0L;
         
         for (JokeSet jokeSet : JokeSet.values()) {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
-            long duration = 0;
             
-            File taggedDirectory = new File("jokes/" + jokeSet.name().toLowerCase() + "/source/4 - tagged");
-            Filesystem.createDirectory(taggedDirectory);
-            File taggedFile = new File(taggedDirectory, "tagged.json");
-            File taggedWorkFile = new File(taggedDirectory, "tagged-work.json");
-            File taggedTimeFile = new File(taggedDirectory, "tagged-time.json");
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
+            progressBar.update(0);
             
-            List<Joke> work = new ArrayList<>();
-            List<Joke> tagged = new ArrayList<>();
-            if (taggedFile.exists()) {
-                tagged = readJokes(taggedFile);
+            long subTagTime = getSaveProcessTime(jokeSet, ProcessStep.TAG) * 1000;
+            File taggedFile = new File(jokeSet.directory + ProcessStep.TAG.out);
+            File taggedWorkFile = new File(jokeSet.directory + ProcessStep.TAG.out.replace(".json", "-work.json"));
+            File taggedBackupFile = new File(jokeSet.directory + ProcessStep.TAG.out.replace(".json", "-bak.json"));
+            File taggedWorkBackupFile = new File(jokeSet.directory + ProcessStep.TAG.out.replace(".json", "-work-bak.json"));
+            
+            if (subTagTime < 0 || taggedWorkFile.exists()) {
+                if (subTagTime < 0) {
+                    Filesystem.deleteDirectory(taggedFile.getParentFile());
+                }
+                Filesystem.createDirectory(taggedFile.getParentFile());
+                
+                List<Joke> work = new ArrayList<>();
+                List<Joke> tagged = new ArrayList<>();
                 if (taggedWorkFile.exists()) {
+                    if (taggedFile.exists()) {
+                        tagged = readJokes(taggedFile);
+                    }
                     work = readJokes(taggedWorkFile);
-                }
-                if (taggedTimeFile.exists()) {
-                    duration = Long.valueOf(Filesystem.readFileToString(taggedTimeFile));
                 } else {
-                    Filesystem.writeStringToFile(taggedTimeFile, "0");
+                    work = readJokes(new File(jokeSet.directory + ProcessStep.TAG.in));
+                    outputJokes(taggedWorkFile, work);
+                    outputJokes(taggedFile, tagged);
                 }
-            } else {
-                work = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/source/3 - fixed/fixed.json"));
-                outputJokes(taggedFile, tagged);
-            }
-            
-            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), work.size() + tagged.size(), "jokes");
-            progressBar.update(tagged.size());
-            
-            List<Integer> hashes = new ArrayList<>();
-            for (Joke joke : tagged) {
-                hashes.add(joke.hash);
-            }
-            
-            while (!work.isEmpty()) {
-                long chunkStartTime = System.currentTimeMillis();
-                int count = 0;
-                for (int i = 0; i < tagChunkSize; i++) {
-                    if (work.size() <= i) {
-                        break;
-                    }
-                    Joke joke = work.get(i);
-                    if (hashes.contains(joke.hash)) {
-                        continue;
-                    }
-                    tagJoke(joke);
-                    progressBar.addOne();
-                    count++;
-                    tagged.add(joke);
-                    hashes.add(joke.hash);
+                
+                progressBar.setTotal(work.size() + tagged.size());
+                progressBar.setInitialProgress(tagged.size());
+                progressBar.update(tagged.size());
+                
+                while (!work.isEmpty()) {
+                    long chunkStartTime = System.currentTimeMillis();
+                    List<Joke> currentWork = work.subList(0, Math.min(tagChunkSize, work.size()));
+                    currentWork.parallelStream().forEach(joke -> Jokes.tagJoke(joke, progressBar));
+                    tagged.addAll(currentWork);
+                    currentWork.clear();
+                    long chunkEndTime = System.currentTimeMillis();
+                    long chunkTime = chunkEndTime - chunkStartTime;
+                    subTagTime += chunkTime;
+                    
+                    Filesystem.copyFile(taggedFile, taggedBackupFile, true);
+                    Filesystem.copyFile(taggedWorkFile, taggedWorkBackupFile, true);
+                    outputJokes(taggedFile, tagged);
+                    outputJokes(taggedWorkFile, work);
+                    setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
                 }
-                work = work.subList(count, work.size());
-                
-                outputJokes(taggedFile, tagged);
-                outputJokes(taggedWorkFile, work);
-                
-                long chunkDuration = System.currentTimeMillis() - chunkStartTime;
-                duration += chunkDuration;
-                Filesystem.writeStringToFile(taggedTimeFile, String.valueOf(duration));
-                System.out.println(jokeSet + "... Tagged " + tagged.size() + "/" + (tagged.size() + work.size()) + " jokes (" + (chunkDuration / 1000) + "s)");
+                Filesystem.deleteFile(taggedWorkFile);
+                Filesystem.deleteFile(taggedBackupFile);
+                Filesystem.deleteFile(taggedWorkBackupFile);
+                setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
             }
-            Filesystem.deleteFile(taggedWorkFile);
-            Filesystem.deleteFile(taggedTimeFile);
+            tagTime += (subTagTime / 1000);
+            int size = readJokes(taggedFile).size();
             
-            progressBar.update(tagged.size());
+            progressBar.setTotal(size);
+            progressBar.update(size);
             progressBar.print();
-            System.out.println(jokeSet + "... " + tagged.size() + " jokes (" + (duration / 1000) + "s)");
+            System.out.println(" (" + (subTagTime / 1000) + "s)");
         }
         
-        System.out.println("Tagged Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
+        totalTime += tagTime;
+        System.out.println("Tagged Jokes in " + tagTime + "s");
         System.out.println();
     }
     
     /**
      * Tags a joke.
      *
-     * @param joke The joke to tag.
+     * @param joke        The joke to tag.
+     * @param progressBar The progress bar.
      */
-    private static void tagJoke(Joke joke) {
+    private static void tagJoke(Joke joke, ConsoleProgressBar progressBar) {
         joke.tags.addAll(textTagger.getTagsFromText(joke.text));
         joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
+        progressBar.addOne();
     }
     
     
@@ -373,25 +504,38 @@ public class Jokes {
         }
         
         System.out.println("Compiling Jokes...");
-        long startTime = System.currentTimeMillis();
+        long compileTime = 0L;
         
         for (JokeSet jokeSet : JokeSet.values()) {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
+            
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
-            long subStartTime = System.currentTimeMillis();
-            int size = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/4 - tagged/tagged.json")).size();
-            Filesystem.copyFile(new File("jokes/" + jokeSet.name().toLowerCase() + "/4 - tagged/tagged.json"), 
-                    new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
-            progressBar.total = size;
+            
+            long subCompileTime = getSaveProcessTime(jokeSet, ProcessStep.COMPILE);
+            File compiledFileIn = new File(jokeSet.directory + ProcessStep.COMPILE.in);
+            File compiledFileOut = new File(jokeSet.directory + ProcessStep.COMPILE.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
+            
+            if (subCompileTime < 0) {
+                long subCompileStartTime = System.currentTimeMillis();
+                Filesystem.copyFile(compiledFileIn, compiledFileOut);
+                long subCompileEndTime = System.currentTimeMillis();
+                subCompileTime = ((subCompileEndTime - subCompileStartTime) / 1000);
+                setSaveProcessTime(jokeSet, ProcessStep.COMPILE, subCompileTime);
+            }
+            compileTime += subCompileTime;
+            int size = readJokes(compiledFileOut).size();
+            
+            progressBar.setTotal(size);
             progressBar.update(size);
             progressBar.print();
-            System.out.println(" (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            System.out.println(" (" + subCompileTime + "s)");
         }
         
-        System.out.println("Compiled Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
+        totalTime += compileTime;
+        System.out.println("Compiled Jokes in " + compileTime + "s");
         System.out.println();
     }
     
@@ -407,30 +551,46 @@ public class Jokes {
         }
         
         System.out.println("Merging Jokes...");
-        long startTime = System.currentTimeMillis();
+        long mergeTime = 0L;
         
-        List<Joke> jokes = new ArrayList<>();
+        File mergedFile = new File(JokeSet.Quirkology + ProcessStep.MERGE.out);
+        List<Joke> jokes = mergedFile.exists() ? readJokes(mergedFile) : new ArrayList<>();
+        
         for (JokeSet jokeSet : JokeSet.values()) {
             if (!doJokeSet.get(jokeSet.ordinal())) {
                 continue;
             }
+            
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
-            long subStartTime = System.currentTimeMillis();
-            List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
-            jokes.addAll(jokeSetJokes);
-            progressBar.total = jokeSetJokes.size();
-            progressBar.update(jokeSetJokes.size());
+            
+            long subMergeTime = getSaveProcessTime(jokeSet, ProcessStep.MERGE);
+            File mergedFileIn = new File(jokeSet.directory + ProcessStep.COMPILE.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
+            
+            if (subMergeTime < 0) {
+                long subMergeStartTime = System.currentTimeMillis();
+                List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
+                jokes.addAll(jokeSetJokes);
+                long subMergeEndTime = System.currentTimeMillis();
+                subMergeTime = ((subMergeEndTime - subMergeStartTime) / 1000);
+                setSaveProcessTime(jokeSet, ProcessStep.MERGE, subMergeTime);
+            }
+            mergeTime += subMergeTime;
+            int size = readJokes(mergedFileIn).size();
+            
+            progressBar.setTotal(size);
+            progressBar.update(size);
             progressBar.print();
-            System.out.println(" (" + ((System.currentTimeMillis() - subStartTime) / 1000) + "s)");
+            System.out.println(" (" + subMergeTime + "s)");
         }
         
         Collections.shuffle(jokes);
-        outputJokes(new File("jokes/jokes.json"), jokes);
+        outputJokes(mergedFile, jokes);
         
-        System.out.println("Compiled Jokes in " + ((System.currentTimeMillis() - startTime) / 1000) + "s");
+        totalTime += mergeTime;
+        System.out.println("Compiled Jokes in " + mergeTime + "s");
         System.out.println();
-        System.out.println("Complete... " + jokes.size() + " jokes");
+        System.out.println("Complete... " + jokes.size() + " jokes (" + totalTime + "s)");
     }
     
     
@@ -441,9 +601,8 @@ public class Jokes {
      *
      * @param out   The file to output the jokes to.
      * @param jokes The list of jokes to output.
-     * @return The number of jokes in the list that still need to be fixed.
      */
-    public static int outputJokes(File out, List<Joke> jokes) {
+    public static void outputJokes(File out, List<Joke> jokes) {
         List<String> text = new ArrayList<>();
         text.add("{");
         text.add("    \"count\": " + jokes.size() + ",");
@@ -465,7 +624,7 @@ public class Jokes {
         
         File outFix = new File(out.getAbsolutePath().replace(".json", "-fix.json"));
         Filesystem.deleteFile(outFix);
-    
+        
         List<Joke> jokeFix = jokes.stream().filter(j -> !j.fix.isEmpty()).sorted(Comparator.comparingInt(j -> -j.fix.size())).collect(Collectors.toList());
         List<String> fix = new ArrayList<>();
         List<String> fixText = new ArrayList<>();
@@ -493,8 +652,6 @@ public class Jokes {
             fix = ListUtility.sortListByNumberOfOccurrences(fix);
             Filesystem.writeLines(outFixList, fix);
         }
-        
-        return fixCount;
     }
     
     /**
@@ -570,6 +727,83 @@ public class Jokes {
         }
         
         return jokes;
+    }
+    
+    /**
+     * Reads the time data from the time file.
+     */
+    public static void readTimeFile() {
+        List<String> data = Filesystem.readLines(timeFile);
+        for (String dataLine : data) {
+            String[] dataLineParts = dataLine.split(":");
+            timeData.put(dataLineParts[0], Long.parseLong(dataLineParts[1]));
+        }
+    }
+    
+    /**
+     * Gets the saved process time for a particular process step of a particular joke set.
+     *
+     * @param jokeSet     The joke set.
+     * @param processStep The process step.
+     * @return The saved process time for the particular process step of the particular joke set, or -1 if it should be reprocessed.
+     */
+    public static long getSaveProcessTime(JokeSet jokeSet, ProcessStep processStep) {
+        String key = getSaveProcessKey(jokeSet, processStep);
+        if (key.isEmpty() || !timeData.containsKey(key)) {
+            return -1L;
+        }
+        return timeData.get(key);
+    }
+    
+    /**
+     * Gets the saved process key for a particular process step of a particular joke set.
+     *
+     * @param jokeSet     The joke set.
+     * @param processStep The process step.
+     * @return The saved process key for the particular process step of the particular joke set.
+     */
+    public static String getSaveProcessKey(JokeSet jokeSet, ProcessStep processStep) {
+        String key = jokeSet.name() + "-" + processStep.name() + "-";
+        File checkFile = new File(jokeSet.directory + processStep.in.replace("<jokeSet>", jokeSet.name().toLowerCase()));
+        File outFile = new File(jokeSet.directory + processStep.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
+        if (!outFile.exists()) {
+            return "";
+        }
+        if (checkFile.getAbsolutePath().endsWith("~")) {
+            List<File> checkFileList = Filesystem.getDirs(checkFile.getParentFile());
+            long hashKey = 0L;
+            for (File checkFileListEntry : checkFileList) {
+                hashKey += Filesystem.checksum(checkFileListEntry);
+                hashKey %= Long.MAX_VALUE;
+            }
+            key += hashKey;
+        } else {
+            key += Filesystem.checksum(checkFile);
+        }
+        return key;
+    }
+    
+    /**
+     * Sets the saved process time for a particular process step of a particular joke set.
+     *
+     * @param jokeSet     The joke set.
+     * @param processStep The process step.
+     */
+    public static void setSaveProcessTime(JokeSet jokeSet, ProcessStep processStep, long time) {
+        String key = getSaveProcessKey(jokeSet, processStep);
+        timeData.put(key, time);
+        writeTimeFile();
+    }
+    
+    /**
+     * Writes the time data to the time file.
+     */
+    public static void writeTimeFile() {
+        List<String> data = new ArrayList<>();
+        for (Map.Entry<String, Long> timeDataEntry : timeData.entrySet()) {
+            data.add(timeDataEntry.getKey() + ":" + timeDataEntry.getValue());
+        }
+        Filesystem.writeLines(timeFile, data);
     }
     
 }

@@ -439,7 +439,7 @@ public final class Console {
      */
     public static String colorAndBackground24Bit(String string, int red, int green, int blue, int redBg, int greenBg, int blueBg) {
         if ((red < 0) || (red > 255) || (green < 0) || (green > 255) || (blue < 0) || (blue > 255) ||
-                (redBg < 0) || (redBg > 255) || (greenBg < 0) || (greenBg > 255) || (blueBg < 0) || (blueBg > 255)) {
+            (redBg < 0) || (redBg > 255) || (greenBg < 0) || (greenBg > 255) || (blueBg < 0) || (blueBg > 255)) {
             return string;
         }
         
@@ -604,7 +604,7 @@ public final class Console {
      */
     public static String stringEffectsWithColorAndBackground24Bit(String string, int red, int green, int blue, int redBg, int greenBg, int blueBg, ConsoleEffect... effects) {
         if ((red < 0) || (red > 255) || (green < 0) || (green > 255) || (blue < 0) || (blue > 255) ||
-                (redBg < 0) || (redBg > 255) || (greenBg < 0) || (greenBg > 255) || (blueBg < 0) || (blueBg > 255)) {
+            (redBg < 0) || (redBg > 255) || (greenBg < 0) || (greenBg > 255) || (blueBg < 0) || (blueBg > 255)) {
             return string;
         }
         

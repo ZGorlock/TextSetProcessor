@@ -1,6 +1,6 @@
 /*
  * File:    ListUtility.java
- * Package: dla.resource.utility
+ * Package: utility
  * Author:  Zachary Gill
  */
 
