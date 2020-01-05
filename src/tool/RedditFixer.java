@@ -69,8 +69,13 @@ public class RedditFixer {
         List<Joke> jokes;
         jokeParser.preserveSource = true;
         
-        File workFixed = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixed.json");
-        if (!workFixed.exists()) {
+        File workFixedFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixed.json");
+        File workFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work.json");
+        File workBackupFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-bak.json");
+        File workFixListFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixList.txt");
+        File workIndexFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-index.txt");
+        
+        if (!workFixedFile.exists()) {
             System.out.println("Starting Up...");
             jokeParser.load();
             textTagger.load();
@@ -83,20 +88,16 @@ public class RedditFixer {
             System.out.println("Fixing Reddit...");
             jokes.parallelStream().forEach(joke -> Jokes.fixJoke(joke, null));
             
-            Jokes.outputJokes(workFixed, jokes, false);
+            Jokes.outputJokes(workFixedFile, jokes, false);
         } else {
-            jokes = Jokes.readJokes(workFixed);
+            jokes = Jokes.readJokes(workFixedFile);
         }
         
-        File indexFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-index.txt");
-        int index = indexFile.exists() ? Integer.parseInt(Filesystem.readFileToString(indexFile)) : 0;
-        
-        File fixListFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixList.txt");
-        List<String> fixList = new ArrayList<>();
-        
         Scanner input = new Scanner(System.in);
+        List<String> fixList = new ArrayList<>();
         int count = 0;
         int lastIndex = 0;
+        int index = workIndexFile.exists() ? Integer.parseInt(Filesystem.readFileToString(workIndexFile)) : 0;
         for (int i = index; i < jokes.size(); i++) {
             Joke j = jokes.get(i);
             if (!j.fix.isEmpty()) {
@@ -140,10 +141,11 @@ public class RedditFixer {
                 }
             }
             if (count >= 10) {
+                Filesystem.copyFile(workFile, workBackupFile, true);
                 jokeParser.writeReddit(jokes);
-                Filesystem.writeLines(fixListFile, fixList, true);
+                Filesystem.writeLines(workFixListFile, fixList, true);
                 fixList.clear();
-                Filesystem.writeStringToFile(indexFile, String.valueOf(i + 1));
+                Filesystem.writeStringToFile(workIndexFile, String.valueOf(i + 1));
                 count = 0;
             }
         }
