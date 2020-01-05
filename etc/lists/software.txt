@@ -2,3 +2,8 @@ McAfee
 Microsoft Office
 Photoshop
 Winrar
+VMWare
+VSphere
+FaceTime
+SnapChat
+Skype

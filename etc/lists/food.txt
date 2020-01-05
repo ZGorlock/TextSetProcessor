@@ -1,4 +1,5 @@
 Acorn Squash
+Takoyaki
 Alfalfa Sprouts
 Almond
 Anchovy
@@ -10,10 +11,15 @@ Applesauce
 Apricot
 Artichoke
 Asparagus
+Hot Pocket
 Aspic
 Ate
 Avocado
 Bacon
+Fajita
+Taco
+Burrito
+Quesadilla
 Bagel
 Bake
 Baked Alaska

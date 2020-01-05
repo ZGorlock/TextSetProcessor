@@ -511,7 +511,12 @@ public final class TextTagger {
         
         String tagRegex = "^([^A-Z0-9]*X[^A-Z0-9].*)|(.*[^A-Z0-9]X[^A-Z0-9]*)|(.*[^A-Z0-9]X[^A-Z0-9].*)|([^A-Z0-9]*X[^A-Z0-9]*)$";
         
-        for (String word : StringUtility.removePunctuation(text.toUpperCase()).split("\\s+", -1)) {
+        for (String word : StringUtility.removePunctuation(text).split("\\s+", -1)) {
+            if (word.charAt(0) == 'i' && Character.isUpperCase(word.charAt(1))) {
+                tags.add("Apple");
+                matches.add("Apple");
+            }
+            word = word.toUpperCase();
             if (word.endsWith("SAURUS")) {
                 tags.add("Dinosaur");
                 matches.add("Dinosaur");

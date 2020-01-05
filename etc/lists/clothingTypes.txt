@@ -1,4 +1,6 @@
 Belt
+TShirt
+T Shirt
 Boot
 Bowtie
 Boxer Briefs

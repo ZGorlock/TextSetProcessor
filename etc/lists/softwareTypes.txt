@@ -1,6 +1,7 @@
 Firmware
 Freeware
 Groupware
+Ransomware
 Malware
 Nagware
 Shareware

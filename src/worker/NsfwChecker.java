@@ -133,7 +133,7 @@ public final class NsfwChecker {
                 }
             }
         }
-        return text.toUpperCase().contains("FUCK") || text.toUpperCase().contains("NIGGER") || text.contains("PORN");
+        return text.toUpperCase().contains("FUCK") || text.toUpperCase().contains("NIGGER") || text.toUpperCase().contains("PORN") || text.toUpperCase().contains("BITCH");
     }
     
     /**
