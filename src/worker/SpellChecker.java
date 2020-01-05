@@ -46,6 +46,11 @@ public final class SpellChecker {
      */
     public final List<String> dict = new ArrayList<>();
     
+    /**
+     * A flag indicating whether or not to load additional dicts.
+     */
+    public boolean loadAdditionalDicts = true;
+    
     
     //Constructors
     
@@ -82,94 +87,96 @@ public final class SpellChecker {
         
         List<String> buildDict = Filesystem.readLines(new File("etc/dicts/dict.txt"));
         
-        List<String> additionalDict = new ArrayList<>();
-        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/cities.txt")));
-        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/countries.txt")));
-        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/famousPeople.txt")));
-        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/names.txt")));
-        additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/subCountries.txt")));
-        for (File list : Filesystem.listFiles(new File("etc/lists/"), var -> true)) {
-            additionalDict.addAll(Filesystem.readLines(list));
-        }
-        additionalDict = additionalDict.stream().map(String::toLowerCase).collect(Collectors.toList());
-        additionalDict = ListUtility.removeDuplicates(additionalDict);
-        additionalDict.sort(Comparator.naturalOrder());
-        
-        for (String additionalWord : additionalDict) {
-            if (additionalWord.contains(" ")) {
-                String[] additionalWordParts = additionalWord.split("\\s+");
-                for (String additionalWordPart : additionalWordParts) {
-                    buildDict.add(StringUtility.trim(additionalWordPart));
-                }
-            } else {
-                buildDict.add(additionalWord);
+        if (loadAdditionalDicts) {
+            List<String> additionalDict = new ArrayList<>();
+            additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/cities.txt")));
+            additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/countries.txt")));
+            additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/famousPeople.txt")));
+            additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/names.txt")));
+            additionalDict.addAll(Filesystem.readLines(new File("etc/dicts/subCountries.txt")));
+            for (File list : Filesystem.listFiles(new File("etc/lists/"), var -> true)) {
+                additionalDict.addAll(Filesystem.readLines(list));
             }
-        }
-        
-        List<String> tagDict = new ArrayList<>();
-        for (Tag tag : textTagger.tagList.values()) {
-            String tagEntry = StringUtility.trim(StringUtility.removePunctuation(tag.name));
-            for (String ending : textTagger.tagEndingToDontDoList.keySet()) {
-                if (tagEntry.endsWith(ending) && !textTagger.tagEndingToDontDoList.get(ending).contains(tagEntry)) {
-                    for (String tagAppend : textTagger.tagEndingToReplacements.get(ending)) {
-                        if (tagAppend.equals("ING") && textTagger.tagEndingToDontDoList.get("ing").contains(tagEntry)) {
-                            continue;
+            additionalDict = additionalDict.stream().map(String::toLowerCase).collect(Collectors.toList());
+            additionalDict = ListUtility.removeDuplicates(additionalDict);
+            additionalDict.sort(Comparator.naturalOrder());
+            
+            for (String additionalWord : additionalDict) {
+                if (additionalWord.contains(" ")) {
+                    String[] additionalWordParts = additionalWord.split("\\s+");
+                    for (String additionalWordPart : additionalWordParts) {
+                        buildDict.add(StringUtility.trim(additionalWordPart));
+                    }
+                } else {
+                    buildDict.add(additionalWord);
+                }
+            }
+            
+            List<String> tagDict = new ArrayList<>();
+            for (Tag tag : textTagger.tagList.values()) {
+                String tagEntry = StringUtility.trim(StringUtility.removePunctuation(tag.name));
+                for (String ending : textTagger.tagEndingToDontDoList.keySet()) {
+                    if (tagEntry.endsWith(ending) && !textTagger.tagEndingToDontDoList.get(ending).contains(tagEntry)) {
+                        for (String tagAppend : textTagger.tagEndingToReplacements.get(ending)) {
+                            if (tagAppend.equals("ING") && textTagger.tagEndingToDontDoList.get("ing").contains(tagEntry)) {
+                                continue;
+                            }
+                            tagDict.add(StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend);
                         }
-                        tagDict.add(StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend);
+                    }
+                }
+                for (String alias : tag.aliases) {
+                    for (String append : Arrays.asList("", "S", "ES")) {
+                        tagDict.add(alias.toUpperCase() + append);
+                    }
+                    if (alias.toUpperCase().endsWith("Y")) {
+                        tagDict.add(StringUtility.rShear(alias.toUpperCase(), 1) + "IES");
                     }
                 }
             }
-            for (String alias : tag.aliases) {
-                for (String append : Arrays.asList("", "S", "ES")) {
-                    tagDict.add(alias.toUpperCase() + append);
-                }
-                if (alias.toUpperCase().endsWith("Y")) {
-                    tagDict.add(StringUtility.rShear(alias.toUpperCase(), 1) + "IES");
+            tagDict = tagDict.stream().map(String::toLowerCase).collect(Collectors.toList());
+            tagDict = ListUtility.removeDuplicates(tagDict);
+            tagDict.sort(Comparator.naturalOrder());
+            
+            for (String tagDictEntry : tagDict) {
+                if (tagDictEntry.contains(" ")) {
+                    String[] tagDictEntryParts = tagDictEntry.split("\\s+");
+                    for (String tagDictEntryPart : tagDictEntryParts) {
+                        buildDict.add(StringUtility.trim(tagDictEntryPart));
+                    }
+                } else {
+                    buildDict.add(tagDictEntry);
                 }
             }
-        }
-        tagDict = tagDict.stream().map(String::toLowerCase).collect(Collectors.toList());
-        tagDict = ListUtility.removeDuplicates(tagDict);
-        tagDict.sort(Comparator.naturalOrder());
-        
-        for (String tagDictEntry : tagDict) {
-            if (tagDictEntry.contains(" ")) {
-                String[] tagDictEntryParts = tagDictEntry.split("\\s+");
-                for (String tagDictEntryPart : tagDictEntryParts) {
-                    buildDict.add(StringUtility.trim(tagDictEntryPart));
+            
+            List<String> nsfwDict = Filesystem.readLines(new File("etc/dicts/nsfw.txt"));
+            nsfwDict = nsfwDict.stream().map(String::toLowerCase).collect(Collectors.toList());
+            nsfwDict = ListUtility.removeDuplicates(nsfwDict);
+            nsfwDict.sort(Comparator.naturalOrder());
+            Filesystem.writeLines(new File("etc/dicts/nsfw.txt"), nsfwDict);
+            buildDict.addAll(nsfwDict);
+            
+            List<String> contractionDict = Filesystem.readLines(new File("etc/dicts/dict-contractions.txt"));
+            contractionDict = contractionDict.stream().map(String::toLowerCase).collect(Collectors.toList());
+            contractionDict = ListUtility.removeDuplicates(contractionDict);
+            contractionDict.sort(Comparator.naturalOrder());
+            Filesystem.writeLines(new File("etc/dicts/dict-contractions.txt"), contractionDict);
+            buildDict.addAll(contractionDict);
+            
+            List<String> localDict = Filesystem.readLines(new File("etc/dicts/dict-local.txt"));
+            localDict = localDict.stream().map(String::toLowerCase).collect(Collectors.toList());
+            List<String> uniqueLocalDict = new ArrayList<>();
+            for (String localDictEntry : localDict) {
+                if (!buildDict.contains(localDictEntry)) {
+                    uniqueLocalDict.add(localDictEntry);
                 }
-            } else {
-                buildDict.add(tagDictEntry);
             }
+            uniqueLocalDict = uniqueLocalDict.stream().map(String::toLowerCase).collect(Collectors.toList());
+            uniqueLocalDict = ListUtility.removeDuplicates(uniqueLocalDict);
+            uniqueLocalDict.sort(Comparator.naturalOrder());
+            Filesystem.writeLines(new File("etc/dicts/dict-local.txt"), uniqueLocalDict);
+            buildDict.addAll(uniqueLocalDict);
         }
-        
-        List<String> nsfwDict = Filesystem.readLines(new File("etc/dicts/nsfw.txt"));
-        nsfwDict = nsfwDict.stream().map(String::toLowerCase).collect(Collectors.toList());
-        nsfwDict = ListUtility.removeDuplicates(nsfwDict);
-        nsfwDict.sort(Comparator.naturalOrder());
-        Filesystem.writeLines(new File("etc/dicts/nsfw.txt"), nsfwDict);
-        buildDict.addAll(nsfwDict);
-        
-        List<String> contractionDict = Filesystem.readLines(new File("etc/dicts/dict-contractions.txt"));
-        contractionDict = contractionDict.stream().map(String::toLowerCase).collect(Collectors.toList());
-        contractionDict = ListUtility.removeDuplicates(contractionDict);
-        contractionDict.sort(Comparator.naturalOrder());
-        Filesystem.writeLines(new File("etc/dicts/dict-contractions.txt"), contractionDict);
-        buildDict.addAll(contractionDict);
-        
-        List<String> localDict = Filesystem.readLines(new File("etc/dicts/dict-local.txt"));
-        localDict = localDict.stream().map(String::toLowerCase).collect(Collectors.toList());
-        List<String> uniqueLocalDict = new ArrayList<>();
-        for (String localDictEntry : localDict) {
-            if (!buildDict.contains(localDictEntry)) {
-                uniqueLocalDict.add(localDictEntry);
-            }
-        }
-        uniqueLocalDict = uniqueLocalDict.stream().map(String::toLowerCase).collect(Collectors.toList());
-        uniqueLocalDict = ListUtility.removeDuplicates(uniqueLocalDict);
-        uniqueLocalDict.sort(Comparator.naturalOrder());
-        Filesystem.writeLines(new File("etc/dicts/dict-local.txt"), uniqueLocalDict);
-        buildDict.addAll(uniqueLocalDict);
         
         buildDict = buildDict.stream().map(String::toLowerCase).collect(Collectors.toList());
         buildDict = ListUtility.removeDuplicates(buildDict);

@@ -43,7 +43,7 @@ public class Jokes {
     /**
      * An enumerations of joke sets that can be processed.
      */
-    private enum JokeSet {
+    public enum JokeSet {
         Quirkology("quirkology"),
         Jokeriot("jokeriot"),
         StupidStuff("stupidstuff"),
@@ -60,7 +60,7 @@ public class Jokes {
     /**
      * An enumeration of steps that can be performed during the processing.
      */
-    private enum ProcessStep {
+    public enum ProcessStep {
         PARSE("/source/1 - cleaned", "/source/2 - parsed/parsed.json"),
         FIX("/source/2 - parsed/parsed.json", "/source/3 - fixed/fixed.json"),
         TAG("/source/3 - fixed/fixed.json", "/source/4 - tagged/tagged.json"),
@@ -94,6 +94,11 @@ public class Jokes {
      * A flag indicating whether or not to perform a clean start.
      */
     private static final boolean doCleanStart = false;
+    
+    /**
+     * A flag indicating whether or not to perform a clean start.
+     */
+    private static final boolean doFastStart = false;
     
     /**
      * The file to save the time of processing steps in.
@@ -170,6 +175,11 @@ public class Jokes {
         System.out.println("Starting Up...");
         long startupTime = System.currentTimeMillis();
         
+        if (doFastStart) {
+            spellChecker.loadAdditionalDicts = false;
+            textTagger.loadTagLists = false;
+        }
+        
         if (doProcessStep.get(ProcessStep.PARSE.ordinal())) {
             jokeParser.load();
         }
@@ -235,7 +245,7 @@ public class Jokes {
                 Filesystem.deleteDirectory(parsedFile.getParentFile());
                 Filesystem.createDirectory(parsedFile.getParentFile());
                 long subParseStartTime = System.currentTimeMillis();
-                List<Joke> jokes = parseJokeSet(jokeSet.name());
+                List<Joke> jokes = parseJokeSet(jokeSet);
                 Filesystem.createDirectory(parsedFile.getParentFile());
                 outputJokes(parsedFile, jokes);
                 long subParseEndTime = System.currentTimeMillis();
@@ -259,20 +269,20 @@ public class Jokes {
     /**
      * Parses a joke set.
      *
-     * @param jokeSet The name of the joke set to process.
+     * @param jokeSet The joke set to process.
      * @return The list of jokes parsed from the joke set.
      */
-    private static List<Joke> parseJokeSet(String jokeSet) {
+    public static List<Joke> parseJokeSet(JokeSet jokeSet) {
         switch (jokeSet) {
-            case "Quirkology":
+            case Quirkology:
                 return jokeParser.parseQuirkology();
-            case "Jokeriot":
+            case Jokeriot:
                 return jokeParser.parseJokeriot();
-            case "StupidStuff":
+            case StupidStuff:
                 return jokeParser.parseStupidStuff();
-            case "Wocka":
+            case Wocka:
                 return jokeParser.parseWocka();
-            case "Reddit":
+            case Reddit:
                 return jokeParser.parseReddit();
             default:
                 return new ArrayList<>();
@@ -387,11 +397,13 @@ public class Jokes {
      * @param joke        The joke to fix.
      * @param progressBar The progress bar.
      */
-    private static void fixJoke(Joke joke, ConsoleProgressBar progressBar) {
+    public static void fixJoke(Joke joke, ConsoleProgressBar progressBar) {
         joke.text = textFixer.cleanText(joke.text);
         joke.fix.addAll(spellChecker.checkForSpelling(joke.text));
         joke.fix.sort(Comparator.naturalOrder());
-        progressBar.addOne();
+        if (progressBar != null) {
+            progressBar.addOne();
+        }
     }
     
     
@@ -486,10 +498,12 @@ public class Jokes {
      * @param joke        The joke to tag.
      * @param progressBar The progress bar.
      */
-    private static void tagJoke(Joke joke, ConsoleProgressBar progressBar) {
+    public static void tagJoke(Joke joke, ConsoleProgressBar progressBar) {
         joke.tags.addAll(textTagger.getTagsFromText(joke.text));
         joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
-        progressBar.addOne();
+        if (progressBar != null) {
+            progressBar.addOne();
+        }
     }
     
     
@@ -599,28 +613,34 @@ public class Jokes {
     /**
      * Outputs a list of jokes to a file.
      *
-     * @param out   The file to output the jokes to.
-     * @param jokes The list of jokes to output.
+     * @param out      The file to output the jokes to.
+     * @param jokes    The list of jokes to output.
+     * @param splitFix Whether or not to split the jokes that need to be fixed into another file.
      */
-    public static void outputJokes(File out, List<Joke> jokes) {
+    public static void outputJokes(File out, List<Joke> jokes, boolean splitFix) {
+        int count = splitFix ? (int) jokes.stream().filter(e -> !e.fix.isEmpty()).count() : jokes.size();
         List<String> text = new ArrayList<>();
         text.add("{");
-        text.add("    \"count\": " + jokes.size() + ",");
+        text.add("    \"count\": " + count + ",");
         text.add("    \"jokes\": [");
         boolean firstJoke = true;
         for (Joke joke : jokes) {
-            if (!joke.fix.isEmpty()) {
+            if (splitFix && !joke.fix.isEmpty()) {
                 continue;
             }
             if (!firstJoke) {
                 text.set(text.size() - 1, text.get(text.size() - 1) + ",");
             }
-            text.addAll(writeJoke(joke, false));
+            text.addAll(writeJoke(joke, !splitFix));
             firstJoke = false;
         }
         text.add("    ]");
         text.add("}");
         Filesystem.writeLines(out, text);
+        
+        if (!splitFix) {
+            return;
+        }
         
         File outFix = new File(out.getAbsolutePath().replace(".json", "-fix.json"));
         Filesystem.deleteFile(outFix);
@@ -655,6 +675,16 @@ public class Jokes {
     }
     
     /**
+     * Outputs a list of jokes to a file.
+     *
+     * @param out   The file to output the jokes to.
+     * @param jokes The list of jokes to output.
+     */
+    public static void outputJokes(File out, List<Joke> jokes) {
+        outputJokes(out, jokes, true);
+    }
+    
+    /**
      * Writes a joke to a list of strings.
      *
      * @param joke The joke to write.
@@ -664,6 +694,7 @@ public class Jokes {
     public static List<String> writeJoke(Joke joke, boolean fix) {
         List<String> out = new ArrayList<>();
         String jokeText = joke.text.replaceAll("\\\\*\"", "\\\\\"").replaceAll("\\s+", " ");
+        String jokeSource = joke.source.replaceAll("\\\\*\"", "\\\\\"").replaceAll("\\s+", " ");
         
         out.add("        {");
         out.add("            \"joke\": \"" + jokeText + "\",");
@@ -675,7 +706,7 @@ public class Jokes {
             out.add("            \"fix\": \"" + fixString.toString() + "\",");
         }
         out.add("            \"length\": " + jokeText.length() + ",");
-        out.add("            \"source\": \"" + joke.source + "\",");
+        out.add("            \"source\": \"" + jokeSource + "\",");
         out.add("            \"nsfw\": " + (joke.nsfw ? "true" : "false") + ",");
         StringBuilder tagString = new StringBuilder();
         joke.tags = ListUtility.removeDuplicates(joke.tags);

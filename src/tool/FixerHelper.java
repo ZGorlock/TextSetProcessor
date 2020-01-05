@@ -28,7 +28,7 @@ public final class FixerHelper {
     /**
      * The file to read the fix list from.
      */
-    private static File fixListFile = new File("jokes/reddit/source/3 - fixed/fixed-fixList1.txt");
+    private static File fixListFile = new File("jokes/reddit/source/3 - fixed/fixed-fixList.txt");
     
     /**
      * The fix list read from the file.

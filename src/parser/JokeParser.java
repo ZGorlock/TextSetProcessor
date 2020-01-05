@@ -52,6 +52,11 @@ public final class JokeParser {
      */
     private TextTagger textTagger;
     
+    /**
+     * A flag indicating whether or not to preserve the text source.
+     */
+    public boolean preserveSource = false;
+    
     
     //Constructors
     
@@ -99,6 +104,7 @@ public final class JokeParser {
     public List<Joke> parseQuirkology() {
         File in = new File("jokes/quirkology/source/1 - cleaned/cleaned.txt");
         String source = "Quirkology";
+        boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
         
@@ -109,7 +115,7 @@ public final class JokeParser {
                 if (jokeText.length() > 0) {
                     Joke thisJoke = new Joke();
                     thisJoke.text = jokeText.toString();
-                    thisJoke.source = source;
+                    thisJoke.source = preserveSource ? jokeText.toString() : source;
                     jokes.add(thisJoke);
                     
                     jokeText = new StringBuilder();
@@ -123,7 +129,39 @@ public final class JokeParser {
             }
         }
         
+        if (rewrite) {
+            writeQuirkology(jokes, false);
+        }
+        
         return jokes;
+    }
+    
+    /**
+     * Writes jokes back to Quirkology.
+     *
+     * @param jokes The list of jokes parsed from Quirkology.
+     * @param work  Whether or not the jokes should be written back to the work file.
+     */
+    private void writeQuirkology(List<Joke> jokes, boolean work) {
+        File out = new File("jokes/quirkology/source/1 - cleaned/cleaned" + (work ? "-work" : "") + ".txt");
+        List<String> output = new ArrayList<>();
+        for (Joke joke : jokes) {
+            output.add(joke.source);
+            output.add("");
+        }
+        Filesystem.writeLines(out, output);
+    }
+    
+    /**
+     * Writes jokes back to Quirkology.
+     *
+     * @param jokes The list of jokes parsed from Quirkology.
+     */
+    public void writeQuirkology(List<Joke> jokes) {
+        if (!preserveSource) {
+            return;
+        }
+        writeQuirkology(jokes, true);
     }
     
     /**
@@ -133,6 +171,7 @@ public final class JokeParser {
      */
     public List<Joke> parseJokeriot() {
         String source = "Jokeriot";
+        boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
         Map<Integer, Joke> hashes = new HashMap<>();
@@ -243,7 +282,7 @@ public final class JokeParser {
                         }
                         Joke thisJoke = new Joke();
                         thisJoke.text = jokeText.toString();
-                        thisJoke.source = source;
+                        thisJoke.source = preserveSource ? jokeText.toString() : source;
                         thisJoke.nsfw = nsfw;
                         
                         for (i = i + 1; i < lines.size(); i++) {
@@ -330,7 +369,32 @@ public final class JokeParser {
             }
         } while (!nsfw);
         
+        if (rewrite) {
+            writeJokeriot(jokes, false);
+        }
+        
         return jokes;
+    }
+    
+    /**
+     * Writes jokes back to Jokeriot.
+     *
+     * @param jokes The list of jokes parsed from Jokeriot.
+     * @param work  Whether or not the jokes should be written back to the work file.
+     */
+    private void writeJokeriot(List<Joke> jokes, boolean work) {
+    }
+    
+    /**
+     * Writes jokes back to Jokeriot.
+     *
+     * @param jokes The list of jokes parsed from Jokeriot.
+     */
+    public void writeJokeriot(List<Joke> jokes) {
+        if (!preserveSource) {
+            return;
+        }
+        writeJokeriot(jokes, true);
     }
     
     /**
@@ -341,22 +405,20 @@ public final class JokeParser {
     public List<Joke> parseStupidStuff() {
         File in = new File("jokes/stupidstuff/source/1 - cleaned/cleaned.json");
         String source = "StupidStuff";
+        boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
         Map<Integer, Joke> hashes = new HashMap<>();
-//        List<String> out = new ArrayList<>();
-//        out.add("[");
         
         JSONParser p = new JSONParser();
         try {
             JSONArray o = (JSONArray) p.parse(new FileReader(in));
-
-//            Set<String> categories = new HashSet<>();
+            
             for (Object i : o) {
                 JSONObject io = (JSONObject) i;
                 String body = StringUtility.trim((String) io.get("body"));
                 String category = ((String) io.get("category"));
-//                categories.add(category);
+                String save = body + "|||||" + category;
                 
                 if (body.isEmpty() || body.endsWith(":") || body.contains("1.") || body.contains("B.)") ||
                     body.contains("2)") || body.toUpperCase().contains("STUPIDSTUFF") ||
@@ -370,7 +432,7 @@ public final class JokeParser {
                 
                 Joke thisJoke = new Joke();
                 thisJoke.text = body;
-                thisJoke.source = source;
+                thisJoke.source = preserveSource ? save : source;
                 for (String cat : category.split(",")) {
                     String tag = StringUtility.toTitleCase(StringUtility.trim(StringUtility.removePunctuation(cat)));
                     if (!tag.isEmpty() && textTagger.tagList.containsKey(tag)) {
@@ -382,30 +444,56 @@ public final class JokeParser {
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
                 } else {
-//                    out.add("    {");
-//                    out.add("        \"body\": \"" + body.replaceAll("\\\\*\"", "\\\\\"") + "\",");
-//                    out.add("        \"category\": \"" + category + "\"");
-//                    out.add("    },");
-                    
                     jokes.add(thisJoke);
                     hashes.put(thisJoke.hash, thisJoke);
                 }
             }
-
-//            for (String s : categories) {
-//                if (!tagList.contains(s)) {
-//                    System.out.println(s);
-//                }
-//            }
             
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-
-//        out.add("]");
-//        Filesystem.writeLines(new File("jokes/stupidstuff/source/1 - cleaned/cleaned.json"), out);
+        
+        if (rewrite) {
+            writeStupidStuff(jokes, false);
+        }
         
         return jokes;
+    }
+    
+    /**
+     * Writes jokes back to StupidStuff.
+     *
+     * @param jokes The list of jokes parsed from StupidStuff.
+     * @param work  Whether or not the jokes should be written back to the work file.
+     */
+    private void writeStupidStuff(List<Joke> jokes, boolean work) {
+        File out = new File("jokes/stupidstuff/source/1 - cleaned/cleaned" + (work ? "-work" : "") + ".json");
+        List<String> output = new ArrayList<>();
+        output.add("[");
+        for (int i = 0; i < jokes.size(); i++) {
+            String[] parts = jokes.get(i).source
+                    .replaceAll("\\\\*\"", "\\\\\"")
+                    .replaceAll("\\s+", " ")
+                    .split("\\|\\|\\|\\|\\|", -1);
+            output.add("    {");
+            output.add("        \"body\": \"" + StringUtility.trim(parts[1]) + "\",");
+            output.add("        \"category\": \"" + StringUtility.trim(parts[2]) + "\"");
+            output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
+        }
+        output.add("]");
+        Filesystem.writeLines(out, output);
+    }
+    
+    /**
+     * Writes jokes back to StupidStuff.
+     *
+     * @param jokes The list of jokes parsed from StupidStuff.
+     */
+    public void writeStupidStuff(List<Joke> jokes) {
+        if (!preserveSource) {
+            return;
+        }
+        writeStupidStuff(jokes, true);
     }
     
     /**
@@ -416,22 +504,21 @@ public final class JokeParser {
     public List<Joke> parseWocka() {
         File in = new File("jokes/wocka/source/1 - cleaned/cleaned.json");
         String source = "Wocka";
+        boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
         Map<Integer, Joke> hashes = new HashMap<>();
-//        List<String> out = new ArrayList<>();
-//        out.add("[");
         
         JSONParser p = new JSONParser();
         try {
             JSONArray o = (JSONArray) p.parse(new FileReader(in));
-
-//            Set<String> categories = new HashSet<>();
+            
             for (Object i : o) {
                 JSONObject io = (JSONObject) i;
                 String body = StringUtility.trim((String) io.get("body"));
                 String category = ((String) io.get("category"));
                 String title = (String) io.get("title");
+                String save = title + "|||||" + body + "|||||" + category;
                 
                 if (body.isEmpty() || body.endsWith(":") || body.contains("1.") || body.contains("B.)") ||
                     body.contains("2)") || body.toUpperCase().contains("WOCKA") ||
@@ -448,13 +535,6 @@ public final class JokeParser {
                     title.toUpperCase().contains("LAST WORD") || title.toUpperCase().contains("THESE ARE")) {
                     continue;
                 }
-
-//                if (title.toUpperCase().contains("YOU KNOW") || title.toUpperCase().contains("SONG") || title.toUpperCase().contains("RULE") || title.contains("PIRATE") || title.toUpperCase().contains("WORD")) {
-//                if (title.toUpperCase().contains("YOU KNOW") || title.toUpperCase().contains("TO KNOW")) {
-//                if (title.toUpperCase().contains("REDNECK")) {
-//                    System.out.println(body);
-//                    System.out.println();
-//                }
                 
                 body = body.trim();
                 
@@ -465,17 +545,12 @@ public final class JokeParser {
                 if (body.endsWith(",")) {
                     body = StringUtility.rShear(body, 1);
                 }
-
-//                if (body.contains("Q.") || body.contains("Q:") || body.contains("Q)") || body.contains("Q.)") || body.contains("Q :") || body.contains("Question:")) {
-//                    category = category + ", Question and Answer";
-//                }
                 
                 Joke thisJoke = new Joke();
                 thisJoke.text = body;
-                thisJoke.source = source;
+                thisJoke.source = preserveSource ? save : source;
                 for (String cat : category.split(",")) {
                     if (!cat.isEmpty()) {
-//                        categories.add(StringUtility.trim(cat));
                         thisJoke.tags.add(StringUtility.trim(cat));
                     }
                 }
@@ -484,31 +559,57 @@ public final class JokeParser {
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
                 } else {
-//                    out.add("    {");
-//                    out.add("        \"body\": \"" + body.replaceAll("\\\\*\"", "\\\\\"") + "\",");
-//                    out.add("        \"category\": \"" + category + "\",");
-//                    out.add("        \"title\": \"" + title + "\"");
-//                    out.add("    },");
-                    
                     jokes.add(thisJoke);
                     hashes.put(thisJoke.hash, thisJoke);
                 }
             }
-
-//            for (String s : categories) {
-//                if (!tagList.contains(s)) {
-//                    System.out.println(s);
-//                }
-//            }
             
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-
-//        out.add("]");
-//        Filesystem.writeLines(new File("jokes/wocka/source/1 - cleaned/test.json"), out);
+        
+        if (rewrite) {
+            writeWocka(jokes, false);
+        }
         
         return jokes;
+    }
+    
+    /**
+     * Writes jokes back to Wocka.
+     *
+     * @param jokes The list of jokes parsed from Wocka.
+     * @param work  Whether or not the jokes should be written back to the work file.
+     */
+    private void writeWocka(List<Joke> jokes, boolean work) {
+        File out = new File("jokes/wocka/source/1 - cleaned/cleaned" + (work ? "-work" : "") + ".json");
+        List<String> output = new ArrayList<>();
+        output.add("[");
+        for (int i = 0; i < jokes.size(); i++) {
+            String[] parts = jokes.get(i).source
+                    .replaceAll("\\\\*\"", "\\\\\"")
+                    .replaceAll("\\s+", " ")
+                    .split("\\|\\|\\|\\|\\|", -1);
+            output.add("    {");
+            output.add("        \"body\": \"" + StringUtility.trim(parts[1]) + "\",");
+            output.add("        \"category\": \"" + StringUtility.trim(parts[2]) + "\",");
+            output.add("        \"title\": \"" + StringUtility.trim(parts[0]) + "\"");
+            output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
+        }
+        output.add("]");
+        Filesystem.writeLines(out, output);
+    }
+    
+    /**
+     * Writes jokes back to Wocka.
+     *
+     * @param jokes The list of jokes parsed from Wocka.
+     */
+    public void writeWocka(List<Joke> jokes) {
+        if (!preserveSource) {
+            return;
+        }
+        writeWocka(jokes, true);
     }
     
     /**
@@ -519,12 +620,10 @@ public final class JokeParser {
     public List<Joke> parseReddit() {
         File in = new File("jokes/reddit/source/1 - cleaned/cleaned.json");
         String source = "Reddit";
-        boolean rewrite = true;
+        boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
         Map<Integer, Joke> hashes = new HashMap<>();
-        List<String> out = new ArrayList<>();
-        out.add("[");
         
         JSONParser p = new JSONParser();
         try {
@@ -537,6 +636,7 @@ public final class JokeParser {
                 JSONObject io = (JSONObject) i;
                 String body = ((String) io.get("body"));
                 String title = ((String) io.get("title"));
+                String save = title + "|||||" + body;
                 
                 if (!title.isEmpty() &&
                     StringUtility.removePunctuation(StringUtility.removeWhiteSpace(body.toUpperCase())).startsWith(
@@ -598,15 +698,11 @@ public final class JokeParser {
                 boolean nsfw = false;
                 if (body.toUpperCase().contains("(NSFW)")) {
                     nsfw = true;
-                    if (!rewrite) {
-                        body = body.replace("(NSFW)", " ");
-                    }
+                    body = body.replace("(NSFW)", " ");
                 }
                 if (title.toUpperCase().contains("(NSFW)")) {
                     nsfw = true;
-                    if (!rewrite) {
-                        title = title.replace("(NSFW)", " ");
-                    }
+                    title = title.replace("(NSFW)", " ");
                 }
                 
                 title = StringUtility.trim(title);
@@ -625,24 +721,13 @@ public final class JokeParser {
                 
                 Joke thisJoke = new Joke();
                 thisJoke.text = title + " " + body;
-                thisJoke.source = source;
+                thisJoke.source = preserveSource ? (title + "|||||" + body) : source;
                 thisJoke.nsfw = nsfw;
                 thisJoke.hash = StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().hashCode();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
                 } else {
-                    if (rewrite) {
-                        if (!first) {
-                            out.set(out.size() - 1, out.get(out.size() - 1) + ",");
-                        }
-                        first = false;
-                        out.add("    {");
-                        out.add("        \"body\": \"" + body.replaceAll("\\\\*\"", "\\\\\"").replaceAll("\\s+", " ") + "\",");
-                        out.add("        \"title\": \"" + title.replaceAll("\\\\*\"", "\\\\\"").replaceAll("\\s+", " ") + "\"");
-                        out.add("    }");
-                    }
-                    
                     jokes.add(thisJoke);
                     hashes.put(thisJoke.hash, thisJoke);
                 }
@@ -653,11 +738,46 @@ public final class JokeParser {
         }
         
         if (rewrite) {
-            out.add("]");
-            Filesystem.writeLines(new File("jokes/reddit/source/1 - cleaned/cleaned.json"), out);
+            writeReddit(jokes, false);
         }
         
         return jokes;
+    }
+    
+    /**
+     * Writes jokes back to Reddit.
+     *
+     * @param jokes The list of jokes parsed from Reddit.
+     * @param work  Whether or not the jokes should be written back to the work file.
+     */
+    private void writeReddit(List<Joke> jokes, boolean work) {
+        File out = new File("jokes/reddit/source/1 - cleaned/cleaned" + (work ? "-work" : "") + ".json");
+        List<String> output = new ArrayList<>();
+        output.add("[");
+        for (int i = 0; i < jokes.size(); i++) {
+            String[] parts = jokes.get(i).source
+                    .replaceAll("\\\\*\"", "\\\\\"")
+                    .replaceAll("\\s+", " ")
+                    .split("\\|\\|\\|\\|\\|", -1);
+            output.add("    {");
+            output.add("        \"body\": \"" + StringUtility.trim(parts[1]) + "\",");
+            output.add("        \"title\": \"" + StringUtility.trim(parts[0]) + "\"");
+            output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
+        }
+        output.add("]");
+        Filesystem.writeLines(out, output);
+    }
+    
+    /**
+     * Writes jokes back to Reddit.
+     *
+     * @param jokes The list of jokes parsed from Reddit.
+     */
+    public void writeReddit(List<Joke> jokes) {
+        if (!preserveSource) {
+            return;
+        }
+        writeReddit(jokes, true);
     }
     
 }
