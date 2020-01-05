@@ -83,7 +83,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
      */
-    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, true);
+    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, false);
     
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
@@ -618,7 +618,7 @@ public class Jokes {
      * @param splitFix Whether or not to split the jokes that need to be fixed into another file.
      */
     public static void outputJokes(File out, List<Joke> jokes, boolean splitFix) {
-        int count = splitFix ? (int) jokes.stream().filter(e -> !e.fix.isEmpty()).count() : jokes.size();
+        int count = splitFix ? (int) jokes.stream().filter(e -> e.fix.isEmpty()).count() : jokes.size();
         List<String> text = new ArrayList<>();
         text.add("{");
         text.add("    \"count\": " + count + ",");

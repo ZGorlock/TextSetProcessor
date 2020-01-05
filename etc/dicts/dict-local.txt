@@ -46,9 +46,6 @@ abombinabull
 aboooooooooty
 aboot
 aborschtion
-yerp
-chocolat
-perfe
 abouta
 abova
 abracapokus
@@ -1420,6 +1417,7 @@ chlorofeels
 chlorophile
 chmod
 chocobo
+chocolat
 choips
 chokeland
 chokeovic
@@ -5863,6 +5861,7 @@ pepsilepsy
 peptalk
 perconow
 perdelkino
+perfe
 perhapth
 perignon
 perkman
@@ -8670,6 +8669,7 @@ yelnats
 yelstin
 yelvis
 yeos
+yerp
 yerr
 yerself
 yesa
