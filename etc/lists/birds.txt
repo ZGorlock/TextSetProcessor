@@ -1,10 +1,12 @@
 Albatross
+Peloquin
 Blackbird
 Bluebird
 Budgie
 Bulbul
 Capercallie
 Chicken
+Kestrel
 Chukar
 Cormorant
 Crane

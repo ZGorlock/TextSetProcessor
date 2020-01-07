@@ -22,3 +22,5 @@ SuperNintendo
 Xbox
 Xbox 360
 Xbox One
+DS
+Wii

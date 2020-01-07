@@ -20,6 +20,10 @@ Fajita
 Taco
 Burrito
 Quesadilla
+Dough
+Manwich
+Sandwich
+Bagel
 Bagel
 Bake
 Baked Alaska

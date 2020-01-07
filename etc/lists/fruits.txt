@@ -1,6 +1,7 @@
 Acai
 Apple
 Avocado
+Currant
 Banana
 Berries
 Berry

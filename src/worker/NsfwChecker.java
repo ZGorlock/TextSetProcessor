@@ -93,7 +93,7 @@ public final class NsfwChecker {
         
         nsfw.addAll(Filesystem.readLines(new File("etc/dicts/nsfw.txt")));
         
-        dontDoStartNsfw.addAll(Arrays.asList("coon", "tit", "ass", "arse", "fuh"));
+        dontDoStartNsfw.addAll(Arrays.asList("anal", "coon", "tit", "ass", "arse", "fuh"));
         dontDoEndNsfw.addAll(Arrays.asList("anal", "ass", "crap", "homo", "muff", "prick", "tit", "fuh"));
         
         System.out.println("(" + nsfw.size() + " Words)");
@@ -133,7 +133,15 @@ public final class NsfwChecker {
                 }
             }
         }
-        return text.toUpperCase().contains("FUCK") || text.toUpperCase().contains("NIGGER") || text.toUpperCase().contains("PORN") || text.toUpperCase().contains("BITCH");
+        List<String> catchAll = Arrays.asList("fuck", "nigga", "nigger", "porn", "bitch", "rape");
+        boolean hitCatchAll = false;
+        for (String catchAllEntry : catchAll) {
+            if (text.toUpperCase().contains(catchAllEntry.toUpperCase())) {
+                hitCatchAll = true;
+                break;
+            }
+        }
+        return hitCatchAll;
     }
     
     /**

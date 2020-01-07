@@ -1,4 +1,7 @@
 Bogeyman
+Loch Ness
+Lochness
+Nessie
 Boogeyman
 Chupacabra
 Frankenstein
@@ -9,3 +12,6 @@ Minotaur
 Mothra
 Vampire
 Werewolf
+Yeti
+Big Foot
+BigFoot

@@ -1,0 +1,39 @@
+Larghissimo
+Lento
+Larghetto
+Adagio
+Adagietto
+Andante moderato
+Andante
+Andantino
+Moderato
+Allegretto
+Allegro moderato
+Allegro
+Vivace
+Vivacissimo
+Allegrissimo
+Presto
+Prestissimo
+A piacere
+Listesso tempo
+Lo stesso tempo
+Tempo comodo
+Tempo di
+Tempo giusto
+Tempo semplice
+Accelerando
+Allargando
+Calando
+Doppio movimento
+Lentando
+Meno mosso
+Mosso
+Piu mosso
+Precipitando
+Rallentando
+Ritardando
+Ritenuto
+Rubato
+Stretto
+Stringendo

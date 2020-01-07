@@ -1,4 +1,5 @@
 Acapella
+Orchestral
 Acoustic Music
 Alternative Rock
 Ballad
@@ -9,9 +10,14 @@ Classical Music
 Contemporary R&B
 Country Music
 Dance Music
+PowerMetal
+Power Metal
 Disco
+Reggaeton
 Dubstep
 Easy Listening
+KPop
+K Pop
 Electronic Dance Music
 Electronic Music
 Folk Music

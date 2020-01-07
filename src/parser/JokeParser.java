@@ -679,7 +679,7 @@ public final class JokeParser {
                     test.matches(".*\\sPS[^a-zA-Z0-9].*$") ||
                     test.matches(".*(I'?LL\\sBE\\sHERE\\s)?ALL\\s(WEEK|NIGHT|MONTH|YEAR).*$") ||
                     test.matches(".*I'?LL\\s(LEAVE|STOP|GO)(\\sNOW)?[^a-zA-Z0-9]*$") ||
-                    test.matches(".*I'?M\\sSO\\sLONELY[^a-zA-Z0-9]*$") ||
+                    test.matches(".*I'?M\\s*(SO\\s)?(LONELY|TIRED)[^a-zA-Z0-9]*$") ||
                     test.matches(".*GET\\sIT[^a-zA-Z0-9]*$") ||
                     test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
                     test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||

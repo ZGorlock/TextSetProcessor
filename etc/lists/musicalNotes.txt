@@ -1,0 +1,16 @@
+Semibreve
+Whole Note
+Half Note
+Quarter Note
+Eighth Note
+Sixteenth Note
+Treble Clef
+Bass Clef
+Alto Clef
+Tenor Clef
+Neutral Clef
+Minim
+Crotchet
+Quaver
+Semiquaver
+Demisemiquaver

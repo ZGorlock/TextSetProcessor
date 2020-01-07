@@ -254,7 +254,7 @@ public final class TextTagger {
         addListToTag(tags.get("Car"), "cars", "carTypes");
         addListToTag(tags.get("Cat"), "cats");
         addListToTag(tags.get("Celebrity"), "actors", "baseballPlayers", "basketballPlayers", "boxers", "chefs", "comedians", "countryMusicSingers", "footballPlayers", "golfPlayers", "hockeyPlayers", "musicians", "rappers", "soccerPlayers", "tennisPlayers", "volleyballPlayers", "wrestlers");
-        addListToTag(tags.get("Chemistry"), "chemists", "chemistryTools");
+        addListToTag(tags.get("Chemistry"), "chemists", "chemistryElements", "chemistryTools");
         addListToTag(tags.get("Chicken"), "chickens");
         addListToTag(tags.get("Christian"), "christians", "baptists", "protestants");
         addListToTag(tags.get("Cinematography"), "actors", "disneyMovies", "harryPotterBooks", "harryPotterCharacters", "harryPotterPlaces", "harryPotterSpells", "lordOfTheRingsCharacters", "lordOfTheRingsPlaces", "movies", "starTrekCharacters", "starTrekPlaces", "starTrekRaces", "starTrekTitles", "starWarsCharacters", "starWarsPlaces", "starWarsRaces", "starWarsTitles", "toyStoryCharacters", "transformersCharacters");
@@ -342,7 +342,7 @@ public final class TextTagger {
         addListToTag(tags.get("Monkey"), "monkeys");
         addListToTag(tags.get("Monster"), "monsters");
         addListToTag(tags.get("Mushroom"), "mushrooms");
-        addListToTag(tags.get("Music"), "countryMusicSingers", "musicalGenres", "musicalInstruments", "musicians", "rappers");
+        addListToTag(tags.get("Music"), "countryMusicSingers", "musicalGenres", "musicalInstruments", "musicalNotes", "musicalTempos", "musicians", "rappers");
         addListToTag(tags.get("Ninja"), "ninjaWeapons");
         addListToTag(tags.get("Ocean"), "crustaceans", "fishes", "oceans", "sharks");
         addListToTag(tags.get("Painkiller"), "painkillers");
@@ -515,6 +515,10 @@ public final class TextTagger {
             if (word.charAt(0) == 'i' && Character.isUpperCase(word.charAt(1))) {
                 tags.add("Apple");
                 matches.add("Apple");
+            }
+            if (word.equalsIgnoreCase("gorilla") && text.toLowerCase().matches("^.+\\shar.+$")) {
+                tags.add("Harambe");
+                matches.add("Harambe");
             }
             word = word.toUpperCase();
             if (word.endsWith("SAURUS")) {

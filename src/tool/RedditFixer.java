@@ -95,6 +95,7 @@ public class RedditFixer {
         
         Scanner input = new Scanner(System.in);
         List<String> fixList = new ArrayList<>();
+        int bigCount = 0;
         int count = 0;
         int lastIndex = 0;
         int index = workIndexFile.exists() ? Integer.parseInt(Filesystem.readFileToString(workIndexFile)) : 0;
@@ -105,6 +106,7 @@ public class RedditFixer {
                 boolean delete = false;
                 for (String fixing : j.fix) {
                     System.out.println("\n\n\n");
+                    System.out.println("Joke " + i + " / " + jokes.size());
                     for (String s : StringUtility.wrapText(j.text.replaceAll(fixing, Console.yellow("***" + fixing + "***")), 120)) {
                         System.out.println(s);
                     }
@@ -121,6 +123,9 @@ public class RedditFixer {
                         } else if (typed.equalsIgnoreCase("*")) {
                             delete = true;
                             break;
+                        } else if (typed.equalsIgnoreCase("=")) {
+                            //skip
+                            break;
                         } else {
                             j.source = j.source.replaceAll(fixing, typed);
                         }
@@ -136,11 +141,12 @@ public class RedditFixer {
                 if (delete) {
                     jokes.remove(i);
                     i--;
-                } else {
-                    lastIndex = i;
                 }
+                lastIndex = i;
             }
             if (count >= 10) {
+                bigCount++;
+                System.out.println("\nSaving Progress... (" + bigCount + ")\n");
                 Filesystem.copyFile(workFile, workBackupFile, true);
                 jokeParser.writeReddit(jokes);
                 Filesystem.writeLines(workFixListFile, fixList, true);

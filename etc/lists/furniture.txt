@@ -1,8 +1,10 @@
 Barstool
+Easychair
 Bed
 Bench
 Bookcase
 Cabinet
+Bunkbed
 Chair
 Couch
 Cupboard
