@@ -1,11 +1,18 @@
 Battery Backup
+DDR
+DRAM
 CPU
 Card Reader
+Central Processing Unit
+Processor
+SATA
 Data Cable
 Daughterboard
 Disk Drive
 Flash Drive
 Floppy Disk Drive
+Floppy Disk
+CD
 Graphics Card
 HDD
 Hard Drive

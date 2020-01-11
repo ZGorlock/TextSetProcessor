@@ -79,7 +79,7 @@ Banker
 Bankruptcy              ,Bankrupt,Bankrupted -dontDoY
 Baptism                 
 Baptist                 
-Bar                     ,Alehouse,Barfight,Barkeep,Barmaid,Bartender,Bartending,DJ,Disco,Disk Jockey,Nightclub,Nightlife,Nightspot,Pub,Saloon,Tavern
+Bar                     ,Alehouse,Gaybar,Barfight,Barkeep,Barmaid,Bartender,Bartending,DJ,Disco,Disk Jockey,Nightclub,Nightlife,Nightspot,Pub,Saloon,Tavern
 Barack Obama            ,Obama,Obamacare
 Barber                  ,Barbershop,Hair Cut,Haircut -dontDoER
 Barbie                  ,Barbied
@@ -208,7 +208,7 @@ Church                  ,Adam and Eve,Altar Boy,AlterBoy,Angel,Antishrist,Beelze
 Cigar                   
 Cigarette               ,Malboro,Newport
 Cinderella              
-Cinematography          ,Box Office,Cinema,Movie,Redbox
+Cinematography          ,Box Office,Cinema,Movie,Redbox,DVD,Blockbuster,Video,Videography,Videographer
 Circumcision            ,Circumcicionist,Circumcise,Circumcised -nsfw
 Circus                  -dontDoS
 Civil War               ,Confederacy,Confederate,Robert E Lee
@@ -409,7 +409,7 @@ Gambling                ,Bet,Betting,Casino,Dice,Jackpot,Lottery,Lotto,Powerball
 Game of Thrones         ,GameOfThrones -dontDoS -dontDoES
 Game                    ,Cybergame,Gamed,Gamer,Gaming,Highscore,Hiscore,Ubisoft,Videogame
 Gardening               ,Botanist,Botany,Fertilizer,Landscape,Landscaping,Replant,Trowel
-Gay                     ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Faggiest,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
+Gay                     ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Faggiest,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Gaybar,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
 Gender                  ,Asexual,Asexuality,Bisexual,Bisexuality,Cis,Drag Queen,Cisgender,Cross Dress,Cross Dressed,Cross Dresser,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Crossdressed,Dyke,Fag,Faggot,Female,Feminine,Gay,Genderfluid,Genderqueer,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Male,Masculine,Metrosexual,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite,Ladyboy,Lady Boy -dontDoER
 Genetics                ,Adenine,Chromosome,Codon,Cytosine,DNA,Deoxyribonucleic Acid,Double Helix,Gene,Genealogy,Genetical,Genomic,Guanine,Helicase,Nucleotide,Purine,Pyrimidine,Telomere,Thymine,mRNA
 Genie                   
@@ -907,7 +907,7 @@ Software                ,Antivirus,Computer Program,Computer Virus,Word Processo
 Soldier                 ,Cannon Fodder,Cavalryman,Infantry,Infantryman,Paratrooper,Peacekeeper,Trooper,Warrior -dontDoER
 Son                     ,Sonny
 South Korea             ,Seoul,South Korean
-Space                   ,Aphelion,Apoapsis,Asteroid,Astronaut,Astronomer,Astronomy,Astrophysicist,Astrophysics,Biosphere,Black Hole,Cosmonaut,Earthlike,Exoplanet,Extrasolar,Galactic,Galaxy,Gas Giant,Heavenly Body,Heliocentric,Heliocentrism,Intergalactic,Interplanetary,Observatory,Orbit,Outerspace,Periapsis,Perihelion,Planet,Planetarium,Planetary,Planetesimal,Planetoid,Protoplanet,Rocket,Satellite,Solar System,Solstice,Spaceship,Spacestation,Sun,Telescope,Transgalactic
+Space                   ,Aphelion,Apoapsis,Hohmann Transfer,Asteroid,Astronaut,Astronomer,Astronomy,Astrophysicist,Astrophysics,Biosphere,Black Hole,Cosmonaut,Earthlike,Exoplanet,Extrasolar,Galactic,Galaxy,Gas Giant,Heavenly Body,Heliocentric,Heliocentrism,Intergalactic,Interplanetary,Observatory,Orbit,Outerspace,Periapsis,Perihelion,Planet,Planetarium,Planetary,Planetesimal,Planetoid,Protoplanet,Rocket,Satellite,Solar System,Solstice,Spaceship,Spacestation,Sun,Telescope,Transgalactic
 Spanish                 ,Barcelona,Castilian,Espanol,Latino,Madrid,Portugal,Spain
 Speech Impediment       ,Dysphonia,Lisp,Muteness,Phoniatric,Slur,Slurred,Slurring,Studder,Studdering,Stutter,Stuttering,TongueTie,TongueTied,Tourette
 Speeding                ,Speed Limit,Speeder
@@ -963,7 +963,7 @@ Television              ,Flat Screen,Flatscreen,HBO,Hulu,Netflix,TV
 Tennessee               ,Tennessean,Tennesseean
 Tennis                  ,Tennisball,Tenniscourt,Tennisracket,Wimbledon -dontDoS
 Terrorist               ,Ackbar,Al Qaeda,AlQaeda,Bin Laden,BinLaden,Extremist,ISIS,Insurgent,Jihad,Militant,Sep 11,Sep 11th,Sept 11,Sept 11th,September 11,September 11th,Suddam Hussien,Suicide Bomber,Terrorism,WTC,World Trade Center
-Testicle                ,Ballsack,Gonad,Nutsack,Scrotum,Spermatic,Spermatogenesis,Testis -nsfw
+Testicle                ,Ballsack,Gonad,Nutsack,Scrotum,Spermatic,Spermatogenesis,Testis,Bollick -nsfw
 Texas                   ,Texan -dontDoS
 Thailand                ,Thai
 Thanksgiving            ,Feast Day -dontDoING
@@ -981,7 +981,7 @@ Tobacco                 ,Cigar,Cigarette,Malboro,Marlboro,Newport,Snuff,Splif,Sp
 Tourist                 ,Sightseeing,Sightseer,Tourism
 Toy Story               ,Pizza Planet -dontDoY
 Traffic                 ,Gridlock,Stoplight,Stopsign
-Train                   ,Conductor,Locomotive,Monorail,Raidroad,Railcar,Railway,Railyar,Third Rail
+Train                   ,Trainyard,Conductor,Locomotive,Monorail,Raidroad,Railcar,Railway,Railyar,Third Rail
 Transformers            ,AllSpark,Autobot,Cybertron,Decepticon
 Transgender             ,Cis,Gender Change,Gender Changed,Hermaphrodite,Sex Change,Sex Changed,Shemale,Transsexual,Transsexually -nsfw -dontDoER
 Transportation          ,Cargo,Ferry,Freight,Haul,Haulage,Hauling,Logistical,Logistically,Logistics,Relocation,Shipping,Transport,Transporter,Transshipment,Trucking

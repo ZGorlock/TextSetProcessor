@@ -644,6 +644,9 @@ public final class JokeParser {
                     title = "";
                 }
                 
+                if (title.toUpperCase().startsWith("HEHE") || body.toUpperCase().startsWith("HEHE")) {
+                    continue;
+                }
                 String test = (title + body);
                 if (test.contains("OC") || test.contains("AMA") || test.contains("DAMA")) {
                     continue;

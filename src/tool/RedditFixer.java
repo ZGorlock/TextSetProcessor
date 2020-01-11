@@ -70,6 +70,7 @@ public class RedditFixer {
         jokeParser.preserveSource = true;
         
         File workFixedFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixed.json");
+        File workFixedBackupFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixed-bak.json");
         File workFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work.json");
         File workBackupFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-bak.json");
         File workFixListFile = new File("jokes/reddit/source/1 - cleaned/cleaned-work-fixList.txt");
@@ -149,6 +150,8 @@ public class RedditFixer {
                 System.out.println("\nSaving Progress... (" + bigCount + ")\n");
                 Filesystem.copyFile(workFile, workBackupFile, true);
                 jokeParser.writeReddit(jokes);
+                Filesystem.copyFile(workFixedFile, workFixedBackupFile, true);
+                Jokes.outputJokes(workFixedFile, jokes, false);
                 Filesystem.writeLines(workFixListFile, fixList, true);
                 fixList.clear();
                 Filesystem.writeStringToFile(workIndexFile, String.valueOf(i + 1));

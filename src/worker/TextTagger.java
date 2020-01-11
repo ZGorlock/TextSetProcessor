@@ -425,7 +425,7 @@ public final class TextTagger {
         addListToTag(tags.get("Vacuum"), "vacuums");
         addListToTag(tags.get("Vegetable"), "vegetables");
         addListToTag(tags.get("Video Game"), "videoGames", "videoGameConsoles", "videoGameTypes");
-        addListToTag(tags.get("Viking"), "norseGods");
+        addListToTag(tags.get("Viking"), "norseGods", "norseRealms");
         addListToTag(tags.get("Virus"), "viruses");
         addListToTag(tags.get("Vodka"), "vodkas");
         addListToTag(tags.get("Volleyball"), "volleyballPlayers", "volleyballPositions");
@@ -544,6 +544,10 @@ public final class TextTagger {
             if (word.contains("SHREK")) {
                 tags.add("Shrek");
                 matches.add("Shrek");
+            }
+            if (word.contains("NAZI")) {
+                tags.add("Nazi");
+                matches.add("Nazi");
             }
         }
         

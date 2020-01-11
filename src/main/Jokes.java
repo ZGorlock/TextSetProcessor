@@ -83,7 +83,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
      */
-    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, false);
+    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, true);
     
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
@@ -96,7 +96,7 @@ public class Jokes {
     private static final boolean doCleanStart = false;
     
     /**
-     * A flag indicating whether or not to perform a clean start.
+     * A flag indicating whether or not to perform a fast start.
      */
     private static final boolean doFastStart = false;
     

@@ -10,6 +10,8 @@ Lycan
 Lycanthrope
 Minotaur
 Mothra
+Wyrm
+Dragon
 Vampire
 Werewolf
 Yeti
