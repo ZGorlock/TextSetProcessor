@@ -250,6 +250,7 @@ public final class TextFixer {
         text = StringUtility.trim(text);
         text = text.replaceAll("\\s+", " ")
                    .replaceAll("\\s([!?.])$", "$1")
+                   .replaceAll("(\\d+)([,])\\s+(\\d+)", "$1$2$3")
                    .replace(".\\.\\\"", ".\\\"");
         
         return StringUtility.trim(text);

@@ -283,6 +283,7 @@ public final class TextTagger {
         addListToTag(tags.get("Dolphin"), "dolphins");
         addListToTag(tags.get("Drinking"), "alcoholicDrinks", "alcohols", "beers", "coffees", "cokeProducts", "drinks", "pepsiProducts", "vodkas", "whiskeys", "wines");
         addListToTag(tags.get("Drug"), "drugs");
+        addListToTag(tags.get("Drum"), "drums");
         addListToTag(tags.get("Duck"), "ducks");
         addListToTag(tags.get("Earth"), "earthScienceBranches");
         addListToTag(tags.get("Egypt"), "pharaohs", "egyptianGods");

@@ -1,5 +1,5 @@
 {
-    "count": 2712,
+    "count": 2626,
     "jokes": [
         {
             "joke": "Dear Dad Letter home from school... Dear Dad, $chool i$ really great. I am making lot$ of friend$ and $tudying very hard. With all my $tuff, I $imply can't think of anything I need, $o if you would like, you can ju$t $end me a card, a$ I would love to hear from you. Love, Your $on. A week later... A letter from, \"home.\" Dear Son, I kNOw that astroNOmy, ecoNOmics, and oceaNOgraphy are eNOugh to keep even an hoNOr student busy. Do NOt forget that the pursuit of kNOwledge is a NOble task, and you can never study eNOugh. Love, Dad.",
@@ -66,14 +66,6 @@
             "tags": []
         },
         {
-            "joke": "What do you call a white immigrant in japan? An erragal Aryan.",
-            "fix": "erragal",
-            "length": 62,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "In my town, we have a combination abortion clinic and Mexican restaurant. They're best known for their fajitus.",
             "fix": "fajitus",
             "length": 111,
@@ -101,22 +93,6 @@
             "joke": "Nutritional Ketosis is a healthy diet that keeps the doctor away... Because of your breath! GitGut bois.",
             "fix": "GitGut",
             "length": 104,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a Dothraki mathematician? Khal culator.",
-            "fix": "culator",
-            "length": 56,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "How did Chastity Bono become Chas Bono? By removing the tity.",
-            "fix": "tity",
-            "length": 61,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -157,14 +133,6 @@
             "joke": "I just solved all my problems: I just pretented it wasn't happening, and I instantly felt better.",
             "fix": "pretented",
             "length": 97,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "A drunk proctologist walks into a bar: And orderrrsh each a round.",
-            "fix": "orderrrsh",
-            "length": 66,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -245,14 +213,6 @@
             "joke": "A drover walks into a pub and orders three beers. He drinks a sips of each in turn. When he finish he orders three more. The bartender says, \"You know, a beer goes flat after I pour it. They'd taste better if you bought one at a time.\" The cattleman replies, \"Well, you see, I have two brothers overseas. When we left home, we promised we'd dring this way to remember the days when we drank together. So I drink one beer for each brother and of for myself.\" The drover became a regular at the pub, always ordering three beers. One day he comes in and orders two. All the regulars take notice and fall silent. The bartender says, \"I don't want to intrude, but condolences for your loss.\" The drover looks puzzled, then a light dawns in his eyes. \"Oh, no, everybody's just fine,\" he laughs. \"It's just my wife and I joined the Salvation Army and I had to quit drinking. Hasn't affected my brothers though.\"",
             "fix": "dring",
             "length": 914,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What was George Lucas doing at the Indonesian rice farm? Filming Sa wahrs.",
-            "fix": "wahrs",
-            "length": 74,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -381,14 +341,6 @@
             "joke": "If someone does t want to eat a human... Doesn't that make them a cantibal?",
             "fix": "cantibal",
             "length": 75,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "NextGen Telsa models will have a new mode... Bolt Mode.. Whaddusayin.",
-            "fix": "NextGen",
-            "length": 69,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -674,14 +626,6 @@
             "tags": []
         },
         {
-            "joke": "What did the egg say to the other egg? Have a eggsellent day.",
-            "fix": "eggsellent",
-            "length": 61,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "A man hated his wife's cat: Mr. Peppers, so he drove the cat to a park and left him. When the man got back, Mr. Peppers was walking up the driveway. The next day, he drove Mr. Peppers to another town and booted him out. THe man arrived home to find Mr. Peppers asleep in his chair. Finally, the man drove 20 miles away, turned right, then left, over a mountain, diwn into a valley, through a river, into a thick forest and dumped the cat. Hours later he called his wife, \"Honey, is Mr. Peppers home?\" \"Yes,\" said his wife. \"Why?\" \"I'm lost and I need him to give me directions home.\"",
             "fix": "diwn",
             "length": 591,
@@ -738,25 +682,9 @@
             "tags": []
         },
         {
-            "joke": "\"How hot is Cedric?\" Girl asked cho Chang: Cho: 40000 diggories.",
-            "fix": "diggories",
-            "length": 66,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "I used to date a dysexic woman... I took her home and she ended up cooking my sock.",
             "fix": "dysexic",
             "length": 83,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "In a job interview: \"Name?\" \"JJoon Sttutuartt.\" \"Again please.\" \"JJoon Sttutuartt.\" \"Sir, are you a stutterer?\" \"No, my father stuttered, and the civil servant was an asshole.\"",
-            "fix": "JJoon",
-            "length": 188,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -853,14 +781,6 @@
             "joke": "A black man dies and is greeted by St. Peter at the pearly gates. \"What's your name?\" \"Leonardo DiCrapio,\" says the black man St. Peter stares at him for a minute and asks, \"I'm sorry, what's your name?\" The black man tells him his name again, \"Leonardo DiCaprio.\" \"Hold on one second,\" says St. Peter. He calls God. \"Excuse me sir, can you remind me again, did the Titanic sink, or burn?\"",
             "fix": "DiCrapio",
             "length": 401,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "You know the 'Done' button you press to exit a video? How come it only sounds judgy and sarcastic after I've finished jacking off?",
-            "fix": "judgy",
-            "length": 130,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -1029,14 +949,6 @@
             "joke": "A woman was dumped by a trangender individual right after their gender-reassignment surgery. She said, \"I'm just not the man you need me to be anymore.\"",
             "fix": "trangender",
             "length": 154,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "So a couple decide to go on an extended vacation: They decide to get their friendly neighbor to watch over their house and pets, as you do. After a week of their trip they get an abrupt phone call from their house-sitter, who tells them in a quite and calmed voice, \"I'm sorry but your cat has passed away.\" Devastated by the news the wife is sobbing over dead Mr. Mittens, ruining the otherwise amazing day they had. Angered by how the enjoyment of the day has vanished grabs the phone, and in another room tells their neighbor, \"Man you've destroyed our day! Possibly our entire vacation too! Do you know how much I spent today on her? Everything was going so well!\" To which the he replies, \"I'm sorry, and I'm sorry for your loss.\" \"Well damn it, uch. At least you could've slowly just told us about the cat's wellbeing instead of just dumping its death on us like that! You should've slowly tell us about the cat, like 'Cat's on roof, won't come down', then again the next day 'Cat's still on roof, won't come down' and then tell us the cats ill or dead.\" The neighbor just says he's sorry again and they hang up. Another week passes and the neighbor calls again, the man picks up. The neighbor thinks hard about his words, \"Um... Mother on roof, won't come down.\"",
-            "fix": "uch",
-            "length": 1279,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -1365,14 +1277,6 @@
             "joke": "Husband catchs pregnant woman eating grass, what is it? Just pregnancy desire.",
             "fix": "catchs",
             "length": 78,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Beware of snakes: Mick and Pat have spent most of the day in the pub and are well on. Mick heads to the toilet and unbeknowns to himself, comes back with his, \"lad,\" still hanging out of his fly and sits back up on the stool beside Pat. A few moments later Pat happens to look down. In a terrified voice he shouts, \"Don't move Mick.\" \"What's wrong?\" Shouts Mick in an equally terrified voice. \"There's a snake on your leg,\" replies Pat. \"What do I do, what do I do?\" Screams Mick. \"Don't move a muscle, I'll deal with it,\" says Pat. Then he turns round and takes one of the empty bottles on the bar, and grabbing it by neck he smashes the other end of it over the bar. He turns back towards Mick. He then raises his arm slowly and with all his might hits the offending item. Mick screams and then shouts, \"Hit him again Pat, he's after biting me!\"",
-            "fix": "unbeknowns",
-            "length": 861,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -2250,14 +2154,6 @@
             "tags": []
         },
         {
-            "joke": "A priest walks down a corridor... A priest is walking down a corridor between the cells in the local prison. As he is walking by the first cell, he sees a man miming playing basketball. He seems to be dribbling this way and that with an imaginary ball, across the floor of his cell. He stops and makes a jump shot, then high fives his invisible teammates. \"Good morning my son, what is it that you are doing?\" Asks the priest. \"Well,\" says the inmate, \"When I get out of here, I'm going to be a professional basketball player!\" \"Very good, my son.\" Replies the priest. The priest continues down the corridor. Just a few cells later, he spies a man swinging his arms. Looking closer, it appears the man thinks he is playing baseball. The man swings again, then starts running around in his cell. \"What are you up to this morning?\" The priest asks the inmate. \"I'm keeping up my skills, because when I get out of here, I'm going to be a professional baseball player!\" The inmate replies. The priest walks further down the hall, uplifted by the hopeful spirits of the young men he has passed. He looks into another cell and finds a man with his pants around his ankles, thrusting his hips madly. As the priest cranes his neck to figure out what the man is doing, he seems to be having his way with a can of Planters. \"And what will you be doing when you get out of here?\" Says the priest to the pantsless inmate. To which the inmate replies, \"Me? I ain't never gettin out of here, I'm fuckin nuts!\"",
-            "fix": "pantsless",
-            "length": 1511,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "I was doing my online shopping the other day and bought one hundred bottles of tipex. I made a really big mistake!",
             "fix": "tipex",
             "length": 114,
@@ -2394,14 +2290,6 @@
             "tags": []
         },
         {
-            "joke": "I just fired my liquid measurement calibration manager: He had really poor litership skills.",
-            "fix": "litership",
-            "length": 92,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "2 gay men are enjoying a pleasant night in. Two gay men decide to have a night in for some netflix and chill. They order pizza and start watching some netflix. About 20 minutes into an episode of Daredevil, things start getting frisky. Before they know it sex is happening. All of a sudden the doorbell rings. \"That must be the pizza guy! Don't finish before I get back!\" And runs to answer the door, throwing on clothes quickly. When he returns, he finds the room covered in spum. The man looks at his husband and says, \"I told you not to finish!\" And the other man looks back at him and says, \"I didn't, I farted.\"",
             "fix": "spum",
             "length": 622,
@@ -2514,14 +2402,6 @@
             "tags": []
         },
         {
-            "joke": "Do you know what smuck is? It's what smurf's do after smoreplay.",
-            "fix": "smoreplay",
-            "length": 64,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "What Color Is It? In case you hadn't noticed, the color of the wind is 'blew.' Water always looks 'wet' to me. Dirt is oviously 'dirty.' Soup seems 'soupy.' If you can't find those Crayons in your box, contact CRAYOLA.",
             "fix": "oviously",
             "length": 218,
@@ -2549,14 +2429,6 @@
             "joke": "What do you call a magic owel? Hoo-Dini!",
             "fix": "owel",
             "length": 40,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a booth babe at Apple's events? iCandy.",
-            "fix": "iCandy",
-            "length": 56,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -2842,14 +2714,6 @@
             "tags": []
         },
         {
-            "joke": "How many frat brahs does it take to screw in a light bulb? None- it's already lit, fam.",
-            "fix": "brahs",
-            "length": 87,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "How does one think the unthinkable? With an iethberg.",
             "fix": "iethberg",
             "length": 53,
@@ -2869,14 +2733,6 @@
             "joke": "What did the door say to the mouse? That don't make no sense, doors canne talk, it's at my grannies isn't it.",
             "fix": "canne",
             "length": 109,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Paddy and seamus are sitting at the pub, havin a pint, when they watch out the window as pastor richards knocks on the door of the brothel and is let it. 'Tis a shem...' - Says paddy. 'Aye... Tis a shem' - says seamus.. ' That a man of the lord should succumb to the sins of the flesh.' Another pint or three later and they notice rabbi goldstein knock on the brothel door, and be let in. 'Tis a shem' - says paddy. 'Aye- tis a shem..' Say's seamus. 'That a man of faith, whatever that is, should be corrupted.' A few pints later, and they notice bishop brennan knock on the door of the brothel and go in. 'Tis a shem...' Says paddy. 'Aye.. Tis a shem...' Says seamus. 'One of tha poor garls must be dyin'. RIP Jack Kelly- if you haven't watched 'Father Ted' the series, I recommend.",
-            "fix": "garls",
-            "length": 783,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3122,49 +2978,9 @@
             "tags": []
         },
         {
-            "joke": "Why are Indians the best pizza makers? Because they always do the kneedful.",
-            "fix": "kneedful",
-            "length": 75,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Asian man goes to an optometrist... And says, \"Doctor, I am having trouble seeing out of my right eye.\" The doctor takes a look and says, \"Ok, I see your problem. You have a cataract.\" The man replies, \"No, I have a rinkon continental.\"",
-            "fix": "rinkon",
-            "length": 242,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "On a Trans-Atlantic flight, an airline's engine goes out... After the pilot stabilizes the plane, he comes across the radio and announces the disaster. \"We're going to have to jettison the luggage, but don't worry; US Coast Guard cutters are standing by to collect your belongings once they land and they'll be returned to you.\" After jettisoning the luggage, a second engine fails, and the pilot comes back on the radio, \"Unfortunately, we're going to have to start jettisoning some passengers to make the aircraft lighter. The flight attendants will supervise handing out parachutes.\" \"We're going to do this alphabetically, by race, to make everything fair,\" the flight attendant said cooly, \"so we'll start with A, for African-American.\" A little boy began to raise his hand, and the boy's father quickly grabbed it and pushed it back down. \"Okay, B, for Black,\" continued the flight attendant. Again the little boy began raising his hand, and was stopped by his father. He was confused, but didn't say anything. \"Alright, C, for Colored,\" said the flight attendant. Once more the boy began raising his hand, and father halted him. \"Dad, I'm confused,\" said the boy with a puzzled look on his face, \"we're African-American, Black, and Colored. Why aren't we getting off the plane?\" \"Son,\" replied his father sternly, \"today, and only today, we're Niggers. We're gonna let those fuckin' Mexicans jump first,\" and burst out laughing. A Mexican in front of him turned around and said, \"I 'unno what the fuck you're laughing at homes, we're Wetbacks.\"",
-            "fix": "unno",
-            "length": 1573,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Since lesbians eat so much pussy: Should they be considered sexually snacktive?",
-            "fix": "snacktive",
-            "length": 79,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Superman is flying around one day, just doing his 'there in a flash' super hero thing. When to his amazement he spots Wonder Woman atop a building naked from the waist down, on her back, moaning with pleasure with her eyes closed. Knowing he was faster than a speeding bullet and sensing this would be the oportune moment swoops down, does the business and flies away in a matter of seconds. The flash of blue and red startles Wonder Woman.. WW: \"What the fuck was that!? The Invisible Man:\" Dunno, but my butt hurts a fucking lot! \"",
             "fix": "oportune",
             "length": 536,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "I saw a female comedian last night: She was ApPauline!",
-            "fix": "ApPauline",
-            "length": 54,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3194,22 +3010,6 @@
             "tags": []
         },
         {
-            "joke": "I'm so broke... That when my Identity was stolen today and LifeLock called me and said I now have no money in my bank account. I was like, \"Sweet! I'm no longer in debt.\"",
-            "fix": "LifeLock",
-            "length": 172,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Hipsters were tensious before it was cool. Because they're pretentious.",
-            "fix": "tensious",
-            "length": 71,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Vaping: A guy goes to the doctor for his usual checkup. The doctor asks, \"Any drug, tobacco, or alcohol use recently?\" The man replies, \"No, but I vape.\" The doctor says, \"That's convenient, I was going to ask if you have had any sextual activity recently as well but you answered my question already!\"",
             "fix": "sextual",
             "length": 308,
@@ -3226,33 +3026,9 @@
             "tags": []
         },
         {
-            "joke": "Apple needs to build a product for older gentlemen who have become fathers. iPop.",
-            "fix": "iPop",
-            "length": 81,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Why didn't anyone like the bread store owner? He was pretty loafsome.",
-            "fix": "loafsome",
-            "length": 69,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Little Johnny and Susie are only 10 years old... But they just know they are in love. One day, they decide they want to get married, so Johnny goes to Susie's father to ask him for her hand. Johnny bravely walks up to him and says, 'my Smith, me and Susie are in love and I want to ask you for her hand in marriage.' Thinking that this was the cutest thing, Mr Smith replies, 'Well Johnny, you are only 10. Where will you two live?' Without even taking a moment to think about it, Johnny replies, 'Susie's room. It's bigger than mine and we can both fit in there nicely.' Still thinking that this is adorable, Mr Smith says with a huge grin, 'Okay then, how will you live? You're not old enough to get a job. You'll need to support Susie.' Again, Johnny instantly replies. 'Our allowence... Susie gets $5 a week and I get $10 a week. That's about $60 a month and that should do us just fine.' By this time, Mr Smith is a little shocked that Johnny has put so much thought into this. So, he thinks for a moment, trying to come up with something Johnny won't have an answer to. After a moment, Mr Smith says, 'Well Johnny, you seem to have it all figured out. I just have one more question for you. What will you do if you have little ones of your own?' Johnny just shrugs his shoulders and says, 'Well, we've been lucky so far.'",
             "fix": "allowence",
             "length": 1327,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Did you hear about the man who had purple paint thrown all over him? He was violeted.",
-            "fix": "violeted",
-            "length": 85,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3266,65 +3042,9 @@
             "tags": []
         },
         {
-            "joke": "Do you think you'll get fake teeth when you're old and gray? Might as well. Nothing dentured, nothing gained.",
-            "fix": "dentured",
-            "length": 109,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "How big was osama bin Laden's hard drive? One terrorbyte.",
-            "fix": "terrorbyte",
-            "length": 57,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a magical dwarf? A midgetcian!",
-            "fix": "midgetcian",
-            "length": 47,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What are terrorists taught in math class? Jihadmetry. What do they learn about? ISISciles triangles.",
-            "fix": "ISISciles",
-            "length": 100,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "I'll take two glasses of lemonade please... Said the man. But hold the, \"ades.\" Waitress: So you just want two lemons? Man: No, I just don't want AIDS.",
-            "fix": "ades",
-            "length": 153,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What is the main material used in the manufacture of TIE fighters? TIE tanium.",
-            "fix": "tanium",
-            "length": 78,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Two drums and a cymbal fall off of a cliff. Ba-dum tisch.",
             "fix": "tisch",
             "length": 57,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Did you hear about the man who was into asphyxiation and vegetables? He liked being artichoked.",
-            "fix": "artichoked",
-            "length": 95,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3338,25 +3058,9 @@
             "tags": []
         },
         {
-            "joke": "Why did the crudites run away? They were afraid of the tzazika virus.",
-            "fix": "tzazika",
-            "length": 69,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "A woman is out fishing with her husband... As she's sitting in the boat, she asks, \"Honey, do you have any more of those little floatey bobber thingies? Mine keep sinking.\"",
             "fix": "floatey",
             "length": 174,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a good for nothing vegetable? A deadbeet.",
-            "fix": "deadbeet",
-            "length": 58,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3410,14 +3114,6 @@
             "tags": []
         },
         {
-            "joke": "My friend cooked up some otter the other day! It was otterly delicious.",
-            "fix": "otterly",
-            "length": 71,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Kappa: Full HD Mega 60FPS Sin Virus 1Link, \"No lo descargo porque ya lo tengo.\"",
             "fix": "descargo",
             "length": 81,
@@ -3437,14 +3133,6 @@
             "joke": "The FineBros remind me of a movie villian... They revealed their master plan via monologue and were stopped before they could end the world.",
             "fix": "villian",
             "length": 140,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a feminist who secretly craves for men and also loves to swallow? A semenist.",
-            "fix": "semenist",
-            "length": 94,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3482,14 +3170,6 @@
             "tags": []
         },
         {
-            "joke": "So Porsche released a Jewish Car... The Yom KiPorsche, since the Muslims already had the Porsche 911.",
-            "fix": "KiPorsche",
-            "length": 101,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "So Hitler is walking down a hallway He goes around the corner and into his bedroom and sees a Jewish person on the TV He asks, \"Why the hell is there a dead jewish person on top of my televison?!\" Ava speaks up, \"It is a good Shoah.\"",
             "fix": "televison",
             "length": 237,
@@ -3498,25 +3178,9 @@
             "tags": []
         },
         {
-            "joke": "Steven Avery and the Manitowac County Sheriffs are sorry they couldn't make it to the Screen Actors Guild Awards. Mantiowac sheriffs just released a statement, \"We are sorry we weren't there. Give it 4 days and rewatch your DVR copies and you will notice that we were all there!\"",
-            "fix": "rewatch",
-            "length": 281,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "What do you call a guy who peeps his peeps? A homeboyeur.",
             "fix": "homeboyeur",
             "length": 57,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Three young bakers walk into the bakery. Three young baked bakers walk into the bakery, seeking knowledge and wisdom. As they walk in, they smell the sweet aromas of freshly baked goods, as they were baking and becoming completely baked. They soon find the master chief baker, a blood member of the babeke tribe which is native to colorado. As they seek knowledge from the master baker, an argument breaks out. The first baked baker states, the vape is the best way to smoke. The second baker argues, by claiming that blunts were the best, because they get you the most baked. The third said, neither, bongs are the best way to smoke because they get you baked without using too much product. In the middle of their argument, the master baker says, \"stop arguing, you are all wrong. You guys are just really baked right now considering that this is just a regular bakery, but if you must know, adding extra butter always does the trick for me.\"",
-            "fix": "babeke",
-            "length": 946,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3538,14 +3202,6 @@
             "tags": []
         },
         {
-            "joke": "Did you hear about those chicken proof yards? They're impeckable.",
-            "fix": "impeckable",
-            "length": 65,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Do you know hwat I do when I'm sad? Me neither - I'm depressed.",
             "fix": "hwat",
             "length": 63,
@@ -3562,57 +3218,9 @@
             "tags": []
         },
         {
-            "joke": "What does a programmer have during sex? An ||gasm.",
-            "fix": "gasm",
-            "length": 50,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "A man asked his boyfriend to fist him... \"... Deeper,\" he moaned. His boyfriend went deeper. \".. Deeper..\" His voice tensed as his spinchter tightened around his boyfriend's forearm. \"What's this, I feel something up there,\" his boyfriend said. He reached in and pulled out a watch. \"What's a rolex doing up your ass?\" The man turned around and started singing, \"Happy birthday to you...\"",
             "fix": "spinchter",
             "length": 398,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "How does the average Chinese worker find a new job? ChinkedIn.",
-            "fix": "ChinkedIn",
-            "length": 62,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "My friend really likes to have sex with people. I guess it's the teenage whoremones.",
-            "fix": "whoremones",
-            "length": 84,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Why did the boy not do his homework? He was ceebs.",
-            "fix": "ceebs",
-            "length": 50,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a racist Chinese person? A ricist.",
-            "fix": "ricist",
-            "length": 51,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "I love milk... It's got lots of cowcium.",
-            "fix": "cowcium",
-            "length": 40,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3626,33 +3234,9 @@
             "tags": []
         },
         {
-            "joke": "What do you call an American Tardis? A reTardis.",
-            "fix": "reTardis",
-            "length": 48,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "What does Mike Tyson use to represent his sewing skills? A thymbol.",
             "fix": "thymbol",
             "length": 67,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Where do pirates go in the summer? In ARRgentina.",
-            "fix": "ARRgentina",
-            "length": 49,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What happens when a T-rex gets strep? His throat becomes saurus.",
-            "fix": "saurus",
-            "length": 64,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3666,33 +3250,9 @@
             "tags": []
         },
         {
-            "joke": "Did you know Stalin's penis was the funniest part of his body? It was real commiedick.",
-            "fix": "commiedick",
-            "length": 86,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "There are 10 types of people in this world. Those who undertsand binary, and those who don't.",
             "fix": "undertsand",
             "length": 93,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "How do mermaids have sex? They mermate.",
-            "fix": "mermate",
-            "length": 39,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "If humans have politics, then what do bees have? POLLENtics.",
-            "fix": "POLLENtics",
-            "length": 60,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3714,14 +3274,6 @@
             "tags": []
         },
         {
-            "joke": "I used to get sad when the leaves fell from the trees... But then they always grew back, so that was a releaf.",
-            "fix": "releaf",
-            "length": 110,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "The blonde that respected my privacy. Well I finally got a roommate. The only problem was. I could never get up early e ough to get to use the bathroom and she would stay in there for hours so I went to the hardware store and bought one of those hook and eye doorlocks so as I was installing the lock she ask me why I was putting it on the outside of the door I told her if it was locked she would know I was. Using the bathroom. Problem solved.",
             "fix": "doorlocks",
             "length": 445,
@@ -3730,25 +3282,9 @@
             "tags": []
         },
         {
-            "joke": "Why did Hitler buy the car when it went on sale? Because he liked the holocost.",
-            "fix": "holocost",
-            "length": 79,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Why Flint Michigan wants the blizard to come there and never end? Because they get so much of something completely lead free for free.",
             "fix": "blizard",
             "length": 134,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a swashbuckler when he noticed you? A senpairate.",
-            "fix": "senpairate",
-            "length": 66,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3794,49 +3330,9 @@
             "tags": []
         },
         {
-            "joke": "The Jewish talking dog: Morty visits Dr. Saul, the veterinarian, and says, \"My dog has a problem.\" Dr. Saul says, \"So, tell me about the dog and the problem.\" \"It's a Jewish dog. His name is Seth and he can talk,\" says Morty. \"He can talk?\" The doubting doctor asks. \"Watch this!\" Morty points to the dog and commands: \"Seth, Fetch!\" Seth the dog, begins to walk toward the door, then turns around and says, \"So why are you talking to me like that? You always order me around like I'm nothing. And you only call me when you want something.\" And then you make me sleep on the floor, with my arthritis. \"You give me this fahkahkta food with all the salt and fat, and you tell me it's a special diet.\" It tastes like dreck! YOU should eat it yourself! \"And do you ever take me for a decent walk?\" NO, it's out of the house, a short pish, and right back home. \"Maybe if I could stretch out a little, the sciatica wouldn't kill me so much!\" I should roll over and play dead for real for all you care! \"Dr. Saul is amazed,\" This is remarkable! So, what's the problem? \"Morty says,\" He has a hearing problem! I said 'Fetch,' not 'Kvetch. \"",
-            "fix": "fahkahkta",
-            "length": 1157,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a blasian? A criminal mastermind.",
-            "fix": "blasian",
-            "length": 50,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "A surgeon turns to his assistant, while operating, and says... \"Hey, it's the right or the left one?\" \"Are you serious?\" \"Just kiddneying!\"",
             "fix": "kiddneying",
             "length": 145,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a teacher who doesn't flatulate in public. A private tutor.",
-            "fix": "flatulate",
-            "length": 76,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "How does a vagina tell time? With a twatch.",
-            "fix": "twatch",
-            "length": 43,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What was the name of the operation to catch Juaquin Guzman? El trapo.",
-            "fix": "trapo",
-            "length": 69,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3853,14 +3349,6 @@
             "joke": "In colllege what was the difference between pumpkin pie and my girlfriend? I shared the girlfriend.",
             "fix": "colllege",
             "length": 99,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What prophylactic did the black person rip open while having sex? The doctor's vaginer.",
-            "fix": "vaginer",
-            "length": 87,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3890,33 +3378,9 @@
             "tags": []
         },
         {
-            "joke": "Little Timmy lived in Flint: But little Timmy is no more For what he thought was H2O Was PbSO4.",
-            "fix": "PbSO",
-            "length": 95,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "What did one curious butt cheek say to the other? I mustass you a question.",
             "fix": "mustass",
             "length": 75,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "My girlfriend dropped this on me after some Tex-Mex last night... \"I'm chilly.\" She steps closer and takes my hand, \"Will you be my con queso?\" And before I could even respond... \"Sorry, was that too cheesy for you?\"",
-            "fix": "queso",
-            "length": 222,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Minnesota stereotypes: Ole and Lars are walking down a street in Minocqua WI, when they see a sign on a store that reads, \"suits $5.00 each, shirts $2.00 each, and trousers $2.50 per pair.\" Ole says to his pal Lars, \"Looky here! We could buy a whole gob of dese, take 'em back at Dilute, sell 'em to our friends, 'n make a fortune. Now when we go in der, you be quiet, okay? Just let me do da talkin because if dey hear yur accent, dey might tink we're ignorant 'n try to cheat us. No way, dey'll know we're from Minnesota. They go in and Ole says with his best.\" Wisconsin, \"accent,\" I'll take 50 of those suits at $5.00 each, 100 of those shirts at $2.00 each, and 50 pairs of trousers at $2.50 each. I'll back up my pickup and.. \"The owner of the shop interrupts,\" You're from Minnesota, ain't you?\"\" Vell... Yeah, \"says a surprised Ole.\" How'd ya know dat?\"\" Because this is a Dry Cleaners... \"",
-            "fix": "dese",
-            "length": 913,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -3938,78 +3402,6 @@
             "tags": []
         },
         {
-            "joke": "Whats the currency of North Korea? The NoDinar.",
-            "fix": "NoDinar",
-            "length": 47,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Two blondes and a brunette are walking down the street when a bird poos on one of the blondes. The brunette says, \"I'll get some toilet paper,\" and runs off. The other blonde laughs and says, \"what an idiot, the bird will be miles away by the time she's back.\"",
-            "fix": "poos",
-            "length": 264,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "If realigion isn't real: Then why does it have the word, \"real,\" in it?",
-            "fix": "realigion",
-            "length": 73,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a gay koala? A homosupial.",
-            "fix": "homosupial",
-            "length": 43,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "I lost 150 pounds, here's my story. Some knobhead stole my wallet.",
-            "fix": "knobhead",
-            "length": 66,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a German tampon? A twatstika.",
-            "fix": "twatstika",
-            "length": 46,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Why do pirates love Playboy Magazine? You'd think it's for the booty, but they really read it for the arrrticles.",
-            "fix": "arrrticles",
-            "length": 113,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What type of plant can you use to make phone calls? A telefern.",
-            "fix": "telefern",
-            "length": 63,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Why do Muslims not eat pork? Because MaHamHid.",
-            "fix": "MaHamHid",
-            "length": 46,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "A man walks onto a plane... He has a dead rabbit under each arm. The stuardess turns: \"I'm sorry, sir. You're only allowed one item of carrion.\"",
             "fix": "stuardess",
             "length": 146,
@@ -4026,65 +3418,9 @@
             "tags": []
         },
         {
-            "joke": "I had a bad donair earlier: Now I falafel.",
-            "fix": "donair",
-            "length": 42,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What is the difference between a small vagina and a douchey midget? One is a runty cunt and the other is a cunty runt.",
-            "fix": "cunty",
-            "length": 118,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What do you call a humor site with bad ads? PunHub.",
-            "fix": "PunHub",
-            "length": 51,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "Which actor is resting in pieces? Alan RIPman.",
-            "fix": "RIPman",
-            "length": 46,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "I just raped my hi hat: White tssst scum.",
-            "fix": "tssst",
-            "length": 41,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "How do you call a male prostitute? A prostidude!",
-            "fix": "prostidude",
-            "length": 48,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What did Matthew McConaughey say to DiCaprio about his chances of winning the Oscars this year? It's a fugazi.",
-            "fix": "fugazi",
-            "length": 110,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "A man is driving down the road and breaks down near a monastery. He goes to the monastery, knocks on the door, and says, \"My car broke down. Do you think I could stay the night?\" The monks graciously accept him, feed him dinner, even fix his car. As the man tries to fall asleep, he hears a strange sound. The next morning, he asks the monks what the sound was, but they say, \"We can't tell you. You're not a monk.\" The man is disappointed but thanks them anyway and goes about his merry way. Some years later, the same man breaks down in front of the same monastery. Shaolin kung fuThe monks accept him, feed him, even fix his car. That night, he hears the same strange noise that he had heard years earlier. The next morning, he asks what it is, but the monks reply, \"We can't tell you. You're not a monk.\" The man says, \"All right, all right. I'm dying to know. If the only way I can find out what that sound was is to become a monk, how do I become a monk?\" The monks reply, \"You must travel the earth and tell us how many blades of grass there are and the exact number of sand pebbles. When you find these numbers, you will become a monk.\" The man sets about his task. Forty-five years later, he returns and knocks on the door of the monastery. He says, \"I have traveled the earth and have found what you have asked for. There are 145,236, 284,232 blades of grass and 231,281, 219,999, 129,382 sand pebbles on the earth.\" The monks reply, \"Congratulations. You are now a monk. We shall now show you the way to the sound.\" The monks lead the man to a wooden door, where the head monk says, \"The sound is right behind that door.\" The man reaches for the knob, but the door is locked. He says, \"Real funny. May I have the key?\" The monks give him the key, and he opens the door. Behind the wooden door is another door made of stone. The man demands the key to the stone door. The monks give him the key, and he opens it, only to find a door made of ruby. He demands another key from the monks, who provide it. Behind that door is another door, this one made of sapphire. So it went until the man had gone through doors of emerald, silver, topaz, and amethyst. Finally, the monks say, \"This is the last key to the last door.\" The man is relieved to no end. He unlocks the door, turns the knob, and behind that door he is amazed to find the source of that strange sound... But I can't tell you what it is because you're not a monk.",
+            "joke": "A man is driving down the road and breaks down near a monastery. He goes to the monastery, knocks on the door, and says, \"My car broke down. Do you think I could stay the night?\" The monks graciously accept him, feed him dinner, even fix his car. As the man tries to fall asleep, he hears a strange sound. The next morning, he asks the monks what the sound was, but they say, \"We can't tell you. You're not a monk.\" The man is disappointed but thanks them anyway and goes about his merry way. Some years later, the same man breaks down in front of the same monastery. Shaolin kung fuThe monks accept him, feed him, even fix his car. That night, he hears the same strange noise that he had heard years earlier. The next morning, he asks what it is, but the monks reply, \"We can't tell you. You're not a monk.\" The man says, \"All right, all right. I'm dying to know. If the only way I can find out what that sound was is to become a monk, how do I become a monk?\" The monks reply, \"You must travel the earth and tell us how many blades of grass there are and the exact number of sand pebbles. When you find these numbers, you will become a monk.\" The man sets about his task. Forty-five years later, he returns and knocks on the door of the monastery. He says, \"I have traveled the earth and have found what you have asked for. There are 145,236,284,232 blades of grass and 231,281,219,999,129,382 sand pebbles on the earth.\" The monks reply, \"Congratulations. You are now a monk. We shall now show you the way to the sound.\" The monks lead the man to a wooden door, where the head monk says, \"The sound is right behind that door.\" The man reaches for the knob, but the door is locked. He says, \"Real funny. May I have the key?\" The monks give him the key, and he opens the door. Behind the wooden door is another door made of stone. The man demands the key to the stone door. The monks give him the key, and he opens it, only to find a door made of ruby. He demands another key from the monks, who provide it. Behind that door is another door, this one made of sapphire. So it went until the man had gone through doors of emerald, silver, topaz, and amethyst. Finally, the monks say, \"This is the last key to the last door.\" The man is relieved to no end. He unlocks the door, turns the knob, and behind that door he is amazed to find the source of that strange sound... But I can't tell you what it is because you're not a monk.",
             "fix": "fuThe",
-            "length": 2451,
+            "length": 2448,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -4138,9 +3474,9 @@
             "tags": []
         },
         {
-            "joke": "A hypochondriac goes to the doctor,: Complaining about his usual long list of symptoms plus some new ones. The doctor, completely fed up at this point, says, \"I've examined you throughly from head to toe, sir. I've run an exhaustive battery of tests - EKGs, CATScans, MRIs, ultrasounds, etc. I cannot find anything wrong with you. In fact, you are the epitome of health.\" \"But doctor, there is something seriously wrong with me, I can feel it. There must be something you can do. Please!\" The doctor says, \"Ok, there is one more test that might get to the bottom of this. Be here at 7am, tomorrow morning.\" The hypochondriac was so excited and anxious that he couldn't sleep that night but he was at the hospital on time the next morning. When he arrives he's asked to strip down to a hospital gown and then swiftly rolled down to an operating room where he greets the doctor. \"Thank you so much for doing this, doctor!\" Exclaimed the hypochondriac. \"No problem, sir. Now we are going to administer the anesthesia. Please count back from 100.\" Says the doctor. \"100,99, 98,97, 96... Oh by the way, I forgot to ask you, what is this procedure called?\" Inquires the hypochondriac. And just as the hypochondriac fades away, the doctor says, \"An Autopsy.\"",
+            "joke": "A hypochondriac goes to the doctor,: Complaining about his usual long list of symptoms plus some new ones. The doctor, completely fed up at this point, says, \"I've examined you throughly from head to toe, sir. I've run an exhaustive battery of tests - EKGs, CATScans, MRIs, ultrasounds, etc. I cannot find anything wrong with you. In fact, you are the epitome of health.\" \"But doctor, there is something seriously wrong with me, I can feel it. There must be something you can do. Please!\" The doctor says, \"Ok, there is one more test that might get to the bottom of this. Be here at 7am, tomorrow morning.\" The hypochondriac was so excited and anxious that he couldn't sleep that night but he was at the hospital on time the next morning. When he arrives he's asked to strip down to a hospital gown and then swiftly rolled down to an operating room where he greets the doctor. \"Thank you so much for doing this, doctor!\" Exclaimed the hypochondriac. \"No problem, sir. Now we are going to administer the anesthesia. Please count back from 100.\" Says the doctor. \"100,99,98,97,96... Oh by the way, I forgot to ask you, what is this procedure called?\" Inquires the hypochondriac. And just as the hypochondriac fades away, the doctor says, \"An Autopsy.\"",
             "fix": "CATScans",
-            "length": 1265,
+            "length": 1263,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -4917,14 +4253,6 @@
             "joke": "Weight Loss Man: A man wants to lose weight. He sees an ad that boasts losing 5 pounds in one week so he calls and orders it. The next day he steps out his door and sees the best looking girl he has ever seen in just a sports bra, a thong, and a sign that reads, \"if you catch me I am yours.\" She runs and the man chases until he can't run any longer. When he weighs himself after 1 week he is happy to see he has lost 5 pounds as promised. He calls the company again as asks for the 10 pound program. The next day he walks out the door to see a girl completely naked with a sign that reads, \"if you catch me I am yours.\" He chases her for as long as he can. After 1 week he weighs himself and sees he has lost 10 pounds. He calls the company the next week and asks for the 25 pound program. The representative says, \"Are you sure? This is our most rigurous program.\" The man says yes and the next day he is excited to walk out the door until he sees an athletic looking naked man with a sign that reads, \"If I catch you, you are mine.\"",
             "fix": "rigurous",
             "length": 1044,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "New TomTom voice over: I got a new TomTom and changed his voice to Chewbacca. Left is BRRRRRRRRRRR and right is BRRRRRRRRRRR And when I'm at my destination: I still don't know.",
-            "fix": "TomTom",
-            "length": 176,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -9882,14 +9210,6 @@
             "tags": []
         },
         {
-            "joke": "Apple just released a range of stripper: iCandy.",
-            "fix": "iCandy",
-            "length": 48,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
             "joke": "Did you hear about the freak birth at chernobil? A baby was born with more eyes than teeth.",
             "fix": "chernobil",
             "length": 91,
@@ -10749,14 +10069,6 @@
             "joke": "Are you a fan of nintendo? Because I wanna see your amiiboobs.",
             "fix": "amiiboobs",
             "length": 62,
-            "source": "Reddit",
-            "nsfw": false,
-            "tags": []
-        },
-        {
-            "joke": "What does a mentally challenged Time Lord use for travel? A retardis.",
-            "fix": "retardis",
-            "length": 69,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -12450,9 +11762,9 @@
             "tags": []
         },
         {
-            "joke": "The Italian Bookkeeper: A Mafia Godfather finds out that his bookkeeper, Guido, has cheated him out of $10,000, 000. His bookkeeper is deaf and that was the reason he got the job in the first place. It was assumed that Guido would hear nothing so he would not have to testify in court. When the Godfather goes to confront Guido about his missing money, he takes along his lawyer who knows sign language. The Godfather tells the lawyer, \"Ask him where the money is.\" The lawyer, using sign language, asks Guido about the money. Guido signs back, \"I don't know what you are talking about.\" The lawyer tells the Godfather, \"he says he doesn't know what you are talking about.\" The Godfather than pulls out his pistol, puts it to Guido's head and says, \"Ask him again!\" The lawyer signs to Guido, \"He'll kill you if you don't tell him.\" Guido signs back, \"OK! You win! The money is in a brown breifcase buried behind the shed at my cousin's house.\" The Godfather asks the lawyer, \"What did he say?\" The lawyer responds, \"He said you don't have the balls to pull the trigger.\"",
+            "joke": "The Italian Bookkeeper: A Mafia Godfather finds out that his bookkeeper, Guido, has cheated him out of $10,000,000. His bookkeeper is deaf and that was the reason he got the job in the first place. It was assumed that Guido would hear nothing so he would not have to testify in court. When the Godfather goes to confront Guido about his missing money, he takes along his lawyer who knows sign language. The Godfather tells the lawyer, \"Ask him where the money is.\" The lawyer, using sign language, asks Guido about the money. Guido signs back, \"I don't know what you are talking about.\" The lawyer tells the Godfather, \"he says he doesn't know what you are talking about.\" The Godfather than pulls out his pistol, puts it to Guido's head and says, \"Ask him again!\" The lawyer signs to Guido, \"He'll kill you if you don't tell him.\" Guido signs back, \"OK! You win! The money is in a brown breifcase buried behind the shed at my cousin's house.\" The Godfather asks the lawyer, \"What did he say?\" The lawyer responds, \"He said you don't have the balls to pull the trigger.\"",
             "fix": "breifcase",
-            "length": 1087,
+            "length": 1086,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -13714,9 +13026,9 @@
             "tags": []
         },
         {
-            "joke": "A Biologist, a Mathematician and a Physicist are called to a farm: Farmer had a problem when his chickens started spontaneously dying. He called his old friends to try and help him with the situation. A Biologist, a Mathematician and a Physicist came to the farm and after gathering initial data, ecah of them separated into their room and started working on a problem. After 3 days, Biologist came out of his room and declared he has diagnosed the problem. \"Your chickens have contracted specific Amazon fever and will all die out in about 3 months.\" For which Farmer responded, \"I value you opinion, but I would still like to hear if anybody else has better solution.\" After a week, Mathematician came out of his room and declared that he has solved the problem. \"As you can see, chickens have started dying in groups of 1,1, 2,3, 5,8, 13 and so on per day. This is fibonacci sequence, and eventually they will all die out in about 3 months.\" To this Farmer said, \"You solution matches the one Biologist said, and I see there is little hope for my farm, but I would still like to hear out Physicist, as I know he is working furiously on the problem as in all this time he hasn't come out from his room even to take something to eat or drink. Maybe he has a better solution than to let all my chickens die.\" After that a month has gone by, then another, before the end of third month, with almost all the chickens dead, Physicist was heard screaming, \"Eureka, Eureka.\" Farmer ran to the room where Physicist was staying and seen him half starved to death, exiting the room. \"Did you solved, it my friend?\" \"You can bet your ass I solved it. I solved it for perfectly spherical chicken in complete vacuum.\"",
+            "joke": "A Biologist, a Mathematician and a Physicist are called to a farm: Farmer had a problem when his chickens started spontaneously dying. He called his old friends to try and help him with the situation. A Biologist, a Mathematician and a Physicist came to the farm and after gathering initial data, ecah of them separated into their room and started working on a problem. After 3 days, Biologist came out of his room and declared he has diagnosed the problem. \"Your chickens have contracted specific Amazon fever and will all die out in about 3 months.\" For which Farmer responded, \"I value you opinion, but I would still like to hear if anybody else has better solution.\" After a week, Mathematician came out of his room and declared that he has solved the problem. \"As you can see, chickens have started dying in groups of 1,1,2,3,5,8,13 and so on per day. This is fibonacci sequence, and eventually they will all die out in about 3 months.\" To this Farmer said, \"You solution matches the one Biologist said, and I see there is little hope for my farm, but I would still like to hear out Physicist, as I know he is working furiously on the problem as in all this time he hasn't come out from his room even to take something to eat or drink. Maybe he has a better solution than to let all my chickens die.\" After that a month has gone by, then another, before the end of third month, with almost all the chickens dead, Physicist was heard screaming, \"Eureka, Eureka.\" Farmer ran to the room where Physicist was staying and seen him half starved to death, exiting the room. \"Did you solved, it my friend?\" \"You can bet your ass I solved it. I solved it for perfectly spherical chicken in complete vacuum.\"",
             "fix": "ecah",
-            "length": 1720,
+            "length": 1717,
             "source": "Reddit",
             "nsfw": false,
             "tags": []
@@ -14178,9 +13490,9 @@
             "tags": []
         },
         {
-            "joke": "3 men are walking through the jungle when they get taken by cannibals: They beg for their lives are given the chance of freedom - they have to go out into the jungle and collect 10 pieces of the same fruit. So off they go and not long after the 1st man returns with 10 apples. This is when he is told about the 2nd part of the deal, \"You must insert all of those pieces of fruit up your ass without making a sound and you are free to go,\" says the chief Sweating a bit the man agrees and starts inserting the apples. He does quite well but as he gets to the 4th apple he winces and yells out in pain As qucik as a flash he is executed and prepared for lunch Short time later the 2nd man returns with 10 berries and is told the same story as the 1st guy. \"Well,\" he thinks, \"Piece of cake this!\" And proceeds to insert the berries. 1,2, 3 etc... Getting there... 8,9 and then all of a sudden he bursts out laughing and is swiftly killed and prepared for dinner. 1st and 2nd guy meet up in heaven and start chatting, \"Why did you laugh?!\" The 1st guy asks? \"You were so close to getting free!\" \"Well..\" He says with a sad grin, \"I was just about to put the last berry up my ass when I looked over to the path into the jungle and I see the 3rd guy walking around the bend with a big smile on his face and an armful of pineapples!\"",
+            "joke": "3 men are walking through the jungle when they get taken by cannibals: They beg for their lives are given the chance of freedom - they have to go out into the jungle and collect 10 pieces of the same fruit. So off they go and not long after the 1st man returns with 10 apples. This is when he is told about the 2nd part of the deal, \"You must insert all of those pieces of fruit up your ass without making a sound and you are free to go,\" says the chief Sweating a bit the man agrees and starts inserting the apples. He does quite well but as he gets to the 4th apple he winces and yells out in pain As qucik as a flash he is executed and prepared for lunch Short time later the 2nd man returns with 10 berries and is told the same story as the 1st guy. \"Well,\" he thinks, \"Piece of cake this!\" And proceeds to insert the berries. 1,2,3 etc... Getting there... 8,9 and then all of a sudden he bursts out laughing and is swiftly killed and prepared for dinner. 1st and 2nd guy meet up in heaven and start chatting, \"Why did you laugh?!\" The 1st guy asks? \"You were so close to getting free!\" \"Well..\" He says with a sad grin, \"I was just about to put the last berry up my ass when I looked over to the path into the jungle and I see the 3rd guy walking around the bend with a big smile on his face and an armful of pineapples!\"",
             "fix": "qucik",
-            "length": 1341,
+            "length": 1340,
             "source": "Reddit",
             "nsfw": false,
             "tags": []

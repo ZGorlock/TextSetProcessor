@@ -2,7 +2,8 @@ Abilify
 Massengill
 Abreva
 Acetaminophen
-Acetaminophen and Hydrocodone
+Acetaminophen
+Hydrocodone
 Actos
 Acyclovir
 Adderall
@@ -24,7 +25,8 @@ Amitriptyline
 Amlodipine
 Amlodipine Besylate
 Amoxicillin
-Amoxicillin and Clavulanate
+Amoxicillin
+Clavulanate
 Anastrozole
 Apixaban
 Aricept
@@ -73,7 +75,8 @@ Budesonide
 Bumetanide
 Bumex
 Buprenorphine
-Buprenorphine and Naloxone
+Buprenorphine
+Naloxone
 Bupropion
 Buspar
 Buspirone
@@ -84,7 +87,8 @@ Calcitriol
 Calcium Carbonate
 Captopril
 Carbamazepine
-Carbidopa and Levodopa
+Carbidopa
+Levodopa
 Cardizem
 Carvedilol
 Cefdinir
@@ -234,7 +238,8 @@ Fluoxetine
 Fluphenazine
 Fluticasone
 Fluticasone Propionate
-Fluticasone and Salmeterol
+Fluticasone
+Salmeterol
 Fluvoxamine
 Fluzone
 Focalin
@@ -266,11 +271,13 @@ Ginseng
 Gleevec
 Glimepiride
 Glipizide
-Glipizide and Metformin
+Glipizide
+Metformin
 Glucagon
 Glucophage
 Glucosamine
-Glucosamine & Chondroitin With MSM
+Glucosamine
+Chondroitin
 Glucotrol
 Glutathione
 Glyburide
@@ -303,12 +310,17 @@ Hyaluronic Acid
 Hydralazine
 Hydrea
 Hydrochlorothiazide
-Hydrochlorothiazide and Lisinopril
-Hydrochlorothiazide and Losartan
-Hydrochlorothiazide and Triamterene
-Hydrochlorothiazide and Valsartan
+Hydrochlorothiazide
+Lisinopril
+Hydrochlorothiazide
+Losartan
+Hydrochlorothiazide
+Triamterene
+Hydrochlorothiazide
+Valsartan
 Hydrocodone
-Hydrocodone and Acetaminophen
+Hydrocodone
+Acetaminophen
 Hydrocortisone
 Hydrocortisone Cream
 Hydrocortisone Topical
@@ -739,7 +751,8 @@ Suboxone
 Subutex
 Sucralfate
 Sudafed
-Sulfamethoxazole and Trimethoprim
+Sulfamethoxazole
+Trimethoprim
 Sulfasalazine
 Sulindac
 Sumatriptan
@@ -799,7 +812,8 @@ Ultravate
 Ultravate X Cream
 Ultresa
 Umeclidinium
-Umeclidinium and Vilanterol
+Umeclidinium
+Vilanterol
 Unasyn
 Uniphyl
 Unisom
