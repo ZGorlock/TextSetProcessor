@@ -1,6 +1,6 @@
 ADHD                    ,Attention Deficit Disorder,Attention Deficit Hyperactivity Disorder,AttentionDeficit Disorder,AttentionDeficitHyperactivity Disorder,Hyperactive
 AIDS                    -nsfw -dontDoS
-Abortion                -nsfw
+Abortion                ProLife,Pro Life,ProChoice,Pro Choice -nsfw
 Abraham Lincoln         ,Lincoln
 Accountant              ,Accounting
 Actor                   ,Actress,Oscars
@@ -145,7 +145,7 @@ Bread                   ,Loaf
 Breakfast               ,Breakfasttime
 Breakup                 ,Break Up,Broke Up
 Breast                  ,Boob,Boobie,Boobies,Breastfed,Breastfeed,Breastfeeding,Lactate,Lactating,Mammary,Mammogram,Nipple,Pec,Pectoral,Suckle,Teet,Tit,Titties,Titty,Wet Nurse,WetNurse -nsfw
-Breastfeeding           ,Breastfed,Lactate,Lactating,Suckle,Wet Nurse,WetNurse
+Breastfeeding           ,Breastfed,Lactate,Lactating,Suckle,Wet Nurse,WetNurse,Breastmilk,Breast Milk
 Bridge                  ,Bridged
 British                 ,Bitish,Brexit,England,Liverpool,Queen Elizabeth
 Broom                   ,Broomstick
@@ -168,7 +168,7 @@ Calendar
 California              ,Californian
 Camel                   
 Camelot                 ,King Arthur
-Camping                 ,Bonfire,Campsite,Tent
+Camping                 ,Bonfire,Campsite,Tent,Campmate
 Canada                  ,Canadian
 Cancer                  ,Cancerless -dontDoER
 Candle                  ,Candlewax
@@ -230,7 +230,7 @@ Colorado                ,Coloradoan
 Color                   ,Colorblind,Colour,Colourblind,Coloured,Colouring,Rainbow
 Comedian                ,Comedy,SNL
 Communism               ,Kim Jong Un,Kim JongUn,Lenin,Marx,Marxist,Marxists,Stalin
-Computer                ,Antivirus,Application,Bash,Bill Gates,Blog,Blogger,Blogging,Browser,Clippy,Debian,Executable,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Macintosh,Melinda Gates,Microsoft,Network Switch,Outlook,Overclock,Overclocked,Overclocking,PC,Phish,Phishing,Router,SSH,Screensaver,Server,Software,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
+Computer                ,Antivirus,Application,Bash,Bill Gates,Blog,Blogger,Blogging,Browser,Clippy,Debian,Executable,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Macintosh,Melinda Gates,Microsoft,Network Switch,Outlook,Overclock,Overclocked,Overclocking,PC,Phish,Phishing,Router,SSH,Screensaver,Server,Software,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber,Laptop,Desktop
 Condom                  ,Durex,Trojan -nsfw
 Confession              ,Confess,Confessed,Confessing,Confessor
 Confucius               -dontDoS
@@ -352,7 +352,7 @@ England                 ,Bitish,Brexit,Liverpool,Queen Elizabeth
 English                 ,Bitish,Brexit,Brit,British,England,Englishman,Englishmen,Englishwoman,Englishwomen,Liverpool,Queen Elizabeth
 Environment             ,Environmental,Environmentalist,Environmentally
 Epilepsy                ,Epileptic -dontDoY
-Erection                ,Boner,Hard On -nsfw
+Erection                ,Boner,Hard On,Stiffy,Stiffies -nsfw
 Ethiopia                ,Ethiopian
 Ethnic                  ,Culturally,Culture,Cultured,Demographic,Demographical,Demographically,Ethnically,Ethnicity
 Europe                  ,EU,European
@@ -887,7 +887,7 @@ Sky Diving              ,Parachute,Wingsuit
 Slavery                 ,Enslave,Enslaved,Human Trafficking,Prisoner Of War,Serf,Serfdom,Servitude,Slave,Slaveholder,Slaveholding,Slaver,Subjugation -nsfw -dontDoY
 Sleep                   ,Apnea,Asleep,Dream,Dreaming,Hibernate,Hibernating,Hibernation,Insomnia,Insomniac,Melatonin,Nap,Napping,Narcolepsy,Narcoleptic,Nightmare,Sandman,Sleepwalk,Sleepwalking,Slumber,Slumbering,Snooze,Snoozed,Snoozing,Snore,Snoring,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
 Sleepwalking            ,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
-Slut                    ,Bimbo,Floozy,Fornicatress,Harlot,Ho,Hussy,Promiscuous,Tramp,Whore -nsfw
+Slut                    ,Bimbo,Floozy,Fornicatress,Harlot,Ho,Hoe,Hussy,Promiscuous,Tramp,Whore,Skank,Skankier,Skaniest -nsfw
 Small Town              ,One Horse Town,Rural Town,Settlement,Village
 Smart                   ,Astute,Astutely,Brainy,Brilliance,Brilliant,Canny,Clever,Cleverly,Competence,Competent,Genius,Gifted,Ingenious,Inquisitive,Intellectual,Intelligent,Keen,Knowledgeable,Logical,Perceptive,Problem Solver,Problem Solving,Rational,Resourceful,Sensible,Smartness,Well Informed,WellInformed,Wise
 Smoking                 ,Bong,Cannabinoid,Cannabis,Chainsmoke,Chainsmoker,Cigar,Cigarette,Dab,Doobie,Hash,Indica,Joint,Kush,Malboro,Marijuana,Marlboro,Newport,Nicorette,Nicotine,Puff,Sativa,Sensimilla,Smoke,Smoker,Snuff,Splif,Spliff,Tobacco,Vapist,Vape,Vaper,Vaping,Hotbox,Hotboxed,Hotboxing -dontDoING
@@ -953,7 +953,7 @@ Tattoo                  ,Scarification
 Tax                     ,Capitation,IRS,Internal Revenue Service,Surtax,Tariff,Taxation,Taxpayer,Tithe
 Taxi                    
 Teacher                 ,Educator,Guru,Instructor,Lecturer,Schoolteacher,Tutor
-Technology              ,AI,Android,Antivirus,Application,Artificial Intelligence,Automaton,Bash,Bill Gates,Binary,Bionic,Biotechnology,Blog,Blogger,Blogging,Bluetooth,Bot,Browser,Clippy,Computer,Cyber,Cyborg,Debian,Droid,Executable,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Hexidecimal,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Machine,Macintosh,Melinda Gates,Microsoft,Nanotechnology,Network Switch,Outlook,Overclock,Overclocked,Overclocking,PC,Password,Phish,Phishing,Robot,Robotics,Router,SSH,Screensaver,Server,Software,Tech,Techy,Transhumanism,Transhumanistic,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
+Technology              ,AI,Android,Antivirus,Application,Hacker,Hacking,Hacked,Artificial Intelligence,Automaton,Bash,Bill Gates,Binary,Bionic,Biotechnology,Blog,Blogger,Blogging,Bluetooth,Bot,Browser,Clippy,Computer,Cyber,Cyborg,Debian,Droid,Executable,Firefox,Firewall,Gates Foundation,Gnu,Google Chrome,Hexidecimal,Intel,Internet,Intranet,Kernel,Linux,MS DOS,MSDOS,Mac,Machine,Macintosh,Melinda Gates,Microsoft,Nanotechnology,Network Switch,Outlook,Overclock,Overclocked,Overclocking,PC,Password,Phish,Phishing,Robot,Robotics,Router,SSH,Screensaver,Server,Software,Tech,Techy,Transhumanism,Transhumanistic,URL,USB,Ubuntu,Unix,UnixLike,Vista,Web Page,Web Site,Webpage,Website,Wiki,Windows,Word Processor,World Wide Web,Youtuber
 Teddy Bear              ,Stuffed Bear
 Teen                    ,Adolescent,Preteen,Puberty,Teenage,Teenaged,Teenager
 Teeth                   ,Dental,Dentin,Dentist,Dentistry,Dentition,Denture,Enamel,Mastication,Orthodontist,Tooth,Toothbrush,Toothed,Toothless,Toothpick,Toothsome,Denture
@@ -1064,7 +1064,7 @@ World                   ,Global,Globalization,Humankind,International,Mankind,Pl
 World Cup               ,FIFA
 World War II            ,2nd World War,3rd Riech,Adolph,Anne Frank,Auschwitz,Concentatration Camp,Concentration Camp,D Day,DDay,Gas Chamber,Gasroom,Gestapo,Hitler,Holocaust,Nazi,Paris Peace Treaties,PostWorld War II,PreWorld War II,Second World War,Third Riech,WW 2,WW II,WW2,WWII,World War 2
 Wrestling               ,WWE,Wrestle,Wrestled,Wrestler
-Writing                 ,Acrostic,Annotate,Annotated,Annotating,Annotator,Author,Blog,Bloggers,Blogging,Book,Bookclub,Bookstore,Columnist,Compose,Composed,Composer,Composing,Composition,Correspondent,Cuneiform,Editorial,Enscribe,Enscribed,Enscribing,Haiku,Hieroglyph,Inscribe,Inscribed,Inscribing,Jot Down,Jotted Down,Jotting Down,Journalism,Journalist,Librarian,Library,Literature,Marker,Newspaper,Paragraph,Pen,Pencil,Poem,Poet,Poetic,Poetry,Publish,Published,Publisher,Publishing,Quill,Rewrite,Rewriting,Rewrote,Scribble,Scribbled,Scribbling,Scribe,Scribed,Scribing,Sharpie,Signwriting,Sonnet,Stanza,Stylus,Superscribe,Superscribed,Tabloid,Typewrite,Write,Writer,Written,Wrote
+Writing                 ,Acrostic,Annotate,Annotated,Fanfiction,Annotating,Annotator,Author,Blog,Bloggers,Blogging,Book,Bookclub,Bookstore,Columnist,Compose,Composed,Composer,Composing,Composition,Correspondent,Cuneiform,Editorial,Enscribe,Enscribed,Enscribing,Haiku,Hieroglyph,Inscribe,Inscribed,Inscribing,Jot Down,Jotted Down,Jotting Down,Journalism,Journalist,Librarian,Library,Literature,Marker,Newspaper,Paragraph,Pen,Pencil,Poem,Poet,Poetic,Poetry,Publish,Published,Publisher,Publishing,Quill,Rewrite,Rewriting,Rewrote,Scribble,Scribbled,Scribbling,Scribe,Scribed,Scribing,Sharpie,Signwriting,Sonnet,Stanza,Stylus,Superscribe,Superscribed,Tabloid,Typewrite,Write,Writer,Written,Wrote
 Wyoming                 ,Wyomingite -dontDoING
 Yo Mama                 ,Yo Mom,Yo Mother,Yo Mumma,Your Mama,Your Mom,Your Mother,Your Mumma
 Zombie                  ,Dawn Of The Dead,Living Dead,Undead

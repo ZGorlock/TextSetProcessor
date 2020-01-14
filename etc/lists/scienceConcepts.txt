@@ -1,4 +1,6 @@
 Atom
+Cation
+Anion
 Atomic
 Beaker
 Bunsen Burner

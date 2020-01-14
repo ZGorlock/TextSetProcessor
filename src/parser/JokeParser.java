@@ -690,7 +690,11 @@ public final class JokeParser {
                     test.matches(".*MADE\\sTHIS((ONE|JOKE)\\s)?\\sUP.*$") ||
                     test.matches(".*OUT[^a-zA-Z]*$") ||
                     test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||
-                    test.matches(".*HATE\\sMYSELF[^a-zA-Z0-9]*$")) {
+                    test.matches(".*HATE\\sMYSELF[^a-zA-Z0-9]*$") ||
+                    test.matches(".*REALLY\\sHAPPEN.*") ||
+                    test.matches(".*TRUE\\sSTORY.*") ||
+                    test.matches("^FROM\\sMY.*") ||
+                    test.matches("^(I\\s)?HEARD\\s(THIS|FROM).*")) {
                     continue;
                 }
                 if (test.replaceAll("[^\\x00-\\x7F]", "")

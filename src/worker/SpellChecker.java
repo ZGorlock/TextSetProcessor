@@ -216,6 +216,9 @@ public final class SpellChecker {
             } else {
                 word = testWord.replaceAll("^'", "");
             }
+            if (word.charAt(0) == 'i' && Character.isUpperCase(word.charAt(1))) {
+                continue;
+            }
             testWord = word;
             if (fix.contains(word)) {
                 continue;

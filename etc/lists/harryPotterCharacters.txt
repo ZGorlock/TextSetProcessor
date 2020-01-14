@@ -1,4 +1,5 @@
 Albus Dumbledore
+Pensieve
 Cho Chang
 Bellatrix Lestrange
 Dementor
