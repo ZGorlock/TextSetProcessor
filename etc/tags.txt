@@ -52,7 +52,7 @@ Arnold Schwarzenegger   ,Terminator -dontDoER
 Art                     ,Acrylic,Airbrush,Artist,Artistic,Canvas,Center Stage,Close Curtains,Crayola,Dramatist,Dramaturge,Dramaturgist,Draw,Drawing,Easel,Fingerpaint,Fingerpainting,Graffiti,Left Stage,Opera,Paint,Paintbrush,Painting,Playwright,Right Stage,Scenarist,Screenwriter,Script,Scriptwriter,Sculpt,Sculpture,Spraypaint,Take A Bow,Theater,Watercolor,Watercolour
 Art Major               -dontDoOR
 Arthritis               -dontDoS
-Asian                   ,Asia,Chee Chee,CheeChee,Weaboo,Blasian,China,Chinaman,Chinamen,Chinese,Chink,Chinki,Curry Muncher,Gook,Jap,Japan,Japanese,Kanji,Kim Jong Un,Kim JongUn,Kimono,Korea,Kyoto,North Korean,Osaka,Samurai,Seoul,Shogun,South Korean,Tokyo,Yellowman,Yellowwoman
+Asian                   ,Asia,Chee Chee,Otaku,Senpai,CheeChee,Weaboo,Blasian,China,Chinaman,Chinamen,Chinese,Chink,Chinki,Curry Muncher,Gook,Jap,Japan,Japanese,Kanji,Kim Jong Un,Kim JongUn,Kimono,Korea,Kyoto,North Korean,Osaka,Samurai,Seoul,Shogun,South Korean,Tokyo,Yellowman,Yellowwoman
 Assassination           ,Assassin
 Assault                 
 Asshole                 -nsfw
@@ -131,7 +131,7 @@ Body
 Bodybuilding            
 Bone                    ,Bony,Skeleton
 Bomb                    ,Claymore,Explode,Exploded,Explosion,Explosive,Grenade,Handgrenade,Land Mine,Landmine
-Book                    ,Author,Bookclub,Bookstore,Librarian,Library,Writer
+Book                    ,Author,EBook,Bookclub,Bookstore,Librarian,Library,Writer
 Bookstore               ,Book Store
 Boomerang               
 Boredom                 ,Bore,Bored,Boring
@@ -175,7 +175,7 @@ Candle                  ,Candlewax
 Candy                   ,Sweets
 Cannibal                ,Cannibalistic
 Capitalism              ,Capitalist,Capitalistic
-Car                     ,Airbag,Auto Shop,AutoMechaic,Autoshop,CarMechanic,Carseat,Diesel,Gasoline,Glovebox,Goodyear Tire,Grease Monkey,Machine Shop,Machinist,Mechanic,Motor Oil,Seatbelt,Steering Wheel,Taxi,Technician,Vehicle,Windshield
+Car                     ,Airbag,Auto Shop,AutoMechaic,Autoshop,CarMechanic,Carseat,Diesel,Gasoline,Glovebox,Goodyear Tire,Grease Monkey,Machine Shop,Machinist,Mechanic,Carburetor,Motor Oil,Seatbelt,Steering Wheel,Taxi,Technician,Vehicle,Windshield
 Car Accident            ,Car Crash
 Castration              -nsfw
 Cat                     ,Feline,Catoholic,Friskies,Fur Ball,Furball,Hair Ball,Hairball,Housecat,Kitten,Kitty,Litter Box,Litterbox,Meow,Meowing,Purr,Purring
@@ -250,7 +250,7 @@ Cow                     ,Bovinae,Bovine,Bull,Bullfight,Bullfighting,Calf,Cattle,
 Cowboy                  ,Cattleman,Cowgirl,Cowpoke,Lasso,Rancher,Rodeo,Wrangler -dontDoY
 Crab                    ,Crabby,Crabmeat
 Creepy                  ,Creep,Creeped,Creeper,Creepily,Creeping -dontDoY
-Crime                   ,Criminal,Felon,Felony,Gangbanger,Mafia,Misdemeanor,Mob,Thug,Thuggish,Thuglike
+Crime                   ,Criminal,Felon,Felony,Gang,Gangbanger,Mafia,Misdemeanor,Mob,Thug,Thuggish,Thuglike
 Crocodile               ,Caiman,Croc,Crocodilian
 Crucifixion             ,Crucified,Crucify
 Cruise                  
@@ -272,7 +272,7 @@ Dead Baby               ,Abortion,Miscarage,Stillbirth,Stillborn -nsfw
 Deafness                ,Deaf,Deafen,Deafened,Helen Keller -dontDoS
 Death                   ,Coroner,Corpse,Cremate,Cremation,Dead,Dying,Funeral,Grave,Graveside,Gravesite,Mortician,Mortuary,Mourning,Necromaniac,Necrophile,Necrophilia,Necrophiliac,Necrophilic
 Debt                    ,Borrow,Borrowed,Collateral,Debtee,Debtor,Down Payment,Financed,Foreclose,Foreclosing,Foreclosure,Indebted,Indebtedness,Lend,Loan,Loanee,Loaner,Loanword,Mortgage,Mortgaged,Mortgagee,Mortgager,Owe,Owed,Repayment,Repossess,Repossessed,Repossession
-Deep                    -minor
+Deep                    ,Shower Thought -minor
 Deformity               ,Deformed
 Democrat                ,Left Wing
 Demon                   
@@ -295,7 +295,7 @@ Dinner                  ,Dinnertime,Supper,Suppertime -dontDoER
 Dinosaur                
 Directions              ,GPS,Map,Mapquest,Navigate,Navigating,Navigation,Navigator,Roadmap
 Dirty                   -nsfw -dontDoY
-Disability              ,Deformed,Deformity,Disabled,Down Syndrome,Mental Illness,Mentally Ill,Paraplegic,Quadriplegic,Retard,Retarded,Tard,Wheelchair
+Disability              ,Deformed,Deformity,Disabled,Paralytic,Down Syndrome,Mental Illness,Mentally Ill,Paraplegic,Quadriplegic,Retard,Retarded,Tard,Wheelchair
 Disappointment          ,Disapoint,Disapointed,Disapointing
 Disaster                ,Disastrous -dontDoER
 Disgusting              ,Gross -nsfw -dontDoING
@@ -320,9 +320,9 @@ Drivers License         ,DMV
 Driving                 ,Carsick,DMV,Driver,Drover,Gridlock,Road,Speed Bump,Speed Limit,Speedbump,Speeder,Speeding,Stoplight,Stopsign,Traffic
 Drone                   
 Drowning                
-Drug                    ,Addict,Get High,Cokehead,Crackhead,Medicament,Methhead,Narcotic,OD,OD'd,Overdose,Overdosed,Pharma,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Trippy,Tweak,Tweaker,Tweeking -nsfw
+Drug                    ,Addict,Get High,Cokehead,Crackhead,Crackwhore,Medicament,Methhead,Narcotic,OD,OD'd,Overdose,Overdosed,Pharma,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Trippy,Tweak,Tweaker,Tweeking,Nootripic -nsfw
 Drum                    ,Drummer,Drumming,Drumset,Drumkit
-Drunk                   ,Alcoholic,Breathalyze,Breathalyzed,Breathalyzer,Drunkedly
+Drunk                   ,Alcoholic,DUI,Breathalyze,Breathalyzed,Breathalyzer,Drunkedly
 Dry Cleaner             ,Drycleaner
 Duck                    ,Duckling,Quack,Quacking
 Dwarf                   ,Dwarve,Dwarven,Dwarves,Dwarvish,Midget
@@ -338,7 +338,7 @@ Egg                     ,Eggshell,Ovum,Yolk
 Egypt                   ,Eqyptian,Giza,Pharaoh,Pyramid
 Ejaculation             ,Cumming -nsfw
 Election                ,Elect,Elected,Electoral,Electorate
-Electricity             ,Electric,Electrical,Electrically,Electrocute,Electrocuted,Electrocuting,Electrocution,Jumplead,Powerstrip -dontDoY
+Electricity             ,Electric,Electrical,Electrically,Electrocute,Electrocuted,Electrocuting,Electrocution,Jumplead,Powerstrip,Volt,Voltage,Electrified,Electrify,Ohm,Amp,Ampere,Amperage -dontDoY
 Electron                
 Elephant                
 Elevator                -dontDoOR
@@ -386,7 +386,7 @@ Flag                    ,Flagpole
 Florida                 ,Floridian
 Flower                  ,Bloom,Blooming,Wildflower -dontDoER
 Fly                     ,Flyswatter
-Food                    ,Fastfood,Foodstamp
+Food                    ,Fastfood,Foodstamp,Nutrition,Nutrient,Nutritionist
 Foot                    ,Cobble,Cobbler,Cobbling,Feet,Footgear,Footwear,Heel,Shoe,Shoelaces,Shoemaker,Sock,Sole,Toe
 Football                ,Field Goal,NFL,Playoffs,Super Bowl,Superbowl,Touchdown
 Ford                    
@@ -409,13 +409,13 @@ Gambling                ,Bet,Betting,Casino,Dice,Jackpot,Lottery,Lotto,Powerball
 Game of Thrones         ,GameOfThrones -dontDoS -dontDoES
 Game                    ,Cybergame,Gamed,Gamer,Gaming,Highscore,Hiscore,Ubisoft,Videogame
 Gardening               ,Botanist,Botany,Fertilizer,Landscape,Landscaping,Replant,Trowel
-Gay                     ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Faggiest,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Gaybar,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
-Gender                  ,Asexual,Asexuality,Bisexual,Bisexuality,Cis,Drag Queen,Cisgender,Cross Dress,Cross Dressed,Cross Dresser,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Crossdressed,Dyke,Fag,Faggot,Female,Feminine,Gay,Genderfluid,Genderqueer,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Male,Masculine,Metrosexual,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite,Ladyboy,Lady Boy -dontDoER
+Gay                     ,Drag Queen,Bisexual,Bisexuality,Dyke,Fag,Faggot,Faggiest,Gay,Genderfluid,Genderqueer,Homo,Homosexual,Gaybar,Lesbian,Lesbo,Metrosexual,Queer,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
+Gender                  ,Asexual,Agender,Asexuality,Bisexual,Bisexuality,Cis,Cisgender,Drag Queen,Cross Dress,Cross Dressed,Cross Dresser,Hermaphrodite,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Shemale,Crossdressed,Dyke,Fag,Faggot,Female,Feminine,Gay,Genderfluid,Genderqueer,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Male,Masculine,Masculinity,Feminine,Metrosexual,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite,Ladyboy,Lady Boy,Nonbinary,Neutrois -dontDoER
 Genetics                ,Adenine,Chromosome,Codon,Cytosine,DNA,Deoxyribonucleic Acid,Double Helix,Gene,Genealogy,Genetical,Genomic,Guanine,Helicase,Nucleotide,Purine,Pyrimidine,Telomere,Thymine,mRNA
 Genie                   
 Genocide                ,Anne Frank,Auschwitz,Concentatration Camp,Gas Chamber,Gasroom,Genocidal,Holocaust -nsfw
 Geography               ,Cartographer,Cartographic,Cartographical,Cartographically,Cartography,Latitude,Longitude,Toponym
-Geology                 ,Crystal,Igneous,Metamorphic,Mineral,Mineralogist,Mineralogy,Sediment,Sedimentary
+Geology                 ,Crystal,Crystaline,Igneous,Metamorphic,Mineral,Mineralogist,Mineralogy,Sediment,Sedimentary
 Geometry                ,Angle,Concave,Convex,Descartes,Dimension,Dimensional,Euclid,Euclidean,Fermat,Geometer,Manifold,Plane,Polygon,Polyhedra,Polyhedron,Surface Area,Topology,Volume
 George Bush             
 George W Bush           
@@ -426,7 +426,7 @@ Girlfriend              ,ExGirlfriend,Girl Friend
 Glue                    ,Epoxy,Epoxylike,Glued
 Goat                    
 God                     ,Abba,Allah,Elohim,Goddess,Goddesslike,Goddessly,Godlike,Godly,Monotheism,Monotheist,Monotheistic,Polytheism,Polytheist,Polytheistic,Theism,Theist,Theistic,Yahweh
-Golf                    ,Golfball,Golfclub,Hole In One
+Golf                    ,Golfball,Golfclub,Hole In One,Goldcart
 Google                  ,G Mail,GMail,Googling
 Gorilla                 ,Harambe,Silverback
 Government              ,Air Force One,America,American,Ballot,Balloting,CIA,Central Intelligence Agency,Chief Executives,Commander And Chief,Congress,Congressman,Congressmen,Congresswoman,Congresswomen,Conservative,DEA,Democrat,Dictator,Drug Enforcement Agency,Elect,Elected,Election,Electoral,Electorate,Executive Branch,FBI,Federal Bureau Of Investigation,GOP,Governance,Governing,Governmental,Head Of State,House Of Representatives,House of Representative,IRS,Internal Revenue Service,Left Wing,Liberal,Merica,Murca,Murica,Oval Office,Poll,Presidency,President,Presidential,Referendum,Republican,Right Wing,Senate,Senator,Suffrage,Supreme Court,Thirteen Colonies,USA,United States,Vote,Voter,Voting
@@ -486,7 +486,7 @@ Holy Water              -dontDoER
 Home School             ,Homeschool,Homeschooled,Homeschooler,Homeschooling
 Homeless                ,Homelessness -dontDoS
 Homework                
-Homosexual              ,Bisexual,Bisexuality,Cis,Dyke,Fag,Faggot,Gay,Gender Change,Gender Changed,Genderfluid,Genderqueer,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,Lesbian,Lesbo,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw
+Homosexual              ,Gay,Lesibian,Bisexual,Bisexuality,Dyke,Fag,Faggot,Gay,Genderfluid,Genderqueer,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Metrosexual,Queer,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw
 Honeymoon               ,Newlywed
 Horse                   ,Donkey,Equine,Esquestrian,Horseshoe,Mare,Mule,Pony,Saddle,Saddlepack,Spurs,Stalion,Warhorse
 Horse Racing            ,Horse Track,Horserace,Horsetrack,Jockey
@@ -528,7 +528,7 @@ Isaac Newton
 Israel                  ,Israeli,Israelite,Shimon Peres
 Italy                   ,Gondola,Italian,Veneto,Venice
 Ivanka Trump            
-Jail                    ,Behind Bars,Cellblock,Cellmate,Convict,Felon,Guantanamo,Imprison,Imprisonment,Incarcerate,Incarcerated,Inmate,Jailbreak,Jailer,Jailguard,Jailhouse,Mugshot,Prison,Prisonbreak,Prisoner,Probabtion,Solitary Confinement,Supermax
+Jail                    ,Behind Bars,Cellblock,Cellmate,Convict,Ex-Con,Felon,Guantanamo,Imprison,Imprisonment,Incarcerate,Incarcerated,Inmate,Jailbreak,Jailer,Jailguard,Jailhouse,Mugshot,Prison,Prisonbreak,Prisoner,Probabtion,Solitary Confinement,Supermax
 Jamaica                 ,Jamaican
 James Bond              ,Casino Royal,Goldfinger
 Japan                   ,Jap,Japanese,Kanji,Kimono,Kyoto,Osaka,Samurai,Shogun,Tokyo
@@ -620,7 +620,7 @@ Marriage                ,Anniversary,Betroth,Betrothal,Betrothed,Bride,Bridegroo
 Mars                    ,Martian -dontDoS
 Martial Arts            ,Dojo
 Martin Luther           ,MLK -dontDoER
-Masculinity             ,Macho,Masculine -dontDoY
+Masculinity             ,Macho,Masculine,Machist,Machismo -dontDoY
 Masochist               ,Masochism,Masochistically -nsfw
 Massage                 ,Massaged,Massager,Massaging,Masseur,Masseuse
 Masturbation            ,Fap,Fappening,Fapping,Jack Off,Jacking Off,Jerk Off,Jerked Off,Jerking Off,Jerkoff,Touching Herself,Touching Himself,Touching Myself,Touching Yourself,Wank,Wanking Off -nsfw
@@ -630,9 +630,10 @@ McDonalds               ,Hamburglar,McDonald
 Mechanic                ,Auto Shop,AutoMechaic,Autoshop,CarMechanic,Grease Monkey,Machine Shop,Machinist,Technician
 Medical                 ,Ambulence,Amputate,Amputation,Anesthesia,Anesthetic,CPR,Cancer,Checkup,Disease,Doctor,Emergency Room,Epilepsy,Epileptic,Hemorrhoids,Hospital,Leper,Leprosy,Lipectomy,Liposuction,MRI,Medicament,Medicine,Midwife,Mycobacterium Leprae,Nurse,Nursed,Nursing,Operating Room,Operation,Pharmaceutical,Prescibed,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Resuscitate,Resuscitated,Resuscitation,Rx,Surgeon,Surgery
 Medicine                ,Medicament,Pharmaceutical,Prescibed,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Rx
-Medicine Man            
+Medicine Man
+Meme                    ,Memer,Memelord            
 Memory                  ,Amnesia,Amnestic,Dementia,Forget,Forgetful,Forgetfulness,Forgot,Forgotten,Learn,Learning,Memorization,Memorize,Memorized,Mnemonic,Recall,Recalling,Recognition,Recognize,Recollect,Recollection,Remember,Remembering,Remembrance,Reminisce,Reminiscence,Retrospect,Retrospection
-Men                     ,Boy,Boyfriend,Chico,ExBoyfriend,ExHusband,Gentleman,Gentlemen,Guy,Hubby,Husband,Male,Man,Manhood,Masculine,Widower
+Men                     ,Boy,Boyfriend,Chico,ExBoyfriend,ExHusband,Gentleman,Gentlemen,Guy,Hubby,Husband,Male,Man,Manhood,Masculine,Masculinity,Widower
 Menopause               ,Hot Flash,Hot Flashes -nsfw
 Mental Health           ,Blot Test,Hypnotherapist,Inkblot,Mental Illness,Psychoanalysis,Psychological,Psychologically,Psychologist,Psychology,Psychotherapy,Rorschach,Therapy
 Mermaid                 ,Merfolk,Merman,Mermen,Merperson
@@ -653,7 +654,7 @@ Mirror                  ,Flect,Reflection -dontDoOR
 Missile                 ,AntiAircraft,Projectile,Rocket,Warhead
 Missionary              ,Missioner
 Mississippi             ,Mississippian
-Mistress                ,Concubine,Courtesan,Paramour -dontDoS
+Mistress                ,Concubine,Courtesan,Paramour,Slampiece -dontDoS
 Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Buyers Market,Capitation,Collateral,Credit Union,Currencies,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Financed,Foreclose,Foreclosing,Foreclosure,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paycheck,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
 Monk                    ,Abbot,Carthusian,Cistercian,Friar,Monastery,Monastic
 Monkey                  ,Ape,Primate -dontDoY
@@ -701,7 +702,7 @@ Ninja                   ,Daimyo,Naruto,Ninjutsu,Samurai,Shogun
 Nobel Prize             ,Alfred Nobel
 North Dakota            ,North Dakotan
 North Korea             ,Kim Jong Un,Kim JongUn,North Korean
-Norway                  ,Norwegian -dontDoY
+Norway                  ,Norwegian,Lutefisk -dontDoY
 Nose                    ,Beak,Booger,Boogey,Nasal,Nostril,Nuzzle,Olfaction,Olfactory,Proboscis,Smell,Smelling,Smelly,Snout
 Nudist                  -nsfw
 Nudity                  ,Naked,Nakedness,Nude,Nudist -nsfw -dontDoY
@@ -739,9 +740,9 @@ Pasta                   ,Noodle
 Peace                   ,Amity,Armistice,Conciliation,Nonviolence,Pacification,Pact,Peaceful,Peacefulness,Serenity,Tranquility,Tranquillity,Truce
 Pedophilia              ,Child Porn,Child Pornography,Kiddie Porn,Kiddy Porn,Paedo,Paedophile,Paedophilia,Paedophilic,Pedo,Pedophile,Pedophilic -nsfw
 Penguin                 
-Penis                   ,Ballsack,Boner,Cock,Cum,Cummed,Cumming,Dick,Ejaculate,Ejaculation,Erection,Foreskin,Gonad,Hard On,Jizz,Jizzed,Jizzing,Manhood,Micropenis,Nutsack,Pecker,Penile,Phallic,Phallus,Pisser,Precum,Schlong,Scrotum,Semen,Seminal,Sperm,Spermatic,Spermatogenesis,Splooge,Spunk,Testicle,Testis,Wiener,Boabie,Tockley -nsfw -dontDoS
+Penis                   ,Incher,Prick,Ballsack,Boner,Cock,Cum,Cummed,Cumming,Dick,Ejaculate,Ejaculation,Erection,Foreskin,Gonad,Hard On,Jizz,Jizzed,Jizzing,Manhood,Micropenis,Nutsack,Pecker,Penile,Phallic,Phallus,Pisser,Precum,Schlong,Scrotum,Semen,Seminal,Sperm,Spermatic,Spermatogenesis,Splooge,Spunk,Testicle,Testis,Wiener,Boabie,Tockley -nsfw -dontDoS
 Pepsi                   ,PesiCo
-Period                  ,Menstruating,Menstruation,Mentruate,PMS,Premenstrual Syndrome,Tampax,Tampon -nsfw
+Period                  ,Menstruating,Menophilia,Menophiliac,Menstruation,Mentruate,PMS,Premenstrual Syndrome,Tampax,Tampon -nsfw
 Pervert                 ,Perverse -nsfw
 Pessimist               ,Cynic,Cynical,Cynicality,Cynically,Nihilism,Nihilist,Nihilistic,Pessimism,Pessimisti
 Pet                     ,Animal Doctor,PetFriendly,Petco,Petstore,Petshop,Petsmart,Vet,Veterinarian,Veterinary
@@ -773,7 +774,7 @@ Politics                ,Air Force One,Altright,Caucus,America,American,Anarchis
 Polygamy                ,Bigamy,Open Marriage,Polyandy,Polygyny -nsfw
 Pool                    ,Billiard,Hot Tub
 Poop                    ,Crap,Poo,Crapping,Diarrhea,Diuretic,Droppings,Excrement,Excreting,Fecal,Feces,Laxative,Manure,Poopie,Poopy,Shitter,Shitting,Take A Shit,Turd,Coprophilia,Coprophile,Coprophilic -nsfw
-Poor                    ,Bankrupt,Bankruptcy,Bankrupted,Beggar,Beggarly,Destitute,Homeless,Homelessness,Impoverished,Penniless,Poverty,PovertyStricken -dontDoOR
+Poor                    ,Bankrupt,Penniless,Bankruptcy,Bankrupted,Beggar,Beggarly,Destitute,Homeless,Homelessness,Impoverished,Penniless,Poverty,PovertyStricken -dontDoOR
 Popcorn                 
 Pope                    ,Antipope,Papacy,Papal,Pontiff,Pontificate,Vatican
 Pork                    
@@ -793,12 +794,12 @@ Probability             ,Probably,Statistic,Statistically
 Profanity               ,Curse,Cursing,Dirty Word,Expletive,Explict,Obscenity,Profane,Vularity,Vulgar -nsfw
 Professor               ,Academician,Lecturer -dontDoOR
 Programming             ,Algorithm,Antivirus,Byte,Coding,Computer Program,Computer Science,Computer Scientist,Computer Virus,Database,Debug,Debugger,Debugging,Foobar,Gigabyte,Kilobyte,Machine Code,Megabyte,Microprocessor,Multithreaded,Multithreading,Parser,Petabyte,Programmer,QA Tester,QA Testing,Software,Subprogram,Subroutine,Terrabyte,Web Design,Web Designer,Word Processor,Zetabyte -dontDoING
-Prostitution            ,Brothel,Call Girl,Courtesan,Floozie,Floozy,Hooker,Pimp,Prositute,Sex Tourism,Sex Tourist,Sex Traffic,Sex Trafficking,Sex Worker,Streetwalker,Whorehouse -nsfw
+Prostitution            ,Brothel,Call Girl,Crackwhore,Courtesan,Floozie,Floozy,Hooker,Pimp,Prositute,Sex Tourism,Sex Tourist,Sex Traffic,Sex Trafficking,Sex Worker,Streetwalker,Whorehouse -nsfw
 Protestant              ,Protestantism
 Psychiatry              
 Psychic                 ,Aura,Crystal Ball,Tarot
 Psychology              ,Blot Test,Hypnotherapist,Inkblot,Psychoanalysis,Psychotherapy,Rorschach,Therapy
-Pun                     ,Homophone,Malapropism,Punning,Wordplay
+Pun                     ,Homophone,Malapropism,Punning,Wordplay,Punny
 Punctuality             ,On Time,Prompt,Punctilious,Punctual,Punctually,Timely -dontDoY
 Puzzle                  ,Baffle,Baffled,Bewilder,Bewildered,Confuse,Confused,Mystified,Mystify,Perplex,Perplexed,Puzzled,Puzzling
 Queen                   ,Duchess,Queenhood,Queenly
@@ -808,7 +809,7 @@ Quran                   ,Hadith,Koran,Koranic,Sunnah
 Rabbi                   
 Rabbit                  ,Bunnies,Bunny,Hare,Jackrabbit
 Racing                  ,Footrace,Horsetrack,Jockey,Racecar,Racecourse,Raced,Racer,Racetrack,Raceway -dontDoING
-Racist                  ,Black Guy,Black Man,Black Men,Black People,Black Person,Burrhead,Coon,Cracka,Ebonic,Golliwogg,Gringo,He Was Black,He Was White,Honkey,Honky,Jigaboo,Jiggabo,Jungle Bunny,KKK,Klan,Klansman,Klansmen,Klanswoman,Klanswomen,Negra,Negro,Nig Nog,NigNog,Nigga,Nigger,Nigglet,Niggress,Niglet,Nigra,Nigrah,Peckerwood,Porch Monkey,Race,Racialist,Racism,She Was Black,She Was White,Skinhead,Supremacism,They Were Black,They Were White,Wegro,White Guy,White Man,White Men,White Nationalism,White People,White Person,White Supremacy,Whitey,Wigger,Xenophobia,Xenophobic -nsfw
+Racist                  ,Black Guy,Black Man,Black Men,Black People,Black Person,Burrhead,Coon,Cracka,Ebonic,Golliwogg,Gringo,He Was Black,He Was White,Honkey,Honky,Jigaboo,Jiggabo,Jungle Bunny,KKK,Klan,Klansman,Klansmen,Klanswoman,Klanswomen,Negra,Negro,Nig Nog,NigNog,Nigga,Nigger,Nigglet,Niggress,Niglet,Nigra,Nigrah,Peckerwood,Porch Monkey,Race,Racialist,Racism,She Was Black,She Was White,Skinhead,Supremacism,They Were Black,They Were White,Wegro,White Guy,White Man,White Men,White Nationalism,White People,White Person,White Supremacy,Whitey,Wigger,Xenophobia,Xenophobic,Misogyny,Misogynist,Misogynistical,Misogynistically -nsfw
 Radiation               ,Cosmic Ray,Gamma Ray,Geiger Counter,Irradiate,Irradiation,Radioactive,Radioactivity,Radiotherapy,XRay
 Rap                     ,Rapper
 Rape                    ,Raped,Raper,Raping,Rapist,Rohypnol,Roofy,Sexual Assault -nsfw
@@ -862,7 +863,7 @@ Self Defense            ,SelfDefense
 Semen                   ,Cum,Cummed,Cumming,Ejaculate,Ejaculation,Jizz,Jizzed,Jizzing,Precum,Seminal,Sperm,Splooge,Spunk -nsfw
 September 11            ,Sep 11,Sep 11th,Sept 11,Sept 11th,September 11th,WTC,World Trade Center
 Sex                     ,Anorgasmia,Cum,Nooner,Cumming,Ejaculation,Erotic,Erotica,Erotically,Eroticism,Friends With Benefits,Hentai,Lingerie,Make Love,Making Love,Neglegee,Orgasm,Playboy,Porn,Porno,Pornograhic,Pornographer,Pornography,Pornstar,STD,Sexual,Sexually,Sexy,XXX -nsfw
-Sex Offender            -nsfw
+Sex Offender            ,Sexual Offender -nsfw
 Sex Toy                 ,Sex Shop,Sextoy -nsfw -dontDoY
 Sexual Harassment       ,Molest,Molestation,Sex Offender,Sexual Assault,Sexually Assaulted,Sexually Harassed -nsfw
 Shame                   ,Ashame,Ashamed,Disgrace,Disgraced,Disgraceful,Dishonor,Dishonored,Dishonoring,Dishonour,Dishonoured,Dishonouring,Embarrassed,Embarrassedly,Embarrassing,Embarrassment,Ignominy,Shamed,Shaming
@@ -885,7 +886,7 @@ Skirt
 Skunk                   
 Sky Diving              ,Parachute,Wingsuit
 Slavery                 ,Enslave,Enslaved,Human Trafficking,Prisoner Of War,Serf,Serfdom,Servitude,Slave,Slaveholder,Slaveholding,Slaver,Subjugation -nsfw -dontDoY
-Sleep                   ,Apnea,Asleep,Dream,Dreaming,Hibernate,Hibernating,Hibernation,Insomnia,Insomniac,Melatonin,Nap,Napping,Narcolepsy,Narcoleptic,Nightmare,Sandman,Sleepwalk,Sleepwalking,Slumber,Slumbering,Snooze,Snoozed,Snoozing,Snore,Snoring,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
+Sleep                   ,Apnea,Asleep,Dream,Hypersleep,Cryosleep,Dreaming,Hibernate,Hibernating,Hibernation,Insomnia,Insomniac,Melatonin,Nap,Napping,Narcolepsy,Narcoleptic,Nightmare,Sandman,Sleepwalk,Sleepwalking,Slumber,Slumbering,Snooze,Snoozed,Snoozing,Snore,Snoring,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
 Sleepwalking            ,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
 Slut                    ,Bimbo,Floozy,Fornicatress,Harlot,Ho,Hoe,Hussy,Promiscuous,Tramp,Whore,Skank,Skankier,Skaniest -nsfw
 Small Town              ,One Horse Town,Rural Town,Settlement,Village

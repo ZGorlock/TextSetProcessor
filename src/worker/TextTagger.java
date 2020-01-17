@@ -513,7 +513,7 @@ public final class TextTagger {
         String tagRegex = "^([^A-Z0-9]*X[^A-Z0-9].*)|(.*[^A-Z0-9]X[^A-Z0-9]*)|(.*[^A-Z0-9]X[^A-Z0-9].*)|([^A-Z0-9]*X[^A-Z0-9]*)$";
         
         for (String word : StringUtility.removePunctuation(text).split("\\s+", -1)) {
-            if (word.charAt(0) == 'i' && Character.isUpperCase(word.charAt(1))) {
+            if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
                 tags.add("Apple");
                 matches.add("Apple");
             }
@@ -541,6 +541,10 @@ public final class TextTagger {
             if (word.endsWith("SPORT") || word.endsWith("SPORTS")) {
                 tags.add("Sport");
                 matches.add("Sport");
+            }
+            if (word.endsWith("SEXUAL") && !word.equals("SEXUAL")) {
+                tags.add("Gender");
+                matches.add("Gender");
             }
             if (word.contains("SHREK")) {
                 tags.add("Shrek");

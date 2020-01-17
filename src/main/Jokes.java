@@ -81,6 +81,7 @@ public class Jokes {
     //Static Fields
     
     //TODO But her aim is getting better
+    //TODO SJW
     
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.

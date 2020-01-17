@@ -28,6 +28,7 @@ public final class TextTaggerTest {
         TextTagger textTagger = TextTagger.getInstance();
         textTagger.printTagTrigger = true;
         textTagger.load();
+        System.out.println("Ready");
         
         Scanner in = new Scanner(System.in);
         String test;

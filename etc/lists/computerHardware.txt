@@ -10,6 +10,9 @@ Data Cable
 Daughterboard
 Disk Drive
 Flash Drive
+Flashdrive
+Thumb Drive
+Thumbdrive
 Floppy Disk Drive
 Floppy Disk
 CD
