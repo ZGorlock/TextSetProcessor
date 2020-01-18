@@ -1,4 +1,5 @@
 Semibreve
+Diminution
 Whole Note
 Half Note
 Quarter Note

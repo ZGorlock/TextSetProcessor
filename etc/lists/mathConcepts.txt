@@ -1,7 +1,16 @@
 Absolute Value
+Prime
+Acute
+Obtuse
 Acute Angle
 Acute Triangle
 Addend
+Add
+Subtract
+Multiply
+Divide
+Modulus
+Factorial
 Addition
 Addition Property of Equality
 Additive Inverse
@@ -47,6 +56,8 @@ Binomial
 Binomial Theorem
 Bisect
 Boxandwhisker Graph
+Decimal
+Hexadecimal
 Calculate
 Cardinal Number
 Catalan Number
@@ -89,11 +100,13 @@ Counting Number
 Cross Product
 Cube
 Cubic Number
+Cubic
 Cumulative Frequency
 Customary Measurement System
 Cyclic Number
 Cylinder
 Data Set
+Data
 Decimal
 Decimal Digit
 Decimal Fraction

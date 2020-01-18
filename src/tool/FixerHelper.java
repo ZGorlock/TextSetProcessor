@@ -1,6 +1,6 @@
 /*
- * File:    ListCleaner.java
- * Package: worker
+ * File:    FixerHelper.java
+ * Package: tool
  * Author:  Zachary Gill
  */
 
@@ -12,122 +12,164 @@ import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-import org.jnativehook.GlobalScreen;
-import org.jnativehook.keyboard.NativeKeyEvent;
-import org.jnativehook.keyboard.NativeKeyListener;
+import main.Jokes;
+import parser.JokeParser;
+import pojo.Joke;
+import resource.Console;
 import utility.Filesystem;
+import utility.StringUtility;
+import worker.NsfwChecker;
+import worker.SpellChecker;
+import worker.TextFixer;
+import worker.TextTagger;
 
 /**
- * Helps fix spelling mistakes from a fix list.
+ * Helps with fixing spelling mistakes.
  */
-public final class FixerHelper {
+public class FixerHelper {
     
     //Static Fields
     
     /**
-     * The file to read the fix list from.
+     * The reference to the Joke Parser.
      */
-    private static File fixListFile = new File("jokes/reddit/source/3 - fixed/fixed-fixList.txt");
+    private static final JokeParser jokeParser = JokeParser.getInstance();
     
     /**
-     * The fix list read from the file.
+     * The reference to the Text Tagger.
      */
-    private static List<String> fixList = new ArrayList<>();
+    private static final TextTagger textTagger = TextTagger.getInstance();
     
     /**
-     * The current index in the fix list.
+     * The reference to the Text Fixer.
      */
-    private static int index = 0;
+    private static final TextFixer textFixer = TextFixer.getInstance();
     
     /**
-     * The global key listener for the keyboard.
+     * The reference to the Spell Checker.
      */
-    private static NativeKeyListener keyboardHook = null;
+    private static final SpellChecker spellChecker = SpellChecker.getInstance();
     
     /**
-     * The reference to the clipboard.
+     * The reference to the NSFW Checker
      */
-    private static Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+    private static final NsfwChecker nsfwChecker = NsfwChecker.getInstance();
+    
+    
+    //Main Methods
     
     /**
-     * Whether the control key is down or not.
-     */
-    private static boolean controlDown = false;
-    
-    /**
-     * Whether the shift key is down or not.
-     */
-    private static boolean shiftDown = false;
-    
-    /**
-     * A flag indicating whether or not to wait for a key reset.
-     */
-    private static boolean waitForReset = false;
-    
-    
-    //Main Method
-    
-    /**
-     * The main method.
+     * The Main method.
      *
-     * @param args The arguments to the main method.
+     * @param args Arguments to the Main Method.
      */
-    public static void main(String[] args) throws Exception {
-        setupKeyListener();
-        fixList = Filesystem.readLines(fixListFile);
-        while (true) {
-        }
+    public static void main(String[] args) {
+        fix(Jokes.JokeSet.Reddit);
     }
     
-    
-    //Functions
-    
     /**
-     * Sets up the key listener for the helper.
+     * Helps you with fixing spelling mistakes for a joke set.
+     *
+     * @param jokeSet The joke set to work with.
      */
-    private static void setupKeyListener() throws Exception {
-        GlobalScreen.registerNativeHook();
-        NativeKeyListener keyboardHook = new NativeKeyListener() {
-            @Override
-            public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
-                int code = nativeKeyEvent.getRawCode();
-                switch (NativeKeyEvent.getKeyText(nativeKeyEvent.getKeyCode())) {
-                    case "Ctrl":
-                        controlDown = true;
-                        break;
-                    case "Shift":
-                    case "Unknown keyCode: 0xe36":
-                        shiftDown = true;
-                        break;
-                }
-                if (controlDown && shiftDown && !waitForReset) {
-                    clipboard.setContents(new StringSelection(fixList.get(index++)), null);
-                    waitForReset = true;
-                }
-            }
+    private static void fix(Jokes.JokeSet jokeSet) {
+        String jokeSetName = jokeSet.name().toLowerCase();
+        
+        List<Joke> jokes;
+        jokeParser.preserveSource = true;
+        
+        File workFixedFile = new File("jokes/" + jokeSetName + "/source/1 - cleaned/cleaned-work-fixed.json");
+        File workFixedBackupFile = new File("jokes/" + jokeSetName + "/source/1 - cleaned/cleaned-work-fixed-bak.json");
+        File workFile = new File("jokes/" + jokeSetName + "/source/1 - cleaned/cleaned-work.json");
+        File workBackupFile = new File("jokes/" + jokeSetName + "/source/1 - cleaned/cleaned-work-bak.json");
+        File workFixListFile = new File("jokes/" + jokeSetName + "/source/1 - cleaned/cleaned-work-fixList.txt");
+        File workIndexFile = new File("jokes/" + jokeSetName + "/source/1 - cleaned/cleaned-work-index.txt");
+        
+        if (!workFixedFile.exists()) {
+            System.out.println("Starting Up...");
+            jokeParser.load();
+            textTagger.load();
+            textFixer.load();
+            spellChecker.load();
             
-            @Override
-            public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
-                int code = nativeKeyEvent.getRawCode();
-                switch (NativeKeyEvent.getKeyText(nativeKeyEvent.getKeyCode())) {
-                    case "Ctrl":
-                        controlDown = false;
-                        waitForReset = false;
-                        break;
-                    case "Shift":
-                    case "Unknown keyCode: 0xe36":
-                        shiftDown = false;
-                        waitForReset = false;
-                        break;
-                }
-            }
+            System.out.println("Parsing " + jokeSet.name() + "...");
+            jokes = jokeParser.parseJokeSet(jokeSet);
             
-            @Override
-            public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent) {
+            System.out.println("Fixing " + jokeSet.name() + "...");
+            jokes.parallelStream().forEach(joke -> Jokes.fixJoke(joke, null));
+            
+            Jokes.outputJokes(workFixedFile, jokes, false);
+        } else {
+            jokes = Jokes.readJokes(workFixedFile);
+        }
+        
+        Scanner input = new Scanner(System.in);
+        List<String> fixList = new ArrayList<>();
+        int bigCount = 0;
+        int count = 0;
+        int lastIndex = 0;
+        int index = workIndexFile.exists() ? Integer.parseInt(Filesystem.readFileToString(workIndexFile)) : 0;
+        for (int i = index; i < jokes.size(); i++) {
+            Joke j = jokes.get(i);
+            if (!j.fix.isEmpty()) {
+                boolean goBack = false;
+                boolean delete = false;
+                for (String fixing : j.fix) {
+                    System.out.println("\n\n\n");
+                    System.out.println("Joke " + i + " / " + jokes.size());
+                    for (String s : StringUtility.wrapText(j.text.replaceAll(fixing, Console.yellow("***" + fixing + "***")), 120)) {
+                        System.out.println(s);
+                    }
+                    System.out.println("::" + fixing + "::");
+                    System.out.print(":");
+                    StringSelection selection = new StringSelection(fixing);
+                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                    clipboard.setContents(selection, selection);
+                    String typed = input.nextLine();
+                    if (!typed.isEmpty()) {
+                        if (typed.equalsIgnoreCase("~")) {
+                            goBack = true;
+                            break;
+                        } else if (typed.equalsIgnoreCase("*")) {
+                            delete = true;
+                            break;
+                        } else if (typed.equalsIgnoreCase("=")) {
+                            //skip
+                            break;
+                        } else {
+                            j.source = j.source.replaceAll(fixing, typed);
+                        }
+                    } else {
+                        fixList.add(fixing);
+                    }
+                    count++;
+                }
+                if (goBack) {
+                    i = lastIndex - 1;
+                    continue;
+                }
+                if (delete) {
+                    jokes.remove(i);
+                    i--;
+                }
+                lastIndex = i;
             }
-        };
-        GlobalScreen.addNativeKeyListener(keyboardHook);
+            if (count >= 10) {
+                bigCount++;
+                System.out.println("\nSaving Progress... (" + bigCount + ")\n");
+                Filesystem.copyFile(workFile, workBackupFile, true);
+                jokeParser.writeJokeSet(jokeSet, jokes);
+                Filesystem.copyFile(workFixedFile, workFixedBackupFile, true);
+                Jokes.outputJokes(workFixedFile, jokes, false);
+                Filesystem.writeLines(workFixListFile, fixList, true);
+                fixList.clear();
+                Filesystem.writeStringToFile(workIndexFile, String.valueOf(i + 1));
+                count = 0;
+            }
+        }
+        jokeParser.writeJokeSet(jokeSet, jokes);
     }
     
 }

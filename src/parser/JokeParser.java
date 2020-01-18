@@ -18,6 +18,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import main.Jokes;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -95,6 +96,55 @@ public final class JokeParser {
     
     
     //Methods
+    
+    /**
+     * Parses a joke set.
+     *
+     * @param jokeSet The joke set to process.
+     * @return The list of jokes parsed from the joke set.
+     */
+    public List<Joke> parseJokeSet(Jokes.JokeSet jokeSet) {
+        switch (jokeSet) {
+            case Quirkology:
+                return parseQuirkology();
+            case Jokeriot:
+                return parseJokeriot();
+            case StupidStuff:
+                return parseStupidStuff();
+            case Wocka:
+                return parseWocka();
+            case Reddit:
+                return parseReddit();
+            default:
+                return new ArrayList<>();
+        }
+    }
+    
+    /**
+     * Rewrites a joke set.
+     *
+     * @param jokeSet The joke set to process.
+     * @param jokes   The list of jokes to write.
+     */
+    public void writeJokeSet(Jokes.JokeSet jokeSet, List<Joke> jokes) {
+        switch (jokeSet) {
+            case Quirkology:
+                writeQuirkology(jokes);
+                break;
+            case Jokeriot:
+                writeJokeriot(jokes);
+                break;
+            case StupidStuff:
+                writeStupidStuff(jokes);
+                break;
+            case Wocka:
+                writeWocka(jokes);
+                break;
+            case Reddit:
+                writeReddit(jokes);
+                break;
+        }
+    }
     
     /**
      * Parses jokes from Quirkology.
@@ -662,7 +712,7 @@ public final class JokeParser {
                     test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") ||
                     test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") ||
                     test.contains("MODS") || test.contains(">") || test.contains("<") || test.contains("U/") || test.contains("_") || test.contains("  - ") ||
-                    test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") ||
+                    test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") || test.contains("LAWL") ||
                     test.contains(".ORG") || test.contains(".NET") || test.contains(".GOV") || test.contains("AUTHOR") || test.contains(":)") || test.contains(":/") || test.contains(":P") ||
                     test.contains(":|") || test.contains("O.O") || test.contains(":D") || test.contains(":(") || test.contains("D:") || test.contains("[REQUEST]") || test.contains("PLS") || test.contains("PLZ") ||
                     test.contains(":-)") || test.contains(":-(") || test.contains("XD") || test.contains("TRANSLATED") || test.contains("LOL") || test.contains("KEK") || test.contains("#") ||
@@ -687,6 +737,7 @@ public final class JokeParser {
                     test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
                     test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
                     test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
+                    test.matches(".*THANK.+FOR\\sTHAT\\sONE[^a-zA-Z0-9]*$") ||
                     test.matches(".*MADE\\sTHIS((ONE|JOKE)\\s)?\\sUP.*$") ||
                     test.matches(".*OUT[^a-zA-Z]*$") ||
                     test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||

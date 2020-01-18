@@ -82,6 +82,7 @@ public class Jokes {
     
     //TODO But her aim is getting better
     //TODO SJW
+    //TODO Jon Snow
     
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
@@ -248,7 +249,7 @@ public class Jokes {
                 Filesystem.deleteDirectory(parsedFile.getParentFile());
                 Filesystem.createDirectory(parsedFile.getParentFile());
                 long subParseStartTime = System.currentTimeMillis();
-                List<Joke> jokes = parseJokeSet(jokeSet);
+                List<Joke> jokes = jokeParser.parseJokeSet(jokeSet);
                 Filesystem.createDirectory(parsedFile.getParentFile());
                 outputJokes(parsedFile, jokes);
                 long subParseEndTime = System.currentTimeMillis();
@@ -267,29 +268,6 @@ public class Jokes {
         totalTime += parseTime;
         System.out.println("Parsed Jokes in " + parseTime + "s");
         System.out.println();
-    }
-    
-    /**
-     * Parses a joke set.
-     *
-     * @param jokeSet The joke set to process.
-     * @return The list of jokes parsed from the joke set.
-     */
-    public static List<Joke> parseJokeSet(JokeSet jokeSet) {
-        switch (jokeSet) {
-            case Quirkology:
-                return jokeParser.parseQuirkology();
-            case Jokeriot:
-                return jokeParser.parseJokeriot();
-            case StupidStuff:
-                return jokeParser.parseStupidStuff();
-            case Wocka:
-                return jokeParser.parseWocka();
-            case Reddit:
-                return jokeParser.parseReddit();
-            default:
-                return new ArrayList<>();
-        }
     }
     
     

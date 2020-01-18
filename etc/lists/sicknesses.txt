@@ -13,6 +13,7 @@ Cough
 Dementia
 Dengue Fever
 Diabetes
+Migraine
 Disease
 Earache
 Ebola
