@@ -1,4 +1,5 @@
 Baht
+Bitcoin
 Dinar
 Dirham
 Dollar

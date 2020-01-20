@@ -14,6 +14,7 @@ Dementia
 Dengue Fever
 Diabetes
 Migraine
+Syndrome
 Disease
 Earache
 Ebola

@@ -82,7 +82,10 @@ public class Jokes {
     
     //TODO But her aim is getting better
     //TODO SJW
+    //TODO HS
     //TODO Jon Snow
+    //TODO E.A
+    //TODO look at short ones
     
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.

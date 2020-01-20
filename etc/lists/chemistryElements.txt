@@ -1,4 +1,6 @@
 Hydrogen
+Noble Gas
+Noble Gases
 Helium
 Lithium
 Beryllium
