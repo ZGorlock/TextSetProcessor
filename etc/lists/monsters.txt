@@ -13,6 +13,7 @@ Mothra
 Wyrm
 Dragon
 Vampire
+Kaiju
 Werewolf
 Yeti
 Big Foot

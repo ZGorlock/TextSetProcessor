@@ -309,6 +309,7 @@ public final class TextTagger {
         addListToTag(tags.get("Groceries"), "groceryStores");
         addListToTag(tags.get("Guitar"), "guitars");
         addListToTag(tags.get("Gun"), "guns");
+        addListToTag(tags.get("Gym"), "gyms", "gymEquipment");
         addListToTag(tags.get("Hardware"), "hardwares", "hardwareTools");
         addListToTag(tags.get("Harry Potter"), "harryPotterBooks", "harryPotterCharacters", "harryPotterPlaces", "harryPotterSpells");
         addListToTag(tags.get("Hawaii"), "hawaiianPlaces");

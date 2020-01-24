@@ -710,7 +710,7 @@ public final class JokeParser {
                     test.contains("HEARD THIS") || test.contains("HEARD IT") || test.contains("FIRST TIME") || test.contains("HAHA") || test.contains("MY FIRST") || test.contains("AMIRIGHT") ||
                     test.contains("JOKE") || test.contains("THIS SITE") || test.contains("1.") || test.contains("B.)") || test.contains("2)") || test.contains("TRUE STORY") || test.contains("APRIL FOOL") ||
                     test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") ||
-                    test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") ||
+                    test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") || test.contains("VOTE UP") || test.contains("VOTE DOWN") ||
                     test.contains("MODS") || test.contains(">") || test.contains("<") || test.contains("U/") || test.contains("_") || test.contains("  - ") ||
                     test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") || test.contains("LAWL") ||
                     test.contains(".ORG") || test.contains(".NET") || test.contains(".GOV") || test.contains("AUTHOR") || test.contains(":)") || test.contains(":/") || test.contains(":P") ||
@@ -733,12 +733,12 @@ public final class JokeParser {
                     test.matches(".*(I'?LL\\sBE\\sHERE\\s)?ALL\\s(WEEK|NIGHT|MONTH|YEAR).*$") ||
                     test.matches(".*I'?LL\\s(LEAVE|STOP|GO)(\\sNOW)?[^a-zA-Z0-9]*$") ||
                     test.matches(".*I'?M\\s*(SO\\s)?(LONELY|TIRED)[^a-zA-Z0-9]*$") ||
-                    test.matches(".*GET\\sIT[^a-zA-Z0-9]*$") ||
+                    test.matches(".*(GET|NAILED)\\sIT[^a-zA-Z0-9]*$") ||
                     test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
                     test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
                     test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
                     test.matches(".*THANK.+FOR\\sTHAT\\sONE[^a-zA-Z0-9]*$") ||
-                    test.matches(".*MADE\\sTHIS((ONE|JOKE)\\s)?\\sUP.*$") ||
+                    test.matches(".*(MADE|MAKE)\\s((THIS(\\s(ONE|JOKE))?)|IT)\\s(UP|(MY\\s?SELF)).*$") ||
                     test.matches(".*COURTESY\\sOF\\sMY\\s.*$") ||
                     test.matches(".*OUT[^a-zA-Z]*$") ||
                     test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||

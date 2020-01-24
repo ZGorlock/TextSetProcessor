@@ -1,7 +1,9 @@
 Air Compressor
+Bonesaw
 Bandsaw
 Drill
 Floor Jack
+Toolbelt
 Hacksaw
 Hammer
 Impact Wrench

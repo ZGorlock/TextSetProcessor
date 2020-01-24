@@ -83,6 +83,8 @@ public class Jokes {
     //TODO But her aim is getting better
     //TODO SJW
     //TODO HS
+    //TODO SRS
+    //TODO SO's, my SO
     //TODO Jon Snow
     //TODO E.A
     //TODO look at short ones

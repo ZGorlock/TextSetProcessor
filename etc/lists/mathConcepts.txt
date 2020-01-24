@@ -107,6 +107,9 @@ Cyclic Number
 Cylinder
 Data Set
 Data
+Radius
+Diameter
+Circumference
 Decimal
 Decimal Digit
 Decimal Fraction

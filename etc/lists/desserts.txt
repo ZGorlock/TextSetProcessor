@@ -4,6 +4,7 @@ Popsicle
 Cake
 Smoothie
 Smoothy
+Slurpee
 Cookie
 Cupcake
 Custard

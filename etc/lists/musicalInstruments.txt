@@ -1,4 +1,5 @@
 Accordion
+Keytar
 Orchestra
 Bagpipes
 Banjo
