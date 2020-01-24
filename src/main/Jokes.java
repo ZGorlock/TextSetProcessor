@@ -80,19 +80,12 @@ public class Jokes {
     
     //Static Fields
     
-    //TODO But her aim is getting better
-    //TODO SJW
-    //TODO HS
-    //TODO SRS
-    //TODO SO's, my SO
-    //TODO Jon Snow
-    //TODO E.A
     //TODO look at short ones
     
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
      */
-    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, true);
+    private static final List<Boolean> doJokeSet = Arrays.asList(false, true, false, false, false);
     
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
