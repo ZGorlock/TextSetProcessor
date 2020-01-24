@@ -85,7 +85,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
      */
-    private static final List<Boolean> doJokeSet = Arrays.asList(false, true, false, false, false);
+    private static final List<Boolean> doJokeSet = Arrays.asList(true, true, true, true, true);
     
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.

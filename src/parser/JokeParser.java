@@ -693,15 +693,15 @@ public final class JokeParser {
                             StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
                     title = "";
                 }
+                if (body.toUpperCase().equals(body)) {
+                    continue;
+                }
                 
                 if (title.toUpperCase().startsWith("HEHE") || body.toUpperCase().startsWith("HEHE")) {
                     continue;
                 }
                 String test = (title + body);
                 if (test.contains("OC") || test.contains("AMA") || test.contains("DAMA")) {
-                    continue;
-                }
-                if (test.toUpperCase().equals(test)) {
                     continue;
                 }
                 test = test.toUpperCase();
