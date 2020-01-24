@@ -693,15 +693,15 @@ public final class JokeParser {
                             StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
                     title = "";
                 }
-                if (body.toUpperCase().equals(body)) {
-                    continue;
-                }
                 
                 if (title.toUpperCase().startsWith("HEHE") || body.toUpperCase().startsWith("HEHE")) {
                     continue;
                 }
                 String test = (title + body);
                 if (test.contains("OC") || test.contains("AMA") || test.contains("DAMA")) {
+                    continue;
+                }
+                if (test.toUpperCase().equals(test)) {
                     continue;
                 }
                 test = test.toUpperCase();
@@ -744,6 +744,7 @@ public final class JokeParser {
                     test.matches(".*OUT[^a-zA-Z]*$") ||
                     test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||
                     test.matches(".*HATE\\sMYSELF[^a-zA-Z0-9]*$") ||
+                    test.matches(".*THOUGHT\\s((I'?D)|(I\\s(WOULD|SHOULD)))\\sSHARE(\\s(IT|THIS))?[^a-zA-Z0-9]*$") ||
                     test.matches(".*REALLY\\sHAPPEN.*") ||
                     test.matches(".*TRUE\\sSTORY.*") ||
                     test.matches("^FROM\\sMY.*") ||

@@ -633,7 +633,7 @@ Medicine                ,Medicament,Pharmaceutical,Prescibed,Prescribe,Prescribe
 Medicine Man
 Meme                    ,Memer,Memelord            
 Memory                  ,Amnesia,Amnestic,Dementia,Forget,Forgetful,Forgetfulness,Forgot,Forgotten,Learn,Learning,Memorization,Memorize,Memorized,Mnemonic,Recall,Recalling,Recognition,Recognize,Recollect,Recollection,Remember,Remembering,Remembrance,Reminisce,Reminiscence,Retrospect,Retrospection
-Men                     ,Boy,Boyfriend,Chico,ExBoyfriend,ExHusband,Gentleman,Gentlemen,Guy,Hubby,Husband,Male,Man,Manhood,Masculine,Masculinity,Widower
+Men                     ,Boy,Meninism,Meninist,Boyfriend,Chico,ExBoyfriend,ExHusband,Gentleman,Gentlemen,Guy,Hubby,Husband,Male,Man,Manhood,Masculine,Masculinity,Widower
 Menopause               ,Hot Flash,Hot Flashes -nsfw
 Mental Health           ,Blot Test,Hypnotherapist,Inkblot,Mental Illness,Psychoanalysis,Psychological,Psychologically,Psychologist,Psychology,Psychotherapy,Rorschach,Therapy
 Mermaid                 ,Merfolk,Merman,Mermen,Merperson
