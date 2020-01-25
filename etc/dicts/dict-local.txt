@@ -61,6 +61,7 @@ aburrido
 abusif
 acapellago
 acappellago
+accends
 accommadate
 accotink
 acfield
@@ -261,6 +262,7 @@ allright
 allu
 almondine
 almosht
+aloon
 alors
 alou
 alpac'ino
@@ -350,6 +352,7 @@ anonagon
 anonimouse
 anonymoose
 anonymouse
+anorchy
 anotha
 antbulance
 antellu
@@ -520,6 +523,7 @@ assh
 assimo
 assinated
 assisant
+assk
 assless
 assload
 assmatic
@@ -619,6 +623,7 @@ awound
 awready
 awwh
 axisdent
+axx
 ayatoldyah
 ayephone
 ayio
@@ -768,6 +773,7 @@ baroccoli
 baroquen
 barq
 barrackoli
+barracouchie
 barracuchi
 barredvark
 barrell
@@ -784,6 +790,7 @@ basilisp
 basquetball
 bassless
 bassmaster
+bassthoven
 bassturd
 bassturds
 bastey
@@ -929,6 +936,7 @@ berrrnie
 beru
 berylliumtly
 besta
+betabet
 betamax
 betcha
 bettoligist
@@ -1046,6 +1054,7 @@ bluebutterfly
 bluej
 blueteeth
 blumpkin
+blurayrip
 blurgblurgblurg
 bluto
 blyat
@@ -1107,36 +1116,13 @@ booga
 boogalu
 boogaly
 boogati
-rootabegga
-GAYmer
-whoopings
-jupeter
-aloon
-primest
-cockrobin
-kiloWhats
-phuk
-scooches
-flaggot
-cuecummer
-disexual
-fawkers
 boogatti
 boogeynan
-dericious
-shrektal
-metathesiophobe
-homoglobin
-shittalkie
-PbJ
 booghati
 boograr
 boograss
 booka
-meninism
-whope
 bookkake
-cantibal
 boomba
 boomhower
 boomshakalaka
@@ -1500,6 +1486,7 @@ canta
 cantaeloped
 cantdidate
 canteloupe
+cantibal
 cantrol
 canyoufixthespacebaronmykeyboard
 capoeira
@@ -1563,6 +1550,7 @@ cauc
 caurs
 caust
 cavs
+cawcus
 cawked
 cawksucker
 caww
@@ -1828,6 +1816,7 @@ cockleer
 cockophony
 cockortwo
 cockporn
+cockrobin
 cocksuckers
 cocksuckin
 cocktailor
@@ -1837,6 +1826,7 @@ cockwomble
 cockwork
 cockworker
 coctopus
+codenamed
 codependant
 codependent
 cohabitating
@@ -2035,6 +2025,7 @@ crocodilogy
 crocodiology
 crocstar
 crookie
+crooney
 crotchless
 crrraaappp
 crrraaazzy
@@ -2065,6 +2056,7 @@ cucklery
 cuckoonuts
 cucumberbatch
 cucumbersome
+cuecummer
 cuerro
 cuffcakes
 cujo
@@ -2072,9 +2064,11 @@ cukoo
 culator
 cumback
 cumberbitches
+cumcised
 cumdrop
 cumfart
 cumference
+cumfronted
 cuminhersnatch
 cumpie
 cuno
@@ -2310,6 +2304,7 @@ derchi
 derchi'
 derci
 derenger
+dericious
 ders
 derweinerslider
 derwienerslider
@@ -2373,6 +2368,7 @@ dickler
 dickless
 dickory
 dickov
+dickslickic
 dicktaker
 dicktater
 dicktator
@@ -2440,6 +2436,7 @@ disabulled
 disassedher
 discotech
 discowvery
+disexual
 disgrasful
 dishgusting
 dishrespectful
@@ -2522,6 +2519,7 @@ dontthinkhesawus
 doodaa
 doodley
 doody
+dooee
 dooker
 dookie
 doont
@@ -2827,6 +2825,7 @@ encuentra
 encyclopedophile
 endentured
 enderdragon
+endermen
 endwarfins
 endworfins
 endzone
@@ -3081,6 +3080,8 @@ fauxtons
 fauxty
 favoriten
 fawaffle
+fawkers
+fawndoo
 faygo
 faygoth
 fazebook
@@ -3109,6 +3110,7 @@ feelish
 feelmaweena
 feelsbatman
 feelth
+feetsis
 fegelein
 feghoot
 fekeekbdckkdeecg
@@ -3221,6 +3223,7 @@ flabracadabra
 flac
 flacido
 flacowitz
+flaggot
 flambeby
 flambouyant
 flambuoyancy
@@ -3322,6 +3325,7 @@ foxygen
 fozzie
 fozzy
 fracking
+fragranced
 franchicing
 francophony
 frankenstork
@@ -3510,6 +3514,7 @@ gavisgone
 gayboy
 gaylick
 gayme
+gaymer
 gayson
 gaystapo
 gaytway
@@ -3582,6 +3587,7 @@ giggloo
 gilacopa
 gillionaire
 gillooly
+gillt
 gimmee
 gination
 gindr
@@ -3604,6 +3610,7 @@ giussepe
 giutar
 giva
 givest
+giveths
 gladheateher
 glamurai
 glancelot
@@ -3794,6 +3801,7 @@ gulman
 gumpa
 gunked
 gunna
+gurrrl
 gurrrlll
 guruji
 gurupta
@@ -4215,6 +4223,7 @@ hommish
 homoerectus
 homofries
 homogenius
+homoglobin
 homoless
 homolone
 homophobos
@@ -4375,6 +4384,7 @@ hypercondriasm
 hyperpretentious
 hypocrat
 hypot
+hypote
 hypotenoose
 hypotheticals
 hyrule
@@ -4587,6 +4597,7 @@ interup
 interupti
 interupting
 inthectic
+intostella
 intrasmuscular
 invaledictorian
 invegstigator
@@ -4816,6 +4827,7 @@ jonesin
 jonesin'
 jonses
 jonzing
+joogled
 joos
 joowish
 jordashun
@@ -4850,6 +4862,7 @@ jumpstarts
 jumpurr
 junkrat
 junos
+jupeter
 jupitus
 jurado
 jurasskicked
@@ -4971,6 +4984,7 @@ kickass
 kickstarter
 kidager
 kidleys
+kidneying
 kiiiiiiid
 kiiiiing
 kiiing
@@ -4983,6 +4997,7 @@ kilmister
 kilometery
 kilometrey
 kilomockingbirds
+kilowhats
 kilz
 kimistry
 kimosabe
@@ -5213,6 +5228,7 @@ legendairy
 leggies
 leggo
 legoless
+legosaurus
 legy
 lei'd
 leiabensraum
@@ -5236,6 +5252,7 @@ lenk
 leonitis
 leopardheart
 leperchaun
+leprecon
 leprekhaaaaaan
 leprekhan
 leprenomichaun
@@ -5371,6 +5388,7 @@ loooooove
 loooooser
 loooot
 loooove
+looove
 loosey
 lorainna
 lorem
@@ -5380,6 +5398,7 @@ lotts
 lotused
 louboutin
 louboutins
+louganis
 louiwheezeiana
 lovecraftian
 lowcut
@@ -5461,6 +5480,7 @@ magret
 magumba
 mahalo
 mahamhid
+mahogamous
 maican
 maighty
 maillard
@@ -5491,6 +5511,7 @@ mamasan
 mames
 mammaplasty
 mammi
+mammorey
 mammorial
 mamoles
 mamoo
@@ -5705,7 +5726,6 @@ mench
 mencia
 mengele
 mengeling
-meninists
 menintightis
 mennonitis
 menopaws
@@ -5752,6 +5772,7 @@ metalheads
 metallicaaaw
 metalloproteins
 metalminds
+metathesiophobe
 metathor
 methamphibians
 methed
@@ -6327,6 +6348,7 @@ nguyenning
 nicea
 nicka
 nickelback
+nickeless
 nickersonanoff
 nicoderm
 nieeeeeeeeces
@@ -6818,6 +6840,7 @@ payless
 payraise
 payslip
 pazuzu
+pbj
 pbpbpbb
 pbpbpbpb
 pbr
@@ -6954,6 +6977,7 @@ photoshopped
 photosympathize
 phrarmachien
 phucket
+phuk
 phwoar
 phy
 phyllistines
@@ -7255,6 +7279,7 @@ priceline
 pricewaterhousecoopers
 priebus
 primark
+primest
 principao
 pringles
 printdinavia
@@ -7474,6 +7499,7 @@ rabinovitz
 racetits
 radaway
 radetsky
+radished
 radiush
 rado
 rady
@@ -7737,11 +7763,13 @@ roosky
 rooster'n
 rooster'n'nuts
 roosterteeth
+rootabegga
 ropesy
 rosay
 rosenbloom
 rotchurcockov
 rothman
+rothschilds
 rotinom
 rotory
 rottie
@@ -7948,6 +7976,7 @@ scissorhams
 scissorhands
 scoahs
 scoobie
+scooches
 scorcha
 scorps
 scotish
@@ -8123,6 +8152,7 @@ shiek
 shieks
 shiffer
 shigh
+shiht
 shiiiiiiiiiiiiiiiit
 shimkonis
 shindlers
@@ -8152,6 +8182,7 @@ shitpocalypse
 shitpotle
 shitrus
 shitshow
+shittalkie
 shittalking
 shittt
 shituation
@@ -8194,6 +8225,7 @@ shreddies
 shrekmate
 shrekquille
 shreksy
+shrektal
 shreli
 shrinklage
 shtar
@@ -8293,6 +8325,7 @@ skywatching
 slager
 slanta
 slantelope
+slapahoe
 slatery
 slavatory
 slaveria
@@ -8397,6 +8430,7 @@ sodastream
 soderling
 sodimm
 sodomey
+sodomimed
 sodomization
 sodor
 softcap
@@ -8908,6 +8942,7 @@ terrorpist
 terryble
 tesserection
 testickles
+testie
 testosteroni
 testostyrone
 testpack
@@ -9063,6 +9098,7 @@ tiptronic
 tir
 tird
 tiriots
+tisch
 tisk
 tiss
 titbull
@@ -9253,6 +9289,7 @@ tshhhh
 tsinghua
 tsipras
 tssh
+tsshh
 tssss
 tssst
 tsundere
@@ -9726,6 +9763,7 @@ waydown
 waynebow
 waz
 waze
+wazowski
 wazzup
 wdasdwwadwwda
 weabooleans
@@ -9757,6 +9795,7 @@ weeelll
 weefwaze
 weegeeisgoingtokillm
 weeners
+weenus
 weeweechu
 weewy
 weh
@@ -9873,6 +9912,7 @@ whoooooosssshhhhh
 whoopass
 whoopingcough
 whoozyadaddy
+whope
 whoppaaah
 whor
 whorange
@@ -10072,6 +10112,7 @@ xboxer
 xenaphobe
 xenoblade
 xenomorph
+xenomorphs
 xenu
 xenublade
 xer

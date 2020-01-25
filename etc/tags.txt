@@ -10,7 +10,7 @@ Adultery                ,Affair,Cheat On Her,Cheat On Him,Cheat On Me,Cheated On
 Afghanistan             ,Afghanistani
 Africa                  ,African
 Air Force               
-Airplane                ,Aeronaut,Aeroplane,Air Travel,Aircraft,Aircrew,Airman,Airport,Aviator,Cockpit,Copilot,First Class,Flew,Flight Attendant,Inflight,Pilot,Piloted,Piloting,Plane,Planecrash,Stewardess,TSA,Takeoff,Test Flight
+Airplane                ,Aeronaut,Aeroplane,Air Travel,Aircraft,Aircrew,Airman,Airport,Aviator,Cockpit,Copilot,First Class,Flew,Flight Attendant,Inflight,Pilot,Piloted,Piloting,Plane,Planecrash,Stewardess,TSA,Takeoff,Test Flight,747,Blackbox
 Airport                 ,TSA
 Al Gore                 
 Al Qaeda                ,AlQaeda
@@ -536,7 +536,7 @@ Java
 Jerusalem               
 Jesus                   ,Christ -dontDoS
 Jewelry                 ,Bling,Bracelet,Earring,Necklace,Ring -dontDoY
-Jewish                  ,Synagogue,Antisemite,Hanukkah,Hasidic,Hebrew,Jerusalem,Jew,Jews,Judaism,Menora,Rabbi,Semite,Shabbat,Torah,Yamaka
+Jewish                  ,Synagogue,Antisemite,Hanukkah,Hasidic,Hebrew,Jerusalem,Jew,Jews,Judaism,Menora,Rabbi,Semite,Shabbat,Torah,Yamaka,Hanukkah,Menorah
 Job                     ,Boss,Classifieds,Coworker,Cubicle,Employ,Employed,Employee,Employment,Fired,Hire,Hired,Intern,Interning,Internship,Job,Jobless,Laid Off,LaidOff,Management,Manager,Managerial,Managing,Occupation,Office,Out Of Work,Paperwork,Secretaire,Secretarial,Secretary,Undersecretary,Unemploy,Unemployed,Unemployment,Workplace
 Job Interview           ,In Person Interview,InPerson Interview,On Site Interview,OnSite Interview,Phone Interview
 John Kennedy            ,JFK,John F Kennedy -dontDoY
@@ -655,7 +655,7 @@ Missile                 ,AntiAircraft,Projectile,Rocket,Warhead
 Missionary              ,Missioner
 Mississippi             ,Mississippian
 Mistress                ,Concubine,Courtesan,Paramour,Slampiece -dontDoS
-Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Buyers Market,Capitation,Collateral,Credit Union,Currencies,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Financed,Foreclose,Foreclosing,Foreclosure,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paycheck,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
+Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Finance,Financing,Financial,Financially,Buyers Market,Capitation,Collateral,Credit Union,Currencies,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Financed,Foreclose,Foreclosing,Foreclosure,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paycheck,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
 Monk                    ,Abbot,Carthusian,Cistercian,Friar,Monastery,Monastic
 Monkey                  ,Ape,Primate -dontDoY
 Monopoly                ,Monopolistic,Monopsony,Oligopoly
@@ -891,7 +891,7 @@ Sleepwalking            ,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,S
 Slut                    ,Bimbo,Floozy,Fornicatress,Harlot,Ho,Hoe,Hussy,Promiscuous,Tramp,Whore,Skank,Skankier,Skaniest -nsfw
 Small Town              ,One Horse Town,Rural Town,Settlement,Village
 Smart                   ,Astute,Astutely,Brainy,Brilliance,Brilliant,Canny,Clever,Cleverly,Competence,Competent,Genius,Gifted,Ingenious,Inquisitive,Intellectual,Intelligent,Keen,Knowledgeable,Logical,Perceptive,Problem Solver,Problem Solving,Rational,Resourceful,Sensible,Smartness,Well Informed,WellInformed,Wise
-Smoking                 ,Bong,Cannabinoid,Cannabis,Chainsmoke,Chainsmoker,Cigar,Cigarette,Dab,Doobie,Hash,Indica,Joint,Kush,Malboro,Marijuana,Marlboro,Newport,Nicorette,Nicotine,Puff,Sativa,Sensimilla,Smoke,Smoker,Snuff,Splif,Spliff,Tobacco,Vapist,ECigarette,Vape,Vaper,Vaping,Hotbox,Hotboxed,Hotboxing -dontDoING
+Smoking                 ,Bong,Cannabinoid,Cannabis,Chainsmoke,Chainsmoker,Cigar,Cigarette,Dab,Doobie,Hash,Indica,Joint,Kush,Malboro,Marijuana,Marlboro,Newport,Nicorette,Nicotine,Puff,Sativa,Sensimilla,Smoke,Smoker,Snuff,Splif,Spliff,Tobacco,Vapist,ECigarette,Vape,Vaper,Vaping,Hotbox,Hotboxed,Hotboxing,Narguile,Chiefing -dontDoING
 Smurf                   ,Gargamel
 Snail                   ,Escargot,Gastropod,Gastropoda,Mollusc,Mollusk,Pulmonata,Pulmonate,Radula,SnailShell
 Snake                   ,Serpent,Serpentine,Serpentlike,Slithery,Snakebite,Snakelike,Snakevenom
@@ -1004,7 +1004,7 @@ United Kingdom          ,British Empire,Commonwealth Of Nations,Great Britain,Is
 United Nations          ,Geneva,International Committee Of The Red Cross,International Court Of Justice,League Of Nations,Unesco,Unicef
 United States           ,America,American,House Of Representatives,Merica,Murca,Murica,Supreme Court,Thirteen Colonies,USA -dontDoES
 Universe                ,Big Bang,Cosmoligically,Cosmological,Cosmologist,Cosmology,Cosmos,Macrocosm,Multiverse,Universal,Universally
-Urination               ,Bladder,Pee,Peepee,Piddle,Piddling,Piss,Pissing,Pottie,Potty,Unrinological,Urea,Urethra,Uric Acid,Urinalysis,Urinary,Urinate,Urine,Urinologically,Urinologist,Urinology,Urobilin,Weewee -nsfw
+Urination               ,Bladder,Pee,Peepee,Piddle,Piddling,Piss,Pissing,Pottie,Potty,Unrinological,Urea,Urethra,Uric Acid,Urinalysis,Urinary,Urinate,Urine,Urinologically,Urinologist,Urinology,Urobilin,Weewee,Paruresis -nsfw
 Vacation                ,Cruise,Destination,Getaway,Honeymoon,Newlywed,Sabbatical,Sightseeing,Sightseer,Tourism,Tourist,Travel,Traveller,Travelling,Vacationer,Vacationing -dontDoTION
 Vaccination             ,Antivax,Antivaxxer,Pneumovax,Provax,Provaxxer,Vaccinemunization,Vaccinum,Vax,Vaxxer
 Vacuum                  ,VacuumClean,VacuumCleaner

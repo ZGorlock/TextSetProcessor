@@ -110,6 +110,9 @@ Data
 Radius
 Diameter
 Circumference
+Square Root
+Cube Root
+Cubed Root
 Decimal
 Decimal Digit
 Decimal Fraction

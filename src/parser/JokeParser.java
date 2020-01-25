@@ -738,7 +738,7 @@ public final class JokeParser {
                     test.matches(".*PROUD\\sOF\\sTHIS\\sONE[^a-zA-Z0-9]*$") ||
                     test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
                     test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
-                    test.matches(".*THANK.+FOR\\sTHAT\\sONE[^a-zA-Z0-9]*$") ||
+                    test.matches(".*THANK.+FOR\\sTHAT\\s(ONE|JOKE)[^a-zA-Z0-9]*$") ||
                     test.matches(".*(MADE|MAKE)\\s((THIS(\\s(ONE|JOKE))?)|IT)\\s(UP|(MY\\s?SELF)).*$") ||
                     test.matches(".*COURTESY\\sOF\\sMY\\s.*$") ||
                     test.matches(".*OUT[^a-zA-Z]*$") ||
