@@ -562,6 +562,8 @@ public final class JokeParser {
         JSONParser p = new JSONParser();
         try {
             JSONArray o = (JSONArray) p.parse(new FileReader(in));
+            List<Character> punctuation = Arrays.asList('.', ',', '!', '?', ';', ':');
+            List<String> questionWords = Arrays.asList("HOW", "WHAT", "WHY", "WHO", "WHERE", "WILL", "WHEN", "WHICH");
             
             for (Object i : o) {
                 JSONObject io = (JSONObject) i;
@@ -595,9 +597,23 @@ public final class JokeParser {
                 if (body.endsWith(",")) {
                     body = StringUtility.rShear(body, 1);
                 }
+    
+                title = StringUtility.trim(title);
+                if (!title.isEmpty() && !punctuation.contains(title.charAt(title.length() - 1))) {
+                    boolean questionTitle = false;
+                    String questionTest = title.toUpperCase();
+                    for (String questionWord : questionWords) {
+                        if (questionTest.startsWith(questionWord)) {
+                            questionTitle = true;
+                            break;
+                        }
+                    }
+                    title = title + (questionTitle ? "?" : ":");
+                }
+                body = StringUtility.trim(body);
                 
                 Joke thisJoke = new Joke();
-                thisJoke.text = body;
+                thisJoke.text = title + " " + body;
                 thisJoke.source = preserveSource ? save : source;
                 for (String cat : category.split(",")) {
                     if (!cat.isEmpty()) {

@@ -80,8 +80,6 @@ public class Jokes {
     
     //Static Fields
     
-    //TODO look at short ones
-    
     /**
      * A list of flags indicating whether or not to process the corresponding joke set in the joke set list.
      */
