@@ -159,9 +159,7 @@ public class FixerHelper {
             if (count >= 10) {
                 bigCount++;
                 System.out.println("\nSaving Progress... (" + bigCount + ")\n");
-                Filesystem.copyFile(workFile, workBackupFile, true);
                 jokeParser.writeJokeSet(jokeSet, jokes);
-                Filesystem.copyFile(workFixedFile, workFixedBackupFile, true);
                 Jokes.outputJokes(workFixedFile, jokes, false);
                 Filesystem.writeLines(workFixListFile, fixList, true);
                 fixList.clear();
@@ -170,6 +168,9 @@ public class FixerHelper {
             }
         }
         jokeParser.writeJokeSet(jokeSet, jokes);
+        Jokes.outputJokes(workFixedFile, jokes, false);
+        Filesystem.writeLines(workFixListFile, fixList, true);
+        Filesystem.writeStringToFile(workIndexFile, String.valueOf(jokes.size()));
     }
     
 }

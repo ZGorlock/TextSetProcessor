@@ -199,7 +199,7 @@ public final class JokeParser {
             output.add(joke.source);
             output.add("");
         }
-        Filesystem.writeLines(out, output);
+        Jokes.safeRewrite(out, output);
     }
     
     /**
@@ -531,7 +531,7 @@ public final class JokeParser {
             output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
         }
         output.add("]");
-        Filesystem.writeLines(out, output);
+        Jokes.safeRewrite(out, output);
     }
     
     /**
@@ -663,7 +663,7 @@ public final class JokeParser {
             output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
         }
         output.add("]");
-        Filesystem.writeLines(out, output);
+        Jokes.safeRewrite(out, output);
     }
     
     /**
@@ -842,7 +842,7 @@ public final class JokeParser {
             output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
         }
         output.add("]");
-        Filesystem.writeLines(out, output);
+        Jokes.safeRewrite(out, output);
     }
     
     /**

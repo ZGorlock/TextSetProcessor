@@ -334,23 +334,12 @@ public class Jokes {
                     long chunkTime = chunkEndTime - chunkStartTime;
                     subFixTime += chunkTime;
                     
-                    Filesystem.copyFile(fixedFile, fixedBackupFile, true);
-                    Filesystem.copyFile(fixedWorkFile, fixedWorkBackupFile, true);
-                    if (fixedFixFile.exists()) {
-                        Filesystem.copyFile(fixedFixFile, fixedFixBackupFile, true);
-                    }
-                    if (fixedFixListFile.exists()) {
-                        Filesystem.copyFile(fixedFixListFile, fixedFixListBackupFile, true);
-                    }
                     outputJokes(fixedFile, fixed);
                     outputJokes(fixedWorkFile, work);
                     setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
                 }
                 Filesystem.deleteFile(fixedWorkFile);
-                Filesystem.deleteFile(fixedBackupFile);
                 Filesystem.deleteFile(fixedWorkBackupFile);
-                Filesystem.deleteFile(fixedFixBackupFile);
-                Filesystem.deleteFile(fixedFixListBackupFile);
                 setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
             }
             fixTime += (subFixTime / 1000);
@@ -444,14 +433,11 @@ public class Jokes {
                     long chunkTime = chunkEndTime - chunkStartTime;
                     subTagTime += chunkTime;
                     
-                    Filesystem.copyFile(taggedFile, taggedBackupFile, true);
-                    Filesystem.copyFile(taggedWorkFile, taggedWorkBackupFile, true);
                     outputJokes(taggedFile, tagged);
                     outputJokes(taggedWorkFile, work);
                     setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
                 }
                 Filesystem.deleteFile(taggedWorkFile);
-                Filesystem.deleteFile(taggedBackupFile);
                 Filesystem.deleteFile(taggedWorkBackupFile);
                 setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
             }
@@ -613,14 +599,13 @@ public class Jokes {
         }
         text.add("    ]");
         text.add("}");
-        Filesystem.writeLines(out, text);
+        safeRewrite(out, text);
         
         if (!splitFix) {
             return;
         }
         
         File outFix = new File(out.getAbsolutePath().replace(".json", "-fix.json"));
-        Filesystem.deleteFile(outFix);
         
         List<Joke> jokeFix = jokes.stream().filter(j -> !j.fix.isEmpty()).sorted(Comparator.comparingInt(j -> -j.fix.size())).collect(Collectors.toList());
         List<String> fix = new ArrayList<>();
@@ -640,14 +625,17 @@ public class Jokes {
         fixText.add("    ]");
         fixText.add("}");
         if (fixCount > 0) {
-            Filesystem.writeLines(outFix, fixText);
+            safeRewrite(outFix, fixText);
+        } else {
+            Filesystem.deleteFile(outFix);
         }
         
         File outFixList = new File(out.getAbsolutePath().replace(".json", "-fixList.txt"));
-        Filesystem.deleteFile(outFixList);
         if (fixCount > 0) {
             fix = ListUtility.sortListByNumberOfOccurrences(fix);
-            Filesystem.writeLines(outFixList, fix);
+            safeRewrite(outFixList, fix);
+        } else {
+            Filesystem.deleteFile(outFixList);
         }
     }
     
@@ -738,6 +726,24 @@ public class Jokes {
     }
     
     /**
+     * Performs a save rewrite of a file, saving backups to prevent data loss.
+     * 
+     * @param out   The output file.
+     * @param lines The lines to write to the output file.
+     * @return Whether the rewrite was successful or not.
+     */
+    public static boolean safeRewrite(File out, List<String> lines) {
+        String fileType = out.getName().substring(out.getName().lastIndexOf('.'));
+        File outBackup = new File(out.getAbsolutePath().replace(fileType, "-bak" + fileType));
+        File outBackupBackup = new File(out.getAbsolutePath().replace(fileType, "-bak-bak" + fileType));
+        
+        return (!out.exists() || !outBackup.exists() || Filesystem.copyFile(outBackup, outBackupBackup, true)) && 
+               (!out.exists() || Filesystem.moveFile(out, outBackup, true)) && 
+               (Filesystem.writeLines(out, lines)) && 
+               (!outBackupBackup.exists() || Filesystem.deleteFile(outBackupBackup));
+    }
+    
+    /**
      * Reads the time data from the time file.
      */
     public static void readTimeFile() {
@@ -811,7 +817,7 @@ public class Jokes {
         for (Map.Entry<String, Long> timeDataEntry : timeData.entrySet()) {
             data.add(timeDataEntry.getKey() + ":" + timeDataEntry.getValue());
         }
-        Filesystem.writeLines(timeFile, data);
+        safeRewrite(timeFile, data);
     }
     
 }
