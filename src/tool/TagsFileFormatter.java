@@ -90,7 +90,6 @@ public final class TagsFileFormatter {
             }
             if (tag.dontDoOR) {
                 line.append(first ? "" : " ").append("-dontDoOR");
-                first = false;
             }
             output.add(line.toString());
         }

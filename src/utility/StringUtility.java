@@ -913,7 +913,7 @@ public final class StringUtility {
             spaces = indentString.length();
             if ((breakIndent > 0) && indentString.endsWith(". ")) {
                 breakIndent -= 2;
-                breakIndent = (breakIndent < 0) ? 0 : breakIndent;
+                breakIndent = Math.max(breakIndent, 0);
             }
         }
         String indent = spaces(spaces);

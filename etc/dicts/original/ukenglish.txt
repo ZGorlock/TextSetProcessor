@@ -3382,10 +3382,6 @@ applicator
 applicators
 applied
 applies
-appliquƒ
-appliquƒd
-appliquƒing
-appliquƒs
 apply
 applying
 appoint
@@ -4420,7 +4416,6 @@ attach
 attachable
 attached
 attaches
-attachƒ
 attaching
 attachment
 attachments
@@ -6784,8 +6779,6 @@ beyond
 bezel
 bezels
 bezique
-bƒarnaise
-bƒchamel
 bhopal
 bhutan
 bi
@@ -7324,7 +7317,6 @@ blarney
 blarneyed
 blarneying
 blarneys
-blasƒ
 blaspheme
 blasphemed
 blasphemer
@@ -10132,8 +10124,6 @@ canalising
 canals
 canape
 canapes
-canapƒ
-canapƒs
 canard
 canards
 canaries
@@ -12870,8 +12860,6 @@ clew
 clews
 cliche
 cliches
-clichƒ
-clichƒs
 click
 clicked
 clicker
@@ -12989,7 +12977,6 @@ clogged
 clogging
 cloggy
 clogs
-cloisonnƒ
 cloister
 cloistered
 cloistering
@@ -13968,8 +13955,6 @@ communion
 communions
 communique
 communiques
-communiquƒ
-communiquƒs
 communis
 communisation
 communise
@@ -14971,8 +14956,6 @@ consolidators
 consoling
 consols
 consomme
-consommƒ
-consommƒs
 consonance
 consonant
 consonantal
@@ -16708,8 +16691,6 @@ crewing
 crewman
 crewmen
 crews
-crche
-crches
 cri
 crianlarich
 crib
@@ -16994,7 +16975,6 @@ crudely
 crudeness
 cruder
 crudest
-cruditƒs
 crudities
 crudity
 cruel
@@ -20024,11 +20004,6 @@ dextrose
 dextrous
 dextrously
 dextrousness
-dƒclassƒ
-dƒcolletage
-dƒcolletƒ
-dƒtente
-dƒtentes
 dfc
 dfm
 dhabi
@@ -26614,7 +26589,6 @@ factum
 facultative
 faculties
 faculty
-faˆadism
 fad
 faddish
 faddy
@@ -26648,8 +26622,6 @@ fails
 failure
 failures
 fain
-fainƒant
-fainƒants
 faint
 fainted
 fainter
@@ -27431,8 +27403,6 @@ fiance
 fiancee
 fiancees
 fiances
-fiancƒ
-fiancƒs
 fiasco
 fiascos
 fiat
@@ -32646,8 +32616,6 @@ habituation
 habitude
 habitudes
 habitue
-habituƒ
-habituƒs
 hable
 hables
 habsburg
@@ -43044,7 +43012,6 @@ mackinaws
 mackintosh
 mackintoshes
 macmillan
-macramƒ
 macro
 macrobiotic
 macrobiotics
@@ -43649,7 +43616,6 @@ manorbier
 manorial
 manors
 manpower
-manquƒ
 mans
 mansard
 mansards
@@ -45115,8 +45081,6 @@ mezzo
 mezzos
 mezzotint
 mezzotints
-mƒtier
-mƒtiers
 mg
 mho
 mhos
@@ -46277,7 +46241,6 @@ moiled
 moiling
 moils
 moines
-moirƒ
 moist
 moisten
 moistened
@@ -47522,9 +47485,7 @@ nairobi
 naive
 naively
 naives
-naivetƒ
 naivety
-na’f
 naked
 nakedly
 nakedness
@@ -50330,7 +50291,6 @@ outreach
 outreached
 outreaches
 outreaching
-outrƒ
 outrider
 outriders
 outrigger
@@ -51936,7 +51896,6 @@ passerine
 passerines
 passers
 passes
-passƒ
 passim
 passing
 passion
@@ -55935,7 +55894,6 @@ prey
 preyed
 preying
 preys
-prƒcis
 priapism
 price
 priced
@@ -56747,8 +56705,6 @@ protester
 protesters
 protesting
 protests
-protƒgƒ
-protƒgƒs
 protheses
 prothesis
 prothonotaries
@@ -56804,7 +56760,6 @@ proved
 proven
 provenance
 provence
-provenˆal
 provender
 provenience
 proverb
@@ -58983,7 +58938,6 @@ recheck
 rechecked
 rechecking
 rechecks
-recherchƒ
 recht
 recidivism
 recidivist
@@ -61927,7 +61881,6 @@ risks
 risky
 risotto
 risottos
-risquƒ
 rissole
 rissoles
 rita
@@ -62326,8 +62279,6 @@ rotundity
 rouble
 roubles
 rouen
-rouƒ
-rouƒs
 rouge
 rouged
 rouges
@@ -63364,10 +63315,6 @@ sausage
 sausages
 sauterne
 sauternes
-sautƒ
-sautƒed
-sautƒing
-sautƒs
 sauvignon
 savage
 savaged
@@ -67362,7 +67309,6 @@ societal
 societas
 societies
 society
-sociƒtƒ
 sociologic
 sociological
 sociologically
@@ -67423,8 +67369,6 @@ soggiest
 sogginess
 soggy
 soho
-soignƒ
-soignƒe
 soil
 soiled
 soiling
@@ -67754,8 +67698,6 @@ sot
 sots
 soubrette
 soubrettes
-soufflƒ
-soufflƒs
 sough
 soughed
 soughing
@@ -74148,7 +74090,6 @@ touchdown
 touchdowns
 touched
 touches
-touchƒ
 touchier
 touchiest
 touchiness
@@ -82092,7 +82033,3 @@ zygotes
 zygotic
 zymology
 zymurgy
-ƒclat
-ƒlan
-ƒmigrƒs
-ƒpoque

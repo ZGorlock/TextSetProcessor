@@ -170,31 +170,18 @@ public final class ListUtility {
                 store.put(entry, 1);
             }
         }
-        
+    
         List<T> sorted = new ArrayList<>();
-        final List<Integer> last = Arrays.asList(9999);
         if (reverse) {
             store.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(e -> {
                 for (int i = 0; i < e.getValue(); i++) {
-                    if (!sorted.contains(e.getKey())) {
-                        sorted.add(e.getKey());
-                    }
-                }
-                if (e.getValue() < last.get(0)) {
-                    sorted.add(null);
-                    last.set(0, e.getValue());
+                    sorted.add(e.getKey());
                 }
             });
         } else {
             store.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue())).forEach(e -> {
                 for (int i = 0; i < e.getValue(); i++) {
-                    if (!sorted.contains(e.getKey())) {
-                        sorted.add(e.getKey());
-                    }
-                }
-                if (e.getValue() < last.get(0)) {
-                    sorted.add(null);
-                    last.set(0, e.getValue());
+                    sorted.add(e.getKey());
                 }
             });
         }

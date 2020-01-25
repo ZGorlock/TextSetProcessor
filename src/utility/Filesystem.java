@@ -823,9 +823,7 @@ public final class Filesystem {
                 returnList.add(f); //add file to list
             } else {
                 List<File> subList = getFilesRecursively(f, regexFileFilter, regexDirFilter); //enter directory
-                if (subList != null) {
-                    returnList.addAll(subList);
-                }
+                returnList.addAll(subList);
             }
         }
         
@@ -898,9 +896,7 @@ public final class Filesystem {
             returnList.add(f); //add directory to list
             
             List<File> subList = getDirsRecursively(f, regexDirFilter); //enter directory
-            if (subList != null) {
-                returnList.addAll(subList);
-            }
+            returnList.addAll(subList);
         }
         
         return returnList;
@@ -962,9 +958,7 @@ public final class Filesystem {
             
             if (f.isDirectory()) {
                 List<File> subList = getFilesAndDirsRecursively(f, regexFileFilter, regexDirFilter); //enter directory
-                if (subList != null) {
-                    returnList.addAll(subList);
-                }
+                returnList.addAll(subList);
             }
         }
         

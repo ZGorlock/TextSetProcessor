@@ -98,7 +98,7 @@ public class Jokes {
     /**
      * A flag indicating whether or not to perform a fast start.
      */
-    private static final boolean doFastStart = false;
+    private static final boolean doFastStart = true;
     
     /**
      * The file to save the time of processing steps in.
@@ -304,7 +304,7 @@ public class Jokes {
                 }
                 Filesystem.createDirectory(fixedFile.getParentFile());
                 
-                List<Joke> work = new ArrayList<>();
+                List<Joke> work;
                 List<Joke> fixed = new ArrayList<>();
                 if (fixedWorkFile.exists()) {
                     if (fixedFile.exists()) {
@@ -406,7 +406,7 @@ public class Jokes {
                 }
                 Filesystem.createDirectory(taggedFile.getParentFile());
                 
-                List<Joke> work = new ArrayList<>();
+                List<Joke> work;
                 List<Joke> tagged = new ArrayList<>();
                 if (taggedWorkFile.exists()) {
                     if (taggedFile.exists()) {
@@ -691,6 +691,7 @@ public class Jokes {
      * @param in The file to input the jokes from.
      * @return The list of jokes read from the file.
      */
+    @SuppressWarnings("unchecked")
     public static List<Joke> readJokes(File in) {
         List<Joke> jokes = new ArrayList<>();
         

@@ -31,6 +31,7 @@ import worker.TextTagger;
 /**
  * Parses Jokes.
  */
+@SuppressWarnings("ConstantConditions")
 public final class JokeParser {
     
     //Static Fields
@@ -438,6 +439,7 @@ public final class JokeParser {
      * @param jokes The list of jokes parsed from Jokeriot.
      * @param work  Whether or not the jokes should be written back to the work file.
      */
+    @SuppressWarnings("EmptyMethod")
     private void writeJokeriot(List<Joke> jokes, boolean work) {
     }
     

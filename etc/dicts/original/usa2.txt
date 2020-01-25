@@ -3281,10 +3281,6 @@ applicator
 applicators
 applied
 applies
-appliquƒ
-appliquƒd
-appliquƒing
-appliquƒs
 apply
 applying
 appoint
@@ -4282,7 +4278,6 @@ attach
 attachable
 attached
 attaches
-attachƒ
 attaching
 attachment
 attachments
@@ -6512,8 +6507,6 @@ beyond
 bezel
 bezels
 bezique
-bƒarnaise
-bƒchamel
 bhopal
 bhutan
 bi
@@ -7019,7 +7012,6 @@ blarney
 blarneyed
 blarneying
 blarneys
-blasƒ
 blaspheme
 blasphemed
 blasphemer
@@ -19039,11 +19031,6 @@ dextrally
 dextras
 dextrin
 dextrose
-dƒclassƒ
-dƒcolletage
-dƒcolletƒ
-dƒtente
-dƒtentes
 dfc
 dhabi
 dhahran
@@ -25379,7 +25366,6 @@ factum
 facultative
 faculties
 faculty
-faˆadism
 fad
 faddish
 faddy
@@ -25411,8 +25397,6 @@ fails
 failure
 failures
 fain
-fainƒant
-fainƒants
 faint
 fainted
 fainter
@@ -26156,8 +26140,6 @@ fezzes
 fi
 fiancee
 fiancees
-fiancƒ
-fiancƒs
 fiasco
 fiascoes
 fiat
@@ -31080,8 +31062,6 @@ habituating
 habituation
 habitude
 habitudes
-habituƒ
-habituƒs
 hable
 hables
 hac
@@ -40806,7 +40786,6 @@ mackinaws
 mackintosh
 mackintoshes
 macmillan
-macramƒ
 macro
 macrobiotic
 macrobiotics
@@ -41384,7 +41363,6 @@ manor
 manorial
 manors
 manpower
-manquƒ
 mans
 mansard
 mansards
@@ -42696,8 +42674,6 @@ mezzo
 mezzos
 mezzotint
 mezzotints
-mƒtier
-mƒtiers
 mg
 mho
 mhos
@@ -43788,7 +43764,6 @@ moiled
 moiling
 moils
 moines
-moirƒ
 moist
 moisten
 moistened
@@ -44966,10 +44941,7 @@ nairobi
 naive
 naively
 naives
-naivetƒ
 naivety
-na’f
-na’fs
 naked
 nakedly
 nakedness
@@ -47590,7 +47562,6 @@ outreach
 outreached
 outreaches
 outreaching
-outrƒ
 outrider
 outriders
 outrigger
@@ -52983,7 +52954,6 @@ prey
 preyed
 preying
 preys
-prƒcis
 priapism
 price
 priced
@@ -53778,8 +53748,6 @@ protester
 protesters
 protesting
 protests
-protƒgƒ
-protƒgƒs
 protheses
 prothesis
 prothonotaries
@@ -53834,7 +53802,6 @@ proved
 proven
 provenance
 provence
-provenˆal
 provender
 provenience
 proverb
@@ -55908,7 +55875,6 @@ recheck
 rechecked
 rechecking
 rechecks
-recherchƒ
 recht
 recidivism
 recidivist
@@ -58785,7 +58751,6 @@ risks
 risky
 risotto
 risottos
-risquƒ
 rissole
 rissoles
 rite
@@ -59143,8 +59108,6 @@ rotunda
 rotundas
 rotundity
 rouen
-rouƒ
-rouƒs
 rouge
 rouged
 rouges
@@ -60124,10 +60087,6 @@ sausage
 sausages
 sauterne
 sauternes
-sautƒ
-sautƒed
-sautƒing
-sautƒs
 sauvignon
 savable
 savage
@@ -63956,7 +63915,6 @@ societal
 societas
 societies
 society
-sociƒtƒ
 sociological
 sociologically
 sociologist
@@ -64014,8 +63972,6 @@ soggier
 soggiest
 sogginess
 soggy
-soignƒ
-soignƒe
 soil
 soiled
 soiling
@@ -64334,8 +64290,6 @@ sot
 sots
 soubrette
 soubrettes
-soufflƒ
-soufflƒs
 sough
 soughed
 soughing
@@ -77716,7 +77670,3 @@ zygotes
 zygotic
 zymology
 zymurgy
-ƒclat
-ƒlan
-ƒmigrƒs
-ƒpoque
