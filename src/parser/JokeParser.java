@@ -479,8 +479,8 @@ public final class JokeParser {
                 String save = body + "|||||" + category;
                 
                 if (body.isEmpty() || body.endsWith(":") || body.contains("1.") || body.contains("B.)") ||
-                    body.contains("2)") || body.toUpperCase().contains("STUPIDSTUFF") ||
-                    body.toUpperCase().contains("JOKE") || body.toUpperCase().contains("THIS SITE")) {
+                        body.contains("2)") || body.toUpperCase().contains("STUPIDSTUFF") ||
+                        body.toUpperCase().contains("JOKE") || body.toUpperCase().contains("THIS SITE")) {
                     continue;
                 }
                 
@@ -594,10 +594,10 @@ public final class JokeParser {
                 String category = ((String) io.get("category"));
                 String title = (String) io.get("title");
                 String save = title + "|||||" + body + "|||||" + category;
-    
+                
                 if (!title.isEmpty() &&
-                    StringUtility.removePunctuation(StringUtility.removeWhiteSpace(body.toUpperCase())).startsWith(
-                            StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
+                        StringUtility.removePunctuation(StringUtility.removeWhiteSpace(body.toUpperCase())).startsWith(
+                                StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
                     title = "";
                 }
                 if (title.toUpperCase().contains("FUNNY")) {
@@ -605,18 +605,18 @@ public final class JokeParser {
                 }
                 
                 if (body.isEmpty() || body.endsWith(":") || body.contains("1.") || body.contains("B.)") ||
-                    body.contains("2)") || body.toUpperCase().contains("WOCKA") ||
-                    body.toUpperCase().contains("JOKE") || body.toUpperCase().contains("THIS SITE")) {
+                        body.contains("2)") || body.toUpperCase().contains("WOCKA") ||
+                        body.toUpperCase().contains("JOKE") || body.toUpperCase().contains("THIS SITE")) {
                     continue;
                 }
                 
                 if (title.toUpperCase().contains("FACT") || title.toUpperCase().contains("BOOK") ||
-                    title.toUpperCase().contains("QUOTE") || title.toUpperCase().contains("REAL") ||
-                    title.toUpperCase().contains("NAME") || title.toUpperCase().contains("LIST") ||
-                    title.toUpperCase().contains("COLLECTION") || title.toUpperCase().contains("TEST") ||
-                    title.toUpperCase().contains("APPLICATION") || title.toUpperCase().contains("FORM") ||
-                    title.toUpperCase().contains("RESPONSE") || title.toUpperCase().contains("THINGS") ||
-                    title.toUpperCase().contains("LAST WORD") || title.toUpperCase().contains("THESE ARE")) {
+                        title.toUpperCase().contains("QUOTE") || title.toUpperCase().contains("REAL") ||
+                        title.toUpperCase().contains("NAME") || title.toUpperCase().contains("LIST") ||
+                        title.toUpperCase().contains("COLLECTION") || title.toUpperCase().contains("TEST") ||
+                        title.toUpperCase().contains("APPLICATION") || title.toUpperCase().contains("FORM") ||
+                        title.toUpperCase().contains("RESPONSE") || title.toUpperCase().contains("THINGS") ||
+                        title.toUpperCase().contains("LAST WORD") || title.toUpperCase().contains("THESE ARE")) {
                     continue;
                 }
                 
@@ -629,7 +629,7 @@ public final class JokeParser {
                 if (body.endsWith(",")) {
                     body = StringUtility.rShear(body, 1);
                 }
-    
+                
                 title = StringUtility.trim(title);
                 if (!title.isEmpty() && !punctuation.contains(title.charAt(title.length() - 1))) {
                     boolean questionTitle = false;
@@ -759,8 +759,8 @@ public final class JokeParser {
                 String save = title + "|||||" + body;
                 
                 if (!title.isEmpty() &&
-                    StringUtility.removePunctuation(StringUtility.removeWhiteSpace(body.toUpperCase())).startsWith(
-                            StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
+                        StringUtility.removePunctuation(StringUtility.removeWhiteSpace(body.toUpperCase())).startsWith(
+                                StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
                     title = "";
                 }
                 
@@ -776,49 +776,49 @@ public final class JokeParser {
                 }
                 test = test.toUpperCase();
                 if (test.contains("REDDIT") || test.contains("POST") || test.contains("[REMOVED]") || test.contains("R/") || test.contains("WARNING:") ||
-                    test.contains("BLEW UP") || test.contains("EDIT") || test.contains("HANDWRITING") || test.contains("TOLD ME") || test.contains("CAKEDAY") || test.contains("CAKE DAY") ||
-                    test.contains("HEARD THIS") || test.contains("HEARD IT") || test.contains("FIRST TIME") || test.contains("HAHA") || test.contains("MY FIRST") || test.contains("AMIRIGHT") ||
-                    test.contains("JOKE") || test.contains("THIS SITE") || test.contains("1.") || test.contains("B.)") || test.contains("2)") || test.contains("TRUE STORY") || test.contains("APRIL FOOL") ||
-                    test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") ||
-                    test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") || test.contains("VOTE UP") || test.contains("VOTE DOWN") ||
-                    test.contains("MODS") || test.contains(">") || test.contains("<") || test.contains("U/") || test.contains("_") || test.contains("  - ") ||
-                    test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") || test.contains("LAWL") ||
-                    test.contains(".ORG") || test.contains(".NET") || test.contains(".GOV") || test.contains("AUTHOR") || test.contains(":)") || test.contains(":/") || test.contains(":P") ||
-                    test.contains(":|") || test.contains("O.O") || test.contains(":D") || test.contains(":(") || test.contains("D:") || test.contains("[REQUEST]") || test.contains("PLS") || test.contains("PLZ") ||
-                    test.contains(":-)") || test.contains(":-(") || test.contains("XD") || test.contains("TRANSLATED") || test.contains("LOL") || test.contains("KEK") || test.contains("#") ||
-                    test.contains("[") || test.contains("]") || test.contains("PS.") || test.contains("PUNCH LINE") || test.contains("LMAO") || test.contains("PEPE") || test.contains("(") || test.contains(")") ||
-                    test.contains("PUNCHLINE") || test.contains("MYSELF OUT") || test.contains("//") || test.contains("AYY") || test.contains("JK") || test.contains("WTF") || test.contains("DEEZ") ||
-                    test.contains("BTW") || test.contains("SMH") || test.contains("I MADE THIS ONE UP") || test.contains("I MADE THIS UP") || test.contains("I HEARD THIS") || test.contains("LEL") || test.contains("AMIRITE") ||
-                    test.contains("BADUMTSS") || test.contains("BA DUM TSS") || test.contains("TIFU") || test.contains("INB4") || test.contains("TLDR") || test.contains("OUT LOUD") || test.contains("HATE ME") ||
-                    test.contains("SLAP ME") || test.contains("SMACK ME") || test.contains("4CHAN") || test.contains("SEE TITLE") || test.contains("CLICKBAIT") || test.contains("CLICK BAIT") || test.contains("HUEHUE")) {
+                        test.contains("BLEW UP") || test.contains("EDIT") || test.contains("HANDWRITING") || test.contains("TOLD ME") || test.contains("CAKEDAY") || test.contains("CAKE DAY") ||
+                        test.contains("HEARD THIS") || test.contains("HEARD IT") || test.contains("FIRST TIME") || test.contains("HAHA") || test.contains("MY FIRST") || test.contains("AMIRIGHT") ||
+                        test.contains("JOKE") || test.contains("THIS SITE") || test.contains("1.") || test.contains("B.)") || test.contains("2)") || test.contains("TRUE STORY") || test.contains("APRIL FOOL") ||
+                        test.endsWith(":") || test.contains(" TIL ") || test.startsWith("TIL ") || test.contains(" AMA ") || test.startsWith("AMA ") || test.contains("TOLD THIS") ||
+                        test.contains("DOWN-VOTE") || test.contains("DOWNVOTE") || test.contains("UP-VOTE") || test.contains("UPVOTE") || test.contains("WRONG SUB") || test.contains("VOTE UP") || test.contains("VOTE DOWN") ||
+                        test.contains("MODS") || test.contains(">") || test.contains("<") || test.contains("U/") || test.contains("_") || test.contains("  - ") ||
+                        test.contains("==") || test.contains("^") || test.contains("*") || test.contains("HTTP") || test.contains("WWW") || test.contains(".COM") || test.contains("LAWL") ||
+                        test.contains(".ORG") || test.contains(".NET") || test.contains(".GOV") || test.contains("AUTHOR") || test.contains(":)") || test.contains(":/") || test.contains(":P") ||
+                        test.contains(":|") || test.contains("O.O") || test.contains(":D") || test.contains(":(") || test.contains("D:") || test.contains("[REQUEST]") || test.contains("PLS") || test.contains("PLZ") ||
+                        test.contains(":-)") || test.contains(":-(") || test.contains("XD") || test.contains("TRANSLATED") || test.contains("LOL") || test.contains("KEK") || test.contains("#") ||
+                        test.contains("[") || test.contains("]") || test.contains("PS.") || test.contains("PUNCH LINE") || test.contains("LMAO") || test.contains("PEPE") || test.contains("(") || test.contains(")") ||
+                        test.contains("PUNCHLINE") || test.contains("MYSELF OUT") || test.contains("//") || test.contains("AYY") || test.contains("JK") || test.contains("WTF") || test.contains("DEEZ") ||
+                        test.contains("BTW") || test.contains("SMH") || test.contains("I MADE THIS ONE UP") || test.contains("I MADE THIS UP") || test.contains("I HEARD THIS") || test.contains("LEL") || test.contains("AMIRITE") ||
+                        test.contains("BADUMTSS") || test.contains("BA DUM TSS") || test.contains("TIFU") || test.contains("INB4") || test.contains("TLDR") || test.contains("OUT LOUD") || test.contains("HATE ME") ||
+                        test.contains("SLAP ME") || test.contains("SMACK ME") || test.contains("4CHAN") || test.contains("SEE TITLE") || test.contains("CLICKBAIT") || test.contains("CLICK BAIT") || test.contains("HUEHUE")) {
                     continue;
                 }
                 if (test.matches(".*(I'?M\\s)?SORRY[^a-zA-Z0-9]*$") ||
-                    test.matches(".*I\\sTRIED[^a-zA-Z0-9]*$") ||
-                    test.matches(".*FOLKS[^a-zA-Z0-9]*$") ||
-                    test.matches(".*YOU'?\\s?A?RE?\\sWELCOME[^a-zA-Z0-9]*$") ||
-                    test.matches(".*\\sTS+[^a-zA-Z0-9]*$") ||
-                    test.matches(".*\\sTHANK(S|\\sYOU)[^,?\"':;]*$") ||
-                    test.matches(".*\\sPS[^a-zA-Z0-9].*$") ||
-                    test.matches(".*(I'?LL\\sBE\\sHERE\\s)?ALL\\s(WEEK|NIGHT|MONTH|YEAR).*$") ||
-                    test.matches(".*I'?LL\\s(LEAVE|STOP|GO)(\\sNOW)?[^a-zA-Z0-9]*$") ||
-                    test.matches(".*I'?M\\s*(SO\\s)?(LONELY|TIRED)[^a-zA-Z0-9]*$") ||
-                    test.matches(".*(GET|NAILED)\\sIT[^a-zA-Z0-9]*$") ||
-                    test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
-                    test.matches(".*PROUD\\sOF\\sTHIS\\sONE[^a-zA-Z0-9]*$") ||
-                    test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
-                    test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
-                    test.matches(".*THANK.+FOR\\sTHAT\\s(ONE|JOKE)[^a-zA-Z0-9]*$") ||
-                    test.matches(".*(MADE|MAKE)\\s((THIS(\\s(ONE|JOKE))?)|IT)\\s(UP|(MY\\s?SELF)).*$") ||
-                    test.matches(".*COURTESY\\sOF\\sMY\\s.*$") ||
-                    test.matches(".*OUT[^a-zA-Z]*$") ||
-                    test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||
-                    test.matches(".*HATE\\sMYSELF[^a-zA-Z0-9]*$") ||
-                    test.matches(".*THOUGHT\\s((I'?D)|(I\\s(WOULD|SHOULD)))\\sSHARE(\\s(IT|THIS))?[^a-zA-Z0-9]*$") ||
-                    test.matches(".*REALLY\\sHAPPEN.*") ||
-                    test.matches(".*TRUE\\sSTORY.*") ||
-                    test.matches("^FROM\\sMY.*") ||
-                    test.matches("^(I\\s)?HEARD\\s(THIS|FROM).*")) {
+                        test.matches(".*I\\sTRIED[^a-zA-Z0-9]*$") ||
+                        test.matches(".*FOLKS[^a-zA-Z0-9]*$") ||
+                        test.matches(".*YOU'?\\s?A?RE?\\sWELCOME[^a-zA-Z0-9]*$") ||
+                        test.matches(".*\\sTS+[^a-zA-Z0-9]*$") ||
+                        test.matches(".*\\sTHANK(S|\\sYOU)[^,?\"':;]*$") ||
+                        test.matches(".*\\sPS[^a-zA-Z0-9].*$") ||
+                        test.matches(".*(I'?LL\\sBE\\sHERE\\s)?ALL\\s(WEEK|NIGHT|MONTH|YEAR).*$") ||
+                        test.matches(".*I'?LL\\s(LEAVE|STOP|GO)(\\sNOW)?[^a-zA-Z0-9]*$") ||
+                        test.matches(".*I'?M\\s*(SO\\s)?(LONELY|TIRED)[^a-zA-Z0-9]*$") ||
+                        test.matches(".*(GET|NAILED)\\sIT[^a-zA-Z0-9]*$") ||
+                        test.matches(".*(SEE|SAW)\\s(THAT|THIS)\\s(ONE\\s)?COMING[^a-zA-Z0-9]*$") ||
+                        test.matches(".*PROUD\\sOF\\sTHIS\\sONE[^a-zA-Z0-9]*$") ||
+                        test.matches(".*MADE\\sTHIS\\s([^\\s]+\\s)?MYSELF.*$") ||
+                        test.matches(".*I'?LL\\sSHOW\\sMY\\s?SELF.+$") ||
+                        test.matches(".*THANK.+FOR\\sTHAT\\s(ONE|JOKE)[^a-zA-Z0-9]*$") ||
+                        test.matches(".*(MADE|MAKE)\\s((THIS(\\s(ONE|JOKE))?)|IT)\\s(UP|(MY\\s?SELF)).*$") ||
+                        test.matches(".*COURTESY\\sOF\\sMY\\s.*$") ||
+                        test.matches(".*OUT[^a-zA-Z]*$") ||
+                        test.matches(".*I'?LL\\sSEE\\sMY\\s?WAY.+$") ||
+                        test.matches(".*HATE\\sMYSELF[^a-zA-Z0-9]*$") ||
+                        test.matches(".*THOUGHT\\s((I'?D)|(I\\s(WOULD|SHOULD)))\\sSHARE(\\s(IT|THIS))?[^a-zA-Z0-9]*$") ||
+                        test.matches(".*REALLY\\sHAPPEN.*") ||
+                        test.matches(".*TRUE\\sSTORY.*") ||
+                        test.matches("^FROM\\sMY.*") ||
+                        test.matches("^(I\\s)?HEARD\\s(THIS|FROM).*")) {
                     continue;
                 }
                 if (test.replaceAll("[^\\x00-\\x7F]", "")

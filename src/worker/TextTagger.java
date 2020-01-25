@@ -470,8 +470,8 @@ public final class TextTagger {
             for (String alias : tag.aliases) {
                 for (String aliasCheck : toCheck) {
                     if (alias.matches("^" + aliasCheck + "(s|es)?\\s.*$") ||
-                        alias.matches("^.*\\s" + aliasCheck + "(s|es)?\\s.*$") ||
-                        alias.matches("^.*\\s" + aliasCheck + "(s|es)?$")) {
+                            alias.matches("^.*\\s" + aliasCheck + "(s|es)?\\s.*$") ||
+                            alias.matches("^.*\\s" + aliasCheck + "(s|es)?$")) {
                         toRemove.add(alias);
                     }
                 }

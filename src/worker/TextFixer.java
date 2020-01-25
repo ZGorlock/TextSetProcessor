@@ -189,7 +189,7 @@ public final class TextFixer {
                     if (i > 1) {
                         char replacePunct = '\0';
                         if (i < text.length() - 2 && StringUtility.isSymbol(text.charAt(i + 2)) && (i >= text.length() - 3 || !StringUtility.isSymbol(text.charAt(i + 3))) &&
-                            (text.charAt(i + 2) != '(' && text.charAt(i + 2) != '*')
+                                (text.charAt(i + 2) != '(' && text.charAt(i + 2) != '*')
                         ) {
                             replacePunct = text.charAt(i + 2);
                             text = text.substring(0, i + 2) + text.substring(i + 3);
@@ -210,8 +210,8 @@ public final class TextFixer {
                             boolean endSentence = true;
                             for (int j = i + 1; j < text.length(); j++) {
                                 if (StringUtility.isSymbol(text.charAt(j)) && text.charAt(j) != '"' &&
-                                    (text.charAt(j) != '\\' && (j + 1 < text.length() && text.charAt(j + 1) != '"')) &&
-                                    (text.charAt(j) != '.' && (j + 1 < text.length() && text.charAt(j + 1) != '.') && (j + 2 < text.length() && text.charAt(j + 2) != '.'))
+                                        (text.charAt(j) != '\\' && (j + 1 < text.length() && text.charAt(j + 1) != '"')) &&
+                                        (text.charAt(j) != '.' && (j + 1 < text.length() && text.charAt(j + 1) != '.') && (j + 2 < text.length() && text.charAt(j + 2) != '.'))
                                 ) {
                                     text = text.substring(0, j - 1) + text.substring(j);
                                     j--;

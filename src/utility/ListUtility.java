@@ -170,7 +170,7 @@ public final class ListUtility {
                 store.put(entry, 1);
             }
         }
-    
+        
         List<T> sorted = new ArrayList<>();
         if (reverse) {
             store.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(e -> {

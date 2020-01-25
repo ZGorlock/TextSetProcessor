@@ -728,7 +728,7 @@ public class Jokes {
     
     /**
      * Performs a save rewrite of a file, saving backups to prevent data loss.
-     * 
+     *
      * @param out   The output file.
      * @param lines The lines to write to the output file.
      * @return Whether the rewrite was successful or not.
@@ -738,10 +738,10 @@ public class Jokes {
         File outBackup = new File(out.getAbsolutePath().replace(fileType, "-bak" + fileType));
         File outBackupBackup = new File(out.getAbsolutePath().replace(fileType, "-bak-bak" + fileType));
         
-        return (!out.exists() || !outBackup.exists() || Filesystem.copyFile(outBackup, outBackupBackup, true)) && 
-               (!out.exists() || Filesystem.moveFile(out, outBackup, true)) && 
-               (Filesystem.writeLines(out, lines)) && 
-               (!outBackupBackup.exists() || Filesystem.deleteFile(outBackupBackup));
+        return (!out.exists() || !outBackup.exists() || Filesystem.copyFile(outBackup, outBackupBackup, true)) &&
+                (!out.exists() || Filesystem.moveFile(out, outBackup, true)) &&
+                (Filesystem.writeLines(out, lines)) &&
+                (!outBackupBackup.exists() || Filesystem.deleteFile(outBackupBackup));
     }
     
     /**

@@ -194,10 +194,10 @@ public class ConsoleProgressBar {
     public String get() {
         if (update) {
             progressBar = '\r' + StringUtility.spaces(width + ((String.valueOf(total).length() + units.length()) * 2) + 30) + '\r' +
-                          getPercentageString() + ' ' +
-                          getBarString() + ' ' +
-                          getRatioString() + " - " +
-                          getTimeRemainingString();
+                    getPercentageString() + ' ' +
+                    getBarString() + ' ' +
+                    getRatioString() + " - " +
+                    getTimeRemainingString();
         }
         
         return progressBar;
@@ -399,9 +399,9 @@ public class ConsoleProgressBar {
         String formattedCurrent = StringUtility.padLeft(String.valueOf(current), String.valueOf(total).length());
         
         return ((current == total) ? Console.cyan(formattedCurrent) : Console.green(formattedCurrent)) +
-               units + '/' +
-               Console.cyan(String.valueOf(total)) +
-               units;
+                units + '/' +
+                Console.cyan(String.valueOf(total)) +
+                units;
     }
     
     /**
