@@ -237,6 +237,7 @@ public final class JokeParser {
         Pattern textGetter = Pattern.compile("\\s*<p>(?<text>.*)</p>\\s*");
         Pattern textGetterAlt1 = Pattern.compile("\\s*<p>(?<text>.*)");
         Pattern textGetterAlt2 = Pattern.compile("\\s*<br>(?<text>.*)");
+        Pattern textGetterAlt3 = Pattern.compile("\\s*<li>(?<text>.*)</li>");
         Pattern tagGetter = Pattern.compile("\\s*<li><a[^>]*>(?<tag>.+)</a></li>\\s*");
         
         boolean nsfw = true;
@@ -325,6 +326,26 @@ public final class JokeParser {
                                         }
                                         if (line.contains("</p>")) {
                                             break;
+                                        }
+                                    }
+                                } else {
+                                    Matcher textAltMatcher3 = textGetterAlt3.matcher(line);
+                                    if (textAltMatcher3.matches()) {
+                                        String text = textAltMatcher3.group("text");
+                                        if (!text.isEmpty()) {
+                                            if (jokeText.length() > 0) {
+                                                jokeText.append(" ");
+                                            }
+                                            text = StringUtility.trim(text.replaceAll("</?em>", "").replaceAll("</?strong>", ""));
+                                            for (int j = text.length() - 1; j >= 0; j--) {
+                                                if (punctuation.contains(text.charAt(j))) {
+                                                    break;
+                                                } else if (text.charAt(j) != '"' && text.charAt(j) != '\'') {
+                                                    text = text.substring(0, j + 1) + '.' + text.substring(j + 1);
+                                                    break;
+                                                }
+                                            }
+                                            jokeText.append(text);
                                         }
                                     }
                                 }
