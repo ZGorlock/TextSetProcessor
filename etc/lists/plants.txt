@@ -1,5 +1,4 @@
 Algae
-Lilypad
 Angiosperm
 Astragalus Siculus
 Bryophite
@@ -18,6 +17,7 @@ Green Algae
 Gymnosperm
 Herb
 Houseplant
+Lilypad
 Liverwort
 Moss
 Pachyanthus

@@ -1,5 +1,4 @@
 Becks
-Schlitz
 Blue Moon
 Budweiser
 Busch
@@ -16,5 +15,6 @@ Pabst
 Pilsner
 Rolling Rock
 Samuel Adams
+Schlitz
 Stella Artois
 Yuengling

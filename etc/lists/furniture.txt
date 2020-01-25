@@ -1,16 +1,16 @@
 Barstool
-Easychair
 Bed
 Bench
 Bookcase
-Cabinet
 Bunkbed
+Cabinet
 Chair
 Couch
 Cupboard
 Desk
 Drawer
 Dresser
+Easychair
 Entertainment Center
 Footstool
 Futon

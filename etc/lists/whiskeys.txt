@@ -1,5 +1,4 @@
 Black Velvet
-Knob Creek
 Blended Malt
 Bourbon
 Buchanans Scotch
@@ -15,6 +14,7 @@ Jameson
 Jim Beam
 Jonnie Walker
 Kessler American
+Knob Creek
 Makers Mark
 Rich and Rare
 Scotch

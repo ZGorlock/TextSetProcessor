@@ -7,10 +7,6 @@ ChaCha
 Disco
 East Coast Swing
 Foxtrot
-Twerk
-Twerked
-Shoki
-Twerking
 Gangnam Style
 Harlem Shake
 Jive
@@ -20,12 +16,14 @@ Paso Doble
 Quickstep
 Rumba
 Samba
+Shoki
 Tango
 Tapdance
-Tapdancing
 Tapdancer
-Tapdance
 Tapdancing
 The Twist
+Twerk
+Twerked
+Twerking
 Waltz
 West Coast Swing

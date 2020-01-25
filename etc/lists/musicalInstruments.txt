@@ -1,6 +1,4 @@
 Accordion
-Keytar
-Orchestra
 Bagpipes
 Banjo
 Bass Guitar
@@ -29,6 +27,7 @@ Harpsichord
 Hurdy Gurdy
 Jew’s Harp
 Kalimba
+Keytar
 Lute
 Lyre
 Mandolin
@@ -37,6 +36,7 @@ Melodica
 Oboe
 Ocarina
 Octobass
+Orchestra
 Organ
 Pan Pipes
 Pennywhistle

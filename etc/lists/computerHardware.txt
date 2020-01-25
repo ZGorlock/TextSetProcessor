@@ -1,21 +1,17 @@
 Battery Backup
-DDR
-DRAM
+CD
 CPU
 Card Reader
 Central Processing Unit
-Processor
-SATA
+DDR
+DRAM
 Data Cable
 Daughterboard
 Disk Drive
 Flash Drive
 Flashdrive
-Thumb Drive
-Thumbdrive
-Floppy Disk Drive
 Floppy Disk
-CD
+Floppy Disk Drive
 Graphics Card
 HDD
 Hard Drive
@@ -24,11 +20,15 @@ Monitor
 Motherboard
 Network Card
 Optical Drive
+Processor
 RAM
+SATA
 SSD
 Solid State Drive
 SolidState Drive
 Sound Card
 Tape Drive
+Thumb Drive
+Thumbdrive
 Video Card
 Webcam

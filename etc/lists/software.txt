@@ -1,10 +1,10 @@
+AdBlock
+FaceTime
 McAfee
 Microsoft Office
 Photoshop
-Winrar
+Skype
+SnapChat
 VMWare
 VSphere
-FaceTime
-SnapChat
-Skype
-AdBlock
+Winrar

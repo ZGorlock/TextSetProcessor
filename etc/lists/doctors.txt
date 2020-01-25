@@ -1,8 +1,4 @@
 Allergist
-Lobotomist
-Lobotomy
-Phlebotomist
-Phlebotomy
 Anesthesiologist
 Anesthesiology
 Anesthetist
@@ -33,6 +29,8 @@ Infectious Disease Specialist
 Internist
 Kinesiologists
 Kinesiology
+Lobotomist
+Lobotomy
 Medical Geneticist
 Medicine Specialist
 Nephrologist
@@ -52,6 +50,8 @@ Pathologist
 Pediatrician
 Pediatrist
 Pediatry
+Phlebotomist
+Phlebotomy
 Physiatrist
 Physiatry
 Physician

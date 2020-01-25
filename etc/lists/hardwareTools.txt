@@ -1,9 +1,8 @@
 Air Compressor
-Bonesaw
 Bandsaw
+Bonesaw
 Drill
 Floor Jack
-Toolbelt
 Hacksaw
 Hammer
 Impact Wrench
@@ -19,6 +18,7 @@ ShopVac
 Socket Wrench
 Tool Chest
 Tool Kit
+Toolbelt
 Toolbox
 Toolshed
 Vise Grip

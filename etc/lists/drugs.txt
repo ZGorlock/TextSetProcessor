@@ -1,6 +1,4 @@
 Acamprosate
-Krokodil
-Modafinil
 Actiq
 Adderall
 Alprazolam
@@ -59,6 +57,7 @@ Inhalant
 Kadian
 Ketamine
 Klonopin
+Krokodil
 LSD
 Librium
 Lorazepam
@@ -73,6 +72,7 @@ Methadone
 Methamphetamine
 Methaqualone
 Methylphenidate
+Modafinil
 Morphine
 Mushrooms
 Naltrexone

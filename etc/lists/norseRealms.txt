@@ -1,11 +1,11 @@
+Alfheim
 Asgard
 Asgardian
-Niflheim
-Muspelheim
+Helheim
+Jotunheim
 Midgard
 Midgardian
-Jotunheim
-Vanaheim
-Alfheim
+Muspelheim
+Niflheim
 Svartalfheim
-Helheim
+Vanaheim

@@ -1,17 +1,17 @@
-Semibreve
-Diminution
-Whole Note
-Half Note
-Quarter Note
-Eighth Note
-Sixteenth Note
-Treble Clef
-Bass Clef
 Alto Clef
-Tenor Clef
-Neutral Clef
-Minim
+Bass Clef
 Crotchet
-Quaver
-Semiquaver
 Demisemiquaver
+Diminution
+Eighth Note
+Half Note
+Minim
+Neutral Clef
+Quarter Note
+Quaver
+Semibreve
+Semiquaver
+Sixteenth Note
+Tenor Clef
+Treble Clef
+Whole Note

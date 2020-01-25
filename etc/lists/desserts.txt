@@ -1,13 +1,9 @@
 Bundt
-Fudgesicle
-Popsicle
 Cake
-Smoothie
-Smoothy
-Slurpee
 Cookie
 Cupcake
 Custard
+Fudgesicle
 Gelato
 Gingerbread
 Ice Cream
@@ -20,8 +16,12 @@ Oreo
 Pastries
 Pastry
 Pie
+Popsicle
 Pudding
 Sherbet
+Slurpee
+Smoothie
+Smoothy
 Snow Cone
 Sorbet
 Twinkie

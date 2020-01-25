@@ -1,10 +1,10 @@
 Albertsons
-Home Depot
-Lowes
 Aldi
 Dillard
+Home Depot
 JCPenny
 Kroger Co
+Lowes
 Publix
 ShopRite
 Target

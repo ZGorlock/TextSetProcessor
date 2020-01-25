@@ -1,16 +1,9 @@
 Absolute Value
-Prime
 Acute
-Obtuse
 Acute Angle
 Acute Triangle
-Addend
 Add
-Subtract
-Multiply
-Divide
-Modulus
-Factorial
+Addend
 Addition
 Addition Property of Equality
 Additive Inverse
@@ -56,8 +49,6 @@ Binomial
 Binomial Theorem
 Bisect
 Boxandwhisker Graph
-Decimal
-Hexadecimal
 Calculate
 Cardinal Number
 Catalan Number
@@ -99,20 +90,16 @@ Corresponding Side
 Counting Number
 Cross Product
 Cube
-Cubic Number
+Cube Root
+Cubed Root
 Cubic
+Cubic Number
 Cumulative Frequency
 Customary Measurement System
 Cyclic Number
 Cylinder
-Data Set
 Data
-Radius
-Diameter
-Circumference
-Square Root
-Cube Root
-Cubed Root
+Data Set
 Decimal
 Decimal Digit
 Decimal Fraction
@@ -127,6 +114,7 @@ Digital Root
 Dimension
 Disjunction
 Distributive Property of Multiplication
+Divide
 Dividend
 Dividing Decimal
 Divisibility Rule
@@ -183,6 +171,7 @@ Happy Number
 Harshad Number
 Helix
 Heronion Number
+Hexadecimal
 Hexagon
 Histogram
 Horizontal Bar
@@ -245,6 +234,7 @@ Multiplebar Graph
 Multipleline Graph
 Multiplication
 Multiplication Property of Equality
+Multiply
 Multiply Perfect Number
 Multistep Problem
 Mutually Exclusive
@@ -259,6 +249,7 @@ Number Theory
 Numerator
 Numerical Expression
 Oblong Number
+Obtuse
 Obtuse Angle
 Obtuse Triangle
 Octagon
@@ -304,6 +295,7 @@ Polynomial
 Polytope
 Positive Integer
 Prealgebra
+Prime
 Prime Factorization
 Prime Number
 Prism
@@ -378,6 +370,7 @@ Standard Form
 Stemandleaf Plot
 Straight Angle
 Straight Commission
+Subtract
 Subtraction
 Subtraction Property of Equality
 Sum

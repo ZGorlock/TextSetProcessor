@@ -1,6 +1,4 @@
 Acapella
-RnB
-Orchestral
 Acoustic Music
 Alternative Rock
 Ballad
@@ -11,14 +9,9 @@ Classical Music
 Contemporary R&B
 Country Music
 Dance Music
-PowerMetal
-Power Metal
 Disco
-Reggaeton
 Dubstep
 Easy Listening
-KPop
-K Pop
 Electronic Dance Music
 Electronic Music
 Folk Music
@@ -35,13 +28,18 @@ Indie Rock
 Instrumental
 Jazz
 Jazz Fusion
+K Pop
+KPop
 Kidz Bop
 Musical Theatre
 New Wave
 Orchestra
+Orchestral
 Pop Music
 Pop Rock
 Popular Music
+Power Metal
+PowerMetal
 Progressive Rock
 Psychedelic Music
 Punk Rock
@@ -49,8 +47,10 @@ R&B
 Rap
 Rapping
 Reggae
+Reggaeton
 Religious Music
 Rhythm and Blues
+RnB
 Rock
 Rock N Roll
 Rock'N'Roll

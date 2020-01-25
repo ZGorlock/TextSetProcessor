@@ -1,7 +1,6 @@
 Albus Dumbledore
-Pensieve
-Cho Chang
 Bellatrix Lestrange
+Cho Chang
 Dementor
 Dobby
 Dumbledore
@@ -13,6 +12,7 @@ Malfoy
 McGonagall
 Muggle
 Neville Longbottom
+Pensieve
 Professor Dumbledore
 Professor Lupin
 Professor McGonagall

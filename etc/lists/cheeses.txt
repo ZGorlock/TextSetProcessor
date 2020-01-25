@@ -1,5 +1,4 @@
 American Cheese
-Queso
 Asiago
 Babybel
 Blue Cheese
@@ -25,6 +24,7 @@ Parmesan
 Pecorino
 Pepper Jack
 Provolone
+Queso
 Ricotta
 Scamorza
 Stilton

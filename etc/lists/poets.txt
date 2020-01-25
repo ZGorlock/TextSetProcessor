@@ -1,5 +1,4 @@
 A E Housman
-Beowulf
 A R Ammons
 A a Milne
 AC Benson
@@ -47,6 +46,7 @@ Bankim Chandra Chattopadhya
 Barbara Kingsolver
 Basho
 Ben Jonson
+Beowulf
 Bertolt Brecht
 Betty Aberlin
 Blaze Koneski

@@ -1,12 +1,10 @@
 Albatross
-Peloquin
 Blackbird
 Bluebird
 Budgie
 Bulbul
 Capercallie
 Chicken
-Kestrel
 Chukar
 Cormorant
 Crane
@@ -30,6 +28,7 @@ Hoopoes
 Hornbill
 Hummingbird
 Ibis
+Kestrel
 Kingfisher
 Lark
 Moa
@@ -42,6 +41,7 @@ Partridge
 Passerine
 Peacock
 Pelican
+Peloquin
 Penguin
 Pheasant
 Pigeon

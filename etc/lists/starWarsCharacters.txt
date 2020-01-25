@@ -1,5 +1,4 @@
 Aayla Secura
-Sithlord
 Admiral Ackbar
 Ahsoka Tano
 Asajj Ventress
@@ -58,6 +57,7 @@ Shmi Skywalker
 Sifo Dyas
 SifoDyas
 Sith
+Sithlord
 Skywalker
 Slave Leia
 Stormtrooper

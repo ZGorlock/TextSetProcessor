@@ -1,5 +1,6 @@
 Atari
 Atari 2600
+DS
 Game Boy
 Game Boy Advance
 Game Cube
@@ -19,10 +20,9 @@ PlayStation 5
 PlayStation Portable
 Super Nintendo
 SuperNintendo
+Wii
+Wii U
+WiiU
 Xbox
 Xbox 360
 Xbox One
-DS
-Wii
-WiiU
-Wii U

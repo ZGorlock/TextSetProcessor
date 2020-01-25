@@ -1,5 +1,4 @@
 4chan
-WebMD
 Amazon
 Bing
 Blogspot
@@ -8,10 +7,10 @@ Dropbox
 Ebay
 Expedia
 Facebook
+Foogle
 G Mail
 GMail
 Google
-Foogle
 Google Maps
 Imgur
 Instagram
@@ -27,6 +26,7 @@ Quora
 Reddit
 Tumblr
 Twitter
+WebMD
 Wikipedia
 Yahoo
 YouTube

@@ -16,6 +16,7 @@ Kubanskaya
 Luksusowa
 Moskovskaya
 Nemiroff
+Patron
 Reyka
 Russian Standard
 SKYY
@@ -29,4 +30,3 @@ Ultimat Vodka
 Ursus
 Wyborowa
 Zubrowka
-Patron

@@ -1,6 +1,4 @@
 Acorn Squash
-Varnishkes
-Takoyaki
 Alfalfa Sprouts
 Almond
 Anchovy
@@ -12,42 +10,25 @@ Applesauce
 Apricot
 Artichoke
 Asparagus
-Lutefisk
-Hot Pocket
 Aspic
 Ate
 Avocado
 Bacon
-Fajita
-Taco
-Burrito
-Quesadilla
-Dough
-Manwich
-Sandwich
-Bagel
 Bagel
 Bake
 Baked Alaska
 Bamboo Shoots
 Banana
+Banitsa
 Barbecue
 Barley
-Unagi
-Tzazika
 Basil
 Batter
-Donair
-Etouffee
-Hotwing
-Hot Wing
-Banitsa
 Beancurd
 Beans
 Beef
 Beet
 Bell Pepper
-Corndog
 Berry
 Biscuit
 Black Beans
@@ -126,6 +107,7 @@ Cook
 Cookbook
 Cookie
 Corn
+Corndog
 Cornflakes
 Cornmeal
 Cottage Cheese
@@ -159,6 +141,7 @@ Dine
 Diner
 Dinner
 Dip
+Donair
 Dough
 Doughnut
 Dragonfruit
@@ -172,6 +155,8 @@ Eggroll
 Elderberry
 Endive
 Entree
+Etouffee
+Fajita
 Fava Beans
 Feast
 Feed
@@ -224,9 +209,12 @@ Honey
 Honeydew
 Horseradish
 Hot Dog
+Hot Pocket
 Hot Sauce
+Hot Wing
 Hotcake
 Hotdog
+Hotwing
 Hummus
 Hunger
 Hungry
@@ -276,12 +264,14 @@ Lox
 Lunch
 Lunch Box
 Lunchmeat
+Lutefisk
 Lychee
 Macaroni
 Macaroon
 Maize
 Mandarin Orange
 Mango
+Manwich
 Maple Syrup
 Margarine
 Marionberry
@@ -386,6 +376,7 @@ Prune
 Pudding
 Pumpernickel
 Pumpkin
+Quesadilla
 Quiche
 Quinoa
 Radish
@@ -471,6 +462,7 @@ Swiss Chard
 Syrup
 Taco
 Takeout
+Takoyaki
 Tamale
 Tangerine
 Tapioca
@@ -492,9 +484,12 @@ Tuna
 Turkey
 Turmeric
 Turnip
+Tzazika
 Ugli Fruit
+Unagi
 Unleavened
 Vanilla
+Varnishkes
 Veal
 Vegetable
 Venison

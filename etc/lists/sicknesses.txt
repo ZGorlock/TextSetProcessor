@@ -1,6 +1,4 @@
 Alzheimers
-Leposy
-Leper
 Bronchiolitis
 Bronchitis
 Cancer
@@ -10,13 +8,11 @@ Cholelithiasis
 Cold Sore
 Common Cold
 Cough
+Crohn
+Crohns Disease
 Dementia
 Dengue Fever
 Diabetes
-Migraine
-Syndrome
-Crohns Disease
-Crohn
 Disease
 Earache
 Ebola
@@ -37,8 +33,11 @@ Herpes
 Hyperlipoproteinemia
 Infection
 Influenza
+Leper
+Leposy
 Lyme
 Measles
+Migraine
 Mumps
 Osteoporosis
 Parkinsons
@@ -53,6 +52,7 @@ Smallpox
 Sore Throat
 Staph
 Stenosis
+Syndrome
 Tetanus
 UTI
 Urinary Tract Infection

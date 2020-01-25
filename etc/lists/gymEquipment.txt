@@ -1,20 +1,20 @@
-Smith Machine
 Barbell
-Exercise Ball
-Preacher Bench
-Tradmill
 Bench Press
-Kettlebell
-Foam Roller
 Dip Bar
 Dumbbell
-Machine Fly
+Exercise Ball
+Foam Roller
+Free Weight
 Indoor Rower
+Kettlebell
+Machine Fly
+Medicine Ball
 Power Rack
 Power Tower
-Medicine Ball
-Stationary Bike
-Stationary Bicycle
-Recumbent Bike
+Preacher Bench
 Recumbent Bicycle
-Free Weight
+Recumbent Bike
+Smith Machine
+Stationary Bicycle
+Stationary Bike
+Tradmill

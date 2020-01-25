@@ -1,5 +1,4 @@
 Arya
-Kingslayer
 Arya Stark
 Baratheon
 Bran Stark
@@ -21,6 +20,7 @@ John Snow
 Jorah Mormont
 Khal Drogo
 Khaleesi
+Kingslayer
 Lannister
 Littlefinger
 Loras Tyrell
@@ -43,11 +43,11 @@ Tommen Baratheon
 Tyrion
 Tyrion Lannister
 Tywin Lannister
+Valar Dohaeris
+Valar Morghulis
 Walder Frey
 Whitewalker
 Wildling
 Wun Wun
 WunWun
 Ygritte
-Valar Dohaeris
-Valar Morghulis

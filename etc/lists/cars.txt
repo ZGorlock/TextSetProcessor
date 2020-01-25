@@ -1,5 +1,4 @@
 Acura
-Jetta
 Alfa Romeo
 Aston Martin
 Audi
@@ -23,6 +22,7 @@ General Motors
 Honda
 Hyundai
 Jeep
+Jetta
 Kia
 Koenigsegg
 Lamborghini

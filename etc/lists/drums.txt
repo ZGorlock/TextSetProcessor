@@ -1,16 +1,16 @@
-Cymbal
-Ride Cymbal
-Crash Cymbal
-Midle TomTom
-Midle Tom Tom
-TomTom
-Tom Tom
-High TomTom
-High Tom Tom
-HiHat Cymbal
-HiHat
-Hi Hat
-Floor TomTom
-Floor Tom Tom
-Snare
 Bass Drum
+Crash Cymbal
+Cymbal
+Floor Tom Tom
+Floor TomTom
+Hi Hat
+HiHat
+HiHat Cymbal
+High Tom Tom
+High TomTom
+Midle Tom Tom
+Midle TomTom
+Ride Cymbal
+Snare
+Tom Tom
+TomTom

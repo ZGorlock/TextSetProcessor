@@ -1,7 +1,6 @@
 Acai
 Apple
 Avocado
-Currant
 Banana
 Berries
 Berry
@@ -11,6 +10,7 @@ Blueberries
 Blueberry
 Cantelope
 Clementine
+Currant
 Dragonfruit
 Durian
 Fig

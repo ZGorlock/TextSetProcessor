@@ -1,9 +1,6 @@
 Abilify
-Massengill
 Abreva
 Acetaminophen
-Acetaminophen
-Hydrocodone
 Actos
 Acyclovir
 Adderall
@@ -25,8 +22,6 @@ Amitriptyline
 Amlodipine
 Amlodipine Besylate
 Amoxicillin
-Amoxicillin
-Clavulanate
 Anastrozole
 Apixaban
 Aricept
@@ -75,8 +70,6 @@ Budesonide
 Bumetanide
 Bumex
 Buprenorphine
-Buprenorphine
-Naloxone
 Bupropion
 Buspar
 Buspirone
@@ -88,7 +81,6 @@ Calcium Carbonate
 Captopril
 Carbamazepine
 Carbidopa
-Levodopa
 Cardizem
 Carvedilol
 Cefdinir
@@ -101,6 +93,7 @@ Cephalexin
 Cetirizine
 Chlorthalidone
 Cholecalciferol
+Chondroitin
 Cialis
 Cilostazol
 Cipro
@@ -108,6 +101,7 @@ Ciprofloxacin
 Citalopram
 Clarithromycin
 Claritin
+Clavulanate
 Clearasil
 Clindamycin
 Clonazepam
@@ -238,8 +232,6 @@ Fluoxetine
 Fluphenazine
 Fluticasone
 Fluticasone Propionate
-Fluticasone
-Salmeterol
 Fluvoxamine
 Fluzone
 Focalin
@@ -271,13 +263,9 @@ Ginseng
 Gleevec
 Glimepiride
 Glipizide
-Glipizide
-Metformin
 Glucagon
 Glucophage
 Glucosamine
-Glucosamine
-Chondroitin
 Glucotrol
 Glutathione
 Glyburide
@@ -310,19 +298,8 @@ Hyaluronic Acid
 Hydralazine
 Hydrea
 Hydrochlorothiazide
-Hydrochlorothiazide
-Lisinopril
-Hydrochlorothiazide
-Losartan
-Hydrochlorothiazide
-Triamterene
-Hydrochlorothiazide
-Valsartan
 Hydrocodone
-Hydrocodone
-Acetaminophen
 Hydrocortisone
-ProActiv
 Hydrocortisone Cream
 Hydrocortisone Topical
 Hydromorphone
@@ -464,6 +441,7 @@ Levaquin
 Levemir
 Levetiracetam
 Levocetirizine
+Levodopa
 Levofloxacin
 Levothyroxine
 Lexapro
@@ -491,6 +469,7 @@ Lyrica
 Macrobid
 Magnesium
 Magnesium Oxide
+Massengill
 Maxalt
 Meclizine
 Medrol
@@ -642,6 +621,7 @@ Prevacid
 Prilosec
 Primidone
 Pristiq
+ProActiv
 ProAir HFA
 Prochlorperazine
 Progesterone
@@ -719,6 +699,7 @@ Ropinirole
 Rosuvastatin
 Roxicodone
 Salbutamol
+Salmeterol
 Saxenda
 Scopolamine
 Senna
@@ -753,7 +734,6 @@ Subutex
 Sucralfate
 Sudafed
 Sulfamethoxazole
-Trimethoprim
 Sulfasalazine
 Sulindac
 Sumatriptan
@@ -813,8 +793,6 @@ Ultravate
 Ultravate X Cream
 Ultresa
 Umeclidinium
-Umeclidinium
-Vilanterol
 Unasyn
 Uniphyl
 Unisom
@@ -867,6 +845,7 @@ Vicodin
 Victoza
 Vigamox
 Viibryd
+Vilanterol
 Vilazodone
 Vimpat
 Visine

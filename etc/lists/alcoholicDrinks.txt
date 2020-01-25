@@ -1,5 +1,4 @@
 Appletini
-Jager Bomb
 Batida
 Bay Breeze
 Bloody Mary
@@ -12,6 +11,7 @@ Flirtini
 Gigson
 Gimlet
 Gin and Tonic
+Jager Bomb
 Margarita
 Martini
 Mint Julep

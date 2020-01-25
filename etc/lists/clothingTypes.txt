@@ -1,6 +1,4 @@
 Belt
-TShirt
-T Shirt
 Boot
 Bowtie
 Boxer Briefs
@@ -28,6 +26,8 @@ Slipper
 Sock
 Suit
 Sweater
+T Shirt
+TShirt
 Tie
 Trouser
 Underwear

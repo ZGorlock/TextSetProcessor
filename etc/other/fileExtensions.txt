@@ -1,11 +1,12 @@
 Cnf
-Io
 Co
 Com
 Doc
 Docx
+Gif
 Html
 Ini
+Io
 Jpg
 Mp3
 Mp4
