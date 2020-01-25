@@ -196,7 +196,13 @@ public final class JokeParser {
         File out = new File("jokes/quirkology/source/1 - cleaned/cleaned" + (work ? "-work" : "") + ".txt");
         List<String> output = new ArrayList<>();
         for (Joke joke : jokes) {
-            output.add(joke.source);
+            String text;
+            if (preserveSource) {
+                text = joke.source;
+            } else {
+                text = joke.text;
+            }
+            output.add(text);
             output.add("");
         }
         Jokes.safeRewrite(out, output);
@@ -521,13 +527,28 @@ public final class JokeParser {
         List<String> output = new ArrayList<>();
         output.add("[");
         for (int i = 0; i < jokes.size(); i++) {
-            String[] parts = jokes.get(i).source
-                    .replaceAll("\\\\*\"", "\\\\\"")
-                    .replaceAll("\\s+", " ")
-                    .split("\\|\\|\\|\\|\\|", -1);
+            String body;
+            String category;
+            if (preserveSource) {
+                String[] parts = jokes.get(i).source
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ")
+                        .split("\\|\\|\\|\\|\\|", -1);
+                body = StringUtility.trim(parts[0]);
+                category = StringUtility.trim(parts[1]);
+            } else {
+                body = jokes.get(i).text
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ");
+                StringBuilder categoryBuilder = new StringBuilder();
+                for (String c : jokes.get(i).tags) {
+                    categoryBuilder.append((categoryBuilder.length() > 0) ? ", " : "").append(c);
+                }
+                category = categoryBuilder.toString();
+            }
             output.add("    {");
-            output.add("        \"body\": \"" + StringUtility.trim(parts[1]) + "\",");
-            output.add("        \"category\": \"" + StringUtility.trim(parts[2]) + "\"");
+            output.add("        \"body\": \"" + body + "\",");
+            output.add("        \"category\": \"" + category + "\"");
             output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
         }
         output.add("]");
@@ -571,6 +592,15 @@ public final class JokeParser {
                 String category = ((String) io.get("category"));
                 String title = (String) io.get("title");
                 String save = title + "|||||" + body + "|||||" + category;
+    
+                if (!title.isEmpty() &&
+                    StringUtility.removePunctuation(StringUtility.removeWhiteSpace(body.toUpperCase())).startsWith(
+                            StringUtility.removePunctuation(StringUtility.removeWhiteSpace(title.toUpperCase())))) {
+                    title = "";
+                }
+                if (title.toUpperCase().contains("FUNNY")) {
+                    title = "";
+                }
                 
                 if (body.isEmpty() || body.endsWith(":") || body.contains("1.") || body.contains("B.)") ||
                     body.contains("2)") || body.toUpperCase().contains("WOCKA") ||
@@ -613,6 +643,8 @@ public final class JokeParser {
                 body = StringUtility.trim(body);
                 
                 Joke thisJoke = new Joke();
+                thisJoke.title = title;
+                thisJoke.body = body;
                 thisJoke.text = title + " " + body;
                 thisJoke.source = preserveSource ? save : source;
                 for (String cat : category.split(",")) {
@@ -652,14 +684,34 @@ public final class JokeParser {
         List<String> output = new ArrayList<>();
         output.add("[");
         for (int i = 0; i < jokes.size(); i++) {
-            String[] parts = jokes.get(i).source
-                    .replaceAll("\\\\*\"", "\\\\\"")
-                    .replaceAll("\\s+", " ")
-                    .split("\\|\\|\\|\\|\\|", -1);
+            String body;
+            String category;
+            String title;
+            if (preserveSource) {
+                String[] parts = jokes.get(i).source
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ")
+                        .split("\\|\\|\\|\\|\\|", -1);
+                body = StringUtility.trim(parts[1]);
+                category = StringUtility.trim(parts[2]);
+                title = StringUtility.trim(parts[0]);
+            } else {
+                body = jokes.get(i).body
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ");
+                StringBuilder categoryBuilder = new StringBuilder();
+                for (String c : jokes.get(i).tags) {
+                    categoryBuilder.append((categoryBuilder.length() > 0) ? ", " : "").append(c);
+                }
+                category = categoryBuilder.toString();
+                title = jokes.get(i).title
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ");
+            }
             output.add("    {");
-            output.add("        \"body\": \"" + StringUtility.trim(parts[1]) + "\",");
-            output.add("        \"category\": \"" + StringUtility.trim(parts[2]) + "\",");
-            output.add("        \"title\": \"" + StringUtility.trim(parts[0]) + "\"");
+            output.add("        \"body\": \"" + body + "\",");
+            output.add("        \"category\": \"" + category + "\",");
+            output.add("        \"title\": \"" + title + "\"");
             output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
         }
         output.add("]");
@@ -797,6 +849,8 @@ public final class JokeParser {
                 body = StringUtility.trim(body);
                 
                 Joke thisJoke = new Joke();
+                thisJoke.title = title;
+                thisJoke.body = body;
                 thisJoke.text = title + " " + body;
                 thisJoke.source = preserveSource ? (title + "|||||" + body) : source;
                 thisJoke.nsfw = nsfw;
@@ -832,13 +886,27 @@ public final class JokeParser {
         List<String> output = new ArrayList<>();
         output.add("[");
         for (int i = 0; i < jokes.size(); i++) {
-            String[] parts = jokes.get(i).source
-                    .replaceAll("\\\\*\"", "\\\\\"")
-                    .replaceAll("\\s+", " ")
-                    .split("\\|\\|\\|\\|\\|", -1);
+            String body;
+            String category;
+            String title;
+            if (preserveSource) {
+                String[] parts = jokes.get(i).source
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ")
+                        .split("\\|\\|\\|\\|\\|", -1);
+                body = StringUtility.trim(parts[1]);
+                title = StringUtility.trim(parts[0]);
+            } else {
+                body = jokes.get(i).body
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ");
+                title = jokes.get(i).title
+                        .replaceAll("\\\\*\"", "\\\\\"")
+                        .replaceAll("\\s+", " ");
+            }
             output.add("    {");
-            output.add("        \"body\": \"" + StringUtility.trim(parts[1]) + "\",");
-            output.add("        \"title\": \"" + StringUtility.trim(parts[0]) + "\"");
+            output.add("        \"body\": \"" + body + "\",");
+            output.add("        \"title\": \"" + title + "\"");
             output.add("    }" + ((i < jokes.size() - 1) ? "," : ""));
         }
         output.add("]");

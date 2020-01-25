@@ -17,6 +17,16 @@ class Entity {
     //Fields
     
     /**
+     * The title of the entity.
+     */
+    public String title = "";
+    
+    /**
+     * The body of the entity.
+     */
+    public String body = "";
+    
+    /**
      * The text of the entity.
      */
     public String text = "";
