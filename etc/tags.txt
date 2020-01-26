@@ -245,7 +245,7 @@ Corpse                  ,Coroner,Cremation,Funeral,Grave,Mortician
 Corruption              
 Counting                
 Country Music           ,Banjo,Washboard
-Court                   ,Adjudicate,Attorney,Bailiff,Bystander,Courthouse,Defendent,Eyewitness,Gavel,Judge,Judged,Judgy,Judicial,Judiciary,Jurist,Juror,Jury,Law School,Lawyer,Magistrate,Onlooker,Perceiver,Percipient,Plaintiff,Plead The 5th,Plead The Fifth,Prosecutor,School Of Law,Sentencing,Spectated,Spectator,Testifier,Testify,Testimony,Trial,Trialed,Verdict,Witness
+Court                   ,Adjudicate,Attorney,Bailiff,Bystander,Courthouse,Defendent,Eyewitness,Gavel,Judge,Judicial,Judiciary,Jurist,Juror,Jury,Law School,Lawyer,Magistrate,Onlooker,Perceiver,Percipient,Plaintiff,Plead The 5th,Plead The Fifth,Prosecutor,School Of Law,Sentencing,Spectated,Spectator,Testifier,Testify,Testimony,Trial,Trialed,Verdict,Witness
 Cow                     ,Bovinae,Bovine,Bull,Bullfight,Bullfighting,Calf,Cattle,Cattleman,Cowboy,Cowgirl,Cowpie,Cowpoke,Heifer,Lasso,Rancher,Ranchero,Rodeo,Taurus,Wrangler
 Cowboy                  ,Cattleman,Cowgirl,Cowpoke,Lasso,Rancher,Ranchero,Rodeo,Wrangler -dontDoY
 Crab                    ,Crabby,Crabmeat
@@ -568,7 +568,7 @@ Lamp                    ,Lampshade,Night Light,Nightlight
 Land Mine               ,Claymore
 Language                ,Alliteration,Anagram,Antonym,Assonance,Bilingual,Consonance,Holonym,Hyperbole,Hypernym,Linguist,Linguistic,Onomatopoeia,Palindrome,Pertainym,Polylingual,Simile,Synonym,TrilingualOnamonapia
 Laundry                 ,Dry Cleaner,Dry Cleaning,Drycleaner,Drying Machine,Laundromat,Perm Press,Permanent Press,Washing Machine -dontDoY
-Law                     ,911,Adjudicate,Attorney,Bailiff,Bystander,Constable,Constabulary,Cop,Court,Courthouse,Crime,Crimelord,Criminal,Decree,Defendent,Eyewitness,Felon,Felony,Gang,Gangbanger,Gavel,Gendarmerie,Gendarmery,Hood Rat,Hoodlum,Judge,Judged,Judgy,Judicial,Judiciary,Jurist,Juror,Jury,LAPD,Lawyer,Mafia,Magistrate,Misdemeanor,Mob,Officer,Onlooker,PD,Paramilitary,Perceiver,Percipient,Plaintiff,Plead The 5th,Plead The Fifth,Prosecutor,Sentencing,Spectated,Spectator,Statute,Testifier,Testify,Testimony,Thug,Thuggish,Thuglike,Trial,Trialed,Verdict,Warrant,Witness
+Law                     ,911,Adjudicate,Attorney,Bailiff,Bystander,Constable,Constabulary,Cop,Court,Courthouse,Crime,Crimelord,Criminal,Decree,Defendent,Eyewitness,Felon,Felony,Gang,Gangbanger,Gavel,Gendarmerie,Gendarmery,Hood Rat,Hoodlum,Judicial,Judiciary,Jurist,Juror,Jury,LAPD,Lawyer,Mafia,Magistrate,Misdemeanor,Mob,Officer,Onlooker,PD,Paramilitary,Perceiver,Percipient,Plaintiff,Plead The 5th,Plead The Fifth,Prosecutor,Sentencing,Spectated,Spectator,Statute,Testifier,Testify,Testimony,Thug,Thuggish,Thuglike,Trial,Trialed,Verdict,Warrant,Witness
 Lawyer                  ,Attorney,Law School,School Of Law -dontDoER
 Laxative                
 Lazy                    ,Laziness,Procrastinate,Procrastinated,Procrastination,Procrastinator -dontDoY

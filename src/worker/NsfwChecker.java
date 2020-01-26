@@ -111,8 +111,12 @@ public final class NsfwChecker {
      */
     public boolean checkNsfw(String text, List<String> tags) {
         for (String tag : tags) {
-            if (textTagger.tagList.get(tag).nsfw) {
-                return true;
+            if (textTagger.tagList.containsKey(tag)) {
+                if (textTagger.tagList.get(tag).nsfw) {
+                    return true;
+                }
+            } else {
+                System.err.println("Tag Does Not Exist: " + tag);
             }
         }
         

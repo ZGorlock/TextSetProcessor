@@ -536,8 +536,8 @@ public final class TextTagger {
                 matches.add("Cat");
             }
             if (word.startsWith("MEIN") || word.startsWith("KAMPF") || word.startsWith("LUFT")) {
-                tags.add("German");
-                matches.add("German");
+                tags.add("Germany");
+                matches.add("Germany");
             }
             if (word.endsWith("SPORT") || word.endsWith("SPORTS")) {
                 tags.add("Sport");
