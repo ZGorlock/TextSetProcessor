@@ -339,6 +339,9 @@ public class Jokes {
                     setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
                 }
                 Filesystem.deleteFile(fixedWorkFile);
+                Filesystem.deleteFile(fixedBackupFile);
+                Filesystem.deleteFile(fixedFixBackupFile);
+                Filesystem.deleteFile(fixedFixListBackupFile);
                 Filesystem.deleteFile(fixedWorkBackupFile);
                 setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
             }
@@ -438,6 +441,7 @@ public class Jokes {
                     setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
                 }
                 Filesystem.deleteFile(taggedWorkFile);
+                Filesystem.deleteFile(taggedBackupFile);
                 Filesystem.deleteFile(taggedWorkBackupFile);
                 setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
             }
@@ -814,11 +818,13 @@ public class Jokes {
      * Writes the time data to the time file.
      */
     public static void writeTimeFile() {
+        File timeFileBackup = new File(timeFile.getAbsolutePath().replace(".txt", "-bak.txt"));
         List<String> data = new ArrayList<>();
         for (Map.Entry<String, Long> timeDataEntry : timeData.entrySet()) {
             data.add(timeDataEntry.getKey() + ":" + timeDataEntry.getValue());
         }
         safeRewrite(timeFile, data);
+        Filesystem.deleteFile(timeFileBackup);
     }
     
 }
