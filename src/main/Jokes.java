@@ -754,6 +754,9 @@ public class Jokes {
     public static void readTimeFile() {
         List<String> data = Filesystem.readLines(timeFile);
         for (String dataLine : data) {
+            if (dataLine.isEmpty()) {
+                continue;
+            }
             String[] dataLineParts = dataLine.split(":");
             timeData.put(dataLineParts[0], Long.parseLong(dataLineParts[1]));
         }
@@ -824,7 +827,6 @@ public class Jokes {
             data.add(timeDataEntry.getKey() + ":" + timeDataEntry.getValue());
         }
         safeRewrite(timeFile, data);
-        Filesystem.deleteFile(timeFileBackup);
     }
     
 }
