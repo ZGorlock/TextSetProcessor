@@ -873,9 +873,7 @@ public final class StringUtility {
         }
         
         StringBuilder out = new StringBuilder();
-        for (int i = 0; i < num; i++) {
-            out.append(str);
-        }
+        out.append(String.valueOf(str).repeat(num));
         return out.toString();
     }
     

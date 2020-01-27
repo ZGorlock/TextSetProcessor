@@ -374,17 +374,13 @@ public class ConsoleProgressBar {
         StringBuilder bar = new StringBuilder();
         bar.append('[');
         StringBuilder progress = new StringBuilder();
-        for (int i = 0; i < completed; i++) {
-            progress.append('=');
-        }
+        progress.append("=".repeat(Math.max(0, completed)));
         if (completed != width) {
             progress.append('>');
             remaining--;
         }
         bar.append((completed == width) ? Console.cyan(progress.toString()) : Console.green(progress.toString()));
-        for (int i = 0; i < remaining; i++) {
-            bar.append(' ');
-        }
+        bar.append(" ".repeat(Math.max(0, remaining)));
         bar.append(']');
         
         return bar.toString();
