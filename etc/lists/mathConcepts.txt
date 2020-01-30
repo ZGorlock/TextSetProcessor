@@ -18,7 +18,6 @@ Amicable Number
 Angle
 Angle Measure
 Arc
-Area
 Area of a Circle
 Area of a Polygon
 Arithmetic
@@ -55,7 +54,6 @@ Catalan Number
 Center of a Circle
 Choice Number
 Chord
-Circle
 Circle Graph
 Circular Prime
 Circumference
@@ -83,6 +81,7 @@ Congruent Polygon
 Conjecture
 Conjunction
 Convenience Sample
+Planar
 Coordinate
 Coordinate Plane
 Corresponding Angle
@@ -172,7 +171,6 @@ Harshad Number
 Helix
 Heronion Number
 Hexadecimal
-Hexagon
 Histogram
 Horizontal Bar
 Horizontal Scale
@@ -268,7 +266,6 @@ Parallelogram
 Parasite Number
 Partial Product
 Pascals Triangle
-Pentagon
 Pentatope Number
 Percent Change
 Percent Decrease
@@ -326,7 +323,6 @@ Rational Number
 Real Number
 Reasonable Estimate
 Reciprocal
-Rectangle
 Rectangular Number
 Rectangular Prism
 Reduce To Lowest Term
@@ -362,7 +358,6 @@ Simplest Form
 Sociable Number
 Solid Figure
 Solve an Equation
-Square
 Square Number
 Square Root
 Squarefull Number
@@ -395,7 +390,6 @@ Transcendental Number
 Trapezoid
 Trapezoidal Number
 Tree Diagram
-Triangle
 Triangular Number
 Triple Prime Number
 Truth Table

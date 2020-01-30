@@ -15,11 +15,26 @@ import main.Jokes;
 import pojo.Joke;
 import utility.ListUtility;
 import utility.StringUtility;
+import worker.NsfwChecker;
+import worker.TextTagger;
 
 /**
  * Helps with fixing tagging mistakes.
  */
 public class TaggerHelper {
+    
+    //Static Fields
+    
+    /**
+     * The reference to the Text Tagger.
+     */
+    private static TextTagger textTagger = null;
+    
+    /**
+     * The reference to the NSFW Checker
+     */
+    private static NsfwChecker nsfwChecker = null;
+    
     
     //Main Methods
     
@@ -30,13 +45,20 @@ public class TaggerHelper {
      */
     @SuppressWarnings("InfiniteLoopStatement")
     public static void main(String[] args) {
+        textTagger = TextTagger.getInstance();
+        nsfwChecker = NsfwChecker.getInstance();
+        textTagger.printTagTrigger = true;
+        textTagger.load();
+        nsfwChecker.load();
+        
         List<Joke> tagged = new ArrayList<>();
         for (Jokes.JokeSet jokeSet : Jokes.JokeSet.values()) {
-            File taggedFile = new File(jokeSet.directory, "source/4 - tagged/tagged.json");
+            File taggedFile = new File(jokeSet.directory, "source/3 - fixed/fixed.json");
             if (taggedFile.exists()) {
                 tagged.addAll(Jokes.readJokes(taggedFile));
             }
         }
+        System.out.println("Ready");
         
         Scanner input = new Scanner(System.in);
         while (true) {
@@ -46,11 +68,18 @@ public class TaggerHelper {
                 for (String s : StringUtility.wrapText(joke.text, 120)) {
                     System.out.println(s);
                 }
+                joke.tags = textTagger.getTagsFromText(joke.text);
+                joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
+                System.out.println();
+    
+                System.out.println("Tags: ");
                 StringBuilder tags = new StringBuilder();
                 for (String tag : joke.tags) {
                     tags.append((tags.length() > 0) ? ", " : "").append(tag);
                 }
                 System.out.println(tags);
+                System.out.println("NSFW: " + joke.nsfw);
+                System.out.println("Source: " + joke.source);
                 input.nextLine();
             }
         }

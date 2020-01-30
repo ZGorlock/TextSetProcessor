@@ -17,6 +17,14 @@ import worker.TextTagger;
  */
 public final class TextTaggerTest {
     
+    //Static Fields
+    
+    /**
+     * The reference to the Text Tagger.
+     */
+    private static TextTagger textTagger = null;
+    
+    
     //Main Method
     
     /**
@@ -25,7 +33,7 @@ public final class TextTaggerTest {
      * @param args Arguments to the main method.
      */
     public static void main(String[] args) {
-        TextTagger textTagger = TextTagger.getInstance();
+        textTagger = TextTagger.getInstance();
         textTagger.printTagTrigger = true;
         textTagger.load();
         System.out.println("Ready");

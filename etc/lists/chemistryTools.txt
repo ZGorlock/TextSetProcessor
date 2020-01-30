@@ -2,7 +2,6 @@ Beaker
 Bunsen Burner
 Burette
 Cuvette
-Flask
 Funnel
 Glassware
 Graduated Cylinder
@@ -12,3 +11,6 @@ Test Tube
 Vial
 Volumetric Flask
 Watch Glass
+Titration
+Hot Plate
+Stir Bar

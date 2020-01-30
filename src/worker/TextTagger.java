@@ -424,6 +424,7 @@ public final class TextTagger {
         addListToTag(tags.get("Turkey"), "turkeys");
         addListToTag(tags.get("Turtle"), "turtles");
         addListToTag(tags.get("United Kingdom"), "countriesInTheUnitedKingdom");
+        addListToTag(tags.get("United States"), "unitedStates");
         addListToTag(tags.get("Vacuum"), "vacuums");
         addListToTag(tags.get("Vegetable"), "vegetables");
         addListToTag(tags.get("Video Game"), "videoGames", "videoGameConsoles", "videoGameTypes");
@@ -511,9 +512,28 @@ public final class TextTagger {
         List<String> nonMatches = new ArrayList<>();
         String textTest = text.toUpperCase();
         
-        String tagRegex = "^([^A-Z0-9]*X[^A-Z0-9].*)|(.*[^A-Z0-9]X[^A-Z0-9]*)|(.*[^A-Z0-9]X[^A-Z0-9].*)|([^A-Z0-9]*X[^A-Z0-9]*)$";
+        String wordDiv = "[^A-Z0-9]";
+        String wordDivCombined = "[^A-Z0-9&\\-]";
+        String tagRegex = "^" +
+                "(" + wordDiv + "*X" + wordDiv + ".*)|" +
+                "(.*" + wordDiv + "X" + wordDiv + "*)|" +
+                "(.*" + wordDiv + "X" + wordDiv + ".*)|" +
+                "(" + wordDiv + "*X" + wordDiv + "*)" +
+                "$";
+        String tagRegexCombined = "^" + 
+                "(" + wordDivCombined + "*X" + wordDivCombined + ".*)|" + 
+                "(.*" + wordDivCombined + "X" + wordDivCombined + "*)|" + 
+                "(.*" + wordDivCombined + "X" + wordDivCombined + ".*)|" + 
+                "(" + wordDivCombined + "*X" + wordDivCombined + "*)" + 
+                "$";
         
-        for (String word : StringUtility.removePunctuation(text).split("\\s+", -1)) {
+        List<String> words = new ArrayList<>();
+        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
+        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("[\\s&\\-]+", -1)));
+        for (String word : words) {
+            word = word.replaceAll("^[&\\-]+", "");
+            word = word.replaceAll("[&\\-]+$", "");
+            
             if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
                 tags.add("Apple");
                 matches.add("Apple");
@@ -531,7 +551,7 @@ public final class TextTagger {
                 tags.add("Cow");
                 matches.add("Cow");
             }
-            if (word.startsWith("PURR") || word.startsWith("MEOW")) {
+            if (word.startsWith("PURR") || word.startsWith("MEOW") || word.startsWith("NYAN")) {
                 tags.add("Cat");
                 matches.add("Cat");
             }
@@ -558,7 +578,7 @@ public final class TextTagger {
         }
         
         for (Tag tag : tagList.values()) {
-            String tagEntry = StringUtility.trim(StringUtility.removePunctuation(tag.name));
+            String tagEntry = StringUtility.trim(StringUtility.removePunctuationSoft(tag.name, Arrays.asList('&', '-')));
             if (tags.contains(tagEntry) || tag.minor) {
                 continue;
             }
@@ -576,7 +596,8 @@ public final class TextTagger {
                         }
                         
                         String tagTest = StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend;
-                        if (textTest.matches(tagRegex.replace("X", tagTest))) {
+                        if (textTest.matches(tagRegex.replace("X", tagTest)) || 
+                                textTest.matches(tagRegexCombined.replace("X", tagTest))) {
                             tags.add(tagEntry);
                             if (printTagTrigger) {
                                 System.out.println(tag.name + " -> " + tagTest);
@@ -596,7 +617,7 @@ public final class TextTagger {
             }
             
             for (String alias : tag.aliases) {
-                String aliasEntry = StringUtility.trim(StringUtility.removePunctuation(alias));
+                String aliasEntry = StringUtility.trim(StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-')));
                 if (aliasEntry.isEmpty()) {
                     continue;
                 }
@@ -612,7 +633,8 @@ public final class TextTagger {
                 }
                 
                 for (String append : Arrays.asList("", "S", "ES")) {
-                    if (textTest.matches(tagRegex.replace("X", aliasEntry.toUpperCase() + append))) {
+                    if (textTest.matches(tagRegex.replace("X", aliasEntry.toUpperCase() + append)) ||
+                            textTest.matches(tagRegexCombined.replace("X", aliasEntry.toUpperCase() + append))) {
                         tags.add(tagEntry);
                         if (printTagTrigger) {
                             System.out.println(tag.name + " -> " + aliasEntry + append.toLowerCase());
@@ -625,7 +647,8 @@ public final class TextTagger {
                     break;
                 }
                 if (aliasEntry.toUpperCase().endsWith("Y")) {
-                    if (textTest.matches(tagRegex.replace("X", StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "IES"))) {
+                    if (textTest.matches(tagRegex.replace("X", StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "IES")) ||
+                            textTest.matches(tagRegexCombined.replace("X", StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "IES"))) {
                         tags.add(tagEntry);
                         if (printTagTrigger) {
                             System.out.println(tag.name + " -> " + aliasEntry + "ies");

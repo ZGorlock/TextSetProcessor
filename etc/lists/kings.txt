@@ -21,6 +21,7 @@ Henry II
 Henry III
 Henry V
 Henry VI
+Henry IV
 Henry VII
 Henry VIII
 James II
