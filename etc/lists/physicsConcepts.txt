@@ -35,7 +35,6 @@ Electromagnetic Radiation
 Electromagnetic Wave
 Electromagnetism
 Electron
-Element
 Elementary Force
 Elementary Particle
 Energy

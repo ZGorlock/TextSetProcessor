@@ -23,7 +23,7 @@ Bulimia
 Bulimic
 Catatonic Behavior
 Conduct Disorder
-Delerium
+Delirium
 Delusional
 Delusions
 Dependent Personality
@@ -33,7 +33,7 @@ Depression
 Depressive
 Derealization
 Dissociative Identity Disorder
-Dual Persnoalities
+Dual Personalities
 Dyslexia
 Dyslexic
 Dysmorphia
@@ -73,7 +73,7 @@ Pica
 PostTraumatic Stress Disorder
 Pyromania
 Pyromaniac
-Ractive Attachment Disorder
+Reactive Attachment Disorder
 Restless Leg Syndrome
 Runimation
 Schizoid
@@ -82,7 +82,6 @@ Schizotypal
 Separation Anxiety
 Social Anxiety
 Somatic
-Speech Impediment
 Split Personalities
 Stockholm
 Stockholm Syndrome

@@ -38,8 +38,6 @@ import worker.TextTagger;
  */
 public class Jokes {
     
-    //TODO check dontDoTags for adding endings
-    
     //Enums
     
     /**

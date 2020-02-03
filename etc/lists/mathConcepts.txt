@@ -240,7 +240,6 @@ Narcissistic Number
 Natural Number
 Negative Integer
 Null Set
-Number
 Number Line
 Number Sequence
 Number Theory

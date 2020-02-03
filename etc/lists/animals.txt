@@ -24,7 +24,6 @@ Arctic Wolf
 Armadillo
 Arrow Crab
 Asp
-Ass
 Baboon
 Badger
 Bald Eagle
@@ -33,7 +32,6 @@ Bandicoot
 Barnacle
 Barracuda
 Basilisk
-Bass
 Bat
 Beaked Whale
 Bear
