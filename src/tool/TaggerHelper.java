@@ -65,13 +65,14 @@ public class TaggerHelper {
             Joke joke = ListUtility.selectRandom(tagged);
             if (joke != null) {
                 System.out.println("\n\n\n");
-                for (String s : StringUtility.wrapText(joke.text, 120)) {
-                    System.out.println(s);
-                }
+                System.out.println(joke.text);
                 joke.tags = textTagger.getTagsFromText(joke.text);
                 joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
                 System.out.println();
     
+                for (String s : StringUtility.wrapText(joke.text, 120)) {
+                    System.out.println(s);
+                }
                 System.out.println("Tags: ");
                 StringBuilder tags = new StringBuilder();
                 for (String tag : joke.tags) {

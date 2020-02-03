@@ -42,6 +42,11 @@ public class Tag {
     public boolean dontDoS = false;
     
     /**
+     * A flag indicating whether or not the tag is should process -ED ending replacements.
+     */
+    public boolean dontDoED = false;
+    
+    /**
      * A flag indicating whether or not the tag is should process -ES ending replacements.
      */
     public boolean dontDoES = false;

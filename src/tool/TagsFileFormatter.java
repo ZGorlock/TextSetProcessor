@@ -64,6 +64,10 @@ public final class TagsFileFormatter {
                 line.append(first ? "" : " ").append("-dontDoS");
                 first = false;
             }
+            if (tag.dontDoED) {
+                line.append(first ? "" : " ").append("-dontDoED");
+                first = false;
+            }
             if (tag.dontDoES) {
                 line.append(first ? "" : " ").append("-dontDoES");
                 first = false;

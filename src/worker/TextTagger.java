@@ -16,6 +16,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import pojo.Tag;
@@ -106,6 +108,7 @@ public final class TextTagger {
         
         tagEndingToReplacements.put("", Arrays.asList("", "S", "ES", "Y", "ER", "ERS", "ED", "ING", "I", "IC", "MAN"));
         tagEndingToReplacements.put("s", Arrays.asList("", "ING", "ED"));
+        tagEndingToReplacements.put("ed", Collections.singletonList(""));
         tagEndingToReplacements.put("es", Arrays.asList("", "ING", "ED"));
         tagEndingToReplacements.put("ies", Arrays.asList("Y", "C"));
         tagEndingToReplacements.put("y", Arrays.asList("", "ER", "ERS", "IES", "IST", "IC", "ICAL", "ICALLY"));
@@ -119,6 +122,7 @@ public final class TextTagger {
         
         tagEndingToDontDoList.put("", Collections.emptyList());
         tagEndingToDontDoList.put("s", tagList.values().stream().filter(tag -> tag.dontDoS).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("ed", tagList.values().stream().filter(tag -> tag.dontDoED).map(tag -> tag.name).collect(Collectors.toList()));
         tagEndingToDontDoList.put("es", tagList.values().stream().filter(tag -> tag.dontDoES).map(tag -> tag.name).collect(Collectors.toList()));
         tagEndingToDontDoList.put("ies", tagList.values().stream().filter(tag -> tag.dontDoIES).map(tag -> tag.name).collect(Collectors.toList()));
         tagEndingToDontDoList.put("y", tagList.values().stream().filter(tag -> tag.dontDoY).map(tag -> tag.name).collect(Collectors.toList()));
@@ -157,7 +161,8 @@ public final class TextTagger {
      */
     private Map<String, Tag> parseTags() {
         Map<String, Tag> tags = new LinkedHashMap<>();
-        
+    
+        Pattern dontDoXPattern = Pattern.compile("^.+\\s-x\\[(?<list>[^]]*)].*$");
         for (String line : Filesystem.readLines(new File("etc/tags.txt"))) {
             Tag thisTag = new Tag();
             if (line.contains(" -nsfw")) {
@@ -171,6 +176,10 @@ public final class TextTagger {
             if (line.contains(" -dontDoS")) {
                 thisTag.dontDoS = true;
                 line = line.replace(" -dontDoS", "");
+            }
+            if (line.contains(" -dontDoED")) {
+                thisTag.dontDoED = true;
+                line = line.replace(" -dontDoED", "");
             }
             if (line.contains(" -dontDoES")) {
                 thisTag.dontDoES = true;
@@ -537,43 +546,73 @@ public final class TextTagger {
             if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
                 tags.add("Apple");
                 matches.add("Apple");
+                if (printTagTrigger) {
+                    System.out.println("Apple" + " -> " + "i*");
+                }
             }
             if (word.equalsIgnoreCase("gorilla") && text.toLowerCase().matches("^.+\\shar.+$")) {
                 tags.add("Harambe");
                 matches.add("Harambe");
+                if (printTagTrigger) {
+                    System.out.println("Harambe" + " -> " + "Gorilla & Har*");
+                }
             }
             word = word.toUpperCase();
             if (word.endsWith("SAURUS")) {
                 tags.add("Dinosaur");
                 matches.add("Dinosaur");
+                if (printTagTrigger) {
+                    System.out.println("Dinosaur" + " -> " + "*saurus");
+                }
             }
             if (word.startsWith("MOO")) {
                 tags.add("Cow");
                 matches.add("Cow");
+                if (printTagTrigger) {
+                    System.out.println("Cow" + " -> " + "Moo*");
+                }
             }
             if (word.startsWith("PURR") || word.startsWith("MEOW") || word.startsWith("NYAN")) {
                 tags.add("Cat");
                 matches.add("Cat");
+                if (printTagTrigger) {
+                    System.out.println("Cow" + " -> " + "Purr* | Meow* | Nyan*");
+                }
             }
             if (word.startsWith("MEIN") || word.startsWith("KAMPF") || word.startsWith("LUFT")) {
                 tags.add("Germany");
                 matches.add("Germany");
+                if (printTagTrigger) {
+                    System.out.println("Germany" + " -> " + "Mein* | Kampf* | Luft*");
+                }
             }
             if (word.endsWith("SPORT") || word.endsWith("SPORTS")) {
                 tags.add("Sport");
                 matches.add("Sport");
+                if (printTagTrigger) {
+                    System.out.println("Sport" + " -> " + "*sport | *sports");
+                }
             }
             if (word.endsWith("SEXUAL") && !word.equals("SEXUAL")) {
                 tags.add("Gender");
                 matches.add("Gender");
+                if (printTagTrigger) {
+                    System.out.println("Gender" + " -> " + "*sexual");
+                }
             }
             if (word.contains("SHREK")) {
                 tags.add("Shrek");
                 matches.add("Shrek");
+                if (printTagTrigger) {
+                    System.out.println("Shrek" + " -> " + "Shrek*");
+                }
             }
             if (word.contains("NAZI")) {
                 tags.add("Nazi");
                 matches.add("Nazi");
+                if (printTagTrigger) {
+                    System.out.println("Nazi" + " -> " + "*nazi*");
+                }
             }
         }
         
@@ -582,8 +621,12 @@ public final class TextTagger {
             if (tags.contains(tagEntry) || tag.minor) {
                 continue;
             }
+            
             if (matches.contains(tagEntry)) {
                 tags.add(tagEntry);
+                if (printTagTrigger) {
+                    System.out.println(tag.name + " -> " + tag.name);
+                }
                 continue;
             }
             
@@ -591,7 +634,7 @@ public final class TextTagger {
                 
                 if (tagEntry.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tagEntry)) {
                     for (String tagAppend : tagEndingToReplacements.get(ending)) {
-                        if (tagAppend.equals("ING") && tagEndingToDontDoList.get("ing").contains(tagEntry)) {
+                        if (tagEndingToDontDoList.containsKey(tagAppend.toLowerCase()) && tagEndingToDontDoList.get(tagAppend.toLowerCase()).contains(tagEntry)) {
                             continue;
                         }
                         
