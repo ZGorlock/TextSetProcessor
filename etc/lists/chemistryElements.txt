@@ -38,7 +38,6 @@ Francium
 Gadolinium
 Gallium
 Germanium
-Gold
 Hafnium
 Hassium
 Helium
@@ -47,11 +46,9 @@ Hydrogen
 Indium
 Iodine
 Iridium
-Iron
 Krypton
 Lanthanum
 Lawrencium
-Lead
 Lithium
 Livermorium
 Lutetium
@@ -97,7 +94,6 @@ Scandium
 Seaborgium
 Selenium
 Silicon
-Silver
 Sodium
 Strontium
 Sulfur
@@ -109,7 +105,6 @@ Terbium
 Thallium
 Thorium
 Thulium
-Tin
 Titanium
 Tungsten
 Uranium

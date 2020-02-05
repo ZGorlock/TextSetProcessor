@@ -107,20 +107,20 @@ Dingo
 Dinosaur
 Dog
 Dolphin
-Domestic Bactrian Camel
-Domestic Canary
-Domestic Dromedary Camel
-Domestic Duck
-Domestic Goat
-Domestic Goose
-Domestic Guineafowl
-Domestic Hedgehog
-Domestic Pig
-Domestic Pigeon
-Domestic Rabbit
-Domestic Silkmoth
-Domestic Silver Fox
-Domestic Turkey
+Camel
+Canary
+Camel
+Duck
+Goat
+Goose
+Guineafowl
+Hedgehog
+Pig
+Pigeon
+Rabbit
+Silkmoth
+Silver Fox
+Turkey
 Donkey
 Dormouse
 Dove
@@ -334,7 +334,6 @@ Rainbow Trout
 Rat
 Rattlesnake
 Raven
-Ray
 Red Panda
 Reindeer
 Reptile
@@ -370,7 +369,6 @@ Skink
 Skunk
 Sloth
 Slug
-Smelt
 Snail
 Snake
 Snipe
@@ -396,7 +394,6 @@ Sturgeon
 Sugar Glider
 Swallow
 Swan
-Swift
 Swordfish
 Swordtail
 Tahr

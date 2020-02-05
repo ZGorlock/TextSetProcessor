@@ -544,74 +544,104 @@ public final class TextTagger {
             word = word.replaceAll("[&\\-]+$", "");
             
             if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
-                tags.add("Apple");
-                matches.add("Apple");
-                if (printTagTrigger) {
-                    System.out.println("Apple" + " -> " + "i*");
+                if (!tags.contains("Apple")) {
+                    tags.add("Apple");
+                    matches.add("Apple");
+                    if (printTagTrigger) {
+                        System.out.println("Apple" + " -> " + "i*");
+                    }
                 }
             }
             if (word.equalsIgnoreCase("gorilla") && text.toLowerCase().matches("^.+\\shar.+$")) {
-                tags.add("Harambe");
-                matches.add("Harambe");
-                if (printTagTrigger) {
-                    System.out.println("Harambe" + " -> " + "Gorilla & Har*");
+                if (!tags.contains("Harambe")) {
+                    tags.add("Harambe");
+                    matches.add("Harambe");
+                    if (printTagTrigger) {
+                        System.out.println("Harambe" + " -> " + "Gorilla & Har*");
+                    }
                 }
             }
             word = word.toUpperCase();
             if (word.endsWith("SAURUS")) {
-                tags.add("Dinosaur");
-                matches.add("Dinosaur");
-                if (printTagTrigger) {
-                    System.out.println("Dinosaur" + " -> " + "*saurus");
+                if (!tags.contains("Dinosaur")) {
+                    tags.add("Dinosaur");
+                    matches.add("Dinosaur");
+                    if (printTagTrigger) {
+                        System.out.println("Dinosaur" + " -> " + "*saurus");
+                    }
                 }
             }
             if (word.startsWith("MOO")) {
-                tags.add("Cow");
-                matches.add("Cow");
-                if (printTagTrigger) {
-                    System.out.println("Cow" + " -> " + "Moo*");
+                if (!tags.contains("Cow")) {
+                    tags.add("Cow");
+                    matches.add("Cow");
+                    if (printTagTrigger) {
+                        System.out.println("Cow" + " -> " + "Moo*");
+                    }
                 }
             }
             if (word.startsWith("PURR") || word.startsWith("MEOW") || word.startsWith("NYAN")) {
-                tags.add("Cat");
-                matches.add("Cat");
-                if (printTagTrigger) {
-                    System.out.println("Cow" + " -> " + "Purr* | Meow* | Nyan*");
+                if (!tags.contains("Cat")) {
+                    tags.add("Cat");
+                    matches.add("Cat");
+                    if (printTagTrigger) {
+                        System.out.println("Cow" + " -> " + "Purr* | Meow* | Nyan*");
+                    }
                 }
             }
             if (word.startsWith("MEIN") || word.startsWith("KAMPF") || word.startsWith("LUFT")) {
-                tags.add("Germany");
-                matches.add("Germany");
-                if (printTagTrigger) {
-                    System.out.println("Germany" + " -> " + "Mein* | Kampf* | Luft*");
+                if (!tags.contains("Germany")) {
+                    tags.add("Germany");
+                    matches.add("Germany");
+                    if (printTagTrigger) {
+                        System.out.println("Germany" + " -> " + "Mein* | Kampf* | Luft*");
+                    }
                 }
             }
-            if (word.endsWith("SPORT") || word.endsWith("SPORTS")) {
-                tags.add("Sport");
-                matches.add("Sport");
-                if (printTagTrigger) {
-                    System.out.println("Sport" + " -> " + "*sport | *sports");
+            if ((word.endsWith("SPORT") || word.endsWith("SPORTS"))) {
+                if (!tags.contains("Sport")) {
+                    List<String> notSport = Arrays.asList("Disport", "Gosport", "Passport", "Transport", "Spoilsport", "Cotransport");
+                    boolean isNotSport = false;
+                    for (String notSportEntry : notSport) {
+                        if (word.equalsIgnoreCase(notSportEntry) || word.equalsIgnoreCase(notSportEntry + "s")) {
+                            isNotSport = true;
+                            break;
+                        }
+                    }
+                    if (!isNotSport) {
+                        tags.add("Sport");
+                        matches.add("Sport");
+                        if (printTagTrigger) {
+                            System.out.println("Sport" + " -> " + "*sport | *sports");
+                        }
+                    }
                 }
             }
             if (word.endsWith("SEXUAL") && !word.equals("SEXUAL")) {
-                tags.add("Gender");
-                matches.add("Gender");
-                if (printTagTrigger) {
-                    System.out.println("Gender" + " -> " + "*sexual");
+                if (!tags.contains("Gender")) {
+                    tags.add("Gender");
+                    matches.add("Gender");
+                    if (printTagTrigger) {
+                        System.out.println("Gender" + " -> " + "*sexual");
+                    }
                 }
             }
             if (word.contains("SHREK")) {
-                tags.add("Shrek");
-                matches.add("Shrek");
-                if (printTagTrigger) {
-                    System.out.println("Shrek" + " -> " + "Shrek*");
+                if (!tags.contains("Shrek")) {
+                    tags.add("Shrek");
+                    matches.add("Shrek");
+                    if (printTagTrigger) {
+                        System.out.println("Shrek" + " -> " + "Shrek*");
+                    }
                 }
             }
             if (word.contains("NAZI")) {
-                tags.add("Nazi");
-                matches.add("Nazi");
-                if (printTagTrigger) {
-                    System.out.println("Nazi" + " -> " + "*nazi*");
+                if (!tags.contains("Nazi")) {
+                    tags.add("Nazi");
+                    matches.add("Nazi");
+                    if (printTagTrigger) {
+                        System.out.println("Nazi" + " -> " + "*nazi*");
+                    }
                 }
             }
         }
@@ -680,7 +710,7 @@ public final class TextTagger {
                             textTest.matches(tagRegexCombined.replace("X", aliasEntry.toUpperCase() + append))) {
                         tags.add(tagEntry);
                         if (printTagTrigger) {
-                            System.out.println(tag.name + " -> " + aliasEntry + append.toLowerCase());
+                            System.out.println(tag.name + " -> " + aliasEntry.toUpperCase() + append.toLowerCase());
                         }
                         matches.add(aliasEntry);
                         break;
@@ -694,7 +724,7 @@ public final class TextTagger {
                             textTest.matches(tagRegexCombined.replace("X", StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "IES"))) {
                         tags.add(tagEntry);
                         if (printTagTrigger) {
-                            System.out.println(tag.name + " -> " + aliasEntry + "ies");
+                            System.out.println(tag.name + " -> " + StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "ies");
                         }
                         matches.add(aliasEntry);
                         break;

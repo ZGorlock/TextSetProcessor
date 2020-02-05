@@ -26,6 +26,8 @@ Catcher
 Climbing
 Coach
 Cricket
+Crosscountry
+Cross Country
 Cross Country Cycling
 Cross Country Equestrianism
 Cross Country Running
@@ -95,7 +97,6 @@ Paddleboarding
 Penalty
 Pitcher
 Play Ball
-Player
 Playoffs
 Pole Vault
 Polo

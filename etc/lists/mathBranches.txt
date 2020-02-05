@@ -1,10 +1,10 @@
 Algebra
+Calc
 Calculus
 Combinatoric
 Computation
 Geometry
 Information Theory
-Probability
 Signal Processing
 Statistic
 Topology

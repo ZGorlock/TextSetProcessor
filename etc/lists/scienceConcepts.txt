@@ -18,7 +18,6 @@ Energy
 Evolution
 Experiment
 Experimental
-Fact
 Flask
 Fossil
 Funnel
