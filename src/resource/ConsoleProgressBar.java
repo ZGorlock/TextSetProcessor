@@ -260,6 +260,7 @@ public class ConsoleProgressBar {
         System.out.print(bar);
         System.out.flush();
         System.err.flush();
+        update = false;
     }
     
     /**
