@@ -673,15 +673,15 @@ public final class TextTagger {
                     }
                     continue;
                 }
-    
+                
                 for (String ending : tagEndingToDontDoList.keySet()) {
-        
+                    
                     if (tagEntry.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tagEntry)) {
                         for (String tagAppend : tagEndingToReplacements.get(ending)) {
                             if (tagEndingToDontDoList.containsKey(tagAppend.toLowerCase()) && tagEndingToDontDoList.get(tagAppend.toLowerCase()).contains(tagEntry)) {
                                 continue;
                             }
-                
+                            
                             String tagTest = StringUtility.rShear(tagEntryTest.toUpperCase(), ending.length()) + tagAppend;
                             if (textTest.matches(tagRegex.replace("X", tagTest)) ||
                                     textTestCombined.matches(tagRegexCombined.replace("X", tagTest))) {
@@ -694,7 +694,7 @@ public final class TextTagger {
                             }
                         }
                     }
-        
+                    
                     if (tags.contains(tagEntry)) {
                         break;
                     }
