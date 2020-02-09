@@ -120,7 +120,7 @@ public final class NsfwChecker {
             }
         }
         
-        Pattern wordGetter = Pattern.compile("(^|(?<=\\s))(?<word>.+)((?=\\s|$))");
+        Pattern wordGetter = Pattern.compile("(^|(?<=\\s|-))(?<word>[^\\s-]+)((?=\\s|-|$))");
         Matcher wordMatcher = wordGetter.matcher(text);
         while (wordMatcher.find()) {
             String word = StringUtility.removePunctuation(wordMatcher.group("word").toLowerCase().replaceAll("'?s?$", ""));

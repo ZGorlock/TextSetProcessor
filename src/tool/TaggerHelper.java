@@ -69,7 +69,7 @@ public class TaggerHelper {
                 joke.tags = textTagger.getTagsFromText(joke.text);
                 joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
                 System.out.println();
-    
+                
                 for (String s : StringUtility.wrapText(joke.text, 120)) {
                     System.out.println(s);
                 }

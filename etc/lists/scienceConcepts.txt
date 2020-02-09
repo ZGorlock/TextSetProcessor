@@ -6,7 +6,6 @@ Beaker
 Bunsen Burner
 Burette
 Cation
-Cell
 Chemical
 Climate
 Cuvette
@@ -29,10 +28,8 @@ Hypothesis
 Laboratory
 Lepidoptery
 Magnetism
-Mass
 Measure
 Microscope
-Mineral
 Molecule
 Observatory
 Observe

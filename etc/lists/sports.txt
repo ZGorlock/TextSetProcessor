@@ -1,4 +1,6 @@
 Aerobics
+Parkour
+Freerunning
 Aikido
 Archery
 Arena

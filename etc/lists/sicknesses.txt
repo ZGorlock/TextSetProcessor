@@ -1,4 +1,6 @@
 Alzheimers
+Seizure
+Seizing
 Bronchiolitis
 Bronchitis
 Cancer

@@ -435,8 +435,10 @@ public final class JokeParser {
                         thisJoke.tags.addAll(typeTags);
                         thisJoke.hash = StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().hashCode();
                         
-                        if (hashes.containsKey(thisJoke.hash)) {
-                            hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
+                        Joke existingJoke = hashes.get(thisJoke.hash);
+                        if (existingJoke != null) {
+                            existingJoke.tags.addAll(thisJoke.tags);
+                            existingJoke.nsfw = existingJoke.nsfw || thisJoke.nsfw;
                         } else {
                             jokes.add(thisJoke);
                             hashes.put(thisJoke.hash, thisJoke);

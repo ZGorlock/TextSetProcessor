@@ -48,7 +48,6 @@ Fundamental Force
 Galaxy
 Gamma Ray
 Gamma Ray Burst
-Gas
 General Theory of Relativity
 Geodesic
 Grand Unified Theory
@@ -73,10 +72,8 @@ Length Contraction
 Light Year
 Magnetic Field
 Magnetic Monopole
-Mass
 Mass Energy Equivalence
 MassEnergy Equivalence
-Matter
 Momentum
 Multiverse
 Neutrino
@@ -132,7 +129,6 @@ Space Time
 SpaceTime
 Special Theory of Relativity
 Speed of Light
-Star
 Steady State Universe
 String Theory
 Strong Nuclear Force

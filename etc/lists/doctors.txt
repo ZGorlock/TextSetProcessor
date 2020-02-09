@@ -1,4 +1,6 @@
 Allergist
+Proctologist
+Proctology
 Anesthesiologist
 Anesthesiology
 Anesthetist

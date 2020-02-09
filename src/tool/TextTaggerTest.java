@@ -13,7 +13,7 @@ import java.util.Scanner;
 import worker.TextTagger;
 
 /**
- * Tests the Text Tagger
+ * Tests the Text Tagger.
  */
 public final class TextTaggerTest {
     

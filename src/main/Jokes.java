@@ -64,7 +64,8 @@ public class Jokes {
         PARSE("/source/1 - cleaned", "/source/2 - parsed/parsed.json"),
         FIX("/source/2 - parsed/parsed.json", "/source/3 - fixed/fixed.json"),
         TAG("/source/3 - fixed/fixed.json", "/source/4 - tagged/tagged.json"),
-        COMPILE("/source/4 - tagged/tagged.json", "/<jokeSet>.json"),
+        COMPILE("/source/3 - fixed/fixed.json", "/<jokeSet>.json"),
+        //        COMPILE("/source/4 - tagged/tagged.json", "/<jokeSet>.json"),
         MERGE("/../~", "/../jokes.json");
         
         public String in;
@@ -88,7 +89,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
      */
-    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, true, false, false);
+    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, false, true, true);
     
     /**
      * A flag indicating whether or not to perform a clean start.

@@ -51,6 +51,7 @@ Long John Silvers
 LongHorn Steakhouse
 Macaroni Grill
 McDonalds
+McDonald's
 OCharleys
 Olive Garden
 Outback Steakhouse
@@ -72,10 +73,8 @@ Ruby Tuesday
 Ruths Chris Steak House
 Sbarro
 Sheetz
-Sonic
 Starbucks
 Steak N Shake
-Subway
 TGI Fridays
 Taco Bell
 Texas Roadhouse

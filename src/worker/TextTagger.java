@@ -16,7 +16,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -59,6 +58,11 @@ public final class TextTagger {
      * A map between tag endings and possible replacements for them.
      */
     public final Map<String, List<String>> tagEndingToReplacements = new HashMap<>();
+    
+    /**
+     * A list of aliases to not append -ES to.
+     */
+    public final List<String> aliasDontDoES = new ArrayList<>();
     
     /**
      * A flag indicating whether or not to load extra tag alias lists.
@@ -132,6 +136,8 @@ public final class TextTagger {
         tagEndingToDontDoList.put("er", tagList.values().stream().filter(tag -> tag.dontDoER).map(tag -> tag.name).collect(Collectors.toList()));
         tagEndingToDontDoList.put("or", tagList.values().stream().filter(tag -> tag.dontDoOR).map(tag -> tag.name).collect(Collectors.toList()));
         
+        aliasDontDoES.add("HAT");
+        
         int totalKeywords = 0;
         for (Tag tag : tagList.values()) {
             List<String> appendings = new ArrayList<>();
@@ -161,7 +167,7 @@ public final class TextTagger {
      */
     private Map<String, Tag> parseTags() {
         Map<String, Tag> tags = new LinkedHashMap<>();
-    
+        
         Pattern dontDoXPattern = Pattern.compile("^.+\\s-x\\[(?<list>[^]]*)].*$");
         for (String line : Filesystem.readLines(new File("etc/tags.txt"))) {
             Tag thisTag = new Tag();
@@ -519,7 +525,8 @@ public final class TextTagger {
         List<String> tags = new ArrayList<>();
         List<String> matches = new ArrayList<>();
         List<String> nonMatches = new ArrayList<>();
-        String textTest = text.toUpperCase();
+        String textTest = text.toUpperCase().replace("-", "");
+        String textTestCombined = text.toUpperCase();
         
         String wordDiv = "[^A-Z0-9]";
         String wordDivCombined = "[^A-Z0-9&\\-]";
@@ -529,16 +536,21 @@ public final class TextTagger {
                 "(.*" + wordDiv + "X" + wordDiv + ".*)|" +
                 "(" + wordDiv + "*X" + wordDiv + "*)" +
                 "$";
-        String tagRegexCombined = "^" + 
-                "(" + wordDivCombined + "*X" + wordDivCombined + ".*)|" + 
-                "(.*" + wordDivCombined + "X" + wordDivCombined + "*)|" + 
-                "(.*" + wordDivCombined + "X" + wordDivCombined + ".*)|" + 
-                "(" + wordDivCombined + "*X" + wordDivCombined + "*)" + 
+        String tagRegexCombined = "^" +
+                "(" + wordDivCombined + "*X" + wordDivCombined + ".*)|" +
+                "(.*" + wordDivCombined + "X" + wordDivCombined + "*)|" +
+                "(.*" + wordDivCombined + "X" + wordDivCombined + ".*)|" +
+                "(" + wordDivCombined + "*X" + wordDivCombined + "*)" +
                 "$";
         
-        List<String> words = new ArrayList<>();
-        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
+        List<String> words = new ArrayList<>(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
+        List<String> combinedWords = new ArrayList<>();
+        for (String combinedWord : words) {
+            combinedWords.add(combinedWord.replaceAll("[&\\-]", ""));
+        }
+        words.addAll(combinedWords);
         words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("[\\s&\\-]+", -1)));
+        words = ListUtility.removeDuplicates(words);
         for (String word : words) {
             word = word.replaceAll("^[&\\-]+", "");
             word = word.replaceAll("[&\\-]+$", "");
@@ -571,7 +583,7 @@ public final class TextTagger {
                     }
                 }
             }
-            if (word.startsWith("MOO")) {
+            if (word.startsWith("MOO") && !word.equals("MOON") && !word.equals("MOOD")) {
                 if (!tags.contains("Cow")) {
                     tags.add("Cow");
                     matches.add("Cow");
@@ -648,49 +660,53 @@ public final class TextTagger {
         
         for (Tag tag : tagList.values()) {
             String tagEntry = StringUtility.trim(StringUtility.removePunctuationSoft(tag.name, Arrays.asList('&', '-')));
-            if (tags.contains(tagEntry) || tag.minor) {
-                continue;
-            }
-            
-            if (matches.contains(tagEntry)) {
-                tags.add(tagEntry);
-                if (printTagTrigger) {
-                    System.out.println(tag.name + " -> " + tag.name);
-                }
-                continue;
-            }
-            
-            for (String ending : tagEndingToDontDoList.keySet()) {
-                
-                if (tagEntry.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tagEntry)) {
-                    for (String tagAppend : tagEndingToReplacements.get(ending)) {
-                        if (tagEndingToDontDoList.containsKey(tagAppend.toLowerCase()) && tagEndingToDontDoList.get(tagAppend.toLowerCase()).contains(tagEntry)) {
-                            continue;
-                        }
-                        
-                        String tagTest = StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend;
-                        if (textTest.matches(tagRegex.replace("X", tagTest)) || 
-                                textTest.matches(tagRegexCombined.replace("X", tagTest))) {
-                            tags.add(tagEntry);
-                            if (printTagTrigger) {
-                                System.out.println(tag.name + " -> " + tagTest);
-                            }
-                            matches.add(tagEntry);
-                            break;
-                        }
-                    }
-                }
-                
-                if (tags.contains(tagEntry)) {
-                    break;
-                }
-            }
+            String tagEntryTest = tagEntry.replace("-", "\\\\-");
             if (tags.contains(tagEntry)) {
                 continue;
             }
             
+            if (!tag.minor) {
+                if (matches.contains(tagEntry)) {
+                    tags.add(tagEntry);
+                    if (printTagTrigger) {
+                        System.out.println(tag.name + " -> " + tag.name);
+                    }
+                    continue;
+                }
+    
+                for (String ending : tagEndingToDontDoList.keySet()) {
+        
+                    if (tagEntry.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tagEntry)) {
+                        for (String tagAppend : tagEndingToReplacements.get(ending)) {
+                            if (tagEndingToDontDoList.containsKey(tagAppend.toLowerCase()) && tagEndingToDontDoList.get(tagAppend.toLowerCase()).contains(tagEntry)) {
+                                continue;
+                            }
+                
+                            String tagTest = StringUtility.rShear(tagEntryTest.toUpperCase(), ending.length()) + tagAppend;
+                            if (textTest.matches(tagRegex.replace("X", tagTest)) ||
+                                    textTestCombined.matches(tagRegexCombined.replace("X", tagTest))) {
+                                tags.add(tagEntry);
+                                if (printTagTrigger) {
+                                    System.out.println(tag.name + " -> " + tagTest);
+                                }
+                                matches.add(tagEntry);
+                                break;
+                            }
+                        }
+                    }
+        
+                    if (tags.contains(tagEntry)) {
+                        break;
+                    }
+                }
+                if (tags.contains(tagEntry)) {
+                    continue;
+                }
+            }
+            
             for (String alias : tag.aliases) {
                 String aliasEntry = StringUtility.trim(StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-')));
+                String aliasEntryTest = aliasEntry.replace("-", "\\\\-");
                 if (aliasEntry.isEmpty()) {
                     continue;
                 }
@@ -706,11 +722,16 @@ public final class TextTagger {
                 }
                 
                 for (String append : Arrays.asList("", "S", "ES")) {
-                    if (textTest.matches(tagRegex.replace("X", aliasEntry.toUpperCase() + append)) ||
-                            textTest.matches(tagRegexCombined.replace("X", aliasEntry.toUpperCase() + append))) {
+                    if (append.equals("ES") && aliasDontDoES.contains(aliasEntry.toUpperCase())) {
+                        continue;
+                    }
+                    String aliasTest = aliasEntryTest.toUpperCase() + append;
+                    if (textTest.matches(tagRegex.replace("X", aliasTest)) ||
+                            textTestCombined.matches(tagRegex.replace("X", aliasTest)) ||
+                            textTestCombined.matches(tagRegexCombined.replace("X", aliasTest))) {
                         tags.add(tagEntry);
                         if (printTagTrigger) {
-                            System.out.println(tag.name + " -> " + aliasEntry.toUpperCase() + append.toLowerCase());
+                            System.out.println(tag.name + " -> " + aliasTest);
                         }
                         matches.add(aliasEntry);
                         break;
@@ -720,11 +741,13 @@ public final class TextTagger {
                     break;
                 }
                 if (aliasEntry.toUpperCase().endsWith("Y")) {
-                    if (textTest.matches(tagRegex.replace("X", StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "IES")) ||
-                            textTest.matches(tagRegexCombined.replace("X", StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "IES"))) {
+                    String aliasTest = StringUtility.rShear(aliasEntryTest.toUpperCase(), 1) + "IES";
+                    if (textTest.matches(tagRegex.replace("X", aliasTest)) ||
+                            textTestCombined.matches(tagRegex.replace("X", aliasTest)) ||
+                            textTestCombined.matches(tagRegexCombined.replace("X", aliasTest))) {
                         tags.add(tagEntry);
                         if (printTagTrigger) {
-                            System.out.println(tag.name + " -> " + StringUtility.rShear(aliasEntry.toUpperCase(), 1) + "ies");
+                            System.out.println(tag.name + " -> " + aliasTest);
                         }
                         matches.add(aliasEntry);
                         break;
