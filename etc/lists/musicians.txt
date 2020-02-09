@@ -3,8 +3,6 @@
 AC/DC
 Abba
 Adele
-Beyonce
-Chopin
 Aerosmith
 Al Green
 Alanis Morissette
@@ -36,6 +34,7 @@ Bedrich Smetana
 Bee Gees
 Beethoven
 Benny Goodman
+Beyonce
 Beyonce Knowles
 Billie Holiday
 Billy Idol
@@ -70,6 +69,7 @@ Charlie Parker
 Cheap Trick
 Cher
 Chet Baker
+Chopin
 Chuck Berry
 Claude Debussy
 Claudio Monteverdi

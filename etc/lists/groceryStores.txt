@@ -1,6 +1,6 @@
 Albertsons
-Morrisons
 Kroger
+Morrisons
 Publix
 Safeway
 Save Mart

@@ -1,5 +1,4 @@
 Absolute Value
-Scalar
 Acute
 Acute Angle
 Acute Triangle
@@ -82,7 +81,6 @@ Congruent Polygon
 Conjecture
 Conjunction
 Convenience Sample
-Planar
 Coordinate
 Coordinate Plane
 Corresponding Angle
@@ -282,6 +280,7 @@ Pi
 Pi Day
 Pie Chart
 Placing the Decimal Point
+Planar
 Plane Figure
 Plohedra
 Point of Rotation
@@ -341,6 +340,7 @@ Roster Notation
 Rotational Symmetry
 Round Decimal Quotient
 Sample Space
+Scalar
 Scale Drawing
 Scalene Triangle
 Scatterplot

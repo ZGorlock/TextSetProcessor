@@ -5,12 +5,12 @@ Cuvette
 Funnel
 Glassware
 Graduated Cylinder
+Hot Plate
 Petri Dish
 Pipette
+Stir Bar
 Test Tube
+Titration
 Vial
 Volumetric Flask
 Watch Glass
-Titration
-Hot Plate
-Stir Bar

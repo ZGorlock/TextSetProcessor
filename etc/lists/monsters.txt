@@ -1,6 +1,4 @@
 Big Foot
-Ogre
-Orc
 BigFoot
 Bogeyman
 Boogeyman
@@ -16,6 +14,8 @@ Lycanthrope
 Minotaur
 Mothra
 Nessie
+Ogre
+Orc
 Samsquanch
 Sasquatch
 Vampire

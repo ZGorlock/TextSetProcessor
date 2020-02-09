@@ -1,6 +1,4 @@
 Aerobics
-Parkour
-Freerunning
 Aikido
 Archery
 Arena
@@ -28,12 +26,12 @@ Catcher
 Climbing
 Coach
 Cricket
-Crosscountry
 Cross Country
 Cross Country Cycling
 Cross Country Equestrianism
 Cross Country Running
 Cross Country Skiing
+Crosscountry
 Crosscountry Cycling
 Crosscountry Equestrianism
 Crosscountry Running
@@ -96,6 +94,7 @@ Olympic Swimming
 Olympics
 Paddle
 Paddleboarding
+Parkour
 Penalty
 Pitcher
 Play Ball

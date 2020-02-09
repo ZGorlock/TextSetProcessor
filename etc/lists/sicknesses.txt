@@ -1,15 +1,13 @@
 Alzheimers
-Seizure
-Seizing
 Bronchiolitis
 Bronchitis
 Cancer
 Cataract
-Concussion
 Chicken Pox
 Cholelithiasis
 Cold Sore
 Common Cold
+Concussion
 Cough
 Crohn
 Crohns Disease
@@ -50,6 +48,8 @@ Rabies
 Rash
 Rubella
 SARS
+Seizing
+Seizure
 Sinusitis
 Smallpox
 Sore Throat

@@ -1,5 +1,4 @@
 Belt
-Sundress
 Boot
 Bowtie
 Boxer Briefs
@@ -26,6 +25,7 @@ Skirt
 Slipper
 Sock
 Suit
+Sundress
 Sweater
 T Shirt
 TShirt

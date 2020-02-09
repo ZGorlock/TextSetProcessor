@@ -1,6 +1,6 @@
 Boyshort
-G-String
 G String
+G-String
 GString
 Hip Hugger
 Thong

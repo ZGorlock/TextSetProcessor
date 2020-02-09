@@ -1,5 +1,4 @@
 Akita
-German Shepard
 American Bulldog
 American Bully
 American Staddordshire Terrier
@@ -22,6 +21,7 @@ Dobermann
 English Cocker Spaniel
 English Mastiff
 French Bulldog
+German Shepard
 German Shepherd
 Golden Retriever
 Great Dane

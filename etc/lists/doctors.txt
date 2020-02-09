@@ -1,6 +1,4 @@
 Allergist
-Proctologist
-Proctology
 Anesthesiologist
 Anesthesiology
 Anesthetist
@@ -62,6 +60,8 @@ Plastic Surgery
 Podiatrist
 Podiatry
 Preventive Medicine Specialist
+Proctologist
+Proctology
 Psychiatrist
 Psychiatry
 Pulmonologist
