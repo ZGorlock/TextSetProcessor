@@ -174,7 +174,7 @@ public class Jokes {
      */
     private static void setup() {
         System.out.println("Starting Up...");
-        long startupTime = System.currentTimeMillis();
+        long startupStartTime = System.currentTimeMillis();
         
         if (doFastStart) {
             spellChecker.loadAdditionalDicts = false;
@@ -200,9 +200,11 @@ public class Jokes {
         }
         readTimeFile();
         
-        long endStartupTime = ((System.currentTimeMillis() - startupTime) / 1000);
-        totalTime += endStartupTime;
-        System.out.println("Started Up in " + endStartupTime + "s");
+        long startupEndTime = System.currentTimeMillis();
+        long startupTime = ((startupEndTime - startupStartTime) / 1000);
+        
+        totalTime += startupTime;
+        System.out.println("Started Up in " + produceDurationString(startupTime));
         System.out.println();
     }
     
@@ -252,18 +254,18 @@ public class Jokes {
                 long subParseEndTime = System.currentTimeMillis();
                 subParseTime = ((subParseEndTime - subParseStartTime) / 1000);
                 setSaveProcessTime(jokeSet, ProcessStep.PARSE, subParseTime);
+            } else {
+                progressBar.setInitialDuration(subParseTime);
             }
             parseTime += subParseTime;
             int size = readJokes(parsedFile).size();
             
             progressBar.setTotal(size);
-            progressBar.update(size);
-            progressBar.print();
-            System.out.println(" (" + subParseTime + "s)");
+            progressBar.complete(true);
         }
         
         totalTime += parseTime;
-        System.out.println("Parsed Jokes in " + parseTime + "s");
+        System.out.println("Parsed Jokes in " + produceDurationString(parseTime));
         System.out.println();
     }
     
@@ -302,6 +304,7 @@ public class Jokes {
             if (subFixTime < 0 || fixedWorkFile.exists()) {
                 if (subFixTime < 0) {
                     Filesystem.deleteDirectory(fixedFile.getParentFile());
+                    subFixTime = 0;
                 }
                 Filesystem.createDirectory(fixedFile.getParentFile());
                 
@@ -323,6 +326,7 @@ public class Jokes {
                 
                 progressBar.setTotal(work.size() + fixed.size());
                 progressBar.setInitialProgress(fixed.size());
+                progressBar.setInitialDuration(subFixTime);
                 progressBar.update(fixed.size());
                 
                 while (!work.isEmpty()) {
@@ -345,19 +349,19 @@ public class Jokes {
                 Filesystem.deleteFile(fixedFixListBackupFile);
                 Filesystem.deleteFile(fixedWorkBackupFile);
                 setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
+            } else {
+                progressBar.setInitialDuration(subFixTime / 1000);
             }
             fixTime += (subFixTime / 1000);
             int fixSize = fixedFixFile.exists() ? readJokes(fixedFixFile).size() : 0;
             int size = readJokes(fixedFile).size() + fixSize;
             
             progressBar.setTotal(size);
-            progressBar.update(size);
-            progressBar.print();
-            System.out.println(" " + (fixSize > 0 ? (": " + fixSize + " to fix ") : "") + "(" + (subFixTime / 1000) + "s)");
+            progressBar.complete(true, (fixSize > 0 ? (": " + fixSize + " to fix ") : ""));
         }
         
         totalTime += fixTime;
-        System.out.println("Fixed Jokes in " + fixTime + "s");
+        System.out.println("Fixed Jokes in " + produceDurationString(fixTime));
         System.out.println();
     }
     
@@ -407,6 +411,7 @@ public class Jokes {
             if (subTagTime < 0 || taggedWorkFile.exists()) {
                 if (subTagTime < 0) {
                     Filesystem.deleteDirectory(taggedFile.getParentFile());
+                    subTagTime = 0;
                 }
                 Filesystem.createDirectory(taggedFile.getParentFile());
                 
@@ -445,18 +450,18 @@ public class Jokes {
                 Filesystem.deleteFile(taggedBackupFile);
                 Filesystem.deleteFile(taggedWorkBackupFile);
                 setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
+            } else {
+                progressBar.setInitialDuration(subTagTime / 1000);
             }
             tagTime += (subTagTime / 1000);
             int size = readJokes(taggedFile).size();
             
             progressBar.setTotal(size);
-            progressBar.update(size);
-            progressBar.print();
-            System.out.println(" (" + (subTagTime / 1000) + "s)");
+            progressBar.complete(true);
         }
         
         totalTime += tagTime;
-        System.out.println("Tagged Jokes in " + tagTime + "s");
+        System.out.println("Tagged Jokes in " + produceDurationString(tagTime));
         System.out.println();
     }
     
@@ -506,18 +511,18 @@ public class Jokes {
                 long subCompileEndTime = System.currentTimeMillis();
                 subCompileTime = ((subCompileEndTime - subCompileStartTime) / 1000);
                 setSaveProcessTime(jokeSet, ProcessStep.COMPILE, subCompileTime);
+            } else {
+                progressBar.setInitialDuration(subCompileTime);
             }
             compileTime += subCompileTime;
             int size = readJokes(compiledFileOut).size();
             
             progressBar.setTotal(size);
-            progressBar.update(size);
-            progressBar.print();
-            System.out.println(" (" + subCompileTime + "s)");
+            progressBar.complete(true);
         }
         
         totalTime += compileTime;
-        System.out.println("Compiled Jokes in " + compileTime + "s");
+        System.out.println("Compiled Jokes in " + produceDurationString(compileTime));
         System.out.println();
     }
     
@@ -556,23 +561,24 @@ public class Jokes {
                 long subMergeEndTime = System.currentTimeMillis();
                 subMergeTime = ((subMergeEndTime - subMergeStartTime) / 1000);
                 setSaveProcessTime(jokeSet, ProcessStep.MERGE, subMergeTime);
+            } else {
+                progressBar.setInitialDuration(subMergeTime);
             }
             mergeTime += subMergeTime;
             int size = readJokes(mergedFileIn).size();
             
             progressBar.setTotal(size);
-            progressBar.update(size);
-            progressBar.print();
-            System.out.println(" (" + subMergeTime + "s)");
+            progressBar.complete(true);
         }
         
         Collections.shuffle(jokes);
         outputJokes(mergedFile, jokes);
         
         totalTime += mergeTime;
-        System.out.println("Compiled Jokes in " + mergeTime + "s");
+        System.out.println("Compiled Jokes in " + produceDurationString(mergeTime));
+        
         System.out.println();
-        System.out.println("Complete... " + jokes.size() + " jokes (" + totalTime + "s)");
+        System.out.println("Complete... " + jokes.size() + " jokes (" + produceDurationString(totalTime) + ")");
     }
     
     
@@ -828,6 +834,29 @@ public class Jokes {
             data.add(timeDataEntry.getKey() + ":" + timeDataEntry.getValue());
         }
         safeRewrite(timeFile, data);
+    }
+    
+    /**
+     * Produces a duration string.
+     *
+     * @param duration The duration in seconds.
+     * @return The duration string.
+     */
+    public static String produceDurationString(long duration) {
+        long totalSeconds = duration;
+        long totalMinutes = totalSeconds / 60;
+        long totalHours = totalMinutes / 60;
+        long totalDays = totalHours / 24;
+        totalHours %= 24;
+        totalMinutes %= 60;
+        totalSeconds %= 60;
+        String totalDuration =
+                ((totalDays > 0) ? totalDays + "d " : "") +
+                        ((totalDays > 0 || totalHours > 0) ? totalHours + "h " : "") +
+                        ((totalDays > 0 || totalHours > 0 || totalMinutes > 0) ? totalMinutes + "m " : "") +
+                        totalSeconds + "s";
+        totalDuration = StringUtility.trim(totalDuration);
+        return totalDuration;
     }
     
 }

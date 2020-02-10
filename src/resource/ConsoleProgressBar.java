@@ -78,6 +78,11 @@ public class ConsoleProgressBar {
     private long initialProgress = 0;
     
     /**
+     * The initial duration of the progress bar in seconds.
+     */
+    private long initialDuration = 0;
+    
+    /**
      * The time of the current update of the progress bar.
      */
     private long currentUpdate = 0;
@@ -208,10 +213,11 @@ public class ConsoleProgressBar {
      * If the time between updates is less than PROGRESS_BAR_MINIMUM_UPDATE_DELAY then the update will not take place until called again after the delay.
      *
      * @param newProgress The new progress of the progress bar.
+     * @param autoPrint   Whather or not to automatically print the progress bar after an update.
      * @return Whether the progress bar was updated or not.
      */
     @SuppressWarnings("UseOfSystemOutOrSystemErr")
-    public synchronized boolean update(long newProgress) {
+    private synchronized boolean update(long newProgress, boolean autoPrint) {
         if (isComplete()) {
             return false;
         }
@@ -240,6 +246,18 @@ public class ConsoleProgressBar {
             print();
         }
         return update;
+    }
+    
+    /**
+     * Updates the progress bar.<br>
+     * If the time between updates is less than PROGRESS_BAR_MINIMUM_UPDATE_DELAY then the update will not take place until called again after the delay.
+     *
+     * @param newProgress The new progress of the progress bar.
+     * @return Whether the progress bar was updated or not.
+     */
+    @SuppressWarnings("UseOfSystemOutOrSystemErr")
+    public synchronized boolean update(long newProgress) {
+        return update(newProgress, autoPrint);
     }
     
     /**
@@ -339,15 +357,52 @@ public class ConsoleProgressBar {
     
     /**
      * Completes the progress bar.
+     *
+     * @param printTime      Whether or not to print the final time after the progress bar.
+     * @param additionalInfo Additional info to print at the end of the progress bar.
      */
     @SuppressWarnings("UseOfSystemOutOrSystemErr")
-    public void complete() {
-        current = total;
-        update = true;
+    public void complete(boolean printTime, String additionalInfo) {
+        update(total, false);
         String completeProgressBar = get();
+        if (printTime) {
+            long totalSeconds = initialDuration + ((currentUpdate - firstUpdate) / 1000000000);
+            long totalMinutes = totalSeconds / 60;
+            long totalHours = totalMinutes / 60;
+            long totalDays = totalHours / 24;
+            totalHours %= 24;
+            totalMinutes %= 60;
+            totalSeconds %= 60;
+            String totalDuration = ((totalDays > 0) ? totalDays + "d " : "") +
+                    ((totalDays > 0 || totalHours > 0) ? totalHours + "h " : "") +
+                    ((totalDays > 0 || totalHours > 0 || totalMinutes > 0) ? totalMinutes + "m " : "") +
+                    totalSeconds + "s";
+            totalDuration = StringUtility.trim(totalDuration);
+            completeProgressBar += " (" + totalDuration + ")";
+        }
+        if (!additionalInfo.isEmpty()) {
+            completeProgressBar += " " + additionalInfo;
+        }
         System.out.println(completeProgressBar);
         System.out.flush();
         System.err.flush();
+        update = false;
+    }
+    
+    /**
+     * Completes the progress bar.
+     *
+     * @param printTime Whether or not to print the final time after the progress bar.
+     */
+    public void complete(boolean printTime) {
+        complete(printTime, "");
+    }
+    
+    /**
+     * Completes the progress bar.
+     */
+    public void complete() {
+        complete(true);
     }
     
     /**
@@ -446,6 +501,15 @@ public class ConsoleProgressBar {
      */
     public void setInitialProgress(long initialProgress) {
         this.initialProgress = initialProgress;
+    }
+    
+    /**
+     * Sets the initial duration of the progress bar in seconds.
+     *
+     * @param initialDuration The initial duration of the progress bar in seconds.
+     */
+    public void setInitialDuration(long initialDuration) {
+        this.initialDuration = initialDuration;
     }
     
     /**
