@@ -64,8 +64,7 @@ public class Jokes {
         PARSE("/source/1 - cleaned", "/source/2 - parsed/parsed.json"),
         FIX("/source/2 - parsed/parsed.json", "/source/3 - fixed/fixed.json"),
         TAG("/source/3 - fixed/fixed.json", "/source/4 - tagged/tagged.json"),
-        COMPILE("/source/3 - fixed/fixed.json", "/<jokeSet>.json"),
-        //        COMPILE("/source/4 - tagged/tagged.json", "/<jokeSet>.json"),
+        COMPILE("/source/4 - tagged/tagged.json", "/<jokeSet>.json"),
         MERGE("/../~", "/../jokes.json");
         
         public String in;
@@ -89,7 +88,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
      */
-    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, false, true, true);
+    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, true, true, true);
     
     /**
      * A flag indicating whether or not to perform a clean start.
@@ -540,7 +539,7 @@ public class Jokes {
         System.out.println("Merging Jokes...");
         long mergeTime = 0L;
         
-        File mergedFile = new File(JokeSet.Quirkology + ProcessStep.MERGE.out);
+        File mergedFile = new File(JokeSet.Quirkology.directory + ProcessStep.MERGE.out);
         List<Joke> jokes = mergedFile.exists() ? readJokes(mergedFile) : new ArrayList<>();
         
         for (JokeSet jokeSet : JokeSet.values()) {
@@ -575,7 +574,7 @@ public class Jokes {
         outputJokes(mergedFile, jokes);
         
         totalTime += mergeTime;
-        System.out.println("Compiled Jokes in " + produceDurationString(mergeTime));
+        System.out.println("Merged Jokes in " + produceDurationString(mergeTime));
         
         System.out.println();
         System.out.println("Complete... " + jokes.size() + " jokes (" + produceDurationString(totalTime) + ")");
@@ -795,7 +794,7 @@ public class Jokes {
         String key = jokeSet.name() + "-" + processStep.name() + "-";
         File checkFile = new File(jokeSet.directory + processStep.in.replace("<jokeSet>", jokeSet.name().toLowerCase()));
         File outFile = new File(jokeSet.directory + processStep.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
-        if (!outFile.exists()) {
+        if (!outFile.exists() && processStep != ProcessStep.MERGE) {
             return "";
         }
         if (checkFile.getAbsolutePath().endsWith("~")) {

@@ -1,5 +1,4 @@
 'ere
-homocide
 a'cock
 a'd
 a'holdin
@@ -263,6 +262,7 @@ allright
 allu
 almondine
 almosht
+alones
 aloon
 alors
 alou
@@ -4222,6 +4222,7 @@ homies
 homiesexual
 homini
 hommish
+homocide
 homoerectus
 homofries
 homogenius
@@ -6797,7 +6798,6 @@ paredvark
 parfour
 paririst
 parkincense
-parkour
 parkourist
 parlare
 parlate
@@ -7288,7 +7288,6 @@ primest
 principao
 pringles
 printdinavia
-priuses
 priustoric
 prob'ly
 problema
