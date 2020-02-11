@@ -522,14 +522,8 @@ public final class TextTagger {
      * @return The list of tags associated with the given string.
      */
     public List<String> getTagsFromText(String text) {
-        List<String> tags = new ArrayList<>();
-        List<String> matches = new ArrayList<>();
-        List<String> nonMatches = new ArrayList<>();
-        String textTest = text.toUpperCase().replace("-", "");
-        String textTestCombined = text.toUpperCase();
-        
-        String wordDiv = "[^A-Z0-9]";
-        String wordDivCombined = "[^A-Z0-9&\\-]";
+        final String wordDiv = "[^A-Z0-9]";
+        final String wordDivCombined = "[^A-Z0-9&\\-]";
         String tagRegex = "^" +
                 "(" + wordDiv + "*X" + wordDiv + ".*)|" +
                 "(.*" + wordDiv + "X" + wordDiv + "*)|" +
@@ -543,124 +537,16 @@ public final class TextTagger {
                 "(" + wordDivCombined + "*X" + wordDivCombined + "*)" +
                 "$";
         
-        List<String> words = new ArrayList<>(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
-        List<String> combinedWords = new ArrayList<>();
-        for (String combinedWord : words) {
-            combinedWords.add(combinedWord.replaceAll("[&\\-]", ""));
-        }
-        words.addAll(combinedWords);
-        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("[\\s&\\-]+", -1)));
-        words = ListUtility.removeDuplicates(words);
-        for (String word : words) {
-            word = word.replaceAll("^[&\\-]+", "");
-            word = word.replaceAll("[&\\-]+$", "");
-            
-            if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
-                if (!tags.contains("Apple")) {
-                    tags.add("Apple");
-                    matches.add("Apple");
-                    if (printTagTrigger) {
-                        System.out.println("Apple" + " -> " + "i*");
-                    }
-                }
-            }
-            if (word.equalsIgnoreCase("gorilla") && text.toLowerCase().matches("^.+\\shar.+$")) {
-                if (!tags.contains("Harambe")) {
-                    tags.add("Harambe");
-                    matches.add("Harambe");
-                    if (printTagTrigger) {
-                        System.out.println("Harambe" + " -> " + "Gorilla & Har*");
-                    }
-                }
-            }
-            word = word.toUpperCase();
-            if (word.endsWith("SAURUS")) {
-                if (!tags.contains("Dinosaur")) {
-                    tags.add("Dinosaur");
-                    matches.add("Dinosaur");
-                    if (printTagTrigger) {
-                        System.out.println("Dinosaur" + " -> " + "*saurus");
-                    }
-                }
-            }
-            if (word.startsWith("MOO") && !word.equals("MOON") && !word.equals("MOOD")) {
-                if (!tags.contains("Cow")) {
-                    tags.add("Cow");
-                    matches.add("Cow");
-                    if (printTagTrigger) {
-                        System.out.println("Cow" + " -> " + "Moo*");
-                    }
-                }
-            }
-            if (word.startsWith("PURR") || word.startsWith("MEOW") || word.startsWith("NYAN")) {
-                if (!tags.contains("Cat")) {
-                    tags.add("Cat");
-                    matches.add("Cat");
-                    if (printTagTrigger) {
-                        System.out.println("Cow" + " -> " + "Purr* | Meow* | Nyan*");
-                    }
-                }
-            }
-            if (word.startsWith("MEIN") || word.startsWith("KAMPF") || word.startsWith("LUFT")) {
-                if (!tags.contains("Germany")) {
-                    tags.add("Germany");
-                    matches.add("Germany");
-                    if (printTagTrigger) {
-                        System.out.println("Germany" + " -> " + "Mein* | Kampf* | Luft*");
-                    }
-                }
-            }
-            if ((word.endsWith("SPORT") || word.endsWith("SPORTS"))) {
-                if (!tags.contains("Sport")) {
-                    List<String> notSport = Arrays.asList("Disport", "Gosport", "Passport", "Transport", "Spoilsport", "Cotransport");
-                    boolean isNotSport = false;
-                    for (String notSportEntry : notSport) {
-                        if (word.equalsIgnoreCase(notSportEntry) || word.equalsIgnoreCase(notSportEntry + "s")) {
-                            isNotSport = true;
-                            break;
-                        }
-                    }
-                    if (!isNotSport) {
-                        tags.add("Sport");
-                        matches.add("Sport");
-                        if (printTagTrigger) {
-                            System.out.println("Sport" + " -> " + "*sport | *sports");
-                        }
-                    }
-                }
-            }
-            if (word.endsWith("SEXUAL") && !word.equals("SEXUAL")) {
-                if (!tags.contains("Gender")) {
-                    tags.add("Gender");
-                    matches.add("Gender");
-                    if (printTagTrigger) {
-                        System.out.println("Gender" + " -> " + "*sexual");
-                    }
-                }
-            }
-            if (word.contains("SHREK")) {
-                if (!tags.contains("Shrek")) {
-                    tags.add("Shrek");
-                    matches.add("Shrek");
-                    if (printTagTrigger) {
-                        System.out.println("Shrek" + " -> " + "Shrek*");
-                    }
-                }
-            }
-            if (word.contains("NAZI")) {
-                if (!tags.contains("Nazi")) {
-                    tags.add("Nazi");
-                    matches.add("Nazi");
-                    if (printTagTrigger) {
-                        System.out.println("Nazi" + " -> " + "*nazi*");
-                    }
-                }
-            }
-        }
+        List<String> initialTags = getInitialTagsFromText(text);
+        List<String> tags = new ArrayList<>(initialTags);
+        List<String> matches = new ArrayList<>(initialTags);
+        List<String> nonMatches = new ArrayList<>();
+        
+        String textTest = text.toUpperCase().replace("-", "");
+        String textTestCombined = text.toUpperCase();
         
         for (Tag tag : tagList.values()) {
-            String tagEntry = StringUtility.trim(StringUtility.removePunctuationSoft(tag.name, Arrays.asList('&', '-')));
-            String tagEntryTest = tagEntry.replace("-", "\\\\-");
+            String tagEntry = StringUtility.trim(tag.name);
             if (tags.contains(tagEntry)) {
                 continue;
             }
@@ -682,7 +568,7 @@ public final class TextTagger {
                                 continue;
                             }
                             
-                            String tagTest = StringUtility.rShear(tagEntryTest.toUpperCase(), ending.length()) + tagAppend;
+                            String tagTest = StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend;
                             if (textTest.matches(tagRegex.replace("X", tagTest)) ||
                                     textTestCombined.matches(tagRegexCombined.replace("X", tagTest))) {
                                 tags.add(tagEntry);
@@ -761,6 +647,141 @@ public final class TextTagger {
         }
         
         return ListUtility.removeDuplicates(tags);
+    }
+    
+    private List<String> getInitialTagsFromText(String text) {
+        List<String> tags = new ArrayList<>();
+        
+        List<String> words = new ArrayList<>(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
+        List<String> combinedWords = new ArrayList<>();
+        for (String combinedWord : words) {
+            combinedWords.add(combinedWord.replaceAll("[&\\-]", ""));
+        }
+        words.addAll(combinedWords);
+        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("[\\s&\\-]+", -1)));
+        words = ListUtility.removeDuplicates(words);
+        for (String word : words) {
+            word = word.replaceAll("^[&\\-]+", "");
+            word = word.replaceAll("[&\\-]+$", "");
+            
+            if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
+                if (!tags.contains("Apple")) {
+                    tags.add("Apple");
+                    if (printTagTrigger) {
+                        System.out.println("Apple" + " -> " + "i*");
+                    }
+                }
+            }
+            if (word.equalsIgnoreCase("gorilla") && text.toLowerCase().matches("^.+\\shar.+$")) {
+                if (!tags.contains("Harambe")) {
+                    tags.add("Harambe");
+                    if (printTagTrigger) {
+                        System.out.println("Harambe" + " -> " + "Gorilla & Har*");
+                    }
+                }
+            }
+            word = word.toUpperCase();
+            if (word.endsWith("SAURUS")) {
+                if (!tags.contains("Dinosaur")) {
+                    tags.add("Dinosaur");
+                    if (printTagTrigger) {
+                        System.out.println("Dinosaur" + " -> " + "*saurus");
+                    }
+                }
+            }
+            if (word.startsWith("MOO") && !word.equals("MOON") && !word.equals("MOOD")) {
+                if (!tags.contains("Cow")) {
+                    tags.add("Cow");
+                    if (printTagTrigger) {
+                        System.out.println("Cow" + " -> " + "Moo*");
+                    }
+                }
+            }
+            if (word.startsWith("SNOW")) {
+                if (!tags.contains("Snow")) {
+                    tags.add("Snow");
+                    if (printTagTrigger) {
+                        System.out.println("Snow" + " -> " + "Snow*");
+                    }
+                }
+            }
+            if (word.endsWith("WATER") || word.startsWith("RAIN")) {
+                if (!tags.contains("Water")) {
+                    tags.add("Water");
+                    if (printTagTrigger) {
+                        System.out.println("Water" + " -> " + "Water*");
+                    }
+                }
+            }
+            if (word.startsWith("RAIN")) {
+                if (!tags.contains("Weather")) {
+                    tags.add("Weather");
+                    if (printTagTrigger) {
+                        System.out.println("Weather" + " -> " + "Rain*");
+                    }
+                }
+            }
+            if (word.startsWith("PURR") || word.startsWith("MEOW") || word.startsWith("NYAN")) {
+                if (!tags.contains("Cat")) {
+                    tags.add("Cat");
+                    if (printTagTrigger) {
+                        System.out.println("Cow" + " -> " + "Purr* | Meow* | Nyan*");
+                    }
+                }
+            }
+            if (word.startsWith("MEIN") || word.startsWith("KAMPF") || word.startsWith("LUFT")) {
+                if (!tags.contains("Germany")) {
+                    tags.add("Germany");
+                    if (printTagTrigger) {
+                        System.out.println("Germany" + " -> " + "Mein* | Kampf* | Luft*");
+                    }
+                }
+            }
+            if ((word.endsWith("SPORT") || word.endsWith("SPORTS"))) {
+                if (!tags.contains("Sport")) {
+                    List<String> notSport = Arrays.asList("Disport", "Gosport", "Passport", "Transport", "Spoilsport", "Cotransport");
+                    boolean isNotSport = false;
+                    for (String notSportEntry : notSport) {
+                        if (word.equalsIgnoreCase(notSportEntry) || word.equalsIgnoreCase(notSportEntry + "s")) {
+                            isNotSport = true;
+                            break;
+                        }
+                    }
+                    if (!isNotSport) {
+                        tags.add("Sport");
+                        if (printTagTrigger) {
+                            System.out.println("Sport" + " -> " + "*sport | *sports");
+                        }
+                    }
+                }
+            }
+            if (word.endsWith("SEXUAL") && !word.equals("SEXUAL")) {
+                if (!tags.contains("Gender")) {
+                    tags.add("Gender");
+                    if (printTagTrigger) {
+                        System.out.println("Gender" + " -> " + "*sexual");
+                    }
+                }
+            }
+            if (word.contains("SHREK")) {
+                if (!tags.contains("Shrek")) {
+                    tags.add("Shrek");
+                    if (printTagTrigger) {
+                        System.out.println("Shrek" + " -> " + "Shrek*");
+                    }
+                }
+            }
+            if (word.contains("NAZI")) {
+                if (!tags.contains("Nazi")) {
+                    tags.add("Nazi");
+                    if (printTagTrigger) {
+                        System.out.println("Nazi" + " -> " + "*nazi*");
+                    }
+                }
+            }
+        }
+        
+        return tags;
     }
     
 }

@@ -31,6 +31,7 @@ public final class TagsFileFormatter {
     public static void main(String[] args) {
         TextTagger textTagger = TextTagger.getInstance();
         textTagger.loadTagLists = false;
+        textTagger.printTags = true;
         textTagger.load();
         
         int longest = 0;

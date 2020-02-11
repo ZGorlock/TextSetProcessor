@@ -677,7 +677,7 @@ Mozart
 Murder                  ,Assassin,Assassinate,Assassination,Auschwitz,Concentration Camp,Decapitate,Decapitation,Exterminate,Extermination,Gas Chamber,Gasroom,Genocidal,Genocide,Hitman,Hitmen,Holocaust,Homicide,Manslaughter,Massacre,Slaughter,Slay,Slayer,Wetwork -nsfw -dontDoER
 Mushroom                ,Endophyte,Funghi,Fungi,Fungus,Mycelium,Mycological,Mycologically,Mycologist,Mycology,Mycorrhizal,Saprotrophic,Shroom,Spore,Toadstool
 Music                   ,Acapella,Composer,Composing,Composition,Concert,Karaoke,Lyricist,MP3,Melody,Mixtape,Opera,Pandora,Philharmonic,Pop Star,Popstar,RMelodic,Rapper,Record Player,Rhythm,Rhythmic,Rockstar,Sing,Singer,Singing,Song,Songster,Songwriting,Soprano,Spotify,Tempo,Vocal Range,Vocalist,iPod
-Muslim                  ,Allah,Burqa,Five Pillar,Hadith,Imam,Islam,Islamaphobia,Islamaphobic,Islamic,Islamist,Islamophobia,Islamophobic,Ka'aba,Kaaba,Koran,Koranic,Mosque,Qur'an,Quran,Ramadan,Salat,Sharia,Shi'a,Shi'ite,Shia,Shiite,Sunnah,Sunni,Taleban,Taliban
+Muslim                  ,Allah,Burqa,Five Pillar,Hadith,Imam,Islam,Islamaphobia,Islamaphobic,Islamic,Islamist,Islamophobia,Islamophobic,Kaaba,Koran,Koranic,Mosque,Quran,Ramadan,Salat,Sharia,Shiite,Shia,Sunnah,Sunni,Taleban,Taliban
 Mythology               ,Folklore,Myth,Mythos
 NASA                    ,National Aeronautics and Space Administration,Neil Armstrong
 Narcissism              ,Egomania,Egomaniac,Egotistical,Narcissist,Narcissistic,Narcist
