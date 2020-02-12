@@ -34,7 +34,6 @@ Fuddruckers
 Golden Corral
 Hardee
 Hardee's
-Hardees
 Hooters
 IHOP
 In'n'Out Burger
@@ -66,7 +65,6 @@ Popeyes
 Qdoba
 Quizno
 Quizno's
-Quiznos
 Red Lobster
 Red Robin
 Ruby Tuesday

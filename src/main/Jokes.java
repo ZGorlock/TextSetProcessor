@@ -472,6 +472,7 @@ public class Jokes {
      */
     public static void tagJoke(Joke joke, ConsoleProgressBar progressBar) {
         joke.tags.addAll(textTagger.getTagsFromText(joke.text));
+        joke.tags = ListUtility.removeDuplicates(joke.tags);
         joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
         if (progressBar != null) {
             progressBar.addOne();

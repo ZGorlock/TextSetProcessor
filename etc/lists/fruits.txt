@@ -2,11 +2,8 @@ Acai
 Apple
 Avocado
 Banana
-Berries
 Berry
-Blackberries
 Blackberry
-Blueberries
 Blueberry
 Cantelope
 Clementine
@@ -14,7 +11,6 @@ Currant
 Dragonfruit
 Durian
 Fig
-Gojiberries
 Gojiberry
 Grape
 Grapefruit
@@ -25,7 +21,6 @@ Lemon
 Lime
 Lychee
 Mango
-Mangoes
 Melon
 Muskmelon
 Nectarine
@@ -37,9 +32,7 @@ Pear
 Pineapple
 Plum
 Pomegranate
-Raspberries
 Raspberry
-Strawberries
 Strawberry
 Tangerine
 Watermelon

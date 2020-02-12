@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,24 @@ import utility.StringUtility;
  * Tags Text.
  */
 public final class TextTagger {
+    
+    //Constants
+    
+    /**
+     * The base regex pattern for matching tags.
+     */
+    private static final String tagRegexBase = "^(Y*XY.*)|(.*YXY*)|(.*YXY.*)|(Y*XY*)$";
+    
+    /**
+     * The regex pattern for matching tags.
+     */
+    private static final String tagRegex = tagRegexBase.replace("Y", "[^A-Z0-9]");
+    
+    /**
+     * The regex pattern for matching tags with special characters.
+     */
+    private static final String tagRegexCombined = tagRegexBase.replace("Y", "[^A-Z0-9&\\-]");
+    
     
     //Static Fields
     
@@ -60,9 +79,9 @@ public final class TextTagger {
     public final Map<String, List<String>> tagEndingToReplacements = new HashMap<>();
     
     /**
-     * A list of aliases to not append -ES to.
+     * Stores special tags for processing.
      */
-    public final List<String> aliasDontDoES = new ArrayList<>();
+    public final Map<String, Tag> specialTagList = new HashMap<>();
     
     /**
      * A flag indicating whether or not to load extra tag alias lists.
@@ -78,6 +97,11 @@ public final class TextTagger {
      * A flag indicating whether or not to print the word that triggered the tagging.
      */
     public boolean printTagTrigger = false;
+    
+    /**
+     * A flag indicating whether or not to remove potentially obsolete aliases.
+     */
+    public boolean removeObsoleteAliases = false;
     
     
     //Constructors
@@ -136,8 +160,6 @@ public final class TextTagger {
         tagEndingToDontDoList.put("er", tagList.values().stream().filter(tag -> tag.dontDoER).map(tag -> tag.name).collect(Collectors.toList()));
         tagEndingToDontDoList.put("or", tagList.values().stream().filter(tag -> tag.dontDoOR).map(tag -> tag.name).collect(Collectors.toList()));
         
-        aliasDontDoES.add("HAT");
-        
         int totalKeywords = 0;
         for (Tag tag : tagList.values()) {
             List<String> appendings = new ArrayList<>();
@@ -147,12 +169,9 @@ public final class TextTagger {
                 }
             }
             appendings = ListUtility.removeDuplicates(appendings);
-            if (tagEndingToDontDoList.get("ing").contains(tag.name)) {
-                appendings.remove("ING");
-            }
             int tagKeywords = appendings.size();
             for (String alias : tag.aliases) {
-                tagKeywords += (3 + (alias.toUpperCase().endsWith("Y") ? 1 : 0));
+                tagKeywords += (2 + ((alias.length() > 4) ? 1 : 0) + (alias.toUpperCase().endsWith("Y") ? 1 : 0));
             }
             totalKeywords += tagKeywords;
         }
@@ -229,6 +248,7 @@ public final class TextTagger {
         }
         
         if (printTags) {
+            System.out.println();
             for (String tag : tags.keySet()) {
                 System.out.println(tag);
             }
@@ -479,20 +499,24 @@ public final class TextTagger {
             tag.aliases.sort(Comparator.naturalOrder());
         }
         
-        for (Tag tag : tags.values()) {
-            List<String> toRemove = new ArrayList<>();
-            List<String> toCheck = new ArrayList<>(tag.aliases);
-            toCheck.add(tag.name);
-            for (String alias : tag.aliases) {
+        if (removeObsoleteAliases) {
+            for (Tag tag : tags.values()) {
+                List<String> toRemove = new ArrayList<>();
+                List<String> toCheck = new ArrayList<>(tag.aliases);
+                toCheck.add(tag.name);
                 for (String aliasCheck : toCheck) {
-                    if (alias.matches("^" + aliasCheck + "(s|es)?\\s.*$") ||
-                            alias.matches("^.*\\s" + aliasCheck + "(s|es)?\\s.*$") ||
-                            alias.matches("^.*\\s" + aliasCheck + "(s|es)?$")) {
-                        toRemove.add(alias);
+                    for (String alias : tag.aliases) {
+                        if (alias.toUpperCase().equals(aliasCheck.toUpperCase() + "S") ||
+                                ((aliasCheck.length() > 4) && alias.toUpperCase().equals(aliasCheck.toUpperCase() + "ES")) ||
+                                aliasCheck.toUpperCase().endsWith("Y") && alias.toUpperCase().equals(StringUtility.rShear(aliasCheck.toUpperCase(), 1) + "IES")) {
+//                            System.out.println(tag.name + " = " + aliasCheck + " : " + alias);
+                            toRemove.add(alias);
+                            break;
+                        }
                     }
                 }
+                tag.aliases.removeAll(toRemove);
             }
-            tag.aliases.removeAll(toRemove);
         }
         
         return tags;
@@ -505,10 +529,12 @@ public final class TextTagger {
      * @param lists The list of tag alias lists to add to the tag.
      */
     private void addListToTag(Tag tag, String... lists) {
-        if (loadTagLists) {
-            for (String list : lists) {
-                tag.aliases.addAll(Filesystem.readLines(new File("etc/lists/" + list + ".txt")));
-            }
+        if (!loadTagLists) {
+            return;
+        }
+        
+        for (String list : lists) {
+            tag.aliases.addAll(Filesystem.readLines(new File("etc/lists/" + list + ".txt")));
         }
     }
     
@@ -522,134 +548,31 @@ public final class TextTagger {
      * @return The list of tags associated with the given string.
      */
     public List<String> getTagsFromText(String text) {
-        final String wordDiv = "[^A-Z0-9]";
-        final String wordDivCombined = "[^A-Z0-9&\\-]";
-        String tagRegex = "^" +
-                "(" + wordDiv + "*X" + wordDiv + ".*)|" +
-                "(.*" + wordDiv + "X" + wordDiv + "*)|" +
-                "(.*" + wordDiv + "X" + wordDiv + ".*)|" +
-                "(" + wordDiv + "*X" + wordDiv + "*)" +
-                "$";
-        String tagRegexCombined = "^" +
-                "(" + wordDivCombined + "*X" + wordDivCombined + ".*)|" +
-                "(.*" + wordDivCombined + "X" + wordDivCombined + "*)|" +
-                "(.*" + wordDivCombined + "X" + wordDivCombined + ".*)|" +
-                "(" + wordDivCombined + "*X" + wordDivCombined + "*)" +
-                "$";
-        
-        List<String> initialTags = getInitialTagsFromText(text);
+        List<String> initialTags = getInitialTags(text);
         List<String> tags = new ArrayList<>(initialTags);
-        List<String> matches = new ArrayList<>(initialTags);
-        List<String> nonMatches = new ArrayList<>();
-        
-        String textTest = text.toUpperCase().replace("-", "");
-        String textTestCombined = text.toUpperCase();
+        HashSet<String> matches = new HashSet<>(initialTags);
+        HashSet<String> nonMatches = new HashSet<>();
         
         for (Tag tag : tagList.values()) {
-            String tagEntry = StringUtility.trim(tag.name);
-            if (tags.contains(tagEntry)) {
+            if (tags.contains(tag.name)) {
+                matches.add(tag.name.toUpperCase());
                 continue;
             }
-            
-            if (!tag.minor) {
-                if (matches.contains(tagEntry)) {
-                    tags.add(tagEntry);
-                    if (printTagTrigger) {
-                        System.out.println(tag.name + " -> " + tag.name);
-                    }
-                    continue;
-                }
-                
-                for (String ending : tagEndingToDontDoList.keySet()) {
-                    
-                    if (tagEntry.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tagEntry)) {
-                        for (String tagAppend : tagEndingToReplacements.get(ending)) {
-                            if (tagEndingToDontDoList.containsKey(tagAppend.toLowerCase()) && tagEndingToDontDoList.get(tagAppend.toLowerCase()).contains(tagEntry)) {
-                                continue;
-                            }
-                            
-                            String tagTest = StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend;
-                            if (textTest.matches(tagRegex.replace("X", tagTest)) ||
-                                    textTestCombined.matches(tagRegexCombined.replace("X", tagTest))) {
-                                tags.add(tagEntry);
-                                if (printTagTrigger) {
-                                    System.out.println(tag.name + " -> " + tagTest);
-                                }
-                                matches.add(tagEntry);
-                                break;
-                            }
-                        }
-                    }
-                    
-                    if (tags.contains(tagEntry)) {
-                        break;
-                    }
-                }
-                if (tags.contains(tagEntry)) {
-                    continue;
-                }
-            }
-            
-            for (String alias : tag.aliases) {
-                String aliasEntry = StringUtility.trim(StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-')));
-                String aliasEntryTest = aliasEntry.replace("-", "\\\\-");
-                if (aliasEntry.isEmpty()) {
-                    continue;
-                }
-                if (nonMatches.contains(aliasEntry)) {
-                    continue;
-                }
-                if (matches.contains(aliasEntry)) {
-                    tags.add(tagEntry);
-                    if (printTagTrigger) {
-                        System.out.println(tag.name + " -> " + aliasEntry);
-                    }
-                    break;
-                }
-                
-                for (String append : Arrays.asList("", "S", "ES")) {
-                    if (append.equals("ES") && aliasDontDoES.contains(aliasEntry.toUpperCase())) {
-                        continue;
-                    }
-                    String aliasTest = aliasEntryTest.toUpperCase() + append;
-                    if (textTest.matches(tagRegex.replace("X", aliasTest)) ||
-                            textTestCombined.matches(tagRegex.replace("X", aliasTest)) ||
-                            textTestCombined.matches(tagRegexCombined.replace("X", aliasTest))) {
-                        tags.add(tagEntry);
-                        if (printTagTrigger) {
-                            System.out.println(tag.name + " -> " + aliasTest);
-                        }
-                        matches.add(aliasEntry);
-                        break;
-                    }
-                }
-                if (tags.contains(tagEntry)) {
-                    break;
-                }
-                if (aliasEntry.toUpperCase().endsWith("Y")) {
-                    String aliasTest = StringUtility.rShear(aliasEntryTest.toUpperCase(), 1) + "IES";
-                    if (textTest.matches(tagRegex.replace("X", aliasTest)) ||
-                            textTestCombined.matches(tagRegex.replace("X", aliasTest)) ||
-                            textTestCombined.matches(tagRegexCombined.replace("X", aliasTest))) {
-                        tags.add(tagEntry);
-                        if (printTagTrigger) {
-                            System.out.println(tag.name + " -> " + aliasTest);
-                        }
-                        matches.add(aliasEntry);
-                        break;
-                    }
-                }
-                nonMatches.add(aliasEntry);
-            }
-            if (!tags.contains(tagEntry)) {
-                nonMatches.add(tagEntry);
+            if (hasTag(text, tag, matches, nonMatches)) {
+                tags.add(tag.name);
             }
         }
         
-        return ListUtility.removeDuplicates(tags);
+        return fixTagList(text, tags, matches, nonMatches);
     }
     
-    private List<String> getInitialTagsFromText(String text) {
+    /**
+     * Determines the initial list of associated tags for a string.
+     *
+     * @param text The string.
+     * @return The initial list of tags associated with the given string.
+     */
+    public List<String> getInitialTags(String text) {
         List<String> tags = new ArrayList<>();
         
         List<String> words = new ArrayList<>(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
@@ -661,8 +584,7 @@ public final class TextTagger {
         words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("[\\s&\\-]+", -1)));
         words = ListUtility.removeDuplicates(words);
         for (String word : words) {
-            word = word.replaceAll("^[&\\-]+", "");
-            word = word.replaceAll("[&\\-]+$", "");
+            word = word.replaceAll("^[&\\-]+", "").replaceAll("[&\\-]+$", "");
             
             if ((word.length() > 1) && (word.charAt(0) == 'i') && Character.isUpperCase(word.charAt(1))) {
                 if (!tags.contains("Apple")) {
@@ -776,6 +698,166 @@ public final class TextTagger {
                     tags.add("Nazi");
                     if (printTagTrigger) {
                         System.out.println("Nazi" + " -> " + "*nazi*");
+                    }
+                }
+            }
+        }
+        
+        return tags;
+    }
+    
+    /**
+     * Determines if a tag matches a string.
+     *
+     * @param text       The string.
+     * @param tag        The tag.
+     * @param matches    The list of known matches.
+     * @param nonMatches The list of known non-matches.
+     * @return Whether or not the tag matches the given string.
+     */
+    private boolean hasTag(String text, Tag tag, HashSet<String> matches, HashSet<String> nonMatches) {
+        String textTest = text.toUpperCase().replace("-", "");
+        String textTestCombined = text.toUpperCase();
+        
+        if (!tag.minor) {
+            if (matches.contains(tag.name.toUpperCase())) {
+                if (printTagTrigger) {
+                    System.out.println(tag.name + " -> ~" + tag.name);
+                }
+                return true;
+            }
+            
+            for (String ending : tagEndingToDontDoList.keySet()) {
+                if (tag.name.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
+                    for (String append : tagEndingToReplacements.get(ending)) {
+                        if (tagEndingToDontDoList.containsKey(append.toLowerCase()) && tagEndingToDontDoList.get(append.toLowerCase()).contains(tag.name)) {
+                            continue;
+                        }
+                        
+                        String tagTest = StringUtility.rShear(tag.name.toUpperCase(), ending.length()) + append;
+                        if (nonMatches.contains(tagTest.toUpperCase())) {
+                            continue;
+                        }
+                        if (textTest.matches(tagRegex.replace("X", tagTest)) ||
+                                textTestCombined.matches(tagRegexCombined.replace("X", tagTest))) {
+                            if (printTagTrigger) {
+                                System.out.println(tag.name + " -> " + tag.name + (append.isEmpty() ? "" : (" (" + StringUtility.rShear(tag.name.toUpperCase(), ending.length()) + append + ")")));
+                            }
+                            matches.add(tag.name.toUpperCase());
+                            matches.add(tagTest.toUpperCase());
+                            return true;
+                        } else {
+                            nonMatches.add(tagTest.toLowerCase());
+                        }
+                    }
+                }
+            }
+        }
+        
+        for (String alias : tag.aliases) {
+            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-'));
+            String aliasEntryTest = aliasEntry.replace("-", "\\\\-");
+            if (aliasEntry.isEmpty() || nonMatches.contains(aliasEntry)) {
+                continue;
+            }
+            
+            if (matches.contains(aliasEntry.toUpperCase())) {
+                if (printTagTrigger) {
+                    System.out.println(tag.name + " -> ~+" + aliasEntry);
+                }
+                return true;
+            }
+            
+            for (String append : Arrays.asList("", "S", "ES", "IES")) {
+                if ((append.equals("IES") && !aliasEntry.toUpperCase().endsWith("Y")) ||
+                        (append.equals("ES") && aliasEntry.length() <= 4)) {
+                    continue;
+                }
+                
+                String aliasTest = aliasEntryTest.toUpperCase() + append;
+                if (nonMatches.contains(aliasTest.toUpperCase())) {
+                    continue;
+                }
+                if (textTest.matches(tagRegex.replace("X", aliasTest)) ||
+                        textTestCombined.matches(tagRegex.replace("X", aliasTest)) ||
+                        textTestCombined.matches(tagRegexCombined.replace("X", aliasTest))) {
+                    if (printTagTrigger) {
+                        System.out.println(tag.name + " -> +" + aliasEntry + (append.isEmpty() ? "" : (" (" + aliasEntry.toUpperCase() + append + ")")));
+                    }
+                    matches.add(alias.toUpperCase());
+                    matches.add(aliasTest.toUpperCase());
+                    return true;
+                } else {
+                    nonMatches.add(aliasTest.toUpperCase());
+                }
+            }
+            
+            nonMatches.add(alias);
+        }
+        
+        nonMatches.add(tag.name);
+        return false;
+    }
+    
+    /**
+     * Determines if a tag matches a string.
+     *
+     * @param text The string.
+     * @param tag  The tag.
+     * @return Whether or not the tag matches the given string.
+     */
+    public boolean hasTag(String text, Tag tag) {
+        return hasTag(text, tag, new HashSet<>(), new HashSet<>());
+    }
+    
+    /**
+     * Performs additional work on a tag list.
+     *
+     * @param text       The string.
+     * @param tags       The tag list.
+     * @param matches    The list of known matches.
+     * @param nonMatches The list of known non-matches.
+     * @return The fixed tag list.
+     */
+    private List<String> fixTagList(String text, List<String> tags, HashSet<String> matches, HashSet<String> nonMatches) {
+        tags = ListUtility.removeDuplicates(tags);
+        
+        if (tags.contains("Aviation") && tags.contains("Fly")) {
+            tags.remove("Fly");
+            if (printTagTrigger) {
+                System.out.println("-Fly -> Aviation");
+            }
+            
+            if (tags.contains("Bug")) {
+                Tag specialBug = specialTagList.get("Bug~");
+                if (specialBug == null) {
+                    specialBug = new Tag(tagList.get("Bug"));
+                    specialBug.name += "~";
+                    specialBug.aliases.remove("Fly");
+                    specialBug.aliases.removeAll(tagList.get("Fly").aliases);
+                    specialTagList.put("Bug~", specialBug);
+                }
+                if (!hasTag(text, specialBug, matches, nonMatches)) {
+                    tags.remove("Bug");
+                    if (printTagTrigger) {
+                        System.out.println("-Bug -> -Fly -> Aviation");
+                    }
+                }
+            }
+            
+            if (tags.contains("Animal")) {
+                Tag specialAnimal = specialTagList.get("Animal~");
+                if (specialAnimal == null) {
+                    specialAnimal = new Tag(tagList.get("Animal"));
+                    specialAnimal.name += "~";
+                    specialAnimal.aliases.remove("Fly");
+                    specialAnimal.aliases.removeAll(tagList.get("Fly").aliases);
+                    specialTagList.put("Animal~", specialAnimal);
+                }
+                if (!hasTag(text, specialAnimal, matches, nonMatches)) {
+                    tags.remove("Animal");
+                    if (printTagTrigger) {
+                        System.out.println("-Animal -> -Fly ->Aviation");
                     }
                 }
             }

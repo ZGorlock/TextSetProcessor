@@ -13,7 +13,6 @@ Macaron
 Milk Shake
 Milkshake
 Oreo
-Pastries
 Pastry
 Pie
 Popsicle

@@ -59,7 +59,6 @@ Eastern Gray Kangaroo
 Echidna
 Elephant
 Elephant Seal
-Elephants
 Elk
 Erinaceidae
 Even Toed Ungulates
@@ -92,7 +91,6 @@ Hawaiian Monk Seal
 Hedgehog
 Hippopotamus
 Horse
-Horses
 Howler Monkey
 Humpback Whale
 Hyena
@@ -105,7 +103,6 @@ Koala
 Lagomorphs
 Lemming
 Lemur
-Lemurs
 Leopard
 Leopard Seal
 Leporids
@@ -181,7 +178,6 @@ Sheep
 Siberian Tiger
 Sifaka
 Skunk
-Skunks
 Sloth
 Sloth Bear
 Snow Leopard

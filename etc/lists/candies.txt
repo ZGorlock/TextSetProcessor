@@ -4,7 +4,6 @@ Chocolate
 Gum
 Gumball
 Gummi
-Gummies
 Jelly Bean
 Jellybean
 Jolly Rancher
@@ -15,7 +14,8 @@ Lollipop
 M&M
 PEZ
 Sour Patch
-Sweethearts
+Sweet Tarts
+SweetTarts
 Tootsie Pop
 Tootsie Roll
 Warheads

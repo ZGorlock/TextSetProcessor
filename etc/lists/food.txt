@@ -17,25 +17,25 @@ Bacon
 Bagel
 Bake
 Baked Alaska
-Bamboo Shoots
+Bamboo Shoot
 Banana
 Banitsa
 Barbecue
 Barley
 Basil
 Batter
+Bean
 Beancurd
-Beans
 Beef
 Beet
 Bell Pepper
 Berry
 Biscuit
-Black Beans
-Black Eyed Peas
+Black Bean
+Black Eyed Pea
 Black Tea
 Blackberry
-Blackeyed Peas
+Blackeyed Pea
 Blood Orange
 Blueberry
 Boysenberry
@@ -50,9 +50,9 @@ Broil
 Brown Rice
 Brownie
 Brunch
-Brussels Sprouts
+Brussels Sprout
 Buckwheat
-Buns
+Bun
 Burrito
 Butter
 Butter Bean
@@ -81,13 +81,13 @@ Cheesecake
 Chef
 Cherry
 Chew
-Chick Peas
+Chick Pea
 Chicken
 Chili
-Chips
-Chives
+Chip
+Chive
 Chocolate
-Chopsticks
+Chopstick
 Chow
 Chutney
 Cilantro
@@ -101,18 +101,18 @@ Coconut
 Cod
 Coffee
 Coleslaw
-Collard Greens
-Comestibles
+Collard Green
+Comestible
 Cook
 Cookbook
 Cookie
 Corn
 Corndog
-Cornflakes
+Cornflake
 Cornmeal
 Cottage Cheese
 Crab
-Crackers
+Cracker
 Cranberry
 Cream
 Cream Cheese
@@ -122,14 +122,14 @@ Cucumber
 Cuisine
 Cupboard
 Cupcake
-Curds
-Currants
+Curd
+Currant
 Curry
 Custard
 Daikon
 Daily Bread
 Dairy
-Dandelion Greens
+Dandelion Green
 Danish Pastry
 Dates
 Dessert
@@ -157,7 +157,7 @@ Endive
 Entree
 Etouffee
 Fajita
-Fava Beans
+Fava Bean
 Feast
 Feed
 Fennel
@@ -170,10 +170,10 @@ Flax
 Flour
 Food
 Food Pyramid
-Foodstuffs
+Foodstuff
 Fork
 Freezer
-French Fries
+French Fry
 Fried
 Fritter
 Frosting
@@ -225,9 +225,10 @@ Iced Tea
 Jackfruit
 Jalapeno
 Jelly
-Jellybeans
+Jelly Bean
+Jellybean
 Jicama
-Jordan Almonds
+Jordan Almond
 Juice
 Julienne
 Junk Food
@@ -236,7 +237,7 @@ Kebab
 Ketchup
 Kettle
 Kettle Corn
-Kidney Beans
+Kidney Bean
 Kitchen
 Kiwi
 Knife
@@ -246,13 +247,13 @@ Ladle
 Lamb
 Lard
 Lasagna
-Legumes
+Legume
 Lemon
 Lemonade
-Lentils
+Lentil
 Lettuce
 Licorice
-Lima Beans
+Lima Bean
 Lime
 Loaf
 Lobster
@@ -275,7 +276,7 @@ Margarine
 Marionberry
 Marmalade
 Marshmallow
-Mashed Potatoes
+Mashed Potato
 Mayonnaise
 Meat
 Meatball
@@ -288,7 +289,6 @@ Milkshake
 Millet
 Mincemeat
 Mint
-Mints
 Mochi
 Molasses
 Mole Sauce
@@ -296,14 +296,14 @@ Mozzarella
 Muffin
 Munch
 Mushroom
-Mussels
+Mussel
 Mustard
-Mustard Greens
+Mustard Green
 Mutton
 Napkin
 Nectar
 Nectarine
-Noodles
+Noodle
 Nosh
 Nourish
 Nourishment
@@ -312,8 +312,8 @@ Nutmeg
 Nutrient
 Nutrition
 Nutritious
+Oat
 Oatmeal
-Oats
 Oil
 Okra
 Oleo
@@ -357,17 +357,14 @@ Pomegranate
 Pomelo
 Pop
 Popcorn
-Popovers
 Popsicle
 Poptart
 Pork
-Pork Chops
+Pork Chop
 Pot Roast
 Potato
-Preserves
 Pretzel
 Prime Rib
-Provisions
 Prune
 Pudding
 Pumpernickel
@@ -383,7 +380,6 @@ Ravioli
 Relish
 Restaurant
 Rhubarb
-Ribs
 Rice
 Rolling Pin
 Romaine
@@ -399,11 +395,11 @@ Sandwich
 Sauerkraut
 Sausage
 Savory
-Scallops
+Scallop
 Scrambled
 Seaweed
 Sesame Seed
-Shallots
+Shallot
 Sherbet
 Shish Kebab
 Shrimp
@@ -417,20 +413,19 @@ Sorrel
 Soup
 Sour Cream
 Soy
+Soy Bean
 Soy Sauce
-Soybeans
+Soybean
 Spaghetti
-Spareribs
+Sparerib
 Spatula
-Spices
+Spice
 Spicy
 Spinach
-Split Peas
+Split Pea
 Spoon
 Spork
-Sprinkles
-Sprouts
-Spuds
+Spud
 Squash
 Squid
 Steak

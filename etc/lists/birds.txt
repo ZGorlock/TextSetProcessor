@@ -9,7 +9,7 @@ Chukar
 Cormorant
 Crane
 Crow
-Cuckoos
+Cuckoo
 Dove
 Duck
 Eagle

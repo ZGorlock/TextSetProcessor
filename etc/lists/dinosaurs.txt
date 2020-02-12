@@ -3,7 +3,7 @@ Archaeopteryx
 Brachiosaurus
 Brontosaurus
 Pachycephalosaurus
-Pterosaurs
+Pterosaur
 Spinosaurus
 Stegosaurus
 T Rex

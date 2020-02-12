@@ -81,4 +81,34 @@ public class Tag {
      */
     public boolean dontDoOR = false;
     
+    
+    //Constructors
+    
+    /**
+     * The default no-argument constructor for a Tag.
+     */
+    public Tag() {
+    }
+    
+    /**
+     * Clones a Tag from an existing Tag.
+     *
+     * @param tag The Tag to clone.
+     */
+    public Tag(Tag tag) {
+        this.name = tag.name;
+        this.aliases = new ArrayList<>(tag.aliases);
+        this.nsfw = tag.nsfw;
+        this.minor = tag.minor;
+        this.dontDoS = tag.dontDoS;
+        this.dontDoED = tag.dontDoED;
+        this.dontDoES = tag.dontDoES;
+        this.dontDoIES = tag.dontDoIES;
+        this.dontDoY = tag.dontDoY;
+        this.dontDoING = tag.dontDoING;
+        this.dontDoTION = tag.dontDoTION;
+        this.dontDoER = tag.dontDoER;
+        this.dontDoOR = tag.dontDoOR;
+    }
+    
 }
