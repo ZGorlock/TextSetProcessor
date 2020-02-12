@@ -88,7 +88,7 @@ public class TagHotfixer {
                 
                 if (retag) {
                     joke.tags = preTags.get(joke.hash);
-                    joke.tags.addAll(textTagger.getTagsFromText(joke.text));
+                    joke.tags.addAll(textTagger.getTagsFromText(joke.text, joke.tags));
                 }
             }
             

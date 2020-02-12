@@ -18,6 +18,7 @@ Earwig
 Flea
 Fly
 Froghopper
+Fruit Fly
 Grasshopper
 Heteroptera
 Homopterans

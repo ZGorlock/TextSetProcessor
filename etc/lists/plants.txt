@@ -3,6 +3,7 @@ Angiosperm
 Astragalus Siculus
 Bryophite
 Bush
+Bushes
 Cactus
 Charophyte Algae
 Clover
@@ -21,6 +22,7 @@ Houseplant
 Lilypad
 Liverwort
 Moss
+Mosses
 Pachyanthus
 Pinidae
 Red Algae

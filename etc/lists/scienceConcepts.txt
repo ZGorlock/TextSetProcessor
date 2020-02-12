@@ -21,6 +21,7 @@ Flask
 Fossil
 Funnel
 Genetic
+Genetics
 Glassware
 Graduated Cylinder
 Gravity

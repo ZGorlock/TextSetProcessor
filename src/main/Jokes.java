@@ -88,7 +88,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
      */
-    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, true, true, true);
+    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, false, false, false);
     
     /**
      * A flag indicating whether or not to perform a clean start.
@@ -471,8 +471,7 @@ public class Jokes {
      * @param progressBar The progress bar.
      */
     public static void tagJoke(Joke joke, ConsoleProgressBar progressBar) {
-        joke.tags.addAll(textTagger.getTagsFromText(joke.text));
-        joke.tags = ListUtility.removeDuplicates(joke.tags);
+        joke.tags = textTagger.getTagsFromText(joke.text, joke.tags);
         joke.nsfw = joke.nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
         if (progressBar != null) {
             progressBar.addOne();

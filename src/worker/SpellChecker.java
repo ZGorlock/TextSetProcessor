@@ -114,23 +114,24 @@ public final class SpellChecker {
             
             List<String> tagDict = new ArrayList<>();
             for (Tag tag : textTagger.tagList.values()) {
-                String tagEntry = StringUtility.trim(StringUtility.removePunctuation(tag.name));
                 for (String ending : textTagger.tagEndingToDontDoList.keySet()) {
-                    if (tagEntry.endsWith(ending) && !textTagger.tagEndingToDontDoList.get(ending).contains(tagEntry)) {
-                        for (String tagAppend : textTagger.tagEndingToReplacements.get(ending)) {
-                            if (tagAppend.equals("ING") && textTagger.tagEndingToDontDoList.get("ing").contains(tagEntry)) {
+                    if (tag.name.toUpperCase().endsWith(ending) && !textTagger.tagEndingToDontDoList.get(ending).contains(tag.name)) {
+                        for (String append : textTagger.tagEndingToReplacements.get(ending)) {
+                            if (textTagger.tagEndingToDontDoList.containsKey(append) && textTagger.tagEndingToDontDoList.get(append).contains(tag.name)) {
                                 continue;
                             }
-                            tagDict.add(StringUtility.rShear(tagEntry.toUpperCase(), ending.length()) + tagAppend);
+                            tagDict.add(StringUtility.rShear(tag.name, ending.length()) + append);
                         }
                     }
                 }
+                final List<String> aliasAppends = Arrays.asList("", "S", "ES", "IES");
                 for (String alias : tag.aliases) {
-                    for (String append : Arrays.asList("", "S", "ES")) {
-                        tagDict.add(alias.toUpperCase() + append);
-                    }
-                    if (alias.toUpperCase().endsWith("Y")) {
-                        tagDict.add(StringUtility.rShear(alias.toUpperCase(), 1) + "IES");
+                    for (String append : aliasAppends) {
+                        if ((append.equals("ES") && alias.length() <= 4) ||
+                                (append.equals("IES") && !alias.toUpperCase().endsWith("Y"))) {
+                            continue;
+                        }
+                        tagDict.add(StringUtility.rShear(alias, (append.equals("IES") ? 1 : 0)) + append);
                     }
                 }
             }

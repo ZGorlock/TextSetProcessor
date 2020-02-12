@@ -1,6 +1,7 @@
 Applebees
 Arbys
 Baskin Robbins
+BaskinRobbins
 Bob Evans
 Bojangles
 Bonefish Grill

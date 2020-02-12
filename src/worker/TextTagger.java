@@ -134,37 +134,37 @@ public final class TextTagger {
         
         System.out.print("Loading Tags... ");
         
-        tagEndingToReplacements.put("", Arrays.asList("", "S", "ES", "Y", "ER", "ERS", "ED", "ING", "I", "IC", "MAN"));
-        tagEndingToReplacements.put("s", Arrays.asList("", "ING", "ED"));
-        tagEndingToReplacements.put("ed", Collections.singletonList(""));
-        tagEndingToReplacements.put("es", Arrays.asList("", "ING", "ED"));
-        tagEndingToReplacements.put("ies", Arrays.asList("Y", "C"));
-        tagEndingToReplacements.put("y", Arrays.asList("", "ER", "ERS", "IES", "IST", "IC", "ICAL", "ICALLY"));
-        tagEndingToReplacements.put("ing", Arrays.asList("", "E", "ER", "ERS", "ED", "ES", "S"));
-        tagEndingToReplacements.put("tion", Arrays.asList("T", "TE", "TEE", "TED", "TOR", "TING"));
-        tagEndingToReplacements.put("tation", Arrays.asList("T", "TE", "TEE", "TED", "TOR", "TING"));
-        tagEndingToReplacements.put("er", Arrays.asList("", "E", "OR", "ORS", "ATION", "ING"));
-        tagEndingToReplacements.put("or", Arrays.asList("", "E", "ER", "ERS", "ATION", "ING"));
+        tagEndingToReplacements.put("", Arrays.asList("", "S", "ES", "Y", "ER", "ERS", "EST", "ED", "ING", "I", "IC", "MAN"));
+        tagEndingToReplacements.put("S", Arrays.asList("", "ING", "ED"));
+        tagEndingToReplacements.put("ED", Collections.singletonList(""));
+        tagEndingToReplacements.put("ES", Arrays.asList("", "ING", "ED"));
+        tagEndingToReplacements.put("IES", Arrays.asList("Y", "C"));
+        tagEndingToReplacements.put("Y", Arrays.asList("", "ER", "ERS", "IES", "IST", "IC", "ICAL", "ICALLY"));
+        tagEndingToReplacements.put("ING", Arrays.asList("", "E", "ER", "ERS", "ED", "ES", "S"));
+        tagEndingToReplacements.put("TION", Arrays.asList("T", "TE", "TEE", "TED", "TOR", "TING"));
+        tagEndingToReplacements.put("TATION", Arrays.asList("T", "TE", "TEE", "TED", "TOR", "TING"));
+        tagEndingToReplacements.put("ER", Arrays.asList("", "E", "OR", "ORS", "ATION", "ING"));
+        tagEndingToReplacements.put("OR", Arrays.asList("", "E", "ER", "ERS", "ATION", "ING"));
         
         tagList.putAll(parseTags());
         
         tagEndingToDontDoList.put("", Collections.emptyList());
-        tagEndingToDontDoList.put("s", tagList.values().stream().filter(tag -> tag.dontDoS).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("ed", tagList.values().stream().filter(tag -> tag.dontDoED).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("es", tagList.values().stream().filter(tag -> tag.dontDoES).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("ies", tagList.values().stream().filter(tag -> tag.dontDoIES).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("y", tagList.values().stream().filter(tag -> tag.dontDoY).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("ing", tagList.values().stream().filter(tag -> tag.dontDoING).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("tion", tagList.values().stream().filter(tag -> tag.dontDoTION).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("tation", tagList.values().stream().filter(tag -> tag.dontDoTION).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("er", tagList.values().stream().filter(tag -> tag.dontDoER).map(tag -> tag.name).collect(Collectors.toList()));
-        tagEndingToDontDoList.put("or", tagList.values().stream().filter(tag -> tag.dontDoOR).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("S", tagList.values().stream().filter(tag -> tag.dontDoS).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("ED", tagList.values().stream().filter(tag -> tag.dontDoED).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("ES", tagList.values().stream().filter(tag -> tag.dontDoES).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("IES", tagList.values().stream().filter(tag -> tag.dontDoIES).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("Y", tagList.values().stream().filter(tag -> tag.dontDoY).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("ING", tagList.values().stream().filter(tag -> tag.dontDoING).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("TION", tagList.values().stream().filter(tag -> tag.dontDoTION).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("TATION", tagList.values().stream().filter(tag -> tag.dontDoTION).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("ER", tagList.values().stream().filter(tag -> tag.dontDoER).map(tag -> tag.name).collect(Collectors.toList()));
+        tagEndingToDontDoList.put("OR", tagList.values().stream().filter(tag -> tag.dontDoOR).map(tag -> tag.name).collect(Collectors.toList()));
         
         int totalKeywords = 0;
         for (Tag tag : tagList.values()) {
             List<String> appendings = new ArrayList<>();
             for (String ending : tagEndingToDontDoList.keySet()) {
-                if (tag.name.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
+                if (tag.name.toUpperCase().endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
                     appendings.addAll(tagEndingToReplacements.get(ending));
                 }
             }
@@ -544,14 +544,19 @@ public final class TextTagger {
     /**
      * Determines a list of associated tags for a string.
      *
-     * @param text The string.
+     * @param text        The string.
+     * @param currentTags The current tag list.
      * @return The list of tags associated with the given string.
      */
-    public List<String> getTagsFromText(String text) {
-        List<String> initialTags = getInitialTags(text);
-        List<String> tags = new ArrayList<>(initialTags);
-        HashSet<String> matches = new HashSet<>(initialTags);
+    public List<String> getTagsFromText(String text, List<String> currentTags) {
+        List<String> tags = new ArrayList<>(currentTags);
+        HashSet<String> matches = new HashSet<>();
         HashSet<String> nonMatches = new HashSet<>();
+        
+        getInitialTags(text).forEach(e -> {
+            tags.add(e);
+            matches.add(e.toUpperCase());
+        });
         
         for (Tag tag : tagList.values()) {
             if (tags.contains(tag.name)) {
@@ -564,6 +569,16 @@ public final class TextTagger {
         }
         
         return fixTagList(text, tags, matches, nonMatches);
+    }
+    
+    /**
+     * Determines a list of associated tags for a string.
+     *
+     * @param text The string.
+     * @return The list of tags associated with the given string.
+     */
+    public List<String> getTagsFromText(String text) {
+        return getTagsFromText(text, new ArrayList<>());
     }
     
     /**
@@ -603,7 +618,7 @@ public final class TextTagger {
                 }
             }
             word = word.toUpperCase();
-            if (word.endsWith("SAURUS")) {
+            if (word.endsWith("SAURUS") && !word.equals("THESAURUS")) {
                 if (!tags.contains("Dinosaur")) {
                     tags.add("Dinosaur");
                     if (printTagTrigger) {
@@ -611,11 +626,19 @@ public final class TextTagger {
                     }
                 }
             }
-            if (word.startsWith("MOO") && !word.equals("MOON") && !word.equals("MOOD")) {
+            if (word.startsWith("MOOO")) {
                 if (!tags.contains("Cow")) {
                     tags.add("Cow");
                     if (printTagTrigger) {
-                        System.out.println("Cow" + " -> " + "Moo*");
+                        System.out.println("Cow" + " -> " + "Mooo*");
+                    }
+                }
+            }
+            if (word.startsWith("MOON")) {
+                if (!tags.contains("Moon")) {
+                    tags.add("Moon");
+                    if (printTagTrigger) {
+                        System.out.println("Moon" + " -> " + "Moon*");
                     }
                 }
             }
@@ -728,74 +751,63 @@ public final class TextTagger {
             }
             
             for (String ending : tagEndingToDontDoList.keySet()) {
-                if (tag.name.endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
+                if (tag.name.toUpperCase().endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
                     for (String append : tagEndingToReplacements.get(ending)) {
-                        if (tagEndingToDontDoList.containsKey(append.toLowerCase()) && tagEndingToDontDoList.get(append.toLowerCase()).contains(tag.name)) {
+                        if (tagEndingToDontDoList.containsKey(append) && tagEndingToDontDoList.get(append).contains(tag.name)) {
                             continue;
                         }
                         
                         String tagTest = StringUtility.rShear(tag.name.toUpperCase(), ending.length()) + append;
-                        if (nonMatches.contains(tagTest.toUpperCase())) {
-                            continue;
-                        }
                         if (textTest.matches(tagRegex.replace("X", tagTest)) ||
                                 textTestCombined.matches(tagRegexCombined.replace("X", tagTest))) {
                             if (printTagTrigger) {
-                                System.out.println(tag.name + " -> " + tag.name + (append.isEmpty() ? "" : (" (" + StringUtility.rShear(tag.name.toUpperCase(), ending.length()) + append + ")")));
+                                System.out.println(tag.name + " -> " + tag.name + (append.isEmpty() ? "" : (" (" + tagTest + ")")));
                             }
                             matches.add(tag.name.toUpperCase());
-                            matches.add(tagTest.toUpperCase());
                             return true;
-                        } else {
-                            nonMatches.add(tagTest.toLowerCase());
                         }
                     }
                 }
             }
         }
         
+        final List<String> aliasAppends = Arrays.asList("", "S", "ES", "IES");
         for (String alias : tag.aliases) {
-            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-'));
-            String aliasEntryTest = aliasEntry.replace("-", "\\\\-");
+            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-')).toUpperCase();
+            String aliasEntryTest = aliasEntry.replace("-", "\\\\-").toUpperCase();
             if (aliasEntry.isEmpty() || nonMatches.contains(aliasEntry)) {
                 continue;
             }
             
-            if (matches.contains(aliasEntry.toUpperCase())) {
+            if (matches.contains(aliasEntry)) {
                 if (printTagTrigger) {
-                    System.out.println(tag.name + " -> ~+" + aliasEntry);
+                    System.out.println(tag.name + " -> ~+" + alias);
                 }
                 return true;
             }
             
-            for (String append : Arrays.asList("", "S", "ES", "IES")) {
-                if ((append.equals("IES") && !aliasEntry.toUpperCase().endsWith("Y")) ||
-                        (append.equals("ES") && aliasEntry.length() <= 4)) {
+            for (String append : aliasAppends) {
+                if ((append.equals("ES") && aliasEntry.length() <= 4) ||
+                        (append.equals("IES") && !aliasEntry.endsWith("Y"))) {
                     continue;
                 }
                 
-                String aliasTest = aliasEntryTest.toUpperCase() + append;
-                if (nonMatches.contains(aliasTest.toUpperCase())) {
-                    continue;
-                }
+                String aliasTest = StringUtility.rShear(aliasEntryTest, (append.equals("IES") ? 1 : 0)) + append;
                 if (textTest.matches(tagRegex.replace("X", aliasTest)) ||
                         textTestCombined.matches(tagRegex.replace("X", aliasTest)) ||
                         textTestCombined.matches(tagRegexCombined.replace("X", aliasTest))) {
                     if (printTagTrigger) {
-                        System.out.println(tag.name + " -> +" + aliasEntry + (append.isEmpty() ? "" : (" (" + aliasEntry.toUpperCase() + append + ")")));
+                        System.out.println(tag.name + " -> +" + alias + (append.isEmpty() ? "" : (" (" + aliasTest + ")")));
                     }
-                    matches.add(alias.toUpperCase());
-                    matches.add(aliasTest.toUpperCase());
+                    matches.add(aliasEntry);
                     return true;
-                } else {
-                    nonMatches.add(aliasTest.toUpperCase());
                 }
             }
             
-            nonMatches.add(alias);
+            nonMatches.add(aliasEntry);
         }
         
-        nonMatches.add(tag.name);
+        nonMatches.add(tag.name.toUpperCase());
         return false;
     }
     
