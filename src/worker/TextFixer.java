@@ -178,6 +178,12 @@ public final class TextFixer {
                             break;
                         }
                     }
+                    for (int j = i; j < text.length(); j++) {
+                        if (StringUtility.isAlphanumeric(text.charAt(j))) {
+                            text = text.substring(0, j) + Character.toUpperCase(text.charAt(j)) + text.substring(j + 1);
+                            break;
+                        }
+                    }
                     justInQuote = false;
                 }
                 if ((text.charAt(i) == '"' && text.charAt(i - 1) == '\\')) {
