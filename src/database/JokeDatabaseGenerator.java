@@ -7,19 +7,48 @@
 package database;
 
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
+
+import main.Jokes;
+import pojo.Joke;
+import utility.Filesystem;
+import worker.TextTagger;
 
 /**
  * Generates the Joke Database.
  */
 public class JokeDatabaseGenerator {
+    
+    //Static Fields
+    
+    /**
+     * The Connection for the Joke Database.
+     */
+    private static Connection conn;
+    
+    /**
+     * The Statement for the Joke Database Connection.
+     */
+    private static Statement s;
+    
+    /**
+     * The list of Jokes.
+     */
+    private static final List<Joke> jokes = new ArrayList<>();
+    
+    /**
+     * The reference to the Text Tagger.
+     */
+    private static TextTagger textTagger = null;
+    
+    /**
+     * The Joke Database sql code.
+     */
+    private static final List<String> jokesSql = new ArrayList<>();
+    
     
     //Main Method
     
@@ -29,63 +58,223 @@ public class JokeDatabaseGenerator {
      * @param args Arguments to the main method.
      */
     public static void main(String[] args) {
-        try {
-            System.setProperty("derby.stream.error.file", "log" + File.separator + "derby.log");
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver").getConstructor().newInstance();
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | InvocationTargetException | NoSuchMethodException e) {
-            System.out.println("There was an error setting up the DatabaseManager");
+        jokes.addAll(Jokes.readJokes(new File("jokes/jokes.json")));
+        
+        textTagger = TextTagger.getInstance();
+        textTagger.loadTagLists = false;
+        textTagger.load();
+        
+        if (!DatabaseManager.setupDatabase()) {
+            return;
+        }
+        
+        conn = DatabaseManager.connectToDatabase("jokes/db/jokes");
+        if (conn == null) {
+            return;
+        }
+        
+        s = DatabaseManager.createStatement(conn);
+        if (s == null) {
             return;
         }
         
         
-        String db = "jokes/db/jokes";
-        Properties props = new Properties();
-        props.put("user", "admin");
-        props.put("password", "admin");
+        jokesSql.add("-- Create Tables");
+        createSourceTable();
+        createJokeTable();
+        jokesSql.add("");
         
-        try {
-            Connection conn = DriverManager.getConnection("jdbc:derby:" + db + ";create=true", props);
-            conn.setAutoCommit(true);
-            
-            Statement s = conn.createStatement();
-            s.setMaxRows(Integer.MAX_VALUE);
-            
-            List<String> sql = new ArrayList<>();
-            sql.add("CREATE TABLE source (" +
-                    "id INT NOT NULL, " + "" +
-                    "name VARCHAR(16) UNIQUE NOT NULL, " +
-                    "CONSTRAINT source_pk PRIMARY KEY (id)" +
-                    ");");
-            sql.add("INSERT INTO source VALUES(0, 'Quirkology');");
-            sql.add("INSERT INTO source VALUES(1, 'Jokeriot');");
-            sql.add("INSERT INTO source VALUES(2, 'StupidStuff');");
-            sql.add("INSERT INTO source VALUES(3, 'Wocka');");
-            sql.add("INSERT INTO source VALUES(4, 'Reddit');");
-            
-            sql.add("CREATE TABLE joke (" +
-                    "id INT NOT_NULL, " +
-                    "text VARCHAR(32768) NOT_NULL, " +
-                    "length INT NOT_NULL, " +
-                    "source INT NOT_NULL, " +
-                    "nsfw BOOLEAN NOT_NULL, " +
-                    "CONSTRAINT joke_pk PRIMARY KEY (id), " +
-                    "CONSTRAINT joke_source_fk FOREIGN KEY (source) REFERENCES source(id)" +
-                    ");");
-            sql.add("INSERT INTO jokes VALUES(1, 'What kind of pig can you ignore at a party? A wild bore.', 56, 0, 0);");
-            
-            for (String sqlStatement : sql) {
-                s.execute(sqlStatement);
+        jokesSql.add("-- Create Tag Tables");
+        createTagTables();
+        jokesSql.add("");
+        
+        jokesSql.add("-- Create Indices");
+        createIndices();
+        jokesSql.add("");
+        
+        jokesSql.add("-- Insert Sources");
+        populateSourceTable();
+        jokesSql.add("");
+        
+        jokesSql.add("-- Insert Jokes");
+        populateJokeTable();
+        jokesSql.add("");
+        
+        jokesSql.add("-- Insert Tags");
+        populateTagTables();
+        
+        Filesystem.writeLines(new File("jokes/jokes.sql"), jokesSql);
+        
+        
+        DatabaseManager.closeStatement(s);
+        DatabaseManager.disconnectFromDatabase(conn);
+        DatabaseManager.shutdownDatabase();
+    }
+    
+    /**
+     * Creates the Source table in the Joke Database.
+     *
+     * @return Whether the table was created successfully or not.
+     */
+    private static boolean createSourceTable() {
+        String sql = "CREATE TABLE source (" +
+                "id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), " +
+                "name VARCHAR(16) UNIQUE NOT NULL, " +
+                "CONSTRAINT source_pk PRIMARY KEY (id)" +
+                ")";
+        jokesSql.add(sql + ";");
+        
+        return DatabaseManager.executeSql(s, sql);
+    }
+    
+    /**
+     * Creates the Joke table in the Joke Database.
+     *
+     * @return Whether the table was created successfully or not.
+     */
+    private static boolean createJokeTable() {
+        String sql = "CREATE TABLE joke (" +
+                "id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), " +
+                "text VARCHAR(32000) NOT NULL, " +
+                "length INT NOT NULL, " +
+                "source INT NOT NULL, " +
+                "nsfw BOOLEAN NOT NULL, " +
+                "hash INT NOT NULL, " +
+                "CONSTRAINT joke_pk PRIMARY KEY (id), " +
+                "CONSTRAINT joke_source_fk FOREIGN KEY (source) REFERENCES source(id)" +
+                ")";
+        jokesSql.add(sql + ";");
+        
+        return DatabaseManager.executeSql(s, sql);
+    }
+    
+    /**
+     * Creates the Tag tables in the Joke Database.
+     *
+     * @return Whether the tables were created successfully or not.
+     */
+    private static boolean createTagTables() {
+        List<String> sql = new ArrayList<>();
+        for (String tag : textTagger.tagList.keySet()) {
+            String tagTable = "tag_" + tag.toLowerCase().replace(" ", "_");
+            String sqlStatement = "CREATE TABLE " + tagTable + " (" +
+                    "id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), " +
+                    "joke INT NOT NULL, " +
+                    "CONSTRAINT " + tagTable + "_pk PRIMARY KEY (id), " +
+                    "CONSTRAINT " + tagTable + "_joke_fk FOREIGN KEY (joke) REFERENCES joke(id)" +
+                    ")";
+            sql.add(sqlStatement);
+        }
+        
+        for (String sqlStatement : sql) {
+            jokesSql.add(sqlStatement + ";");
+            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+                return false;
             }
+        }
+        return true;
+    }
+    
+    /**
+     * Creates the indices in the Joke Database.
+     *
+     * @return Whether the indices were created successfully or not.
+     */
+    private static boolean createIndices() {
+        List<String> sql = new ArrayList<>();
+        sql.add("CREATE INDEX source_id_idx ON source (id)");
+        sql.add("CREATE INDEX source_name_idx ON source (name)");
+        sql.add("CREATE INDEX joke_id_idx ON joke (id)");
+        sql.add("CREATE INDEX joke_length_idx ON joke (length)");
+        sql.add("CREATE INDEX joke_source_idx ON joke (source)");
+        sql.add("CREATE INDEX joke_nsfw_idx ON joke (nsfw)");
+        
+        for (String tag : textTagger.tagList.keySet()) {
+            String tagTable = "tag_" + tag.toLowerCase().replace(" ", "_");
+            sql.add("CREATE INDEX " + tagTable + "_joke_idx ON " + tagTable + " (joke)");
+        }
+        
+        for (String sqlStatement : sql) {
+            jokesSql.add(sqlStatement + ";");
+            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    /**
+     * Populates the Source table in the Joke Database.
+     *
+     * @return Whether the table was populated successfully or not.
+     */
+    private static boolean populateSourceTable() {
+        List<String> sql = new ArrayList<>();
+        sql.add("INSERT INTO source (name) VALUES('Quirkology')");
+        sql.add("INSERT INTO source (name) VALUES('Jokeriot')");
+        sql.add("INSERT INTO source (name) VALUES('StupidStuff')");
+        sql.add("INSERT INTO source (name) VALUES('Wocka')");
+        sql.add("INSERT INTO source (name) VALUES('Reddit')");
+        
+        for (String sqlStatement : sql) {
+            jokesSql.add(sqlStatement + ";");
+            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    /**
+     * Populates the Joke table in the Joke Database.
+     *
+     * @return Whether the table was populated successfully or not.
+     */
+    private static boolean populateJokeTable() {
+        List<String> sql = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            Joke joke = jokes.get(i);
             
-        } catch (Exception ignored) {
+            StringBuilder jokeSql = new StringBuilder("INSERT INTO joke (text, length, source, nsfw, hash) VALUES(");
+            jokeSql.append("'").append(joke.text.replace("'", "''")).append("', ");
+            jokeSql.append(joke.length).append(", ");
+            jokeSql.append("(SELECT id FROM source WHERE name = '").append(joke.source).append("'), ");
+            jokeSql.append(joke.nsfw ? "true" : "false").append(", ");
+            jokeSql.append(joke.hash).append(")");
+            sql.add(jokeSql.toString());
         }
         
-        
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:derby:;shutdown=true");
-            connection.close();
-        } catch (SQLException ignored) {
+        for (String sqlStatement : sql) {
+            jokesSql.add(sqlStatement + ";");
+            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+                return false;
+            }
         }
+        return true;
+    }
+    
+    /**
+     * Populates the Tag tables in the Joke Database.
+     *
+     * @return Whether the tables were populated successfully or not.
+     */
+    private static boolean populateTagTables() {
+        List<String> sql = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            Joke joke = jokes.get(i);
+            
+            for (String tag : joke.tags) {
+                sql.add("INSERT INTO tag_" + tag.toLowerCase().replace(" ", "_") + " (joke) VALUES(" + (i + 1) + ")");
+            }
+        }
+        
+        for (String sqlStatement : sql) {
+            jokesSql.add(sqlStatement + ";");
+            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+                return false;
+            }
+        }
+        return true;
     }
     
 }
