@@ -103,7 +103,7 @@ public class JokeDatabaseGenerator {
         jokesSql.add("-- Insert Tags");
         populateTagTables();
         
-        Filesystem.writeLines(new File("jokes/jokes.sql"), jokesSql);
+        Filesystem.writeLines(new File("jokes/db/jokes.sql"), jokesSql);
         
         
         DatabaseManager.closeStatement(s);
@@ -182,9 +182,7 @@ public class JokeDatabaseGenerator {
      */
     private static boolean createIndices() {
         List<String> sql = new ArrayList<>();
-        sql.add("CREATE INDEX source_id_idx ON source (id)");
         sql.add("CREATE INDEX source_name_idx ON source (name)");
-        sql.add("CREATE INDEX joke_id_idx ON joke (id)");
         sql.add("CREATE INDEX joke_length_idx ON joke (length)");
         sql.add("CREATE INDEX joke_source_idx ON joke (source)");
         sql.add("CREATE INDEX joke_nsfw_idx ON joke (nsfw)");
@@ -232,8 +230,7 @@ public class JokeDatabaseGenerator {
      */
     private static boolean populateJokeTable() {
         List<String> sql = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
-            Joke joke = jokes.get(i);
+        for (Joke joke : jokes) {
             
             StringBuilder jokeSql = new StringBuilder("INSERT INTO joke (text, length, source, nsfw, hash) VALUES(");
             jokeSql.append("'").append(joke.text.replace("'", "''")).append("', ");
@@ -260,7 +257,7 @@ public class JokeDatabaseGenerator {
      */
     private static boolean populateTagTables() {
         List<String> sql = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < jokes.size(); i++) {
             Joke joke = jokes.get(i);
             
             for (String tag : joke.tags) {
