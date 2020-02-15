@@ -14,6 +14,7 @@ import java.util.Map;
 
 import main.Jokes;
 import pojo.Joke;
+import resource.ConsoleProgressBar;
 import worker.TextTagger;
 
 /**
@@ -26,12 +27,20 @@ public class TagHotfixer {
     /**
      * A list of tags to hotfix.
      */
-    private static final List<String> redo = Arrays.asList("Airplane", "Anal Sex", "Anatomy", "Archaeology", "Arizona", "Army", "Asian", "Astrology", "Aviation", "Bad Language", "British", "Butt", "Cancer", "Car", "Childbirth", "Children", "Clubhouse", "Court", "Dead Baby", "Disability", "Disappointment", "Driving", "Drug", "Dwarf", "Earth", "Eating", "Egypt", "Electricity", "England", "English", "Family", "Fitness", "Genetics", "Geology", "Geometry", "Gun", "Health", "Heart", "Helicopter", "Herptile", "Hitler", "Horse", "Hospital", "Housework", "Invisibility", "Jail", "Jewish", "King", "Kung Fu", "Law", "Lifeguard", "Lying", "Mail", "Make a Wish", "Mammal", "Mechanic", "Medical", "Medicine", "Military", "Mirror", "Native American", "Nazi", "News", "Oral Sex", "PTSD", "Pepsi", "Period", "Pessimist", "Politics", "Pregnancy", "Profanity", "Prostitution", "Rape", "Rejection", "Religion", "Repairman", "Reporter", "Reptile", "Rich", "River", "Royalty", "Sarcastic", "School", "Scottish", "Slut", "Snail", "Snow", "Soda", "Speech Impediment", "Sport", "Student Loans", "Swimming", "Train", "Turtle", "Ugly", "Urination", "Vaccination", "Water", "Weather", "Work", "World War II");
+    @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
+    private static final List<String> redo = Arrays.asList();
+    
+    /**
+     * A list of tags indicating the joke should have its tags to hotfix.
+     */
+    @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
+    private static final List<String> redoIfHas = Arrays.asList("Lightbulb");
     
     /**
      * A list of initial tags to hotfix.
      */
-    private static final List<String> redoInitial = Arrays.asList("Snow", "Water", "Weather");
+    @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
+    private static final List<String> redoInitial = Arrays.asList();
     
     /**
      * The reference to the Text Tagger.
@@ -51,23 +60,40 @@ public class TagHotfixer {
         textTagger.load();
         
         for (Jokes.JokeSet jokeSet : Jokes.JokeSet.values()) {
+            if (jokeSet == Jokes.JokeSet.Quirkology || jokeSet == Jokes.JokeSet.StupidStuff || jokeSet == Jokes.JokeSet.Wocka) {
+                continue;
+            }
             File fixedFile = new File(jokeSet.directory, "/source/3 - fixed/fixed.json");
             File taggedFile = new File(jokeSet.directory, "/source/4 - tagged/tagged.json");
             if (!taggedFile.exists()) {
                 continue;
             }
             
+            ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
+            progressBar.update(0);
+            
             List<Joke> preJokes = Jokes.readJokes(fixedFile);
             Map<Integer, List<String>> preTags = new HashMap<>();
             for (Joke preJoke : preJokes) {
                 preTags.put(preJoke.hash, preJoke.tags);
             }
-            
             List<Joke> jokes = Jokes.readJokes(taggedFile);
+            
+            progressBar.setTotal(jokes.size());
+            
             for (Joke joke : jokes) {
                 boolean retag = false;
                 
-                if (!redoInitial.isEmpty()) {
+                if (!redoIfHas.isEmpty()) {
+                    for (String tag : joke.tags) {
+                        if (redoIfHas.contains(tag)) {
+                            retag = true;
+                            break;
+                        }
+                    }
+                }
+                
+                if (!retag && !redoInitial.isEmpty()) {
                     List<String> initialTags = textTagger.getInitialTags(joke.text);
                     for (String redoInitialEntry : redoInitial) {
                         if (initialTags.contains(redoInitialEntry)) {
@@ -77,7 +103,7 @@ public class TagHotfixer {
                     }
                 }
                 
-                if (!retag) {
+                if (!retag && !redo.isEmpty()) {
                     for (String redoEntry : redo) {
                         if (textTagger.hasTag(joke.text, textTagger.tagList.get(redoEntry))) {
                             retag = true;
@@ -90,9 +116,11 @@ public class TagHotfixer {
                     joke.tags = preTags.get(joke.hash);
                     joke.tags.addAll(textTagger.getTagsFromText(joke.text, joke.tags));
                 }
+                progressBar.addOne();
             }
             
             Jokes.outputJokes(taggedFile, jokes);
+            progressBar.complete(true);
         }
     }
     
