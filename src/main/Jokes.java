@@ -128,7 +128,7 @@ public class Jokes {
     /**
      * The number of jokes to tag before saving the state.
      */
-    private static final int tagChunkSize = 25 * numCores;
+    private static final int tagChunkSize = 20 * numCores;
     
     /**
      * The reference to the Joke Parser.
@@ -240,7 +240,7 @@ public class Jokes {
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
             
-            long subParseTime = getSaveProcessTime(jokeSet, ProcessStep.PARSE);
+            long subParseTime = getSaveProcessTime(jokeSet, ProcessStep.PARSE) * 1000;
             File parsedFile = new File(jokeSet.directory + ProcessStep.PARSE.out);
             
             if (subParseTime < 0) {
@@ -251,12 +251,12 @@ public class Jokes {
                 Filesystem.createDirectory(parsedFile.getParentFile());
                 outputJokes(parsedFile, jokes);
                 long subParseEndTime = System.currentTimeMillis();
-                subParseTime = ((subParseEndTime - subParseStartTime) / 1000);
-                setSaveProcessTime(jokeSet, ProcessStep.PARSE, subParseTime);
+                subParseTime = (subParseEndTime - subParseStartTime);
+                setSaveProcessTime(jokeSet, ProcessStep.PARSE, (subParseTime / 1000));
             } else {
-                progressBar.setInitialDuration(subParseTime);
+                progressBar.setInitialDuration(subParseTime / 1000);
             }
-            parseTime += subParseTime;
+            parseTime += (subParseTime / 1000);
             int size = readJokes(parsedFile).size();
             
             progressBar.setTotal(size);
@@ -325,7 +325,7 @@ public class Jokes {
                 
                 progressBar.setTotal(work.size() + fixed.size());
                 progressBar.setInitialProgress(fixed.size());
-                progressBar.setInitialDuration(subFixTime);
+                progressBar.setInitialDuration(subFixTime / 1000);
                 progressBar.update(fixed.size());
                 
                 while (!work.isEmpty()) {
@@ -429,6 +429,7 @@ public class Jokes {
                 
                 progressBar.setTotal(work.size() + tagged.size());
                 progressBar.setInitialProgress(tagged.size());
+                progressBar.setInitialDuration(subTagTime / 1000);
                 progressBar.update(tagged.size());
                 
                 while (!work.isEmpty()) {
@@ -500,7 +501,7 @@ public class Jokes {
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
             
-            long subCompileTime = getSaveProcessTime(jokeSet, ProcessStep.COMPILE);
+            long subCompileTime = getSaveProcessTime(jokeSet, ProcessStep.COMPILE) * 1000;
             File compiledFileIn = new File(jokeSet.directory + ProcessStep.COMPILE.in);
             File compiledFileOut = new File(jokeSet.directory + ProcessStep.COMPILE.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
             
@@ -508,12 +509,12 @@ public class Jokes {
                 long subCompileStartTime = System.currentTimeMillis();
                 Filesystem.copyFile(compiledFileIn, compiledFileOut);
                 long subCompileEndTime = System.currentTimeMillis();
-                subCompileTime = ((subCompileEndTime - subCompileStartTime) / 1000);
-                setSaveProcessTime(jokeSet, ProcessStep.COMPILE, subCompileTime);
+                subCompileTime = (subCompileEndTime - subCompileStartTime);
+                setSaveProcessTime(jokeSet, ProcessStep.COMPILE, (subCompileTime / 1000));
             } else {
-                progressBar.setInitialDuration(subCompileTime);
+                progressBar.setInitialDuration(subCompileTime / 1000);
             }
-            compileTime += subCompileTime;
+            compileTime += (subCompileTime / 1000);
             int size = readJokes(compiledFileOut).size();
             
             progressBar.setTotal(size);
@@ -550,7 +551,7 @@ public class Jokes {
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
             
-            long subMergeTime = getSaveProcessTime(jokeSet, ProcessStep.MERGE);
+            long subMergeTime = getSaveProcessTime(jokeSet, ProcessStep.MERGE) * 1000;
             File mergedFileIn = new File(jokeSet.directory + ProcessStep.COMPILE.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
             
             if (subMergeTime < 0) {
@@ -558,12 +559,12 @@ public class Jokes {
                 List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
                 jokes.addAll(jokeSetJokes);
                 long subMergeEndTime = System.currentTimeMillis();
-                subMergeTime = ((subMergeEndTime - subMergeStartTime) / 1000);
-                setSaveProcessTime(jokeSet, ProcessStep.MERGE, subMergeTime);
+                subMergeTime = (subMergeEndTime - subMergeStartTime);
+                setSaveProcessTime(jokeSet, ProcessStep.MERGE, (subMergeTime / 1000));
             } else {
-                progressBar.setInitialDuration(subMergeTime);
+                progressBar.setInitialDuration(subMergeTime / 1000);
             }
-            mergeTime += subMergeTime;
+            mergeTime += (subMergeTime / 1000);
             int size = readJokes(mergedFileIn).size();
             
             progressBar.setTotal(size);

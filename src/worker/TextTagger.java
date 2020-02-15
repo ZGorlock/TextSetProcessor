@@ -841,15 +841,15 @@ public final class TextTagger {
             }
             
             if (tags.contains("Bug")) {
-                Tag specialBug = specialTagList.get("Bug~");
-                if (specialBug == null) {
-                    specialBug = new Tag(tagList.get("Bug"));
-                    specialBug.name += "~";
-                    specialBug.aliases.remove("Fly");
-                    specialBug.aliases.removeAll(tagList.get("Fly").aliases);
-                    specialTagList.put("Bug~", specialBug);
+                Tag bugNoFly = specialTagList.get("Bug~Fly");
+                if (bugNoFly == null) {
+                    bugNoFly = new Tag(tagList.get("Bug"));
+                    bugNoFly.name += "~";
+                    bugNoFly.aliases.remove("Fly");
+                    bugNoFly.aliases.removeAll(tagList.get("Fly").aliases);
+                    specialTagList.put("Bug~Fly", bugNoFly);
                 }
-                if (!hasTag(text, specialBug, matches, nonMatches)) {
+                if (!hasTag(text, bugNoFly, matches, nonMatches)) {
                     tags.remove("Bug");
                     if (printTagTrigger) {
                         System.out.println("-Bug -> -Fly -> Aviation");
@@ -858,19 +858,37 @@ public final class TextTagger {
             }
             
             if (tags.contains("Animal")) {
-                Tag specialAnimal = specialTagList.get("Animal~");
-                if (specialAnimal == null) {
-                    specialAnimal = new Tag(tagList.get("Animal"));
-                    specialAnimal.name += "~";
-                    specialAnimal.aliases.remove("Fly");
-                    specialAnimal.aliases.removeAll(tagList.get("Fly").aliases);
-                    specialTagList.put("Animal~", specialAnimal);
+                Tag animalNoFly = specialTagList.get("Animal~Fly");
+                if (animalNoFly == null) {
+                    animalNoFly = new Tag(tagList.get("Animal"));
+                    animalNoFly.name += "~";
+                    animalNoFly.aliases.remove("Fly");
+                    animalNoFly.aliases.removeAll(tagList.get("Fly").aliases);
+                    specialTagList.put("Animal~Fly", animalNoFly);
                 }
-                if (!hasTag(text, specialAnimal, matches, nonMatches)) {
+                if (!hasTag(text, animalNoFly, matches, nonMatches)) {
                     tags.remove("Animal");
                     if (printTagTrigger) {
-                        System.out.println("-Animal -> -Fly ->Aviation");
+                        System.out.println("-Animal -> -Fly -> Aviation");
                     }
+                }
+            }
+        }
+        
+        if (tags.contains("Lightbulb") && tags.contains("Sex")) {
+            Tag sexNoScrew = specialTagList.get("Sex~Screw");
+            if (sexNoScrew == null) {
+                sexNoScrew = new Tag(tagList.get("Sex"));
+                sexNoScrew.name += "~";
+                sexNoScrew.aliases.remove("Screw");
+                sexNoScrew.aliases.remove("Screwed");
+                sexNoScrew.aliases.remove("Screwing");
+                specialTagList.put("Sex~Screw", sexNoScrew);
+            }
+            if (!hasTag(text, sexNoScrew, matches, nonMatches)) {
+                tags.remove("Sex");
+                if (printTagTrigger) {
+                    System.out.println("-Sex -> Lightbulb");
                 }
             }
         }
