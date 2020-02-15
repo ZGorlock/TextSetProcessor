@@ -69,6 +69,11 @@ public final class TextTagger {
     public final Map<String, Tag> tagList = new LinkedHashMap<>();
     
     /**
+     * A dictionary of tags and aliases.
+     */
+    public final List<String> tagDict = new ArrayList<>();
+    
+    /**
      * A map between tag endings to a list of tags that should not use them.
      */
     public final Map<String, List<String>> tagEndingToDontDoList = new HashMap<>();
@@ -160,23 +165,9 @@ public final class TextTagger {
         tagEndingToDontDoList.put("ER", tagList.values().stream().filter(tag -> tag.dontDoER).map(tag -> tag.name).collect(Collectors.toList()));
         tagEndingToDontDoList.put("OR", tagList.values().stream().filter(tag -> tag.dontDoOR).map(tag -> tag.name).collect(Collectors.toList()));
         
-        int totalKeywords = 0;
-        for (Tag tag : tagList.values()) {
-            List<String> appendings = new ArrayList<>();
-            for (String ending : tagEndingToDontDoList.keySet()) {
-                if (tag.name.toUpperCase().endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
-                    appendings.addAll(tagEndingToReplacements.get(ending));
-                }
-            }
-            appendings = ListUtility.removeDuplicates(appendings);
-            int tagKeywords = appendings.size();
-            for (String alias : tag.aliases) {
-                tagKeywords += (2 + ((alias.length() > 4) ? 1 : 0) + (alias.toUpperCase().endsWith("Y") ? 1 : 0));
-            }
-            totalKeywords += tagKeywords;
-        }
+        generateTagDict();
         
-        System.out.println("(" + tagList.size() + " Tags : " + totalKeywords + " Keywords)");
+        System.out.println("(" + tagList.size() + " Tags : " + tagDict.size() + " Keywords)");
     }
     
     /**
@@ -535,6 +526,39 @@ public final class TextTagger {
         
         for (String list : lists) {
             tag.aliases.addAll(Filesystem.readLines(new File("etc/lists/" + list + ".txt")));
+        }
+    }
+    
+    /**
+     * Generates a dictionary of tags and aliases.
+     */
+    private void generateTagDict() {
+        if (!tagDict.isEmpty()) {
+            return;
+        }
+        
+        for (Tag tag : tagList.values()) {
+            for (String ending : tagEndingToDontDoList.keySet()) {
+                if (tag.name.toUpperCase().endsWith(ending) && !tagEndingToDontDoList.get(ending).contains(tag.name)) {
+                    for (String append : tagEndingToReplacements.get(ending)) {
+                        if (tagEndingToDontDoList.containsKey(append) && tagEndingToDontDoList.get(append).contains(tag.name)) {
+                            continue;
+                        }
+                        tagDict.add(StringUtility.rShear(tag.name, ending.length()) + append);
+                    }
+                }
+            }
+            
+            final List<String> aliasAppends = Arrays.asList("", "S", "ES", "IES");
+            for (String alias : tag.aliases) {
+                for (String append : aliasAppends) {
+                    if ((append.equals("ES") && alias.length() <= 4) ||
+                            (append.equals("IES") && !alias.toUpperCase().endsWith("Y"))) {
+                        continue;
+                    }
+                    tagDict.add(StringUtility.rShear(alias, (append.equals("IES") ? 1 : 0)) + append);
+                }
+            }
         }
     }
     

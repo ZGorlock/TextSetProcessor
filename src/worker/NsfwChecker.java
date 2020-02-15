@@ -91,7 +91,7 @@ public final class NsfwChecker {
         textTagger = TextTagger.getInstance();
         textTagger.load();
         
-        nsfw.addAll(Filesystem.readLines(new File("etc/dicts/nsfw.txt")));
+        nsfw.addAll(Filesystem.readLines(new File("etc/dicts/dict-nsfw.txt")));
         
         dontDoStartNsfw.addAll(Arrays.asList("anal", "coon", "tit", "ass", "arse", "fuh"));
         dontDoEndNsfw.addAll(Arrays.asList("anal", "ass", "crap", "homo", "muff", "prick", "tit", "fuh"));

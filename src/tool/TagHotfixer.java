@@ -117,7 +117,7 @@ public class TagHotfixer {
             }
             
             Jokes.outputJokes(taggedFile, jokes);
-            progressBar.complete(true);
+            progressBar.complete();
         }
     }
     

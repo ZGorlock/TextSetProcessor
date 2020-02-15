@@ -8,6 +8,7 @@ package tool;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -32,21 +33,26 @@ public final class ListCleaner {
         TextFixer textFixer = TextFixer.getInstance();
         textFixer.load();
         
-        List<File> files = Filesystem.listFiles(new File("etc/lists/"), var -> true);
-        files.add(new File("etc/dicts/cities.txt"));
-        files.add(new File("etc/dicts/countries.txt"));
-        files.add(new File("etc/dicts/famousPeople.txt"));
-        files.add(new File("etc/dicts/names.txt"));
-        files.add(new File("etc/dicts/subCountries.txt"));
-        files.add(new File("etc/other/fileExtensions.txt"));
+        List<File> files = Filesystem.getFiles(new File("etc/lists/"));
+        files.addAll(Arrays.asList(
+                new File("etc/dicts/dict-local.txt"),
+                new File("etc/dicts/dict-contractions.txt"),
+                new File("etc/dicts/dict-nsfw.txt"),
+                new File("etc/dicts/cities.txt"),
+                new File("etc/dicts/countries.txt"),
+                new File("etc/dicts/famousPeople.txt"),
+                new File("etc/dicts/names.txt"),
+                new File("etc/dicts/subCountries.txt"),
+                new File("etc/other/fileExtensions.txt")));
         
         for (File f : files) {
+            boolean isDict = f.getName().contains("dict-");
             List<String> a = Filesystem.readLines(f);
             List<String> b = new ArrayList<>();
             for (String as : a) {
-                String work = as.replaceAll("\\s+", " ").replaceAll("^\\s+", "").replaceAll("\\s+$", "");
+                String work = StringUtility.trim(as.replaceAll("\\s+", " "));
                 work = textFixer.replaceDiacritics(work);
-                b.add(StringUtility.toTitleCase(work));
+                b.add(isDict ? work.toLowerCase() : StringUtility.toTitleCase(work));
             }
             b = ListUtility.removeDuplicates(b);
             b.sort(Comparator.naturalOrder());

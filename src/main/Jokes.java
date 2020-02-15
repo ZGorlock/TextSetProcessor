@@ -260,7 +260,7 @@ public class Jokes {
             int size = readJokes(parsedFile).size();
             
             progressBar.setTotal(size);
-            progressBar.complete(true);
+            progressBar.complete();
         }
         
         totalTime += parseTime;
@@ -457,7 +457,7 @@ public class Jokes {
             int size = readJokes(taggedFile).size();
             
             progressBar.setTotal(size);
-            progressBar.complete(true);
+            progressBar.complete();
         }
         
         totalTime += tagTime;
@@ -518,7 +518,7 @@ public class Jokes {
             int size = readJokes(compiledFileOut).size();
             
             progressBar.setTotal(size);
-            progressBar.complete(true);
+            progressBar.complete();
         }
         
         totalTime += compileTime;
@@ -568,7 +568,7 @@ public class Jokes {
             int size = readJokes(mergedFileIn).size();
             
             progressBar.setTotal(size);
-            progressBar.complete(true);
+            progressBar.complete();
         }
         
         Collections.shuffle(jokes);
