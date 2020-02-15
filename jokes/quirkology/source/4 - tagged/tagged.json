@@ -69,7 +69,7 @@
             "length": 45,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Fly"]
+            "tags": ["Aviation"]
         },
         {
             "joke": "What do you call a teacher with no arms, no legs, and no body? The Head...",
@@ -433,7 +433,7 @@
             "length": 410,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["America", "Animal", "Birth", "Body", "Cow", "India", "Lying", "Mammal", "Math", "Men", "Native American", "Racist", "United States", "Women"]
+            "tags": ["America", "Animal", "Birth", "Body", "India", "Lying", "Mammal", "Math", "Men", "Native American", "Racist", "United States", "Women"]
         },
         {
             "joke": "Guy walks into the doctor's with a strawberry growing out of his head. Doctor says 'I can give you some cream for that'.",
@@ -741,7 +741,7 @@
             "length": 347,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Clothing", "Dress", "Husband", "Marriage", "Men", "Party", "Relationship"]
+            "tags": ["Clothing", "Dress", "Husband", "Marriage", "Men", "Party", "Relationship", "Wife", "Women"]
         },
         {
             "joke": "What will Postman Pat be called when he retires? Pat.",
@@ -1091,7 +1091,7 @@
             "length": 258,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Airplane", "Animal", "Aviation", "Bug", "Fly", "Hawaii", "Men", "Ocean", "United States", "Water", "Women"]
+            "tags": ["Airplane", "Aviation", "Hawaii", "Men", "Ocean", "United States", "Water", "Women"]
         },
         {
             "joke": "Why did the 'possum cross the road? To get half-way across. Why did the chicken cross the road? To show the 'possum it could be done. Why did the anarchist monkey cross the road? He was stapled to the chicken. Why didn't the skeleton cross the road? No guts.",
@@ -1196,7 +1196,7 @@
             "length": 90,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Earth", "Fly", "Helicopter", "Ugly"]
+            "tags": ["Aviation", "Earth", "Helicopter", "Ugly"]
         },
         {
             "joke": "Did you hear about the maniac riding on the subways chopping peoples' arms off? The police caught him and charged him with armed robbery!",
@@ -1350,7 +1350,7 @@
             "length": 530,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Alcohol", "Bar", "Beer", "Clothing", "Drinking", "Furniture", "Men"]
+            "tags": ["Alcohol", "Bar", "Beer", "Clothing", "Disappointment", "Drinking", "Furniture", "Men"]
         },
         {
             "joke": "Why did the ram jump over the cliff? He didn't see the ewe turn.",
@@ -1434,7 +1434,7 @@
             "length": 135,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Amputation", "Body", "Doctor", "Health", "Hospital", "Medical", "Men", "Surgery"]
+            "tags": ["Amputation", "Body", "Doctor", "Health", "Hospital", "Medical", "Men"]
         },
         {
             "joke": "One penguin says to another, \"You look like you're wearing a tux.\" The second penguin replies, \"Who says I'm not?\"",
@@ -1777,7 +1777,7 @@
             "length": 38,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Color", "Food", "Plant", "Vegetable"]
+            "tags": ["Color", "Food", "Invisibility", "Plant", "Vegetable"]
         },
         {
             "joke": "Marge: \"Homer, you never listen to anything I say!\" Homer: \"Thank you. I would like an omelet.\"",
@@ -2207,11 +2207,11 @@
             "tags": ["Animal", "Children", "Family", "Health", "Mammal", "Marriage", "Relationship", "Sheep", "Wife", "Women"]
         },
         {
-            "joke": "James wanted to start a new hobby, and he decides he's going to learn a new flying sport. So he invites his friends to come and watch. He takes them to the top of a cliff, and produces three bird cages: One containing a budgerigar, the second containing a chicken, and the third a parrot. \"What *are* you up to?\" Asked one of his friends. \"Well,\" said James, \"I couldn't decide between budgie-jumping, hen-gliding or parrot- shooting... So I thought I'd try all three.\"",
-            "length": 475,
+            "joke": "James wanted to start a new hobby, and he decides he's going to learn a new flying sport. So he invites his friends to come and watch. He takes them to the top of a cliff, and produces three bird cages: One containing a budgerigar, the second containing a chicken, and the third a parrot. \"What *are* you up to?\" Asked one of his friends. \"Well,\" said James, \"I couldn't decide between budgie-jumping, hen-gliding or parrot-shooting... So I thought I'd try all three.\"",
+            "length": 474,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Bird", "Chicken", "Fly", "Food", "Friend", "Gun", "Memory", "Parrot", "Sport"]
+            "tags": ["Animal", "Aviation", "Bird", "Chicken", "Food", "Friend", "Gun", "Memory", "Parrot", "Sport"]
         },
         {
             "joke": "World's best oxymoron: Windows Operating System.",
@@ -2309,14 +2309,14 @@
             "length": 118,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Children", "Family", "Marriage", "Men", "Relationship", "Superhero", "Women"]
+            "tags": ["Children", "Family", "Invisibility", "Marriage", "Men", "Relationship", "Superhero", "Women"]
         },
         {
             "joke": "So these vultures decide to fly to Florida on an airline. They got on board carrying six dead raccoons and the flight attendant says, \"I'm sorry, but there's a limit of two carrion per passenger.\"",
             "length": 198,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Airplane", "Animal", "Aviation", "Bird", "Death", "Florida", "Fly", "Mammal", "United States"]
+            "tags": ["Airplane", "Animal", "Aviation", "Bird", "Death", "Florida", "Mammal", "United States"]
         },
         {
             "joke": "How do you keep an idiot in suspense? I will tell you later.",
@@ -2379,7 +2379,7 @@
             "length": 421,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Clothing", "Family", "Father", "Hotel", "House", "Men", "Parent", "Son"]
+            "tags": ["Family", "Father", "Hotel", "House", "Men", "Parent", "Son"]
         },
         {
             "joke": "A man walked into a bar and the barman said to him, \"Hello, do you want a drink?\" \"Yes please,\" replied the man. The barman then gave him a drink and waited for his money but the man didn't pay the barman argued with him and said, \"That's $3.00 please.\" But the man replied, \"No you asked me if I wanted a drink not if I wanted to buy one.\" A lawyer sitting in the corner agreed so the barman let him off and banned him from the pub. The next day the man went back to the pub and the barman said, \"Oi aren't you the man I barred yesterday?\" \"No,\" replied the man. \"Oh,\" said the barman. \"You must have a double.\" \"Yes please,\" said the man, \"I'll have a malt whiskey.\"",
@@ -2428,7 +2428,7 @@
             "length": 456,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Cinematography", "Dollar", "Family", "Fish", "Food", "Hearing", "Mammal", "Math", "Men", "Money", "Monkey", "Ocean", "Shopping", "Water", "Weight", "Zoo"]
+            "tags": ["Animal", "Cinematography", "Dollar", "Family", "Hearing", "Mammal", "Math", "Men", "Money", "Monkey", "Shopping", "Weight", "Zoo"]
         },
         {
             "joke": "A guy is driving down the motorway, knitting. Obviously this is dangerous driving as the driver has no hands on the wheel, so before long the police are catching up with him. One police car drives up alongside the offending vehicle, and motions for him to open his window. \"Pull over!\" The policeman shouts across. \"No, pair of socks!\"",
@@ -2456,7 +2456,7 @@
             "length": 69,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Bird", "Car", "Dog", "Fly", "Mammal"]
+            "tags": ["Animal", "Aviation", "Bird", "Car", "Dog", "Mammal"]
         },
         {
             "joke": "What is white and walks through the desert? A herd of yoghurt.",
@@ -2477,7 +2477,7 @@
             "length": 90,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Dancing", "Fly"]
+            "tags": ["Animal", "Bug", "Dancing", "Fly"]
         },
         {
             "joke": "What do you get if you cross a snowman with a vampire? Frostbite!",
@@ -2687,7 +2687,7 @@
             "length": 48,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Bug", "Car", "Fly", "Truck"]
+            "tags": ["Animal", "Bug", "Car", "Fly", "Truck"]
         },
         {
             "joke": "What's the difference between a trampoline and a bagpipe? Eventually you get tired of jumping on a trampoline.",
@@ -2722,7 +2722,7 @@
             "length": 177,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Angel", "Animal", "Aviation", "Bible", "Body", "Christian", "Church", "Family", "Fly", "Mammal", "Mice", "Mother", "Parent", "Religion"]
+            "tags": ["Angel", "Animal", "Aviation", "Bible", "Body", "Christian", "Church", "Family", "Mammal", "Mice", "Mother", "Parent", "Religion"]
         },
         {
             "joke": "What do you call a princess who worries all the time? A warrior princess.",
@@ -2750,14 +2750,14 @@
             "length": 753,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Business", "Computer", "Email", "Fly", "Height", "Holiday", "Hotel", "Husband", "Love", "Marriage", "Memory", "Men", "Reading", "Relationship", "Short", "Technology", "Widow", "Wife", "Women", "Writing"]
+            "tags": ["Aviation", "Business", "Computer", "Email", "Height", "Holiday", "Hotel", "Husband", "Love", "Marriage", "Memory", "Men", "Reading", "Relationship", "Short", "Technology", "Widow", "Wife", "Women", "Writing"]
         },
         {
             "joke": "A guy walks up to the receptionist in the Psychiatrist's office and says, \"I'm the Invisible man and I'd like to talk to the Doctor.\" She pokes her head into the Psychiatrist's office and says there is a man here who wants to talk to you and he claims he's the Invisible man. The Psychiatrist replies, \"Tell him I can't see him right now.\"",
             "length": 343,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Doctor", "Health", "Job", "Medical", "Men", "Office", "Psychiatry", "Work"]
+            "tags": ["Doctor", "Health", "Invisibility", "Job", "Medical", "Men", "Office", "Psychiatry", "Work"]
         },
         {
             "joke": "What's black, white, blue, and purple all over? A zebra with a bruise!",
@@ -2806,7 +2806,7 @@
             "length": 448,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Bank", "Boat", "Business", "Cow", "Dentist", "Doctor", "Health", "Hospital", "Mammal", "Medical", "Money", "River", "Shopping", "Surgery", "Teeth", "Transportation", "Water", "Work"]
+            "tags": ["Bank", "Boat", "Business", "Dentist", "Doctor", "Health", "Hospital", "Medical", "Money", "River", "Shopping", "Surgery", "Teeth", "Transportation", "Water", "Work"]
         },
         {
             "joke": "A group of astronauts are on the moon. They've been mining the surface, and have discovered that it really is made of cheese. One particular area of cheese that they're quite interested in is a large vein of brie, and they've already been there twice, and collected samples to be returned to mission control. All of a sudden, the radio crackles into life: \"Mission control to cheese-base-one, we need you to get a third load of that brie!\" But the astronauts are unhappy with the idea. They try to come up with all sorts of excuses why they shouldn't dig any more... \"It'll spoil the environment if we take too much. We don't want to leave this place looking bad... After all, have you ever seen such a site in your life as brie mined thrice?\"",
@@ -2876,7 +2876,7 @@
             "length": 760,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["America", "Asian", "Australia", "Beach", "Engineer", "Helicopter", "Japan", "Jungle", "Men", "Military", "Nature", "Navy", "Ocean", "Physics", "Plant", "Running", "Science", "Tree", "United States", "Water"]
+            "tags": ["America", "Asian", "Australia", "Aviation", "Beach", "Engineer", "Helicopter", "Japan", "Jungle", "Men", "Military", "Nature", "Navy", "Ocean", "Physics", "Plant", "Running", "Science", "Tree", "United States", "Water"]
         },
         {
             "joke": "Why do elephants drink? To try and forget.",
@@ -3261,7 +3261,7 @@
             "length": 95,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Bread", "Fly", "Food", "Restaurant", "Waiter"]
+            "tags": ["Animal", "Bread", "Bug", "Fly", "Food", "Restaurant", "Waiter"]
         },
         {
             "joke": "To tell the weather, Go to your back door and look for the dog. If the dog is at the door and he is wet, it's probably raining. But if the dog is standing there really soaking wet, it is probably raining really hard. If the dog's fur looks like it's been rubbed the wrong way, it's probably windy. If the dog has snow on his back, it's probably snowing. Of course, to be able to tell the weather like this, you have to leave the dog outside all the time, especially if you expect bad weather. Sincerely, The cat.",
@@ -3359,7 +3359,7 @@
             "length": 459,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Body", "Color", "Corpse", "Death", "Driving", "Eyesight", "Friend", "Funeral", "Golf", "Marriage", "Men", "Prayer", "Relationship", "Religion", "Sport"]
+            "tags": ["Body", "Color", "Corpse", "Death", "Driving", "Eyesight", "Food", "Friend", "Funeral", "Golf", "Marriage", "Men", "Prayer", "Relationship", "Religion", "Sport"]
         },
         {
             "joke": "Two cows in a field. One turns to the other and says, \"Are you worried about this Mad Cow Disease?\" The other cow says, \"Non, je suis Napoleon.\"",
@@ -3471,7 +3471,7 @@
             "length": 52,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Bug", "Fly", "Food", "Fruit", "Plant"]
+            "tags": ["Animal", "Bug", "Fly", "Food", "Fruit", "Plant"]
         },
         {
             "joke": "If miss universe is not fixed then why are all the winners from Earth?",
@@ -3618,7 +3618,7 @@
             "length": 520,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Anesthesia", "Beauty", "Body", "Doctor", "Drug", "Eyesight", "Health", "Hearing", "Hospital", "Law", "Lawyer", "Marriage", "Medical", "Relationship", "Sleep", "Surgery", "Wife", "Women"]
+            "tags": ["Anesthesia", "Beauty", "Body", "Disappointment", "Doctor", "Drug", "Eyesight", "Health", "Hearing", "Hospital", "Law", "Lawyer", "Marriage", "Medical", "Relationship", "Sleep", "Surgery", "Wife", "Women"]
         },
         {
             "joke": "Give a man a fish and he will eat for a day. Teach him how to fish and he will sit in a boat and drink beer all day!",
@@ -3646,7 +3646,7 @@
             "length": 540,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Animal", "Bird", "Body", "Breast", "Business", "Chicken", "Food", "Friend", "Hearing", "Shopping", "Supermarket", "Women"]
+            "tags": ["Animal", "Bird", "Body", "Breast", "Business", "Chicken", "Disappointment", "Food", "Friend", "Hearing", "Shopping", "Supermarket", "Women"]
         },
         {
             "joke": "Sean got home in the early hours of the morning after a night at the local pub. He made such a racket hitting into the furniture as he weaved his way through the house, that he woke up the missus. \"What on earth are you doing down there?\" She yelled down from the bedroom. \"Get yourself up here to bed and don't wake the neighbours.\" \"I'm trying to get a barrel of Guinness up the stairs,\" he shouted. \"Leave it 'till the morning,\" she shouted down, \"I can't,\" he said, \"I've drank it!\"",
@@ -3660,7 +3660,7 @@
             "length": 383,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Children", "Family", "Men", "Photography", "Police"]
+            "tags": ["Children", "Family", "Men", "Photography", "Police", "School"]
         },
         {
             "joke": "While making his rounds, a doctor points out an X-ray to a group of interns. \"As you can see the patient is limping because his left fibula and tibia are radically arched. Michael, what would you do in a case like this?\" \"Well,\" said the intern, \"I suppose I'd limp too.\"",
@@ -3821,7 +3821,7 @@
             "length": 67,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Bird", "Fly", "Men"]
+            "tags": ["Animal", "Aviation", "Bird", "Men"]
         },
         {
             "joke": "What do you get when you play a country song backwards? You get your dog back, your wife back, your house back, and you sober up.",
@@ -3961,7 +3961,7 @@
             "length": 653,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Blood", "Cow", "Eating", "Farmer", "Fly", "Food", "Hunger", "Mammal", "Monster", "Plant", "Tree", "Vampire"]
+            "tags": ["Animal", "Aviation", "Blood", "Cow", "Eating", "Farmer", "Food", "Hunger", "Mammal", "Monster", "Plant", "Tree", "Vampire"]
         },
         {
             "joke": "A man walks into a pub where everybody else is having coffee with cream. \"I would like a coffee. No cream on it.\" \"Sorry, we ran out of cream. Could it be with no milk?\"",
@@ -4675,7 +4675,7 @@
             "length": 676,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Color", "Dinner", "Eating", "Flower", "Food", "Furniture", "House", "Kitchen", "Love", "Men", "Old People", "Restaurant"]
+            "tags": ["Color", "Dinner", "Eating", "Flower", "Food", "Furniture", "House", "Kitchen", "Love", "Men", "Old People", "Restaurant", "Wife", "Women"]
         },
         {
             "joke": "A dog comes into a bar and asks for a beer. The bartender, a little surprised serves the dog the beer the dog drinks the beer and asks for the bill. \"It'll be 10 dollars,\" says the bartender the dog pays and is leaving through the door when the bartender says, \"It is not usual to have dogs here drinking.\" The dog hears and answers, \"For 10 dollars a beer no dog can keep drinking here.\"",
@@ -4787,7 +4787,7 @@
             "length": 316,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Alcohol", "Animal", "Aviation", "Beer", "Bug", "Drinking", "Fly", "Friend", "Gender", "House", "Men", "Stalker", "Telephone", "Women"]
+            "tags": ["Alcohol", "Animal", "Beer", "Bug", "Drinking", "Fly", "Friend", "Gender", "House", "Men", "Stalker", "Telephone", "Women"]
         },
         {
             "joke": "A man goes into a doctors surgery. \"Doctor, I've got a pain in my leg. Do you know what it could be?\" \"Gout,\" says the doctor. \"Why?\" Says the patient, \"I've only just come in.\"",
@@ -4836,14 +4836,14 @@
             "length": 732,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Airplane", "Aviation", "Beach", "Boat", "Cruise", "Dirty", "Genie", "Husband", "Jail", "Lamp", "Magic", "Marriage", "Men", "Ocean", "Relationship", "Sailor", "Travel", "Vacation", "Water", "Wife", "Wish", "Women", "World"]
+            "tags": ["Airplane", "Aviation", "Beach", "Boat", "Cruise", "Dirty", "Genie", "Husband", "Jail", "Lamp", "Magic", "Marriage", "Men", "Ocean", "Relationship", "Rich", "Sailor", "Travel", "Vacation", "Water", "Wife", "Wish", "Women", "World"]
         },
         {
             "joke": "One cow says to the other. \"Aren't you just so worried about the mad cow disease?\" The other answers, \"Why should I worry? I'm not a cow, I'm a helicopter!\"",
             "length": 160,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Cow", "Health", "Helicopter", "Mad Cow Disease", "Mammal", "Medical", "Sick"]
+            "tags": ["Animal", "Aviation", "Cow", "Health", "Helicopter", "Mad Cow Disease", "Mammal", "Medical", "Sick"]
         },
         {
             "joke": "Two gangsters walk into a grocery store and while they are walking through the Vegetable aisle one gangster says to the other, \"Hey, look at that, Artie-chokes, two for a Dollar!\"",
@@ -5081,7 +5081,7 @@
             "length": 1224,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Boat", "Drowning", "Flower", "Heaven", "Helicopter", "House", "Men", "Rejection", "Religion", "Security", "Sport", "Water", "Weather"]
+            "tags": ["Aviation", "Boat", "Drowning", "Flower", "Heaven", "Helicopter", "House", "Men", "Rejection", "Religion", "Security", "Sport", "Water", "Weather"]
         },
         {
             "joke": "What is Big, Red and eats Rocks? A big red rock eater!",
@@ -5186,14 +5186,14 @@
             "length": 67,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Aviation", "Fly"]
+            "tags": ["Animal", "Bug", "Fly"]
         },
         {
             "joke": "Why was the Egyptian girl worried? Because her Daddy was a mummy!",
             "length": 65,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Family", "Father", "Parent", "Women"]
+            "tags": ["Egypt", "Family", "Father", "Middle East", "Parent", "Women"]
         },
         {
             "joke": "A drummer gets fed up with all the comments denying he's a real musician, and so he decides to learn some new instruments. He visits his local Music shop, and spends an hour looking around and deliberating. \"Right!\" He says, after an age. \"I'll have the shiny red one, and the accordion thing over there.\" \"I'll do you a deal,\" ays the Music Shop Manager, \"You can have the fire extinguisher, but the radiator is staying where it is.\"",
