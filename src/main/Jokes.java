@@ -88,7 +88,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
      */
-    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, false, false, false);
+    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, true, true, true);
     
     /**
      * A flag indicating whether or not to perform a clean start.

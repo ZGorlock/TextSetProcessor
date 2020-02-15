@@ -72,7 +72,7 @@ public class JokeSetSizeChecker {
                 }
             }
             
-            File compiled = new File(jokeSet.directory, "source/" + jokeSet.name().toLowerCase() + ".json");
+            File compiled = new File(jokeSet.directory, jokeSet.name().toLowerCase() + ".json");
             if (compiled.exists()) {
                 int compiledCount = Jokes.readJokes(compiled).size();
                 if (compiledCount == cleanedCount) {
