@@ -60,9 +60,6 @@ public class TagHotfixer {
         textTagger.load();
         
         for (Jokes.JokeSet jokeSet : Jokes.JokeSet.values()) {
-            if (jokeSet == Jokes.JokeSet.Quirkology || jokeSet == Jokes.JokeSet.StupidStuff || jokeSet == Jokes.JokeSet.Wocka) {
-                continue;
-            }
             File fixedFile = new File(jokeSet.directory, "/source/3 - fixed/fixed.json");
             File taggedFile = new File(jokeSet.directory, "/source/4 - tagged/tagged.json");
             if (!taggedFile.exists()) {
