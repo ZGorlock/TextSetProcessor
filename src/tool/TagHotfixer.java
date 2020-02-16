@@ -18,7 +18,7 @@ import resource.ConsoleProgressBar;
 import worker.TextTagger;
 
 /**
- * Helps with hotfixing tagged jokes.
+ * Hotfixes tags for tagged jokes.
  */
 public class TagHotfixer {
     
@@ -34,13 +34,13 @@ public class TagHotfixer {
      * A list of tags that have less aliases than before.
      */
     @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
-    private static final List<String> tagHasLess = Arrays.asList("Gun", "Astrology", "Drug", "Beauty");
+    private static final List<String> tagHasLess = Arrays.asList();
     
     /**
      * A list of tags that have more aliases than before
      */
     @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
-    private static final List<String> tagHasMore = Arrays.asList("Drunk", "Star Wars", "Stealing", "Thief");
+    private static final List<String> tagHasMore = Arrays.asList("Death");
     
     /**
      * A list of initial tags to hotfix.
@@ -75,10 +75,9 @@ public class TagHotfixer {
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
             
-            List<Joke> preJokes = Jokes.readJokes(fixedFile);
-            Map<Long, List<String>> preTags = new HashMap<>();
-            for (Joke preJoke : preJokes) {
-                preTags.put(preJoke.hash, preJoke.tags);
+            Map<Long, Joke> preJokes = new HashMap<>();
+            for (Joke preJoke : Jokes.readJokes(fixedFile)) {
+                preJokes.put(preJoke.hash, preJoke);
             }
             
             List<Joke> jokes = Jokes.readJokes(taggedFile);
@@ -86,7 +85,7 @@ public class TagHotfixer {
             
             jokes.parallelStream().forEach(joke -> {
                 if (needsRetag(joke)) {
-                    joke.tags = textTagger.getTagsFromText(joke.text, preTags.get(joke.hash));
+                    joke.tags = textTagger.getTagsFromText(joke.text, preJokes.get(joke.hash).tags);
                 }
                 progressBar.addOne();
             });

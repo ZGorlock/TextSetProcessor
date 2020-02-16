@@ -269,7 +269,7 @@ Dating                  ,Eharmony
 Daughter                -dontDoER
 Dead Baby               ,Abortion,Dead Child,Dead Children,Miscarriage,Pro Choice,Pro Life,ProChoice,ProLife,Stillbirth,Stillborn -nsfw
 Deafness                ,Deaf,Deafen,Deafened,Helen Keller -dontDoS
-Death                   ,Coroner,Corpse,Cremate,Cremation,Dead,Die,Dying,Funeral,Grave,Graveside,Gravesite,Mortician,Mortuary,Mourning,Necromaniac,Necrophile,Necrophilia,Necrophiliac,Necrophilic -nsfw
+Death                   ,Coroner,Corpse,Cremate,Cremation,Dead,Die,Died,Dying,Funeral,Grave,Graveside,Gravesite,Mortician,Mortuary,Mourning,Necromaniac,Necrophile,Necrophilia,Necrophiliac,Necrophilic -nsfw
 Debt                    ,Borrow,Borrowed,Collateral,Debtee,Debtor,Down Payment,Financed,Foreclose,Foreclosing,Foreclosure,Indebted,Indebtedness,Lend,Loan,Loanee,Loaner,Loanword,Mortgage,Mortgaged,Mortgagee,Mortgager,Owe,Owed,Repayment,Repossess,Repossessed,Repossession
 Deep                    ,Shower Thought -minor
 Deformity               ,Deformation,Deformed
