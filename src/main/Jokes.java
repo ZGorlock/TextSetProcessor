@@ -124,7 +124,7 @@ public class Jokes {
     /**
      * The number of jokes to fix before saving the state.
      */
-    private static final int fixChunkSize = 100 * numCores;
+    private static final int fixChunkSize = 500 * numCores;
     
     /**
      * The number of jokes to tag before saving the state.
@@ -251,6 +251,7 @@ public class Jokes {
                 List<Joke> jokes = jokeParser.parseJokeSet(jokeSet);
                 Filesystem.createDirectory(parsedFile.getParentFile());
                 outputJokes(parsedFile, jokes);
+                
                 long subParseEndTime = System.currentTimeMillis();
                 subParseTime = (subParseEndTime - subParseStartTime);
                 setSaveProcessTime(jokeSet, ProcessStep.PARSE, (subParseTime / 1000));
@@ -335,12 +336,12 @@ public class Jokes {
                     currentWork.parallelStream().forEach(joke -> Jokes.fixJoke(joke, progressBar));
                     fixed.addAll(currentWork);
                     currentWork.clear();
+                    outputJokes(fixedFile, fixed);
+                    outputJokes(fixedWorkFile, work);
+                    
                     long chunkEndTime = System.currentTimeMillis();
                     long chunkTime = chunkEndTime - chunkStartTime;
                     subFixTime += chunkTime;
-                    
-                    outputJokes(fixedFile, fixed);
-                    outputJokes(fixedWorkFile, work);
                     setSaveProcessTime(jokeSet, ProcessStep.FIX, (subFixTime / 1000));
                 }
                 Filesystem.deleteFile(fixedWorkFile);
@@ -439,12 +440,12 @@ public class Jokes {
                     currentWork.parallelStream().forEach(joke -> Jokes.tagJoke(joke, progressBar));
                     tagged.addAll(currentWork);
                     currentWork.clear();
+                    outputJokes(taggedFile, tagged);
+                    outputJokes(taggedWorkFile, work);
+                    
                     long chunkEndTime = System.currentTimeMillis();
                     long chunkTime = chunkEndTime - chunkStartTime;
                     subTagTime += chunkTime;
-                    
-                    outputJokes(taggedFile, tagged);
-                    outputJokes(taggedWorkFile, work);
                     setSaveProcessTime(jokeSet, ProcessStep.TAG, (subTagTime / 1000));
                 }
                 Filesystem.deleteFile(taggedWorkFile);
@@ -509,6 +510,7 @@ public class Jokes {
             if (subCompileTime < 0) {
                 long subCompileStartTime = System.currentTimeMillis();
                 Filesystem.copyFile(compiledFileIn, compiledFileOut);
+                
                 long subCompileEndTime = System.currentTimeMillis();
                 subCompileTime = (subCompileEndTime - subCompileStartTime);
                 setSaveProcessTime(jokeSet, ProcessStep.COMPILE, (subCompileTime / 1000));
@@ -559,6 +561,7 @@ public class Jokes {
                 long subMergeStartTime = System.currentTimeMillis();
                 List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
                 jokes.addAll(jokeSetJokes);
+                
                 long subMergeEndTime = System.currentTimeMillis();
                 subMergeTime = (subMergeEndTime - subMergeStartTime);
                 setSaveProcessTime(jokeSet, ProcessStep.MERGE, (subMergeTime / 1000));
