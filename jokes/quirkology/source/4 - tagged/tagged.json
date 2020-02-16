@@ -2266,8 +2266,8 @@
             "joke": "One day little Johnny was in his backyard digging a hole. His neighbor, seeing him there, decided to investigate. \"Whatcha doin?\" He asked. \"My goldfish died and I'm burying him,\" Johnny replied. \"That's an awful big hole for a goldfish, ain't it?\" Asked the neighbor. \"That's because he's inside your cat!\"",
             "length": 315,
             "source": "Quirkology",
-            "nsfw": false,
-            "tags": ["Animal", "Cat", "Detective", "Fish", "Food", "Little Johnny", "Mammal", "Neighbor", "Ocean", "Water"]
+            "nsfw": true,
+            "tags": ["Animal", "Cat", "Death", "Detective", "Fish", "Food", "Little Johnny", "Mammal", "Neighbor", "Ocean", "Water"]
         },
         {
             "joke": "Did you hear what happened to the hyena who swallowed an Oxo cube? He became a laughing stock ...",
@@ -3148,8 +3148,8 @@
             "joke": "A man came home from golfing one Saturday a little later than he usually did. His wife asked him why. \"Bob had a heart attack and died right there on the 9th hole!\" He explained. \"Oh, my goodness, how horrible!\" She exclaimed. \"No wonder you're late!\" \"Yeah,\" he said. \"For the whole rest of the course, it was 'hit the ball, drag Bob, hit the ball'.\"",
             "length": 361,
             "source": "Quirkology",
-            "nsfw": false,
-            "tags": ["Golf", "Heart", "House", "Marriage", "Men", "Relationship", "Sick", "Sport", "Wife", "Women"]
+            "nsfw": true,
+            "tags": ["Death", "Golf", "Heart", "House", "Marriage", "Men", "Relationship", "Sick", "Sport", "Wife", "Women"]
         },
         {
             "joke": "What's the difference between a shark and a lemon? They both swim, except for the lemon.",
