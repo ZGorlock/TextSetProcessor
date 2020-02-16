@@ -224,10 +224,12 @@ public final class TextFixer {
                                     continue;
                                 }
                                 if (StringUtility.isAlphabetic(text.charAt(j))) {
-                                    if (!Character.isUpperCase(text.charAt(j))) {
+                                    if (((j > 1) && text.charAt(j - 1) == '"' && text.charAt(j - 2) == '\\')) {
+                                        break;
+                                    } else if (!Character.isUpperCase(text.charAt(j))) {
                                         endSentence = false;
                                     } else if (replacePunct == ',') {
-                                        text = text.substring(0, j - 1) + Character.toLowerCase(text.charAt(j)) + text.substring(j + 1);
+                                        text = text.substring(0, j) + Character.toLowerCase(text.charAt(j)) + text.substring(j + 1);
                                     }
                                     break;
                                 }
