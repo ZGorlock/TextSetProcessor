@@ -542,7 +542,7 @@ public class Jokes {
         long mergeTime = 0L;
         
         File mergedFile = new File(JokeSet.Quirkology.directory + ProcessStep.MERGE.out);
-        List<Joke> jokes = mergedFile.exists() ? readJokes(mergedFile) : new ArrayList<>();
+        List<Joke> jokes = new ArrayList<>();
         
         for (JokeSet jokeSet : JokeSet.values()) {
             if (!doJokeSet.get(jokeSet.ordinal())) {
