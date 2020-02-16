@@ -362,7 +362,7 @@ public final class JokeParser {
                         Joke thisJoke = new Joke();
                         thisJoke.text = jokeText.toString();
                         thisJoke.source = preserveSource ? jokeText.toString() : source;
-                        thisJoke.nsfw = nsfw;
+//                        thisJoke.nsfw = nsfw;
                         
                         for (i = i + 1; i < lines.size(); i++) {
                             line = lines.get(i);
@@ -434,12 +434,12 @@ public final class JokeParser {
                                 break;
                         }
                         thisJoke.tags.addAll(typeTags);
-                        thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
+                        thisJoke.hash = UUID.nameUUIDFromBytes(StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().getBytes()).getMostSignificantBits();
                         
                         Joke existingJoke = hashes.get(thisJoke.hash);
                         if (existingJoke != null) {
                             existingJoke.tags.addAll(thisJoke.tags);
-                            existingJoke.nsfw = existingJoke.nsfw || thisJoke.nsfw;
+//                            existingJoke.nsfw = existingJoke.nsfw || thisJoke.nsfw;
                         } else {
                             jokes.add(thisJoke);
                             hashes.put(thisJoke.hash, thisJoke);
@@ -521,7 +521,7 @@ public final class JokeParser {
                         thisJoke.tags.add(tag);
                     }
                 }
-                thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
+                thisJoke.hash = UUID.nameUUIDFromBytes(StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().getBytes()).getMostSignificantBits();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
@@ -678,7 +678,7 @@ public final class JokeParser {
                         thisJoke.tags.add(StringUtility.trim(cat));
                     }
                 }
-                thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
+                thisJoke.hash = UUID.nameUUIDFromBytes(StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().getBytes()).getMostSignificantBits();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
@@ -880,7 +880,7 @@ public final class JokeParser {
                 thisJoke.text = title + " " + body;
                 thisJoke.source = preserveSource ? (title + "|||||" + body) : source;
                 thisJoke.nsfw = nsfw;
-                thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
+                thisJoke.hash = UUID.nameUUIDFromBytes(StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().getBytes()).getMostSignificantBits();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);

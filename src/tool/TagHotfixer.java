@@ -15,6 +15,7 @@ import java.util.Map;
 import main.Jokes;
 import pojo.Joke;
 import resource.ConsoleProgressBar;
+import worker.NsfwChecker;
 import worker.TextTagger;
 
 /**
@@ -53,6 +54,11 @@ public class TagHotfixer {
      */
     private static TextTagger textTagger = null;
     
+    /**
+     * The reference to the NSFW Checker
+     */
+    private static NsfwChecker nsfwChecker = null;
+    
     
     //Main Method
     
@@ -63,7 +69,9 @@ public class TagHotfixer {
      */
     public static void main(String[] args) {
         textTagger = TextTagger.getInstance();
+        nsfwChecker = NsfwChecker.getInstance();
         textTagger.load();
+        nsfwChecker.load();
         
         for (Jokes.JokeSet jokeSet : Jokes.JokeSet.values()) {
             File fixedFile = new File(jokeSet.directory, "/source/3 - fixed/fixed.json");
@@ -86,6 +94,7 @@ public class TagHotfixer {
             jokes.parallelStream().forEach(joke -> {
                 if (needsRetag(joke)) {
                     joke.tags = textTagger.getTagsFromText(joke.text, preJokes.get(joke.hash).tags);
+                    joke.nsfw = preJokes.get(joke.hash).nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
                 }
                 progressBar.addOne();
             });
