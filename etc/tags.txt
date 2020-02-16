@@ -96,7 +96,7 @@ Bean
 Bear                    ,Cub,Grizzly
 Beard                   ,Neckbeard
 Bestiality              ,Bearfucker,Chickenfucker,Cowfucker,Dogfucker,Goatfucker,Horsefucker,Pigfucker,Sheepfucker -nsfw -dontDoY
-Beauty                  ,Beauties,Beautiful,Beautifully,Beautify,Pretty,Sexy -dontDoY
+Beauty                  ,Beauties,Beautiful,Beautifully,Beautify,Sexy -dontDoY
 Bedroom                 
 Bee                     ,Beehive
 Beer                    ,Brewery,Brewskis,Brewsky,Microbrew,Pint -dontDoER
@@ -314,14 +314,14 @@ Donut                   ,Dunkin,Krispy Kreme
 Drawing                 ,Acrylic,Airbrush,Canvas,Crayola,Draw,Drawn,Easel,Fingerpaint,Fingerpainting,Graffiti,Paint,Paintbrush,Painting,Spraypaint,Watercolor,Watercolour -dontDoING
 Dream                   ,Nightmare
 Dress                   -dontDoS
-Drinking                ,Alcohol,Alcoholic,Barista,Breathalyze,Breathalyzed,Breathalyzer,Coffee,DUI,Decaf,Drunk,Drunkedly,Drunkenly,Shot Glass,Shotglass,Starbucks
+Drinking                ,Alcohol,Alcoholic,Barista,Breathalyze,Breathalyzed,Breathalyzer,Coffee,DUI,Decaf,Drunk,Drunkedly,Drunkenly,Hang Over,Hangover,Hung Over,Shot Glass,Shotglass,Starbucks
 Drivers License         ,DMV
 Driving                 ,Carsick,DMV,Driver,Drover,Freeway,Green Light,Gridlock,Highway,Interstate,Motorway,Red Light,Road,Speed Bump,Speed BumpSpeeder,Speed Limit,Speedbump,Speeder,Speeding,Stop Sign,Stoplight,Stopsign,Traffic,Yellow Light
 Drone                   
 Drowning                
 Drug                    ,Addict,Addicted,Cokehead,Crackhead,Crackwhore,Get High,Medicament,Methhead,Narcotic,Nootropic,OD,Overdose,Overdosed,Pharma,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Rehab,Relapse,Relapsed,Relapsing,Trippy,Tweak,Tweaker,Tweeking -nsfw
 Drum                    ,Drumkit,Drummer,Drumming,Drumset
-Drunk                   ,Alcoholic,Breathalyze,Breathalyzed,Breathalyzer,DUI,Drunkedly,Drunkenly
+Drunk                   ,Alcoholic,Breathalyze,Breathalyzed,Breathalyzer,DUI,Drunkedly,Drunkenly,Hang Over,Hangover,Hung Over
 Dry Cleaner             ,Dry Cleaning,Drycleaner,Drycleaning
 Duck                    ,Duckling,Quack,Quacking
 Dwarf                   ,Dwarve,Dwarven,Dwarvish,Midget
@@ -923,7 +923,7 @@ Star Wars               ,Jedi,Light Saber,Lightsaber -dontDoS
 Starbucks               -dontDoS
 Statistics              ,Correlation,Datum,Odds,Outlier,Probabilistic,Probability,Standard Deviation,Statistic,Statistical,Statistically,Statistician
 Steak                   ,Medium Rare,Medium Well,Ribeye,Sirloin,T Bone,TBone
-Stealing                ,Bandit,Bandito,Burglar,Burglarize,Burglarized,Burglarizing,Confiscate,Confiscated,Confiscating,Confiscator,Conman,Conmen,Conwoman,Conwomen,Embezzle,Embezzled,Embezzler,Embezzling,Extort,Extorting,Extortion,Extortioner,Heist,Hustle,Hustled,Hustler,Hustling,Loot,Looted,Looter,Looting,Misappropriate,Mugged,Mugger,Mugging,Pickpocket,Pickpocketed,Pickpocketer,Pickpocketing,Pilfer,Pilfered,Pilferer,Pilfering,Plagiarise,Plagiarised,Plagiariser,Plagiarising,Plagiarism,Plagiarize,Plagiarized,Plagiarizer,Plagiarizing,Plunder,Plundered,Plunderer,Plundering,Rob,Robbed,Robber,Robbery,Robbing,Seize,Seized,Shoplift,Shoplifter,Shoplifting,Smuggle,Smuggled,Smuggler,Smuggling,Steal,Stealing,Stole,Theft,Thief,Thieved,Thieves -dontDoING
+Stealing                ,Bandit,Bandito,Burglar,Burglarize,Burglarized,Burglarizing,Confiscate,Confiscated,Confiscating,Confiscator,Conman,Conmen,Conwoman,Conwomen,Embezzle,Embezzled,Embezzler,Embezzling,Extort,Extorting,Extortion,Extortioner,Heist,Hustle,Hustled,Hustler,Hustling,Loot,Looted,Looter,Looting,Misappropriate,Mugged,Mugger,Mugging,Pick Pocket,Pick Pocketed,Pick Pocketer,Pick Pocketing,Pickpocket,Pickpocketed,Pickpocketer,Pickpocketing,Pilfer,Pilfered,Pilferer,Pilfering,Plagiarise,Plagiarised,Plagiariser,Plagiarising,Plagiarism,Plagiarize,Plagiarized,Plagiarizer,Plagiarizing,Plunder,Plundered,Plunderer,Plundering,Rob,Robbed,Robber,Robbery,Robbing,Seize,Seized,Shoplift,Shoplifter,Shoplifting,Smuggle,Smuggled,Smuggler,Smuggling,Steal,Stealing,Stole,Theft,Thief,Thieved,Thieves -dontDoING
 Stephen Hawking         ,Hawking -dontDoING
 Stepmother              ,Stepmom -dontDoER
 Steve Irwin             ,Crocodile Hunter
@@ -971,7 +971,7 @@ Thanksgiving            ,Feast Day -dontDoING
 The Beatles             -dontDoS -dontDoES
 The Simpsons            ,Simpson -dontDoS
 Theater                 ,Center Stage,Close Curtains,Dramatist,Dramaturge,Dramaturgist,Left Stage,Playwright,Right Stage,Scenarist,Screenwriter,Script,Scriptwriter,Take A Bow -dontDoER
-Thief                   ,Bandit,Bandito,Burglar,Confiscator,Conman,Embezzler,Extortioner,Hustler,Looter,Mugger,Pickpocket,Pickpocketer,Pilferer,Plagiariser,Plagiarizer,Plunderer,Robber,Shoplifter,Smuggler,Thief,Thieved,Thieves
+Thief                   ,Bandit,Bandito,Burglar,Confiscator,Conman,Embezzler,Extortioner,Hustler,Looter,Mugger,Pick Pocket,Pick Pocketer,Pickpocket,Pickpocketer,Pilferer,Plagiariser,Plagiarizer,Plunderer,Robber,Shoplifter,Smuggler,Thief,Thieved,Thieves
 Threesome               ,Menage A Trois -nsfw
 Tiger Woods             -dontDoS
 Time                    ,Alternate Reality,Clock,Future,Futuristic,High Noon,Moment,Rolex,Spacetime,Temporal,Temporally,Tick Tock,Timeline,Timewise,Timezone -minor -dontDoS

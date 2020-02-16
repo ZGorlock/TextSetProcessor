@@ -917,6 +917,7 @@ public final class TextTagger {
             }
         }
         
+        tags.sort(Comparator.naturalOrder());
         return tags;
     }
     

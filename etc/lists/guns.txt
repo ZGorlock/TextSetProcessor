@@ -16,7 +16,6 @@ Handgun
 Heckler and Kock
 Kammerlader
 Karabiner
-Level
 M16
 M4
 Machine Gun
