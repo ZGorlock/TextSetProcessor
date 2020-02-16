@@ -4968,7 +4968,7 @@
             "joke": "How many religious education teachers does it take to screw in a light bulb? One, and their God of choice.",
             "length": 106,
             "source": "Quirkology",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["God", "Lightbulb", "Religion", "School", "Teacher"]
         },
         {
@@ -5024,7 +5024,7 @@
             "joke": "What do you get when Godzilla steps on your house? Mushrooms.",
             "length": 61,
             "source": "Quirkology",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Food", "House", "Monster", "Mushroom"]
         },
         {

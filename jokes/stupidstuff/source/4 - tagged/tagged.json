@@ -10904,7 +10904,7 @@
             "joke": "How many economists does it take to screw in a light bulb? None. If the light bulb really needed changing, market forces would have already caused it to happen. Two. One to assume the ladder and one to change the bulb. Two. One to assume the latter (A pun) And change the bulb. None. If the government would just leave it alone, it would screw itself in.",
             "length": 354,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Government", "Lightbulb", "Money", "Politics", "Pun"]
         },
         {
@@ -10918,14 +10918,14 @@
             "joke": "How many liberals does it take to screw in a light bulb? One liberal and twenty eight delegates representing all the social, economic, and ethnic communities. Two-one to do it and the other to keep the first one's knee from jerking. None: They can't remove the old ones since they are already part of the environment.",
             "length": 317,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Environment", "Ethnic", "Knee", "Lightbulb", "Politics"]
         },
         {
             "joke": "How many social scientists does it take to screw in a light bulb? They do not change light bulbs; They search for the root cause as to why the last one went out.",
             "length": 161,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Lightbulb", "Plant", "Science", "Tree"]
         },
         {
@@ -10939,7 +10939,7 @@
             "joke": "How many US Presidents does it take to screw in a light bulb? None, the constitution says that only Congress can screw in light bulbs, so only Congress is responsible for the dark, which is why we need a Constitutional amendment. Only one. If he can handle 250,000,000 people a day I think he can handle screwing one extra light bulb.",
             "length": 334,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Congress", "Darkness", "Government", "Lightbulb", "Politics", "President"]
         },
         {
@@ -12220,7 +12220,7 @@
             "joke": "How many lawyers does it take to screw in a lightbulb? As many as you can afford. How many Lawyers does it take to oil a Hummer? 1, If you put him through real slow. What do you call 1000 peg-legged lawyers? A waste of good wood! Did you hear the US Supreme Court building was taken over by foreign terrorists? They are holding 30 lawyers hostage and they say if their demands are not met, they will start releasing one an hour!",
             "length": 428,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Court", "Food", "Government", "Law", "Lawyer", "Lightbulb", "Plant", "Politics", "Terrorist", "Tree", "United States"]
         },
         {
@@ -14719,7 +14719,7 @@
             "joke": "How many Pentecostals does it take to screw in a lightbulb? Five - one to screw in the lightbulb and four to pray against the power of darkness!",
             "length": 144,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Baptist", "Christian", "Darkness", "Lightbulb", "Prayer", "Protestant", "Religion"]
         },
         {
@@ -14775,7 +14775,7 @@
             "joke": "How many mice does it take to screw in a light bulb? 2, but don't ask me how they got in there!",
             "length": 95,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Animal", "Lightbulb", "Mammal", "Mice"]
         },
         {
@@ -17288,14 +17288,14 @@
             "joke": "How many Oregonians does it take to screw in a light bulb? Five. One to change the bulb and four more to chase off the Californians who have come up to relate to the experience. Nine. One to change the bulb, and eight to protest the nuclear power plant that generates the electricity that powers it.",
             "length": 299,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["California", "Change", "Electricity", "Lightbulb", "Physics", "Plant", "Science", "United States"]
         },
         {
             "joke": "How many New Yorkers does it take to screw in a light bulb? None 'o yo' freakin' business! 50.50? Yeah 50; Its in the contract.",
             "length": 127,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Business", "Lightbulb", "New York", "United States"]
         },
         {
@@ -17316,7 +17316,7 @@
             "joke": "How many software people does it take to screw in a light bulb? None. That's a hardware problem. One, but if he changes it, the whole building will probably fall down. Two. One always leaves in the middle of the project.",
             "length": 220,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Computer", "Hardware", "Lightbulb", "Programming", "Software", "Technology"]
         },
         {
@@ -17358,7 +17358,7 @@
             "joke": "How many APL hackers does it take to screw in a light bulb? None. There's a primitive for that.",
             "length": 95,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "Technology"]
         },
         {
@@ -17372,7 +17372,7 @@
             "joke": "How many graduate students does it take to screw in a light bulb? Only one, but it may take upwards of five years for him to get it done.",
             "length": 137,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["College", "Graduation", "Lightbulb", "School", "Student"]
         },
         {
@@ -17393,14 +17393,14 @@
             "joke": "How many Jewish mothers does it take to screw in a light bulb? None. (\"That's all right... I'll just sit here in the dark...\"",
             "length": 127,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Darkness", "Family", "Jewish", "Lightbulb", "Mother", "Parent", "Religion"]
         },
         {
             "joke": "How many mice does it take to screw in a light bulb? Only two, but the hard part is getting them into the light bulb.",
             "length": 117,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Animal", "Lightbulb", "Mammal", "Mice"]
         },
         {
@@ -17414,14 +17414,14 @@
             "joke": "How many WASPs does it take to screw in a light bulb? Silly, WASPs don't screw in a light bulb, they screw in a hot tub.",
             "length": 120,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Animal", "Bug", "Lightbulb", "Pool", "Water"]
         },
         {
             "joke": "How many Marxists does it take to screw in a light bulb? None: The light bulb contains the seeds of its own revolution.",
             "length": 119,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Communism", "Karl Marx", "Lightbulb", "Philosophy", "Politics", "Revolution"]
         },
         {
@@ -17463,14 +17463,14 @@
             "joke": "How many Christian Scientists does it take to screw in a light bulb? None, but it takes at least one to sit and pray for the old one to go back on.",
             "length": 147,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Christian", "Lightbulb", "Prayer", "Religion", "Science"]
         },
         {
             "joke": "How many Roman Catholics does it take to screw in a light bulb? Two. One to do the screwing, and one to hear the confession.",
             "length": 124,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Catholic", "Christian", "Confession", "Lightbulb", "Religion", "Roman"]
         },
         {
@@ -17505,7 +17505,7 @@
             "joke": "How many economists does it take to screw in a light bulb? Two. One to assume the ladder and one to change the bulb. None. If the government would just leave it alone, it would screw itself in.",
             "length": 193,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Government", "Lightbulb", "Money", "Politics"]
         },
         {
@@ -17526,28 +17526,28 @@
             "joke": "How many straight San Franciscans does it take to screw in a light bulb? Both of them.",
             "length": 86,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "San Francisco"]
         },
         {
             "joke": "How many Zen masters does it take to screw in a light bulb? A tree in a golden forest. Two: One to change the bulb and one not to change it. One to change and one not to change is fake Zen. The true Zen answer is Four. One to change the bulb. None. Zen masters carry their own light.",
             "length": 283,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Forest", "Lightbulb", "Money", "Nature", "Plant", "Tree"]
         },
         {
             "joke": "How many Carl Sagans does it take to screw in a light bulb? Billions and billions.",
             "length": 82,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "Physics", "Science", "Space"]
         },
         {
             "joke": "How many folk singers does it take to screw in a light bulb? Two. One to change the bulb, and one to write a song about how good the old light bulb was.",
             "length": 152,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Lightbulb", "Music", "Singing", "Writing"]
         },
         {
@@ -17568,7 +17568,7 @@
             "joke": "How many doctors does it take to screw in a light bulb? Three. One to find a bulb specialist, one to find a bulb installation specialist, and one to bill it all to Medicare.",
             "length": 173,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Doctor", "Health", "Lightbulb", "Medical"]
         },
         {
@@ -17617,14 +17617,14 @@
             "joke": "How many public utility workers does it take to screw in a light bulb? 10. One to hold the bulb, 6 to rotate the ladder, and 3 to supervise.",
             "length": 140,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "Work"]
         },
         {
             "joke": "How many strongmen does it take to screw in a light bulb? 115. One to hold the bulb and 114 to rotate the house.",
             "length": 112,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["House", "Lightbulb"]
         },
         {
@@ -17645,14 +17645,14 @@
             "joke": "How many cops does it take to screw in a light bulb? None. It turned itself in.",
             "length": 79,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Law", "Lightbulb", "Police"]
         },
         {
             "joke": "How many lawyers does it take to change a light bulb? How many can you afford? It only takes one to change your bulb... To his. Lawyers don't change bulbs. Now if you're looking for someone to really screw a bulb...",
             "length": 215,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Law", "Lawyer", "Lightbulb"]
         },
         {
@@ -17680,42 +17680,42 @@
             "joke": "How many Federal employees does it take to screw in a light bulb? Sorry, that item has been cut from the budget!",
             "length": 112,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Business", "Job", "Lightbulb", "Work"]
         },
         {
             "joke": "How many psychics does it take to screw in a light bulb? - You should have hit, \"N!\"",
             "length": 86,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "Psychic"]
         },
         {
             "joke": "How many, \"Pro-lifers,\" does it take to change a light bulb? 6:2 to screw in the bulb and 4 to testify that it was lit from the moment they began screwing.",
             "length": 157,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Court", "Law", "Lightbulb", "Time", "Witness"]
         },
         {
             "joke": "How many frat guys does it take to screw in a light bulb? Three: One to screw it in, and the other two to help him down off the keg. Five: One to hold the bulb, and four to guzzle beer until the room spins. None. Frat boys screw in puddles of vomit.",
             "length": 249,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Alcohol", "Beer", "Drinking", "Lightbulb", "Men", "Vomiting", "Water"]
         },
         {
             "joke": "How many Harvard grads does it take to screw in a light bulb? Just one. He grabs the bulb and waits for the world to revolve around him.",
             "length": 136,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "World"]
         },
         {
             "joke": "How many bureaucrats does it take to screw in a light bulb? Two. One to assure the everything possible is being done while the other screws the bulb into the water faucet. 45. One to change the bulb, and 44 to do the paperwork.",
             "length": 227,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Change", "Job", "Lightbulb", "Office", "Politics", "Water", "Work"]
         },
         {
@@ -17743,14 +17743,14 @@
             "joke": "How many WASP Princesses does it take to screw in a light bulb? Two. One to get a Tab and one to call Daddy.",
             "length": 108,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Animal", "Bug", "Family", "Father", "King", "Lightbulb", "Parent", "Princess", "Royalty"]
         },
         {
             "joke": "How many accountants does it take to screw in a light bulb? What kind of answer did you have in mind?",
             "length": 101,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Accountant", "Lightbulb"]
         },
         {
@@ -17764,7 +17764,7 @@
             "joke": "How many junkies does it take to screw in a light bulb? \"Oh wow, is it like dark, man?\"",
             "length": 89,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Darkness", "Lightbulb", "Men"]
         },
         {
@@ -17778,14 +17778,14 @@
             "joke": "How many U. S marines does it take to screw in a light bulb? 50. One to screw in the light bulb and the remaining 49 to guard him.",
             "length": 130,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "Marine", "Military", "Navy", "Ocean", "Security", "Water"]
         },
         {
             "joke": "How many Romulans does it take to screw in a light bulb? 151, one to screw the light-bulb in, and 150 to self-destruct the ship out of disgrace.",
             "length": 144,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Boat", "Cinematography", "Lightbulb", "Shame", "Star Trek", "Television"]
         },
         {
@@ -17806,7 +17806,7 @@
             "joke": "How many Pygmies does it take to screw in a light bulb? At least three. (Notes: Think height!)",
             "length": 94,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Height", "Lightbulb"]
         },
         {
@@ -17820,21 +17820,21 @@
             "joke": "How many Chinese Red Guards does it take to screw in a light bulb? 10,000 - to give the bulb a cultural revolution.",
             "length": 115,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Asian", "China", "Color", "Lightbulb", "Revolution", "Security"]
         },
         {
             "joke": "How many anarchists does it take to screw in a light bulb? All of them.",
             "length": 71,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb"]
         },
         {
             "joke": "How many TV comedians does it take to screw in a light bulb? Two, one to screw it in, and another to say, \"Sock it to Me.\" (Notes: Sock it = Socket. Also, the phrase was from Laugh In.)",
             "length": 187,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Body", "Clothing", "Comedian", "Foot", "Lightbulb", "Sock", "Television"]
         },
         {
@@ -17848,7 +17848,7 @@
             "joke": "How many mystery writers does it take to screw in a light bulb? Two, one to screw it almost all the way in and the other to give it a surprising twist at the end.",
             "length": 162,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Book", "Lightbulb", "Writing"]
         },
         {
@@ -17876,14 +17876,14 @@
             "joke": "How many referral agents does it take to screw in a light bulb? Two: One to screw you out of a fee, and the other to send you to a store where they ran out of bulbs weeks ago.",
             "length": 175,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb", "Shopping"]
         },
         {
             "joke": "How many existentialists does it take to screw in a light bulb? Two: One to screw it in and one to observe how the light bulb itself symbolizes a single incandescent beacon of subjective reality in a netherworld of endless absurdity reaching out toward a maudlin cosmos of nothingness.",
             "length": 285,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Hell", "Lightbulb", "Optimist", "Physics", "Religion", "Science", "Universe"]
         },
         {
@@ -17911,7 +17911,7 @@
             "joke": "How many dadaists does it take to screw in a light bulb? To get to the other side.",
             "length": 82,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Lightbulb"]
         },
         {
@@ -17925,7 +17925,7 @@
             "joke": "How many Ukrainians does it take to screw in a light bulb? None, because people who glow in the dark don't need light bulbs. Note: Topical to the Chernobyl Reactor disaster of 1984.",
             "length": 181,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Book", "Chernobyl", "Darkness", "Disaster", "Lightbulb", "Writing"]
         },
         {
@@ -17995,7 +17995,7 @@
             "joke": "How many televangelists does it take to screw in a light bulb? None. Televangelists screw in motels.",
             "length": 100,
             "source": "StupidStuff",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["Hotel", "Lightbulb"]
         },
         {

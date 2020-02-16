@@ -59,12 +59,8 @@ public class NsfwHotfixer {
             progressBar.setTotal(jokes.size());
             
             jokes.parallelStream().forEach(joke -> {
-                try {
-                    joke.nsfw = preJokes.get(joke.hash).nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
-                    progressBar.addOne();
-                } catch (Exception e) {
-                    int d = 3;
-                }
+                joke.nsfw = preJokes.get(joke.hash).nsfw || nsfwChecker.checkNsfw(joke.text, joke.tags);
+                progressBar.addOne();
             });
             
             Jokes.outputJokes(new File(taggedFile.getAbsolutePath().replace("tagged.json", "tagged-hotfix.json")), jokes);
