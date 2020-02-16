@@ -16,6 +16,7 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.json.simple.JSONArray;
@@ -725,7 +726,7 @@ public class Jokes {
                     }
                 }
                 
-                joke.hash = joke.text.hashCode();
+                joke.hash = UUID.nameUUIDFromBytes((joke.source + joke.text).getBytes()).getMostSignificantBits();
                 
                 jokes.add(joke);
             }

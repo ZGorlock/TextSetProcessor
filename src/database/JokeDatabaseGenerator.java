@@ -139,7 +139,7 @@ public class JokeDatabaseGenerator {
                 "length INT NOT NULL, " +
                 "source INT NOT NULL, " +
                 "nsfw BOOLEAN NOT NULL, " +
-                "hash INT NOT NULL, " +
+                "hash BIGINT NOT NULL, " +
                 "CONSTRAINT joke_pk PRIMARY KEY (id), " +
                 "CONSTRAINT joke_source_fk FOREIGN KEY (source) REFERENCES source(id)" +
                 ")";

@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -231,7 +232,7 @@ public final class JokeParser {
         boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
-        Map<Integer, Joke> hashes = new HashMap<>();
+        Map<Long, Joke> hashes = new HashMap<>();
         
         List<Character> punctuation = Arrays.asList('.', '!', '?', ';', ':', ',');
         Pattern textGetter = Pattern.compile("\\s*<p>(?<text>.*)</p>\\s*");
@@ -433,7 +434,7 @@ public final class JokeParser {
                                 break;
                         }
                         thisJoke.tags.addAll(typeTags);
-                        thisJoke.hash = StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().hashCode();
+                        thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
                         
                         Joke existingJoke = hashes.get(thisJoke.hash);
                         if (existingJoke != null) {
@@ -489,7 +490,7 @@ public final class JokeParser {
         boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
-        Map<Integer, Joke> hashes = new HashMap<>();
+        Map<Long, Joke> hashes = new HashMap<>();
         
         JSONParser p = new JSONParser();
         try {
@@ -520,7 +521,7 @@ public final class JokeParser {
                         thisJoke.tags.add(tag);
                     }
                 }
-                thisJoke.hash = StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().hashCode();
+                thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
@@ -603,7 +604,7 @@ public final class JokeParser {
         boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
-        Map<Integer, Joke> hashes = new HashMap<>();
+        Map<Long, Joke> hashes = new HashMap<>();
         
         JSONParser p = new JSONParser();
         try {
@@ -677,7 +678,7 @@ public final class JokeParser {
                         thisJoke.tags.add(StringUtility.trim(cat));
                     }
                 }
-                thisJoke.hash = StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().hashCode();
+                thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);
@@ -766,7 +767,7 @@ public final class JokeParser {
         boolean rewrite = false;
         
         List<Joke> jokes = new ArrayList<>();
-        Map<Integer, Joke> hashes = new HashMap<>();
+        Map<Long, Joke> hashes = new HashMap<>();
         
         JSONParser p = new JSONParser();
         try {
@@ -879,7 +880,7 @@ public final class JokeParser {
                 thisJoke.text = title + " " + body;
                 thisJoke.source = preserveSource ? (title + "|||||" + body) : source;
                 thisJoke.nsfw = nsfw;
-                thisJoke.hash = StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase().hashCode();
+                thisJoke.hash = UUID.nameUUIDFromBytes((thisJoke.source + StringUtility.removePunctuation(StringUtility.removeWhiteSpace(thisJoke.text)).toUpperCase()).getBytes()).getMostSignificantBits();
                 
                 if (hashes.containsKey(thisJoke.hash)) {
                     hashes.get(thisJoke.hash).tags.addAll(thisJoke.tags);

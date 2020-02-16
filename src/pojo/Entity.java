@@ -59,6 +59,6 @@ class Entity {
     /**
      * The hash of the entity.
      */
-    public int hash;
+    public long hash;
     
 }

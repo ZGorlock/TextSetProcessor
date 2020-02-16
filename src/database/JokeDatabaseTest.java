@@ -209,7 +209,7 @@ public class JokeDatabaseTest {
                 (rs.getIntResult("LENGTH", 0) != joke.length) ||
                 (rs.getIntResult("SOURCE", 0) != source) ||
                 (rs.getBooleanResult("NSFW", 0) != joke.nsfw) ||
-                (rs.getIntResult("HASH", 0) != joke.hash)) {
+                (rs.getLongResult("HASH", 0) != (joke.hash))) {
             return false;
         }
         
