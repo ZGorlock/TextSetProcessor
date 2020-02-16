@@ -49,6 +49,11 @@ public class JokeDatabaseGenerator {
      */
     private static final List<String> jokesSql = new ArrayList<>();
     
+    /**
+     * A flag indicating whether or not to produce only the Joke Database sql.
+     */
+    private static boolean sqlOnly = true;
+    
     
     //Main Method
     
@@ -64,18 +69,20 @@ public class JokeDatabaseGenerator {
         textTagger.loadTagLists = false;
         textTagger.load();
         
-        if (!DatabaseManager.setupDatabase()) {
-            return;
-        }
-        
-        conn = DatabaseManager.connectToDatabase("jokes/db/jokes");
-        if (conn == null) {
-            return;
-        }
-        
-        s = DatabaseManager.createStatement(conn);
-        if (s == null) {
-            return;
+        if (!sqlOnly) {
+            if (!DatabaseManager.setupDatabase()) {
+                return;
+            }
+            
+            conn = DatabaseManager.connectToDatabase("jokes/db/jokes");
+            if (conn == null) {
+                return;
+            }
+            
+            s = DatabaseManager.createStatement(conn);
+            if (s == null) {
+                return;
+            }
         }
         
         
@@ -106,9 +113,11 @@ public class JokeDatabaseGenerator {
         Filesystem.writeLines(new File("jokes/db/jokes.sql"), jokesSql);
         
         
-        DatabaseManager.closeStatement(s);
-        DatabaseManager.disconnectFromDatabase(conn);
-        DatabaseManager.shutdownDatabase();
+        if (!sqlOnly) {
+            DatabaseManager.closeStatement(s);
+            DatabaseManager.disconnectFromDatabase(conn);
+            DatabaseManager.shutdownDatabase();
+        }
     }
     
     /**
@@ -124,7 +133,7 @@ public class JokeDatabaseGenerator {
                 ")";
         jokesSql.add(sql + ";");
         
-        return DatabaseManager.executeSql(s, sql);
+        return sqlOnly || DatabaseManager.executeSql(s, sql);
     }
     
     /**
@@ -145,7 +154,7 @@ public class JokeDatabaseGenerator {
                 ")";
         jokesSql.add(sql + ";");
         
-        return DatabaseManager.executeSql(s, sql);
+        return sqlOnly || DatabaseManager.executeSql(s, sql);
     }
     
     /**
@@ -168,7 +177,7 @@ public class JokeDatabaseGenerator {
         
         for (String sqlStatement : sql) {
             jokesSql.add(sqlStatement + ";");
-            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
         }
@@ -194,7 +203,7 @@ public class JokeDatabaseGenerator {
         
         for (String sqlStatement : sql) {
             jokesSql.add(sqlStatement + ";");
-            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
         }
@@ -216,7 +225,7 @@ public class JokeDatabaseGenerator {
         
         for (String sqlStatement : sql) {
             jokesSql.add(sqlStatement + ";");
-            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
         }
@@ -243,7 +252,7 @@ public class JokeDatabaseGenerator {
         
         for (String sqlStatement : sql) {
             jokesSql.add(sqlStatement + ";");
-            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
         }
@@ -267,7 +276,7 @@ public class JokeDatabaseGenerator {
         
         for (String sqlStatement : sql) {
             jokesSql.add(sqlStatement + ";");
-            if (!DatabaseManager.executeSql(s, sqlStatement)) {
+            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
         }
