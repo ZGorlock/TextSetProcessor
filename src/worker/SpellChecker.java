@@ -9,6 +9,7 @@ package worker;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
@@ -42,7 +43,7 @@ public final class SpellChecker {
     /**
      * A list of strings in the dictionary.
      */
-    public final List<String> dict = new ArrayList<>();
+    public final HashSet<String> dict = new HashSet<>();
     
     /**
      * A flag indicating whether or not to load additional dicts.
