@@ -10,6 +10,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import main.Jokes;
@@ -64,6 +65,7 @@ public class JokeDatabaseGenerator {
      */
     public static void main(String[] args) {
         jokes.addAll(Jokes.readJokes(new File("jokes/jokes.json")));
+        jokes.sort(Comparator.comparingLong(o -> o.hash));
         
         textTagger = TextTagger.getInstance();
         textTagger.loadTagLists = false;
