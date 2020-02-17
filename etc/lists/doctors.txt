@@ -42,7 +42,10 @@ Oncologist
 Oncology
 Ophthalmologist
 Ophthalmology
+Optometrist
+Optometry
 Osteopath
+Osteopathy
 Otolaryngologist
 Otolaryngology
 Palliative Medicine Specialist

@@ -1,6 +1,7 @@
 ADHD
 Adjustment Disorder
 Agoraphobia
+Alzheimers
 Amnesia
 Amnesiac
 Anorexia
@@ -83,6 +84,7 @@ Separation Anxiety
 Social Anxiety
 Somatic
 Split Personalities
+Split Personality
 Stockholm
 Stockholm Syndrome
 Stress Disorder

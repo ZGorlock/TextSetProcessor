@@ -1,6 +1,5 @@
 Atari
 Atari 2600
-DS
 Game Boy
 Game Boy Advance
 Game Cube

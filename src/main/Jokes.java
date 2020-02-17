@@ -129,7 +129,7 @@ public class Jokes {
     /**
      * The number of jokes to tag before saving the state.
      */
-    private static final int tagChunkSize = 20 * numCores;
+    private static final int tagChunkSize = 50 * numCores;
     
     /**
      * The reference to the Joke Parser.
