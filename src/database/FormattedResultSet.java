@@ -6,9 +6,13 @@
 
 package database;
 
+import java.math.BigDecimal;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -121,7 +125,8 @@ public final class FormattedResultSet {
     }
     
     /**
-     * Returns a string result from the formatted result set.
+     * Returns a string result from the formatted result set.<br>
+     * Valid for CHAR, CHAR(n), CHARACTER, CHARACTER(n), VARCHAR(n), CHAR VARYING(n), CHARACTER VARYING(n), and LONG VARCHAR data types.
      *
      * @param column The name of the column to retrieve the result from.
      * @param row    The row of the column to retrieve, starting with 0.
@@ -129,58 +134,124 @@ public final class FormattedResultSet {
      */
     public String getStringResult(String column, int row) {
         Object result = getResult(column, row);
-        if (result == null) {
-            return null;
-        }
-        return result.toString();
+        return (String) result;
     }
     
     /**
-     * Returns an int result from the formatted result set.
-     *
-     * @param column The name of the column to retrieve the result from.
-     * @param row    The row of the column to retrieve, starting with 0.
-     * @return The int result from the formatted result set or null if it does not exist.
-     */
-    @SuppressWarnings("ConstantConditions")
-    public Integer getIntResult(String column, int row) {
-        try {
-            return Integer.valueOf(getStringResult(column, row));
-        } catch (NumberFormatException ignored) {
-            return null;
-        }
-    }
-    
-    /**
-     * Returns an boolean result from the formatted result set.
+     * Returns an boolean result from the formatted result set.<br>
+     * Valid for BOOLEAN data types.
      *
      * @param column The name of the column to retrieve the result from.
      * @param row    The row of the column to retrieve, starting with 0.
      * @return The boolean result from the formatted result set or null if it does not exist.
      */
-    @SuppressWarnings("ConstantConditions")
     public Boolean getBooleanResult(String column, int row) {
-        try {
-            return Boolean.valueOf(getStringResult(column, row));
-        } catch (NumberFormatException ignored) {
-            return null;
-        }
+        Object result = getResult(column, row);
+        return (Boolean) result;
     }
     
     /**
-     * Returns a long result from the formatted result set.
+     * Returns an integer result from the formatted result set.<br>
+     * Valid for INT, INTEGER, and SMALLINT data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The integer result from the formatted result set or null if it does not exist.
+     */
+    public Integer getIntegerResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (Integer) result;
+    }
+    
+    /**
+     * Returns a long result from the formatted result set.<br>
+     * Valid for BIGINT data types.
      *
      * @param column The name of the column to retrieve the result from.
      * @param row    The row of the column to retrieve, starting with 0.
      * @return The long result from the formatted result set or null if it does not exist.
      */
-    @SuppressWarnings("ConstantConditions")
     public Long getLongResult(String column, int row) {
-        try {
-            return Long.valueOf(getStringResult(column, row));
-        } catch (NumberFormatException ignored) {
-            return null;
-        }
+        Object result = getResult(column, row);
+        return (Long) result;
+    }
+    
+    /**
+     * Returns a float result from the formatted result set.<br>
+     * Valid for REAL, and FLOAT(n<=23) data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The float result from the formatted result set or null if it does not exist.
+     */
+    public Float getFloatResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (Float) result;
+    }
+    
+    /**
+     * Returns a double result from the formatted result set.<br>
+     * Valid for DOUBLE, DOUBLE PRECISION, FLOAT, and FLOAT(n>=24) data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The double result from the formatted result set or null if it does not exist.
+     */
+    public Double getDoubleResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (Double) result;
+    }
+    
+    /**
+     * Returns a big decimal result from the formatted result set.<br>
+     * Valid for DECIMAL, DECIMAL(n), DECIMAL(n, m), DEC, DEC(n), DEC(n, m), NUMERIC, NUMERIC(n), and NUMERIC(n, m) data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The big decimal result from the formatted result set or null if it does not exist.
+     */
+    public BigDecimal getBigDecimalResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (BigDecimal) result;
+    }
+    
+    /**
+     * Returns a date result from the formatted result set.<br>
+     * Valid for DATE data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The date result from the formatted result set or null if it does not exist.
+     */
+    public Date getDateResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (Date) result;
+    }
+    
+    /**
+     * Returns a time result from the formatted result set.<br>
+     * Valid for TIME data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The time result from the formatted result set or null if it does not exist.
+     */
+    public Time getTimeResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (Time) result;
+    }
+    
+    /**
+     * Returns a timestamp result from the formatted result set.<br>
+     * Valid for TIMESTAMP data types.
+     *
+     * @param column The name of the column to retrieve the result from.
+     * @param row    The row of the column to retrieve, starting with 0.
+     * @return The timestamp result from the formatted result set or null if it does not exist.
+     */
+    public Timestamp getTimestampResult(String column, int row) {
+        Object result = getResult(column, row);
+        return (Timestamp) result;
     }
     
 }

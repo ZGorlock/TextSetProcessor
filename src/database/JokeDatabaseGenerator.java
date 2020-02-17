@@ -144,11 +144,11 @@ public class JokeDatabaseGenerator {
     private static boolean createJokeTable() {
         String sql = "CREATE TABLE joke (" +
                 "id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), " +
-                "text VARCHAR(32000) NOT NULL, " +
+                "text LONG VARCHAR NOT NULL, " +
                 "length INT NOT NULL, " +
                 "source INT NOT NULL, " +
                 "nsfw BOOLEAN NOT NULL, " +
-                "hash BIGINT NOT NULL, " +
+                "hash BIGINT UNIQUE NOT NULL, " +
                 "CONSTRAINT joke_pk PRIMARY KEY (id), " +
                 "CONSTRAINT joke_source_fk FOREIGN KEY (source) REFERENCES source(id)" +
                 ")";

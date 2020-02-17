@@ -170,18 +170,16 @@ public class JokeDatabaseTest {
      * Tests the Source table in the Joke Database.
      *
      * @return Whether the table passed the tests or not.
-     *
-     * @noinspection ConstantConditions
      */
     private static boolean testSourceTable() {
         FormattedResultSet rs = DatabaseManager.querySql(s, "SELECT * FROM source");
         
         return (rs != null) &&
-                (rs.getIntResult("id", 0) == 1) &&
-                (rs.getIntResult("id", 1) == 2) &&
-                (rs.getIntResult("id", 2) == 3) &&
-                (rs.getIntResult("id", 3) == 4) &&
-                (rs.getIntResult("id", 4) == 5) &&
+                (rs.getIntegerResult("id", 0) == 1) &&
+                (rs.getIntegerResult("id", 1) == 2) &&
+                (rs.getIntegerResult("id", 2) == 3) &&
+                (rs.getIntegerResult("id", 3) == 4) &&
+                (rs.getIntegerResult("id", 4) == 5) &&
                 rs.getStringResult("name", 0).equals("Quirkology") &&
                 rs.getStringResult("name", 1).equals("Jokeriot") &&
                 rs.getStringResult("name", 2).equals("StupidStuff") &&
@@ -193,8 +191,6 @@ public class JokeDatabaseTest {
      * Tests the Joke table in the Joke Database.
      *
      * @return Whether the table passed the tests or not.
-     *
-     * @noinspection ConstantConditions
      */
     private static boolean testJokeTable() {
         FormattedResultSet rs = DatabaseManager.querySql(s, "SELECT * FROM joke WHERE id = 1");
@@ -203,11 +199,16 @@ public class JokeDatabaseTest {
         }
         
         Joke joke = jokes.get(0);
-        int source = DatabaseManager.querySql(s, "SELECT id FROM source WHERE name = '" + joke.source + "'").getIntResult("ID", 0);
+        
+        FormattedResultSet sourceRs = DatabaseManager.querySql(s, "SELECT id FROM source WHERE name = '" + joke.source + "'");
+        if (sourceRs == null) {
+            return false;
+        }
+        int source = sourceRs.getIntegerResult("ID", 0);
         
         if (!StringUtility.removePunctuation(rs.getStringResult("TEXT", 0)).equals(StringUtility.removePunctuation(joke.text)) ||
-                (rs.getIntResult("LENGTH", 0) != joke.length) ||
-                (rs.getIntResult("SOURCE", 0) != source) ||
+                (rs.getIntegerResult("LENGTH", 0) != joke.length) ||
+                (rs.getIntegerResult("SOURCE", 0) != source) ||
                 (rs.getBooleanResult("NSFW", 0) != joke.nsfw) ||
                 (rs.getLongResult("HASH", 0) != (joke.hash))) {
             return false;
@@ -218,15 +219,13 @@ public class JokeDatabaseTest {
             return false;
         }
         
-        return (rs.getIntResult("COUNT", 0) == jokes.size());
+        return (rs.getIntegerResult("COUNT", 0) == jokes.size());
     }
     
     /**
      * Tests the Tag tables in the Joke Database.
      *
      * @return Whether the tables passed the tests or not.
-     *
-     * @noinspection ConstantConditions
      */
     private static boolean testTagTables() {
         Joke joke = jokes.get(0);
@@ -237,7 +236,7 @@ public class JokeDatabaseTest {
                 return false;
             }
             
-            if (rs.getIntResult("COUNT", 0) != 1) {
+            if (rs.getIntegerResult("COUNT", 0) != 1) {
                 return false;
             }
         }
