@@ -89,7 +89,7 @@ public class Jokes {
     /**
      * A list of flags indicating whether or not to perform the corresponding joke processing step.
      */
-    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, true, false, false);
+    private static final List<Boolean> doProcessStep = Arrays.asList(true, true, true, true, true);
     
     /**
      * A flag indicating whether or not to perform a clean start.
@@ -509,7 +509,7 @@ public class Jokes {
             
             if (subCompileTime < 0) {
                 long subCompileStartTime = System.currentTimeMillis();
-                Filesystem.copyFile(compiledFileIn, compiledFileOut);
+                Filesystem.copyFile(compiledFileIn, compiledFileOut, true);
                 
                 long subCompileEndTime = System.currentTimeMillis();
                 subCompileTime = (subCompileEndTime - subCompileStartTime);
@@ -575,7 +575,7 @@ public class Jokes {
             progressBar.complete();
         }
         
-        Collections.shuffle(jokes);
+        jokes.sort(Comparator.comparingLong(o -> o.hash));
         outputJokes(mergedFile, jokes);
         
         totalTime += mergeTime;

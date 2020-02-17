@@ -76,7 +76,7 @@
             "length": 74,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Body", "Disability", "School", "Teacher"]
+            "tags": ["Amputation", "Body", "Disability", "Medical", "School", "Teacher"]
         },
         {
             "joke": "Why should you never iron a four leaf clover? You should never press your luck!",
@@ -888,7 +888,7 @@
             "length": 67,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Body", "Disability", "Herptile", "Reptile", "Turtle"]
+            "tags": ["Amputation", "Animal", "Body", "Disability", "Herptile", "Medical", "Reptile", "Turtle"]
         },
         {
             "joke": "Why did the squirrel fall out of the tree? It was dead. Why did the second squirrel fall out of the tree? It thought it was a game. Why did the tree fall over? It thought it was a squirrel!",
@@ -1217,7 +1217,7 @@
             "length": 49,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Body", "Cow", "Disability", "Food", "Mammal"]
+            "tags": ["Amputation", "Animal", "Body", "Cow", "Disability", "Food", "Mammal", "Medical"]
         },
         {
             "joke": "How can you tell the difference between a dead cat in the road or a dead lawyer in the road? The dead cat has tread marks.",
@@ -1854,7 +1854,7 @@
             "length": 618,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Camping", "Earth", "House", "Idiot", "Intelligence", "Planet", "Sherlock Holmes", "Sleep", "Space", "Stealing", "Television"]
+            "tags": ["Camping", "Doctor", "Earth", "Health", "House", "Idiot", "Intelligence", "Medical", "Planet", "Sherlock Holmes", "Sleep", "Space", "Stealing", "Television"]
         },
         {
             "joke": "What is the last thing a fish says when it hits a wall? Dam!",
@@ -1875,7 +1875,7 @@
             "length": 60,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Body", "Disability", "Dog", "Mammal"]
+            "tags": ["Amputation", "Animal", "Body", "Disability", "Dog", "Mammal", "Medical"]
         },
         {
             "joke": "Three guys walk into an office building, you think one of them would have noticed it was there.",
@@ -1973,7 +1973,7 @@
             "length": 51,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["King", "Royalty"]
+            "tags": ["King", "Military", "Royalty"]
         },
         {
             "joke": "A woman walked into a bar and ordered a double entendre, so the barman gave her one.",
@@ -2266,8 +2266,8 @@
             "joke": "One day little Johnny was in his backyard digging a hole. His neighbor, seeing him there, decided to investigate. \"Whatcha doin?\" He asked. \"My goldfish died and I'm burying him,\" Johnny replied. \"That's an awful big hole for a goldfish, ain't it?\" Asked the neighbor. \"That's because he's inside your cat!\"",
             "length": 315,
             "source": "Quirkology",
-            "nsfw": false,
-            "tags": ["Animal", "Cat", "Detective", "Fish", "Food", "Little Johnny", "Mammal", "Neighbor", "Ocean", "Water"]
+            "nsfw": true,
+            "tags": ["Animal", "Cat", "Death", "Detective", "Fish", "Food", "Little Johnny", "Mammal", "Neighbor", "Ocean", "Water"]
         },
         {
             "joke": "Did you hear what happened to the hyena who swallowed an Oxo cube? He became a laughing stock ...",
@@ -2547,7 +2547,7 @@
             "length": 310,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Clothing", "Family", "Food", "In Law", "Law", "Lunch", "Mother", "Mother In Law", "Parent"]
+            "tags": ["Clothing", "Family", "Food", "In Law", "Law", "Lunch", "Mother", "Mother In Law", "Parent", "Son"]
         },
         {
             "joke": "What did the orange say to the banana on the street corner? \"Hi.\"",
@@ -2708,7 +2708,7 @@
             "length": 282,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Animal", "Body", "Cheese", "Death", "Drug", "Food", "Mammal", "Men", "Mushroom", "Pig", "Pizza", "Plant", "Police", "Pork", "Restaurant", "Strength", "Vegetable", "Work"]
+            "tags": ["Animal", "Body", "Cheese", "Death", "Food", "Mammal", "Men", "Mushroom", "Pig", "Pizza", "Plant", "Police", "Pork", "Restaurant", "Strength", "Vegetable", "Work"]
         },
         {
             "joke": "A man is driving down the road when he gets pulled over by a copper. The copper draws a circle on the floor and asks the man to stand in it. While the man stands in the circle, the copper gets out a hammer and smashes the cars headlights. The copper turns around and sees the man laughing! So the copper goes and smashes each of the cars windows. The copper turns around again and sees the man laughing even harder! The frustrated copper then shouts to the man, \"What the hell do you find so funny?\" The man replies, \"Every time you turned around, I've been jumping in and out of this circle!\"",
@@ -2736,7 +2736,7 @@
             "length": 144,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Body", "Dentist", "Monk", "Rejection", "Religion", "Teeth"]
+            "tags": ["Body", "Cold", "Dentist", "Monk", "Rejection", "Religion", "Teeth"]
         },
         {
             "joke": "A man had a dog called Minton. One day Minton ate two shuttlecocks. When the owner found out he said bad Minton!",
@@ -2750,7 +2750,7 @@
             "length": 753,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Aviation", "Business", "Computer", "Email", "Height", "Holiday", "Hotel", "Husband", "Love", "Marriage", "Memory", "Men", "Reading", "Relationship", "Short", "Technology", "Widow", "Wife", "Women", "Writing"]
+            "tags": ["Aviation", "Business", "Computer", "Email", "Height", "Holiday", "Hotel", "Husband", "Love", "Mail", "Marriage", "Memory", "Men", "Reading", "Relationship", "Short", "Technology", "Widow", "Wife", "Women", "Writing"]
         },
         {
             "joke": "A guy walks up to the receptionist in the Psychiatrist's office and says, \"I'm the Invisible man and I'd like to talk to the Doctor.\" She pokes her head into the Psychiatrist's office and says there is a man here who wants to talk to you and he claims he's the Invisible man. The Psychiatrist replies, \"Tell him I can't see him right now.\"",
@@ -2946,7 +2946,7 @@
             "length": 66,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Bank", "Banker", "Football", "Game", "Money", "Sport"]
+            "tags": ["Bank", "Football", "Game", "Money", "Sport"]
         },
         {
             "joke": "Did you hear about the ship that ran aground carrying a cargo of red paint and black paint? The whole crew was marooned.",
@@ -3148,8 +3148,8 @@
             "joke": "A man came home from golfing one Saturday a little later than he usually did. His wife asked him why. \"Bob had a heart attack and died right there on the 9th hole!\" He explained. \"Oh, my goodness, how horrible!\" She exclaimed. \"No wonder you're late!\" \"Yeah,\" he said. \"For the whole rest of the course, it was 'hit the ball, drag Bob, hit the ball'.\"",
             "length": 361,
             "source": "Quirkology",
-            "nsfw": false,
-            "tags": ["Golf", "Heart", "House", "Marriage", "Men", "Relationship", "Sick", "Sport", "Wife", "Women"]
+            "nsfw": true,
+            "tags": ["Death", "Golf", "Heart", "House", "Marriage", "Men", "Relationship", "Sick", "Sport", "Wife", "Women"]
         },
         {
             "joke": "What's the difference between a shark and a lemon? They both swim, except for the lemon.",
@@ -3380,7 +3380,7 @@
             "length": 804,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Body", "Car", "Computer", "Darkness", "Driving", "Food", "Foot", "God", "Gun", "Men", "Microsoft", "Religion", "Technology", "Time", "Water", "Weather", "Windows"]
+            "tags": ["Body", "Car", "Computer", "Darkness", "Driving", "Food", "Foot", "God", "Men", "Microsoft", "Religion", "Technology", "Time", "Water", "Weather", "Windows"]
         },
         {
             "joke": "A man walks into a butchers shop, \"A pound of kidleys please.\" The butcher replies, \"What?\" \"I said a pound of kidleys!\" \"Don t you mean a pound of kidneys?\" \"That's what I said, diddle I?\"",
@@ -3408,7 +3408,7 @@
             "length": 54,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Breakfast", "Cat", "Eating", "Food", "Mammal"]
+            "tags": ["Animal", "Breakfast", "Cat", "Eating", "Food", "Mammal", "Mice"]
         },
         {
             "joke": "How many punk rockers does it take to change a light bulb? Two, one to change the bulb and one to kick the chair out from underneath him.",
@@ -4066,7 +4066,7 @@
             "length": 46,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Body", "Disability", "Dog", "Food", "Hot Dog", "Mammal"]
+            "tags": ["Amputation", "Animal", "Body", "Disability", "Dog", "Food", "Hot Dog", "Mammal", "Medical"]
         },
         {
             "joke": "What do you get if you mix a cow with a camel? Lumpy milkshakes.",
@@ -4087,7 +4087,7 @@
             "length": 853,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Anatomy", "Bone", "Death", "Drug", "Eating", "Food", "Husband", "Insurance", "Marriage", "Men", "Money", "Mushroom", "Poison", "Relationship", "Suspicion", "Wedding"]
+            "tags": ["Anatomy", "Bone", "Death", "Eating", "Food", "Husband", "Insurance", "Marriage", "Men", "Money", "Mushroom", "Poison", "Relationship", "Suspicion", "Wedding"]
         },
         {
             "joke": "A snail is on the bar one Christmas, and asks the barman, \"Excuse me, can I have a pint of beer please?\" The barman says, \"You WHAT?\" \"May I have a pint of beer, please?\" Repeats the snail. \"Don't be so stupid, snails don't drink beer,\" snarls the bar man and sweeps the snail off the bar on to the floor. The following Christmas, in the same bar, a snail appears on the counter. The barman asks, \"What do you want?\" Whereupon the snail shouts, \"What did you do THAT for?!\"",
@@ -4437,7 +4437,7 @@
             "length": 1034,
             "source": "Quirkology",
             "nsfw": true,
-            "tags": ["Animal", "Army", "Body", "Color", "Dishes", "Food", "Furniture", "Killing", "Kitchen", "Military", "Restaurant", "Russia", "Waiter"]
+            "tags": ["Animal", "Army", "Body", "Color", "Cooking", "Dishes", "Food", "Furniture", "Killing", "Kitchen", "Military", "Restaurant", "Russia", "Waiter"]
         },
         {
             "joke": "Two ladies were walking in the woods when they saw a raccoon on top of a tree stump. The first lady asked, \"What do you think? Do you think it's rabid?\" The second lady answered, \"No, raccoon.\"",
@@ -4675,7 +4675,7 @@
             "length": 676,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Color", "Dinner", "Eating", "Flower", "Food", "Furniture", "House", "Kitchen", "Love", "Men", "Old People", "Restaurant", "Wife", "Women"]
+            "tags": ["Color", "Dinner", "Eating", "Flower", "Food", "Furniture", "House", "Kitchen", "Love", "Marriage", "Men", "Old People", "Relationship", "Restaurant", "Wife", "Women"]
         },
         {
             "joke": "A dog comes into a bar and asks for a beer. The bartender, a little surprised serves the dog the beer the dog drinks the beer and asks for the bill. \"It'll be 10 dollars,\" says the bartender the dog pays and is leaving through the door when the bartender says, \"It is not usual to have dogs here drinking.\" The dog hears and answers, \"For 10 dollars a beer no dog can keep drinking here.\"",
@@ -4808,7 +4808,7 @@
             "length": 492,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Bank", "Banker", "Business", "Confused", "Debt", "Dog", "Elephant", "Job", "Loan", "Mammal", "Manager", "Men", "Money", "Office", "Work"]
+            "tags": ["Animal", "Bank", "Business", "Confused", "Debt", "Dog", "Elephant", "Job", "Loan", "Mammal", "Manager", "Men", "Money", "Office", "Work"]
         },
         {
             "joke": "The preacher was wired for sound with a lapel mic, and as he preached, he moved briskly about the platform, jerking the mic cord as he went. Then he moved to one side, getting wound up in the cord and nearly tripped before jerking it again. After several circles and jerks, a little girl in the third pew leaned toward her mother and whispered, \"If he gets loose, will he hurt us?\"",
@@ -4913,7 +4913,7 @@
             "length": 418,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Baby", "Bacon", "Body", "Family", "Father", "Food", "Mammal", "Nose", "Parent", "Pig", "Pork", "Sleep"]
+            "tags": ["Animal", "Baby", "Bacon", "Body", "Family", "Father", "Food", "Mammal", "Mother", "Nose", "Parent", "Pig", "Pork", "Sleep"]
         },
         {
             "joke": "A bus station is where a bus stops. A train station is where a train stops. On my desk I have a workstation.",
@@ -4968,7 +4968,7 @@
             "joke": "How many religious education teachers does it take to screw in a light bulb? One, and their God of choice.",
             "length": 106,
             "source": "Quirkology",
-            "nsfw": true,
+            "nsfw": false,
             "tags": ["God", "Lightbulb", "Religion", "School", "Teacher"]
         },
         {
@@ -5017,15 +5017,15 @@
             "joke": "This woman rushed to see her doctor, looking very much worried and all strung out. She rattles off, \"Doctor, take a look at me. When I woke up this morning, I looked at myself in the mirror and saw my hair all wiry and frazzled up, my skin was all wrinkled and pasty, my eyes were bloodshot and bugging out, and I had this corpse-like look on my face! What's WRONG with me, Doctor!?\" The doctor looks her over for a couple of minutes, then calmly says, \"Well, I can tell you that there ain't nothing wrong with your eyesight.\"",
             "length": 530,
             "source": "Quirkology",
-            "nsfw": false,
-            "tags": ["Body", "Doctor", "Eyesight", "Health", "Medical", "Mirror", "Women"]
+            "nsfw": true,
+            "tags": ["Body", "Corpse", "Death", "Doctor", "Eyesight", "Health", "Medical", "Mirror", "Women"]
         },
         {
             "joke": "What do you get when Godzilla steps on your house? Mushrooms.",
             "length": 61,
             "source": "Quirkology",
-            "nsfw": true,
-            "tags": ["Drug", "Food", "House", "Monster", "Mushroom"]
+            "nsfw": false,
+            "tags": ["Food", "House", "Monster", "Mushroom"]
         },
         {
             "joke": "What is a baby bee? A little humbug.",
@@ -5067,7 +5067,7 @@
             "length": 986,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Animal", "Beauty", "Car", "Driving", "Farmer", "Friend", "Idiot", "Intelligence", "Mammal", "Marriage", "Pig", "Relationship", "Transportation", "Truck", "Wife", "Women", "Writing"]
+            "tags": ["Animal", "Car", "Driving", "Farmer", "Friend", "Idiot", "Intelligence", "Mammal", "Marriage", "Pig", "Relationship", "Transportation", "Truck", "Wife", "Women", "Writing"]
         },
         {
             "joke": "A man decides to take the opportunity while his wife is away to paint the toilet seat. After he finished, he went to the kitchen to raid the fridge. The wife comes home sooner than expected, and heads to the bathroom, sits down and gets the toilet seat stuck to her rear. In a panic, she shouts to her husband to drive her to the doctor. She puts on a large overcoat to cover the stuck seat, and off they go. When they get to the doctors office, the man lifts his wife's coat to show their predicament. The man asked, \"Doctor, have you ever seen anything like this before?\" \"Well, yes,\" the doctor replied. \"But never framed.\"",
@@ -5137,7 +5137,7 @@
             "length": 99,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Body", "Drum", "Gun"]
+            "tags": ["Body", "Drum"]
         },
         {
             "joke": "A guy gets home from work one night and hears a voice. The voice tells him, \"Quit your job, sell your house, take your money, go to Vegas.\" The man is disturbed at what he hears and ignores the voice. The next day when he gets home from work, the same thing happens. The voice tells him, \"Quit your job, sell your house, take your money, go to Vegas.\" Again the man ignores the voice, though he is very troubled by the event. Every day, day after day, the man hears the same voice when he gets home from work, \"Quit your job, sell your house, take your money, go to Vegas.\" Each time the man hears the voice he becomes increasingly upset. Finally, after two weeks, he succumbs to the pressure. He does quit his job, sells his house, takes his money and heads to Vegas. The moment the man gets off the plane in Vegas, the voice tells him, \"Go to Harrah's.\" So, he hops in a cab and rushes over to Harrah's. As soon as he sets foot in the casino, the voice tells him, \"Go to the roulette table.\" The man does as he is told. When he gets to the roulette table, the voice tells him, \"Put all your money on 17.\" Nervously, the man cashes in his money for chips and then puts them all on 17. The dealer wishes the man good luck and spins the roulette wheel. Around and around the ball goes. The man anxiously watches the ball as it slowly loses speed until finally it settles into number: 21. The voice says, \"Damn.\"",
@@ -5200,7 +5200,7 @@
             "length": 442,
             "source": "Quirkology",
             "nsfw": false,
-            "tags": ["Business", "Color", "Drum", "Eating", "Fire", "Job", "Manager", "Memory", "Music", "Office", "Piano", "Radiation", "Shopping", "Work"]
+            "tags": ["Business", "Color", "Drum", "Eating", "Fire", "Job", "Manager", "Memory", "Music", "Office", "Piano", "Radiation", "Science", "Shopping", "Work"]
         },
         {
             "joke": "When is a vet busiest? When its raining cats and dogs!",
