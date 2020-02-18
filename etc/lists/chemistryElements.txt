@@ -1,3 +1,4 @@
+Actinide
 Actinium
 Aluminium
 Aluminum
@@ -47,6 +48,7 @@ Indium
 Iodine
 Iridium
 Krypton
+Lanthanide
 Lanthanum
 Lawrencium
 Lithium
@@ -105,6 +107,7 @@ Thallium
 Thorium
 Thulium
 Titanium
+Transition Metal
 Tungsten
 Uranium
 Vanadium

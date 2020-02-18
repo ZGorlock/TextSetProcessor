@@ -43,6 +43,11 @@ public final class NsfwChecker {
     public final List<String> nsfw = new ArrayList<>();
     
     /**
+     * A list of strings in that are SFW dictionary.
+     */
+    public final List<String> sfw = new ArrayList<>();
+    
+    /**
      * A list of strings in the NSFW dictionary to not check for as prefixes.
      */
     public final List<String> dontDoStartNsfw = new ArrayList<>();
@@ -92,9 +97,10 @@ public final class NsfwChecker {
         textTagger.load();
         
         nsfw.addAll(Filesystem.readLines(new File("etc/dicts/dict-nsfw.txt")));
+        sfw.add("ball");
         
         dontDoStartNsfw.addAll(Arrays.asList("anal", "coon", "tit", "ass", "arse", "fuh"));
-        dontDoEndNsfw.addAll(Arrays.asList("anal", "ass", "crap", "homo", "muff", "prick", "tit", "fuh"));
+        dontDoEndNsfw.addAll(Arrays.asList("anal", "ass", "crap", "homo", "muff", "prick", "tit", "fuh", "balls"));
         
         System.out.println("(" + nsfw.size() + " Words)");
     }
@@ -124,6 +130,9 @@ public final class NsfwChecker {
         Matcher wordMatcher = wordGetter.matcher(text);
         while (wordMatcher.find()) {
             String word = StringUtility.removePunctuation(wordMatcher.group("word").toLowerCase().replaceAll("'?s?$", ""));
+            if (sfw.contains(word)) {
+                continue;
+            }
             for (String append : Arrays.asList("", "s", "es", "ing")) {
                 if (nsfw.contains(word + append)) {
                     return true;

@@ -45,7 +45,7 @@ public final class TextTagger {
     /**
      * The regex pattern for matching tags with special characters.
      */
-    private static final String TAG_REGEX_COMBINED = TAG_REGEX_BASE.replace("Y", "[^A-Z0-9&\\-]");
+    private static final String TAG_REGEX_COMBINED = TAG_REGEX_BASE.replace("Y", "[^A-Z0-9&\\-/]");
     
     /**
      * A list of appendings for aliases.
@@ -607,7 +607,7 @@ public final class TextTagger {
         }
         
         for (String alias : tag.aliases) {
-            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-')).toUpperCase();
+            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-', '/')).toUpperCase();
             String aliasEntryTest = aliasEntry.replace("-", "\\\\-").toUpperCase();
             if (aliasEntry.isEmpty()) {
                 continue;
@@ -670,13 +670,13 @@ public final class TextTagger {
     public List<String> getInitialTags(String text) {
         List<String> tags = new ArrayList<>();
         
-        List<String> words = new ArrayList<>(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("\\s+", -1)));
+        List<String> words = new ArrayList<>(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-', '/')).split("\\s+", -1)));
         List<String> combinedWords = new ArrayList<>();
         for (String combinedWord : words) {
-            combinedWords.add(combinedWord.replaceAll("[&\\-]", ""));
+            combinedWords.add(combinedWord.replaceAll("[&\\-/]", ""));
         }
         words.addAll(combinedWords);
-        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-')).split("[\\s&\\-]+", -1)));
+        words.addAll(Arrays.asList(StringUtility.removePunctuationSoft(text, Arrays.asList('&', '-', '/')).split("[\\s&\\-/]+", -1)));
         words = ListUtility.removeDuplicates(words);
         for (String word : words) {
             word = word.replaceAll("^[&\\-]+", "").replaceAll("[&\\-]+$", "");
@@ -890,7 +890,7 @@ public final class TextTagger {
         }
         
         for (String alias : tag.aliases) {
-            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-')).toUpperCase();
+            String aliasEntry = StringUtility.removePunctuationSoft(alias, Arrays.asList('&', '-', '/')).toUpperCase();
             String aliasEntryTest = aliasEntry.replace("-", "\\\\-").toUpperCase();
             
             for (String append : ALIAS_APPENDS) {
@@ -977,6 +977,23 @@ public final class TextTagger {
                 tags.remove("Sex");
                 if (printTagTrigger) {
                     System.out.println("-Sex -> Lightbulb");
+                }
+            }
+        }
+        
+        if (tags.contains("Hearing Aid") && tags.contains("AIDS")) {
+            Tag aidsNoAids = specialTagList.get("AIDS~AIDS");
+            if (aidsNoAids == null) {
+                aidsNoAids = new Tag(tagList.get("AIDS"));
+                aidsNoAids.name += "~";
+                aidsNoAids.aliases.remove("Aids");
+                generateTestStoreEntry(aidsNoAids);
+                specialTagList.put("AIDS~AIDS", aidsNoAids);
+            }
+            if (!hasTag(text, aidsNoAids)) {
+                tags.remove("AIDS");
+                if (printTagTrigger) {
+                    System.out.println("-AIDS -> Hearing Aid");
                 }
             }
         }
