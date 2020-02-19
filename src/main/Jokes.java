@@ -514,6 +514,7 @@ public class Jokes {
             
             compileTime += (subCompileTime / 1000);
             int size = readJokes(compiledFileOut).size();
+            setSaveProcessTime(jokeSet, ProcessStep.COMPILE, (subCompileTime / 1000));
             
             progressBar.setTotal(size);
             progressBar.complete();
