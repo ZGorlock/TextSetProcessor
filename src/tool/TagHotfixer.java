@@ -35,13 +35,13 @@ public class TagHotfixer {
      * A list of tags that have less aliases than before.
      */
     @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
-    private static final List<String> tagHasLess = Arrays.asList("Truck");
+    private static final List<String> tagHasLess = Arrays.asList("Bathroom");
     
     /**
      * A list of tags that have more aliases than before
      */
     @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
-    private static final List<String> tagHasMore = Arrays.asList("Aviation", "Internet", "Porn", "Chemistry", "Slut", "Security", "Government", "Politics", "Racist", "Black People", "Masturbation", "Disney");
+    private static final List<String> tagHasMore = Arrays.asList("Alcohol", "Sleep", "Transgender", "Cannibal", "Math", "Time");
     
     /**
      * A list of initial tags to hotfix.

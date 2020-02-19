@@ -1,10 +1,16 @@
 Algebra
+Algebraic
 Calc
 Calculus
 Combinatoric
 Computation
+Geometric
 Geometry
 Information Theory
 Signal Processing
 Statistic
+Topological
 Topology
+Trig
+Trigonometic
+Trigonometry

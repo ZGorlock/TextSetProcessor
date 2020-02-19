@@ -17,7 +17,7 @@ Al Qaeda                ,AlQaeda
 Alabama                 ,Alabamian
 Alaska                  ,Alaskan
 Albert Einstein         ,Einstein,General Relativity
-Alcohol                 ,Shot Glass,Shotglass
+Alcohol                 ,Prohibition,Shot Glass,Shotglass
 Alien                   ,Extraterrestrial,UFO
 Allergy                 
 Alligator               ,Gator -dontDoOR
@@ -87,7 +87,7 @@ Baseball                ,1st Base,2nd Base,3rd Base,4th Base,Ballgame,Center Fie
 Basement                ,Bunker,Cellar
 Basketball              ,Dribble,Dribbling,Free Throw,Jumpshot
 Bath                    ,Bathe,Bathtub,Body Wash,Bodywash,Shampoo,Shower,Showercurtain,Showered,Showerhead,Showering,Washcloth
-Bathroom                ,Bath,Bathe,Bathtub,Body Wash,Bodywash,Shampoo,Shower,Showercurtain,Showered,Showerhead,Showering,Sink,Toilet,Washcloth
+Bathroom                ,Bath,Bathe,Bathtub,Body Wash,Bodywash,Shampoo,Shower,Showercurtain,Showered,Showerhead,Showering,Toilet,Washcloth
 Batman                  ,Bane,Batarang,Batcave,Batmobile,Bruce Wayne,Gotham City,Harvey Dent,The Joker,Twoface
 Battery                 
 Battle                  ,Battled
@@ -172,7 +172,7 @@ Canada                  ,Canadian
 Cancer                  ,Cancerfree,Cancerless,Chemo,Chemotherapy -dontDoER
 Candle                  ,Candlewax
 Candy                   ,Candied,Sugar Coat,Sugar Coated,Sugar Coating,Sweets
-Cannibal                ,Cannibalistic
+Cannibal                ,Cannibalism,Cannibalistic
 Capitalism              ,Capitalist,Capitalistic
 Car                     ,Airbag,Auto Shop,AutoMechanic,Autoshop,CarMechanic,Carburetor,Carseat,Diesel,Gas Pump,Gas Station,Gasoline,Glovebox,Goodyear Tire,Grease Monkey,Machine Shop,Machinist,Mechanic,Motor Oil,NASCAR,Seatbelt,Steering Wheel,Taxi,Technician,Vehicle,Windshield -dontDoED
 Car Accident            ,Car Crash
@@ -314,7 +314,7 @@ Donut                   ,Dunkin,Krispy Kreme
 Drawing                 ,Acrylic,Airbrush,Canvas,Crayola,Draw,Drawn,Easel,Fingerpaint,Fingerpainting,Graffiti,Paint,Paintbrush,Painting,Spraypaint,Watercolor,Watercolour -dontDoING
 Dream                   ,Nightmare
 Dress                   -dontDoS
-Drinking                ,Alcohol,Alcoholic,Barista,Breathalyze,Breathalyzed,Breathalyzer,Coffee,DUI,Decaf,Drunk,Drunkedly,Drunkenly,Hang Over,Hangover,Hung Over,Shot Glass,Shotglass,Starbucks
+Drinking                ,Alcohol,Alcoholic,Barista,Breathalyze,Breathalyzed,Breathalyzer,Coffee,DUI,Decaf,Drunk,Drunkedly,Drunkenly,Hang Over,Hangover,Hung Over,Prohibition,Shot Glass,Shotglass,Starbucks
 Drivers License         ,DMV
 Driving                 ,Carsick,DMV,Driver,Driveway,Drover,Freeway,Green Light,Gridlock,Highway,Interstate,Motorway,Red Light,Road,Speed Bump,Speed BumpSpeeder,Speed Limit,Speedbump,Speeder,Speeding,Stop Sign,Stoplight,Stopsign,Traffic,Yellow Light
 Drone                   
@@ -409,8 +409,8 @@ Gambling                ,Bet,Betting,Casino,Dice,Jackpot,Lottery,Lotto,Powerball
 Game of Thrones         ,GameOfThrones -dontDoS -dontDoES
 Game                    ,Cybergame,Gamed,Gamer,Gaming,Highscore,Hiscore,Ubisoft,Videogame
 Gardening               ,Botanist,Botany,Fertilizer,Landscape,Landscaping,Replant,Trowel
-Gay                     ,Bicurious,Bisexual,Bisexuality,Cis,Drag Queen,Dyke,Fag,Faggiest,Faggot,Gay,Gaybar,Gender Change,Gender Changed,Genderfluid,Genderqueer,Grindr,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Lesibian,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
-Gender                  ,Agender,Asexual,Asexuality,Bicurious,Bisexual,Bisexuality,Cis,Cisgender,Cross Dress,Cross Dressed,Cross Dresser,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Crossdressed,Drag Queen,Dyke,Fag,Faggiest,Faggot,Female,Feminine,Gay,Gaybar,Gender Change,Gender Changed,Genderfluid,Genderqueer,Grindr,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lady Boy,Ladyboy,Lesbian,Lesbo,Lesibian,Machismo,Machist,Macho,Male,Masculine,Masculinity,Metrosexual,Neutrois,Nonbinary,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite -dontDoER
+Gay                     ,Bicurious,Bisexual,Bisexuality,Cis,Drag Queen,Dyke,Fag,Faggiest,Faggot,Gay,Gaybar,Gender Change,Gender Changed,Genderfluid,Genderqueer,Grindr,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Lesibian,Metrosexual,Queer,Sex Change,Sex Changed,Sexchange,Sexchanged,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw -dontDoY
+Gender                  ,Agender,Asexual,Asexuality,Bicurious,Bisexual,Bisexuality,Cis,Cisgender,Cross Dress,Cross Dressed,Cross Dresser,Cross Dressing,CrossDress,CrossDresser,CrossDressing,Crossdressed,Drag Queen,Dyke,Fag,Faggiest,Faggot,Female,Feminine,Gay,Gaybar,Gender Change,Gender Changed,Genderfluid,Genderqueer,Grindr,Hermaphrodite,Heterosexual,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lady Boy,Ladyboy,Lesbian,Lesbo,Lesibian,Machismo,Machist,Macho,Male,Masculine,Masculinity,Metrosexual,Neutrois,Nonbinary,Pansexual,Pansexuality,Queer,Sex Change,Sex Changed,Sexchange,Sexchanged,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually,Transvestite -dontDoER
 Genetics                ,Adenine,Chromosome,Clone,Cloned,Cloning,Codon,Cytosine,DNA,Deoxyribonucleic Acid,Double Helix,Gene,Genealogy,Genetic,Genetically,Genomic,Guanine,Helicase,Nucleotide,Purine,Pyrimidine,Telomere,Thymine,mRNA
 Genie                   
 Genocide                ,Auschwitz,Concentration Camp,Gas Chamber,Gasroom,Genocidal,Holocaust -nsfw
@@ -486,7 +486,7 @@ Holy Water              -dontDoER
 Home School             ,Homeschool,Homeschooled,Homeschooler,Homeschooling
 Homeless                ,Homelessness -dontDoS
 Homework                
-Homosexual              ,Bicurious,Bisexual,Bisexuality,Cis,Drag Queen,Dyke,Fag,Faggiest,Faggot,Gay,Gaybar,Gender Change,Gender Changed,Genderfluid,Genderqueer,Grindr,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Lesibian,Metrosexual,Queer,Sex Change,Sex Changed,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw
+Homosexual              ,Bicurious,Bisexual,Bisexuality,Cis,Drag Queen,Dyke,Fag,Faggiest,Faggot,Gay,Gaybar,Gender Change,Gender Changed,Genderfluid,Genderqueer,Grindr,Hermaphrodite,Homo,Homosexual,Homosexuality,LGBT,LGBTQ,Lesbian,Lesbo,Lesibian,Metrosexual,Queer,Sex Change,Sex Changed,Sexchange,Sexchanged,Shemale,Swing Both Ways,Tanssexual,Transgender,Transsexual,Transsexually -nsfw
 Honeymoon               ,Newlywed
 Horse                   ,Donkey,Equestrian,Equine,Horseshoe,Mare,Mule,Pony,Saddle,Saddlepack,Spurs,Stallion,Warhorse
 Horse Racing            ,Horse Track,Horserace,Horsetrack,Jockey
@@ -886,7 +886,7 @@ Skirt                   ,Miniskirt
 Skunk                   
 Sky Diving              ,Parachute,Wingsuit
 Slavery                 ,Enslave,Enslaved,Human Trafficking,Prisoner Of War,Serf,Serfdom,Servitude,Slave,Slaveholder,Slaveholding,Slaver,Subjugation,Underground Railroad -nsfw -dontDoY
-Sleep                   ,Apnea,Asleep,Cryosleep,Cryostasis,Dream,Dreaming,Hibernate,Hibernating,Hibernation,Hypersleep,Insomnia,Insomniac,Melatonin,Nap,Napping,Narcolepsy,Narcoleptic,Nightmare,Sandman,Sleepwalk,Sleepwalking,Slumber,Slumbering,Snooze,Snoozed,Snoozing,Snore,Snoring,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
+Sleep                   ,Apnea,Asleep,Cryosleep,Cryostasis,Dream,Dreaming,Hibernate,Hibernating,Hibernation,Hypersleep,Insomnia,Insomniac,Melatonin,Nap,Napping,Narcolepsy,Narcoleptic,Nightmare,Sandman,Sleepwalk,Sleepwalking,Slept,Slumber,Slumbering,Snooze,Snoozed,Snoozing,Snore,Snoring,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
 Sleepwalking            ,Somnambulant,Somnambulate,Somnambulatory,Somnambulism,Somnambulist
 Slut                    ,Bimbo,Floozy,Fornicatress,Harlot,Ho,Hoe,Hussy,Promiscuous,Skank,Skankier,Skankiest,Sluttier,Sluttiest,Slutty,Tramp,Whore -nsfw
 Small Town              ,One Horse Town,Rural Town,Settlement,Village
@@ -974,7 +974,7 @@ Theater                 ,Center Stage,Close Curtains,Dramatist,Dramaturge,Dramat
 Thief                   ,Bandit,Bandito,Burglar,Confiscator,Conman,Embezzler,Extortioner,Hustler,Looter,Mugger,Pick Pocket,Pick Pocketer,Pickpocket,Pickpocketer,Pilferer,Plagiariser,Plagiarizer,Plunderer,Robber,Shoplifter,Smuggler,Thief,Thieved,Thieves
 Threesome               ,Menage A Trois -nsfw
 Tiger Woods             -dontDoS
-Time                    ,Alternate Reality,Clock,Future,Futuristic,High Noon,Moment,Rolex,Spacetime,Temporal,Temporally,Tick Tock,Timeline,Timewise,Timezone -minor -dontDoS
+Time                    ,Alternate Reality,Clock,Future,Futuristic,High Noon,Moment,Rolex,Spacetime,Sundial,Temporal,Temporally,Tick Tock,Timeline,Timewise,Timezone -minor -dontDoS
 Time Travel             ,Alternate Reality,Timeline
 Tinder                  ,Grindr,OKCupid -dontDoER
 Titanic                 
@@ -985,7 +985,7 @@ Toy Story               ,Pizza Planet -dontDoY
 Traffic                 ,Green Light,Gridlock,Red Light,Stoplight,Stopsign,Yellow Light
 Train                   ,Conductor,Locomotive,Monorail,Railcar,Railroad,Railway,Railyard,Third Rail,Trainwreck,Trainyard
 Transformers            ,AllSpark,Autobot,Cybertron,Decepticon
-Transgender             ,Cis,Gender Change,Gender Changed,Hermaphrodite,Sex Change,Sex Changed,Shemale,Transsexual,Transsexually -nsfw -dontDoER
+Transgender             ,Cis,Gender Change,Gender Changed,Hermaphrodite,Sex Change,Sex Changed,Sexchange,Sexchanged,Shemale,Transsexual,Transsexually -nsfw -dontDoER
 Transportation          ,Cargo,Ferry,Freight,Haul,Haulage,Hauling,Logistical,Logistically,Logistics,Relocation,Shipping,Transport,Transporter,Transshipment,Trucking
 Travel                  ,Cruise,Destination,Traveller,Travelling
 Treasure                ,Loot,Pirate Booty,Pirate Chest,Trove

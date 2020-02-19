@@ -363,42 +363,42 @@ public final class JokeParser {
                         thisJoke.text = jokeText.toString();
                         thisJoke.source = preserveSource ? jokeText.toString() : source;
 //                        thisJoke.nsfw = nsfw;
-
-//                        for (i = i + 1; i < lines.size(); i++) {
-//                            line = lines.get(i);
-//                            if (line.contains("</div>")) {
-//                                break;
-//                            }
-//                            if (line.contains("<div class=\"tag-list-container-r0jbeo\"><span>Tags:</span>")) {
-//                                for (i = i + 1; i < lines.size(); i++) {
-//                                    line = lines.get(i);
-//                                    if (line.contains("class=\"tag-list-sojdneob\"")) {
-//                                        for (i = i + 1; i < lines.size(); i++) {
-//                                            line = lines.get(i);
-//                                            Matcher tagMatcher = tagGetter.matcher(line);
-//                                            if (tagMatcher.matches()) {
-//                                                String tag = tagMatcher.group("tag");
-//                                                if (!tag.isEmpty()) {
-//                                                    String extractedTag = StringUtility.toTitleCase(StringUtility.trim(StringUtility.removePunctuation(tag)));
-//                                                    if (textTagger.tagList.containsKey(extractedTag)) {
-//                                                        thisJoke.tags.add(extractedTag);
-//                                                    }
-//                                                }
-//                                            }
-//                                            if (line.contains("</ul>")) {
-//                                                break;
-//                                            }
-//                                        }
-//                                        if (line.contains("</ul>")) {
-//                                            break;
-//                                        }
-//                                    }
-//                                }
-//                                if (line.contains("</ul>")) {
-//                                    break;
-//                                }
-//                            }
-//                        }
+                        
+                        for (i = i + 1; i < lines.size(); i++) {
+                            line = lines.get(i);
+                            if (line.contains("</div>")) {
+                                break;
+                            }
+                            if (line.contains("<div class=\"tag-list-container-r0jbeo\"><span>Tags:</span>")) {
+                                for (i = i + 1; i < lines.size(); i++) {
+                                    line = lines.get(i);
+                                    if (line.contains("class=\"tag-list-sojdneob\"")) {
+                                        for (i = i + 1; i < lines.size(); i++) {
+                                            line = lines.get(i);
+                                            Matcher tagMatcher = tagGetter.matcher(line);
+                                            if (tagMatcher.matches()) {
+                                                String tag = tagMatcher.group("tag");
+                                                if (!tag.isEmpty()) {
+                                                    String extractedTag = StringUtility.toTitleCase(StringUtility.trim(StringUtility.removePunctuation(tag)));
+                                                    if (!extractedTag.isEmpty() && textTagger.tagList.containsKey(extractedTag) && textTagger.tagList.get(extractedTag).minor) {
+                                                        thisJoke.tags.add(extractedTag);
+                                                    }
+                                                }
+                                            }
+                                            if (line.contains("</ul>")) {
+                                                break;
+                                            }
+                                        }
+                                        if (line.contains("</ul>")) {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (line.contains("</ul>")) {
+                                    break;
+                                }
+                            }
+                        }
                         
                         List<String> typeTags = new ArrayList<>();
                         switch (type) {
@@ -517,7 +517,7 @@ public final class JokeParser {
                 thisJoke.source = preserveSource ? save : source;
                 for (String cat : category.split(",")) {
                     String tag = StringUtility.toTitleCase(StringUtility.trim(StringUtility.removePunctuation(cat)));
-                    if (!tag.isEmpty() && textTagger.tagList.containsKey(tag)) {
+                    if (!tag.isEmpty() && textTagger.tagList.containsKey(tag) && textTagger.tagList.get(tag).minor) {
                         thisJoke.tags.add(tag);
                     }
                 }
@@ -674,7 +674,7 @@ public final class JokeParser {
                 thisJoke.text = title + " " + body;
                 thisJoke.source = preserveSource ? save : source;
                 for (String cat : category.split(",")) {
-                    if (!cat.isEmpty()) {
+                    if (!cat.isEmpty() && textTagger.tagList.containsKey(cat) && textTagger.tagList.get(cat).minor) {
                         thisJoke.tags.add(StringUtility.trim(cat));
                     }
                 }
