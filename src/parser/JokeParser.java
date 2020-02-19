@@ -442,6 +442,7 @@ public final class JokeParser {
 //                            existingJoke.nsfw = existingJoke.nsfw || thisJoke.nsfw;
                         } else {
                             jokes.add(thisJoke);
+                            thisJoke.nsfw = nsfw;
                             hashes.put(thisJoke.hash, thisJoke);
                         }
                     }
