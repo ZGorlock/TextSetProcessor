@@ -569,6 +569,7 @@ public class Jokes {
         }
         
         jokes.sort(Comparator.comparingLong(o -> o.hash));
+        Filesystem.deleteFile(mergedFile);
         outputJokes(mergedFile, jokes);
         
         totalTime += mergeTime;
