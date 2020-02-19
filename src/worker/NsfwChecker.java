@@ -22,6 +22,19 @@ import utility.StringUtility;
  */
 public final class NsfwChecker {
     
+    //Constants
+    
+    /**
+     * The regex pattern for extracting words from text.
+     */
+    private static final Pattern WORD_GETTER_REGEX = Pattern.compile("(^|(?<=\\s|-))(?<word>[^\\s-]+)((?=\\s|-|$))");
+    
+    /**
+     * A list of appendings for words to check for NSFW.
+     */
+    private static final List<String> NSFW_APPENDS = Arrays.asList("", "s", "es", "ing");
+    
+    
     //Static Fields
     
     /**
@@ -43,11 +56,6 @@ public final class NsfwChecker {
     public final List<String> nsfw = new ArrayList<>();
     
     /**
-     * A list of strings in that are SFW dictionary.
-     */
-    public final List<String> sfw = new ArrayList<>();
-    
-    /**
      * A list of strings in the NSFW dictionary to not check for as prefixes.
      */
     public final List<String> dontDoStartNsfw = new ArrayList<>();
@@ -56,6 +64,16 @@ public final class NsfwChecker {
      * A list of strings in the NSFW dictionary to not check for as suffixes.
      */
     public final List<String> dontDoEndNsfw = new ArrayList<>();
+    
+    /**
+     * A list of strings in the NSFW dictionary that will always trigger the NSFW flag.
+     */
+    public final List<String> catchAll = new ArrayList<>();
+    
+    /**
+     * A list of strings in th NSFW dictionary that need the appending -s.
+     */
+    public final List<String> needsS = new ArrayList<>();
     
     /**
      * The reference to the Text Tagger.
@@ -97,10 +115,11 @@ public final class NsfwChecker {
         textTagger.load();
         
         nsfw.addAll(Filesystem.readLines(new File("etc/dicts/dict-nsfw.txt")));
-        sfw.add("ball");
         
         dontDoStartNsfw.addAll(Arrays.asList("anal", "coon", "tit", "ass", "arse", "fuh"));
         dontDoEndNsfw.addAll(Arrays.asList("anal", "ass", "crap", "homo", "muff", "prick", "tit", "fuh", "balls"));
+        catchAll.addAll(Arrays.asList("fuck", "nigga", "nigger", "porn", "bitch", "rape"));
+        needsS.add("balls");
         
         System.out.println("(" + nsfw.size() + " Words)");
     }
@@ -126,27 +145,33 @@ public final class NsfwChecker {
             }
         }
         
-        Pattern wordGetter = Pattern.compile("(^|(?<=\\s|-))(?<word>[^\\s-]+)((?=\\s|-|$))");
-        Matcher wordMatcher = wordGetter.matcher(text);
+        Matcher wordMatcher = WORD_GETTER_REGEX.matcher(text);
         while (wordMatcher.find()) {
-            String word = StringUtility.removePunctuation(wordMatcher.group("word").toLowerCase().replaceAll("'?s?$", ""));
-            if (sfw.contains(word)) {
-                continue;
+            String originalWord = wordMatcher.group("word").toLowerCase();
+            String word = StringUtility.removePunctuation(originalWord.replaceAll("'?s?$", ""));
+            if (needsS.contains(originalWord)) {
+                word += "s";
             }
-            for (String append : Arrays.asList("", "s", "es", "ing")) {
+            for (String append : NSFW_APPENDS) {
+                if (append.equals("s") && needsS.contains(word + "s")) {
+                    continue;
+                }
                 if (nsfw.contains(word + append)) {
                     return true;
                 }
             }
             for (String nsfwWord : nsfw) {
-                for (String append : Arrays.asList("", "s", "es", "ing")) {
+                for (String append : NSFW_APPENDS) {
+                    if (append.equals("s") && needsS.contains(word + "s")) {
+                        continue;
+                    }
                     if ((word.startsWith(nsfwWord + append) && !dontDoStartNsfw.contains(nsfwWord)) || (word.endsWith(nsfwWord + append) && !dontDoEndNsfw.contains(nsfwWord))) {
                         return true;
                     }
                 }
             }
         }
-        List<String> catchAll = Arrays.asList("fuck", "nigga", "nigger", "porn", "bitch", "rape");
+        
         boolean hitCatchAll = false;
         for (String catchAllEntry : catchAll) {
             if (text.toUpperCase().contains(catchAllEntry.toUpperCase())) {
