@@ -11,7 +11,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -503,20 +502,16 @@ public class Jokes {
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
             
-            long subCompileTime = getSaveProcessTime(jokeSet, ProcessStep.COMPILE) * 1000;
+            long subCompileTime = 0;
             File compiledFileIn = new File(jokeSet.directory + ProcessStep.COMPILE.in);
             File compiledFileOut = new File(jokeSet.directory + ProcessStep.COMPILE.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
             
-            if (subCompileTime < 0) {
-                long subCompileStartTime = System.currentTimeMillis();
-                Filesystem.copyFile(compiledFileIn, compiledFileOut, true);
-                
-                long subCompileEndTime = System.currentTimeMillis();
-                subCompileTime = (subCompileEndTime - subCompileStartTime);
-                setSaveProcessTime(jokeSet, ProcessStep.COMPILE, (subCompileTime / 1000));
-            } else {
-                progressBar.setInitialDuration(subCompileTime / 1000);
-            }
+            long subCompileStartTime = System.currentTimeMillis();
+            Filesystem.copyFile(compiledFileIn, compiledFileOut, true);
+            
+            long subCompileEndTime = System.currentTimeMillis();
+            subCompileTime = (subCompileEndTime - subCompileStartTime);
+            
             compileTime += (subCompileTime / 1000);
             int size = readJokes(compiledFileOut).size();
             
@@ -554,20 +549,17 @@ public class Jokes {
             ConsoleProgressBar progressBar = new ConsoleProgressBar(jokeSet.name(), 1, "jokes");
             progressBar.update(0);
             
-            long subMergeTime = getSaveProcessTime(jokeSet, ProcessStep.MERGE) * 1000;
+            long subMergeTime;
             File mergedFileIn = new File(jokeSet.directory + ProcessStep.COMPILE.out.replace("<jokeSet>", jokeSet.name().toLowerCase()));
             
-            if (subMergeTime < 0) {
-                long subMergeStartTime = System.currentTimeMillis();
-                List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
-                jokes.addAll(jokeSetJokes);
-                
-                long subMergeEndTime = System.currentTimeMillis();
-                subMergeTime = (subMergeEndTime - subMergeStartTime);
-                setSaveProcessTime(jokeSet, ProcessStep.MERGE, (subMergeTime / 1000));
-            } else {
-                progressBar.setInitialDuration(subMergeTime / 1000);
-            }
+            long subMergeStartTime = System.currentTimeMillis();
+            List<Joke> jokeSetJokes = readJokes(new File("jokes/" + jokeSet.name().toLowerCase() + "/" + jokeSet.name().toLowerCase() + ".json"));
+            jokes.addAll(jokeSetJokes);
+            
+            long subMergeEndTime = System.currentTimeMillis();
+            subMergeTime = (subMergeEndTime - subMergeStartTime);
+            setSaveProcessTime(jokeSet, ProcessStep.MERGE, (subMergeTime / 1000));
+            
             mergeTime += (subMergeTime / 1000);
             int size = readJokes(mergedFileIn).size();
             
