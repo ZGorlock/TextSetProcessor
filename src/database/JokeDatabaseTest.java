@@ -15,6 +15,7 @@ import java.util.List;
 
 import main.Jokes;
 import pojo.Joke;
+import pojo.Tag;
 import utility.StringUtility;
 import worker.TextTagger;
 
@@ -64,7 +65,7 @@ public class JokeDatabaseTest {
             return;
         }
         
-        conn = DatabaseManager.connectToDatabase("jokes/db/jokes");
+        conn = DatabaseManager.connectToDatabase("jar:(jokes/db/jokes.zip)jokes");
         if (conn == null) {
             return;
         }
@@ -105,7 +106,11 @@ public class JokeDatabaseTest {
         System.out.println();
         System.out.println("Tag NSFW Source Length Speed (all)   : " + testSpeed("ALL;tag=Lightbulb;nsfw=true;source=Reddit;lengthGt=100") + "ms");
         System.out.println("Tag NSFW Source Length Speed (random): " + testSpeed("RANDOM;tag=Lightbulb;nsfw=true;source=Reddit;lengthGt=100") + "ms");
-        
+        System.out.println();
+        System.out.println("Source Count: " + testCount("source"));
+        System.out.println("Joke Count: " + testCount("joke"));
+        System.out.println();
+        System.out.println("Tag Count: " + testCountTags());
         
         DatabaseManager.closeStatement(s);
         DatabaseManager.disconnectFromDatabase(conn);
@@ -283,6 +288,41 @@ public class JokeDatabaseTest {
         FormattedResultSet rs = DatabaseManager.querySql(s, sql);
         long endTime = System.currentTimeMillis();
         return endTime - startTime;
+    }
+    
+    /**
+     * Tests the Size of a Joke Database table.
+     *
+     * @param table The table to count the rows for.
+     * @return The number of rows in the specified table.
+     */
+    private static int testCount(String table) {
+        String sql = "SELECT COUNT(*) AS count FROM " + table;
+        
+        FormattedResultSet rs = DatabaseManager.querySql(s, sql);
+        if (rs == null) {
+            return -1;
+        }
+        
+        return rs.getIntegerResult("COUNT", 0);
+    }
+    
+    /**
+     * Tests the Size of the Joke Database tag tables.
+     *
+     * @return The total number of rows in all tag tables.
+     */
+    private static int testCountTags() {
+        int total = 0;
+        for (Tag tag : textTagger.tagList.values()) {
+            String tagTable = "tag_" + tag.name.toLowerCase().replace(" ", "_");
+            
+            int count = testCount(tagTable);
+            System.out.println(tagTable + " Count: " + count);
+            
+            total += count;
+        }
+        return total;
     }
     
 }

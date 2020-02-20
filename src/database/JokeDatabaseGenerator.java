@@ -11,10 +11,14 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import main.Jokes;
 import pojo.Joke;
+import resource.ConsoleProgressBar;
 import utility.Filesystem;
 import worker.TextTagger;
 
@@ -41,6 +45,11 @@ public class JokeDatabaseGenerator {
     private static final List<Joke> jokes = new ArrayList<>();
     
     /**
+     * The maximum number of Jokes to process.
+     */
+    private static int maxJokes;
+    
+    /**
      * The reference to the Text Tagger.
      */
     private static TextTagger textTagger = null;
@@ -53,7 +62,7 @@ public class JokeDatabaseGenerator {
     /**
      * A flag indicating whether or not to produce only the Joke Database sql.
      */
-    private static boolean sqlOnly = true;
+    private static boolean sqlOnly = false;
     
     
     //Main Method
@@ -66,6 +75,7 @@ public class JokeDatabaseGenerator {
     public static void main(String[] args) {
         jokes.addAll(Jokes.readJokes(new File("jokes/jokes.json")));
         jokes.sort(Comparator.comparingLong(o -> o.hash));
+        maxJokes = jokes.size();
         
         textTagger = TextTagger.getInstance();
         textTagger.loadTagLists = false;
@@ -76,7 +86,7 @@ public class JokeDatabaseGenerator {
                 return;
             }
             
-            conn = DatabaseManager.connectToDatabase("jokes/db/jokes");
+            conn = DatabaseManager.connectToDatabase("jokes/db/jokes", false);
             if (conn == null) {
                 return;
             }
@@ -112,8 +122,8 @@ public class JokeDatabaseGenerator {
         jokesSql.add("-- Insert Tags");
         populateTagTables();
         
-        Filesystem.writeLines(new File("jokes/db/jokes.sql"), jokesSql);
         
+        Filesystem.writeLines(new File("jokes/db/jokes.sql"), jokesSql);
         
         if (!sqlOnly) {
             DatabaseManager.closeStatement(s);
@@ -135,7 +145,18 @@ public class JokeDatabaseGenerator {
                 ")";
         jokesSql.add(sql + ";");
         
-        return sqlOnly || DatabaseManager.executeSql(s, sql);
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Creating Source Table", 1, "");
+        progressBar.update(0);
+        
+        if (!sqlOnly) {
+            if (!DatabaseManager.executeSql(s, sql)) {
+                return false;
+            }
+        }
+        
+        DatabaseManager.commitChanges(conn);
+        progressBar.complete();
+        return true;
     }
     
     /**
@@ -156,7 +177,16 @@ public class JokeDatabaseGenerator {
                 ")";
         jokesSql.add(sql + ";");
         
-        return sqlOnly || DatabaseManager.executeSql(s, sql);
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Creating Joke Table", 1, "");
+        progressBar.update(0);
+        
+        if (!sqlOnly && !DatabaseManager.executeSql(s, sql)) {
+            return false;
+        }
+        
+        DatabaseManager.commitChanges(conn);
+        progressBar.complete();
+        return true;
     }
     
     /**
@@ -165,7 +195,9 @@ public class JokeDatabaseGenerator {
      * @return Whether the tables were created successfully or not.
      */
     private static boolean createTagTables() {
-        List<String> sql = new ArrayList<>();
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Creating Tag Tables", textTagger.tagList.size(), "");
+        progressBar.update(0);
+        
         for (String tag : textTagger.tagList.keySet()) {
             String tagTable = "tag_" + tag.toLowerCase().replace(" ", "_");
             String sqlStatement = "CREATE TABLE " + tagTable + " (" +
@@ -174,15 +206,16 @@ public class JokeDatabaseGenerator {
                     "CONSTRAINT " + tagTable + "_pk PRIMARY KEY (id), " +
                     "CONSTRAINT " + tagTable + "_joke_fk FOREIGN KEY (joke) REFERENCES joke(id)" +
                     ")";
-            sql.add(sqlStatement);
-        }
-        
-        for (String sqlStatement : sql) {
             jokesSql.add(sqlStatement + ";");
+            
             if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
+            progressBar.addOne();
         }
+        
+        DatabaseManager.commitChanges(conn);
+        progressBar.complete();
         return true;
     }
     
@@ -192,23 +225,37 @@ public class JokeDatabaseGenerator {
      * @return Whether the indices were created successfully or not.
      */
     private static boolean createIndices() {
-        List<String> sql = new ArrayList<>();
-        sql.add("CREATE INDEX source_name_idx ON source (name)");
-        sql.add("CREATE INDEX joke_length_idx ON joke (length)");
-        sql.add("CREATE INDEX joke_source_idx ON joke (source)");
-        sql.add("CREATE INDEX joke_nsfw_idx ON joke (nsfw)");
+        List<String> baseIndices = new ArrayList<>();
+        baseIndices.add("CREATE INDEX source_name_idx ON source (name)");
+        baseIndices.add("CREATE INDEX joke_length_idx ON joke (length)");
+        baseIndices.add("CREATE INDEX joke_source_idx ON joke (source)");
+        baseIndices.add("CREATE INDEX joke_nsfw_idx ON joke (nsfw)");
+        
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Creating Indices", textTagger.tagList.size() + baseIndices.size(), "");
+        progressBar.update(0);
+        
+        for (String baseIndex : baseIndices) {
+            jokesSql.add(baseIndex + ";");
+            
+            if (!sqlOnly && !DatabaseManager.executeSql(s, baseIndex)) {
+                return false;
+            }
+            progressBar.addOne();
+        }
         
         for (String tag : textTagger.tagList.keySet()) {
             String tagTable = "tag_" + tag.toLowerCase().replace(" ", "_");
-            sql.add("CREATE INDEX " + tagTable + "_joke_idx ON " + tagTable + " (joke)");
-        }
-        
-        for (String sqlStatement : sql) {
-            jokesSql.add(sqlStatement + ";");
-            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
+            String sql = "CREATE INDEX " + tagTable + "_joke_idx ON " + tagTable + " (joke)";
+            jokesSql.add(sql + ";");
+            
+            if (!sqlOnly && !DatabaseManager.executeSql(s, sql)) {
                 return false;
             }
+            progressBar.addOne();
         }
+        
+        DatabaseManager.commitChanges(conn);
+        progressBar.complete();
         return true;
     }
     
@@ -218,19 +265,26 @@ public class JokeDatabaseGenerator {
      * @return Whether the table was populated successfully or not.
      */
     private static boolean populateSourceTable() {
-        List<String> sql = new ArrayList<>();
-        sql.add("INSERT INTO source (name) VALUES('Quirkology')");
-        sql.add("INSERT INTO source (name) VALUES('Jokeriot')");
-        sql.add("INSERT INTO source (name) VALUES('StupidStuff')");
-        sql.add("INSERT INTO source (name) VALUES('Wocka')");
-        sql.add("INSERT INTO source (name) VALUES('Reddit')");
+        List<String> sourceData = new ArrayList<>();
+        sourceData.add("INSERT INTO source (name) VALUES('Quirkology')");
+        sourceData.add("INSERT INTO source (name) VALUES('Jokeriot')");
+        sourceData.add("INSERT INTO source (name) VALUES('StupidStuff')");
+        sourceData.add("INSERT INTO source (name) VALUES('Wocka')");
+        sourceData.add("INSERT INTO source (name) VALUES('Reddit')");
         
-        for (String sqlStatement : sql) {
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Populating Source Table", sourceData.size(), "");
+        progressBar.update(0);
+        
+        for (String sqlStatement : sourceData) {
             jokesSql.add(sqlStatement + ";");
             if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
                 return false;
             }
+            progressBar.addOne();
         }
+        
+        DatabaseManager.commitChanges(conn);
+        progressBar.complete();
         return true;
     }
     
@@ -240,24 +294,27 @@ public class JokeDatabaseGenerator {
      * @return Whether the table was populated successfully or not.
      */
     private static boolean populateJokeTable() {
-        List<String> sql = new ArrayList<>();
-        for (Joke joke : jokes) {
-            
-            StringBuilder jokeSql = new StringBuilder("INSERT INTO joke (text, length, source, nsfw, hash) VALUES(");
-            jokeSql.append("'").append(joke.text.replace("'", "''")).append("', ");
-            jokeSql.append(joke.length).append(", ");
-            jokeSql.append("(SELECT id FROM source WHERE name = '").append(joke.source).append("'), ");
-            jokeSql.append(joke.nsfw ? "true" : "false").append(", ");
-            jokeSql.append(joke.hash).append(")");
-            sql.add(jokeSql.toString());
-        }
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Populating Joke Table", jokes.size(), "");
+        progressBar.update(0);
         
-        for (String sqlStatement : sql) {
-            jokesSql.add(sqlStatement + ";");
-            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
+        for (int i = 0; i < maxJokes; i++) {
+            Joke joke = jokes.get(i);
+            String jokeSql = "INSERT INTO joke (text, length, source, nsfw, hash) VALUES(" +
+                    "'" + joke.text.replace("'", "''") + "', " +
+                    joke.length + ", " +
+                    "(SELECT id FROM source WHERE name = '" + joke.source + "'), " +
+                    (joke.nsfw ? "true" : "false") + ", " +
+                    joke.hash + ")";
+            jokesSql.add(jokeSql + ";");
+            
+            if (!sqlOnly && !DatabaseManager.executeSql(s, jokeSql)) {
                 return false;
             }
+            progressBar.addOne();
         }
+        
+        DatabaseManager.commitChanges(conn);
+        progressBar.complete();
         return true;
     }
     
@@ -267,21 +324,37 @@ public class JokeDatabaseGenerator {
      * @return Whether the tables were populated successfully or not.
      */
     private static boolean populateTagTables() {
-        List<String> sql = new ArrayList<>();
-        for (int i = 0; i < jokes.size(); i++) {
+        final AtomicInteger tagCount = new AtomicInteger(0);
+        jokes.forEach(j -> tagCount.getAndAdd(j.tags.size()));
+        
+        ConsoleProgressBar progressBar = new ConsoleProgressBar("Populating Tag Tables", tagCount.get(), "");
+        progressBar.update(0);
+        
+        Map<String, List<String>> sql = new HashMap<>();
+        for (int i = 0; i < maxJokes; i++) {
             Joke joke = jokes.get(i);
             
             for (String tag : joke.tags) {
-                sql.add("INSERT INTO tag_" + tag.toLowerCase().replace(" ", "_") + " (joke) VALUES(" + (i + 1) + ")");
+                String tagTable = "tag_" + tag.toLowerCase().replace(" ", "_");
+                String tagSql = "INSERT INTO " + tagTable + " (joke) VALUES(" + (i + 1) + ")";
+                jokesSql.add(tagSql + ";");
+                
+                sql.putIfAbsent(tagTable, new ArrayList<>());
+                sql.get(tagTable).add(tagSql);
             }
         }
         
-        for (String sqlStatement : sql) {
-            jokesSql.add(sqlStatement + ";");
-            if (!sqlOnly && !DatabaseManager.executeSql(s, sqlStatement)) {
-                return false;
+        for (Map.Entry<String, List<String>> sqlEntry : sql.entrySet()) {
+            for (String tagSql : sqlEntry.getValue()) {
+                if (!sqlOnly && !DatabaseManager.executeSql(s, tagSql)) {
+                    return false;
+                }
+                progressBar.addOne();
             }
+            DatabaseManager.commitChanges(conn);
         }
+        
+        progressBar.complete();
         return true;
     }
     

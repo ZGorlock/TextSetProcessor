@@ -28,6 +28,7 @@ public final class DatabaseManager {
     public static boolean setupDatabase() {
         try {
             System.setProperty("derby.stream.error.file", "log" + File.separator + "derby.log");
+            System.setProperty("derby.storage.tempDirectory", "tmp");
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver").getConstructor().newInstance();
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | InvocationTargetException | NoSuchMethodException e) {
             System.out.println("There was an error setting up the Derby Database");
@@ -39,22 +40,33 @@ public final class DatabaseManager {
     /**
      * Creates the Connection for a Database.
      *
-     * @param db The Database to connect to.
+     * @param db         The Database to connect to.
+     * @param autoCommit Whether or not to auto-commit queries.
      * @return The Connection that was made, or null if there was an error.
      */
-    public static Connection connectToDatabase(String db) {
+    public static Connection connectToDatabase(String db, boolean autoCommit) {
         Properties props = new Properties();
         props.put("user", "admin");
         props.put("password", "admin");
         
         try {
             Connection conn = DriverManager.getConnection("jdbc:derby:" + db + ";create=true", props);
-            conn.setAutoCommit(true);
+            conn.setAutoCommit(autoCommit);
             return conn;
         } catch (SQLException e) {
             System.out.println("There was an error connecting to the Database: " + db);
             return null;
         }
+    }
+    
+    /**
+     * Creates the Connection for a Database.
+     *
+     * @param db The Database to connect to.
+     * @return The Connection that was made, or null if there was an error.
+     */
+    public static Connection connectToDatabase(String db) {
+        return connectToDatabase(db, true);
     }
     
     /**
@@ -69,6 +81,42 @@ public final class DatabaseManager {
         } catch (SQLException e) {
             return false;
         }
+    }
+    
+    /**
+     * Commits changes queued in a connection.
+     *
+     * @param conn The connection to commit changes for.
+     * @return Whether the changes were successfully committed or not.
+     */
+    public static boolean commitChanges(Connection conn) {
+        try {
+            if (!conn.getAutoCommit()) {
+                conn.commit();
+            }
+        } catch (SQLException e) {
+            System.out.println("There was an error committing the changes queued in the Database Connection");
+            return false;
+        }
+        return true;
+    }
+    
+    /**
+     * Rolls back changes queued in a connection.
+     *
+     * @param conn The connection to roll back changes for.
+     * @return Whether the changes were successfully rolled back or not.
+     */
+    public static boolean rollbackChanges(Connection conn) {
+        try {
+            if (!conn.getAutoCommit()) {
+                conn.rollback();
+            }
+        } catch (SQLException e) {
+            System.out.println("There was an error rolling back the changes queued in the Database Connection");
+            return false;
+        }
+        return true;
     }
     
     /**
