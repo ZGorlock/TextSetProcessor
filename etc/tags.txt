@@ -656,7 +656,7 @@ Missile                 ,AntiAircraft,Projectile,Rocket,Warhead
 Missionary              ,Missioner
 Mississippi             ,Mississippian
 Mistress                ,Concubine,Courtesan,Paramour,Slampiece -dontDoS
-Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Buyers Market,Capitation,Cent,Collateral,Credit Union,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Finance,Financed,Financial,Financially,Financing,Foreclose,Foreclosing,Foreclosure,Gilded,Gold,Golden,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paycheck,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Silver,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
+Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Buyers Market,Capitation,Cent,Collateral,Credit Union,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Finance,Financed,Financial,Financially,Financing,Foreclose,Foreclosing,Foreclosure,Gilded,Gold,Golden,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paid,Pay,Paycheck,Paying,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Silver,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
 Monk                    ,Abbot,Carthusian,Cistercian,Friar,Monastery,Monastic
 Monkey                  ,Ape,Primate -dontDoY
 Monopoly                ,Monopolistic,Monopsony,Oligopoly
@@ -743,7 +743,7 @@ Pedophilia              ,Child Porn,Child Pornography,Hebephile,Hebephilia,Hebep
 Penguin                 
 Penis                   ,Ballsack,Boabie,Bollick,Boner,Choad,Chode,Cock,Cum,Cummed,Cumming,Cummy,Dick,Ejaculate,Ejaculation,Ejaculator,Erection,Foreskin,Gonad,Hard On,Incher,Jizz,Jizzed,Jizzing,Manhood,Micropenis,Nutsack,Pecker,Penile,Phallic,Phallus,Pisser,Precum,Prick,Schlong,Scrotum,Semen,Seminal,Sperm,Spermatic,Spermatogenesis,Splooge,Spunk,Stiffy,Testicle,Testis,Tockley,Wiener -nsfw -dontDoS
 Pepsi                   ,PepsiCo
-Period                  ,Menophilia,Menophiliac,Menstruate,Menstruating,Menstruation,PMS,Premenstrual Syndrome,Tampax,Tampon -nsfw
+Period                  ,Menophilia,Menophiliac,Menstrual,Menstruate,Menstruating,Menstruation,PMS,Premenstrual Syndrome,Tampax,Tampon -nsfw
 Pervert                 ,Perverse -nsfw
 Pessimist               ,Cynic,Cynical,Cynicality,Cynically,Nihilism,Nihilist,Nihilistic,Pessimism,Pessimistic
 Pet                     ,Animal Doctor,Pet Doctor,PetFriendly,Petco,Petshop,Petsmart,Petstore,Vet,Veterinarian,Veterinary -dontDoER
