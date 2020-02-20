@@ -27,7 +27,7 @@ Amazon                  ,Amazonian
 America                 ,American,Merica,Merican,Murca,Murica
 Amish                   
 Amphibian               ,Frog,Froggy,Froglike,Ribbit,Ribbiting,Toad,Toadlike,Toady
-Amputation              ,No Arms,No Legs
+Amputation              ,Amputated,Amputee,No Arms,No Legs
 Anal Sex                ,Anal Lube,Analingus,Anilingus,Butt Sex,Buttsex -nsfw
 Anatomy                 ,Cadaver,Dissect,Dissected,Dissection,Human Body,Ligament,Neuroanatomy,Osteological,Osteologically,Osteologist,Osteology,Physiological,Physiologically,Physiologist,Physiology,Skeleton,Tendon
 Anesthesia              ,Anesthetic
@@ -195,7 +195,7 @@ Chicken                 ,Hen,Henhouse,Hot Wing,Hotwing,Pollo,Poultry,Rooster
 Child Abuse             ,Abuse Children,Abusing Children -nsfw
 Child Molestation       ,Molest Children,Molesting Children -nsfw
 Childbirth              ,Cesarean,Miscarriage,Newborn,Stillbirth,Stillborn -nsfw
-Children                ,Child,Fatherless,Kid,Make a Wish,Makeawish,Motherless,Orphan,Orphanage,Parentless,Unparented
+Children                ,Child,Childish,Dead Parents,Fatherless,Kid,Make a Wish,Makeawish,Motherless,Orphan,Orphanage,Parentless,Parents Are Dead,Parents Were Dead,Unparented
 China                   ,Chee Chee,CheeChee,Chinaman,Chinamen,Chinese,Chink,Chinki,Curry Muncher,Gook,Yellowman,Yellowmen,Yellowwoman,Yellowwomen
 Chiropractor            
 Chocolate               
@@ -364,7 +364,7 @@ FBI                     ,Federal Bureau Of Investigation
 Facebook                
 Failure                 ,Fail,Failed,Failing
 Fairy                   ,Faerie,Faery,Fairytale,Farie,Toothfairy -dontDoY
-Family                  ,Abuela,Abuelo,Aunt,Auntie,Brother,Child,Children,Cousin,Dad,Daddy,Father,Father-In-Law,FatherInLaw,Fatherhood,Fatherless,Fatherly,GILF,Geema,Geepa,Gramma,Grampa,Grandad,Grandchild,Grandchildren,Granddad,Granddaughter,Grandfather,Grandfatherly,Grandkid,Grandma,Grandmom,Grandmother,Grandmotherly,Grandpa,Grandparent,Grandpop,Grandson,Half-Brother,Half-Sister,HalfBrother,HalfSister,Kid,MILF,Make a Wish,Makeawish,Mama,Mom,Momma,Mommy,Mother,Mother-In-Law,MotherInLaw,Motherhood,Motherless,Motherly,Orphan,Orphanage,Papa,Parent,Parental,Parenthood,Parentless,Pops,Sibling,Sister,Step-Brother,Step-Sister,StepBrother,StepSister,Stepdad,Stepfather,Stepmom,Stepmother,Stepparent,Uncle,Unparented
+Family                  ,Abuela,Abuelo,Aunt,Auntie,Brother,Child,Childish,Children,Cousin,Dad,Daddy,Dead Parents,Father,Father-In-Law,FatherInLaw,Fatherhood,Fatherless,Fatherly,GILF,Geema,Geepa,Gramma,Grampa,Grandad,Grandchild,Grandchildren,Granddad,Granddaughter,Grandfather,Grandfatherly,Grandkid,Grandma,Grandmom,Grandmother,Grandmotherly,Grandpa,Grandparent,Grandpop,Grandson,Half-Brother,Half-Sister,HalfBrother,HalfSister,Kid,MILF,Make a Wish,Makeawish,Mama,Mom,Momma,Mommy,Mother,Mother-In-Law,MotherInLaw,Motherhood,Motherless,Motherly,Orphan,Orphanage,Papa,Parent,Parental,Parenthood,Parentless,Parents Are Dead,Parents Were Dead,Pops,Sibling,Sister,Step-Brother,Step-Sister,StepBrother,StepSister,Stepdad,Stepfather,Stepmom,Stepmother,Stepparent,Uncle,Unparented
 Farmer                  ,Cornfield,Crop,Farmboy,Farmhand,Farmhouse,Farmland,Farmyard,Livestock,Pasture,Plantation
 Fart                    ,Cut the Cheese,Flatulate,Flatulence,Flatulent,Pass Gas,Passing Gas
 Fat                     ,Adipose,Corpulence,Corpulent,Fatass,Fatness,Fatten,Fatter,Fattest,Fatty,Obese,Obesity,Overweight,Plump,Pudgy
@@ -625,11 +625,11 @@ Masculinity             ,Machismo,Machist,Macho,Masculine -dontDoY
 Masochist               ,Masochism,Masochistically -nsfw
 Massage                 ,Massaged,Massager,Massaging,Masseur,Masseuse
 Masturbation            ,Crywank,Crywanker,Crywanking,Fap,Fapped,Fappening,Fapping,Finger Herself,Fingering Herself,Jack Off,Jacking Off,Jerk Off,Jerked Off,Jerking Off,Jerkoff,Pleasure Herself,Pleasured Herself,Pleasuring Herself,Touch Herself,Touching Herself,Touching Himself,Touching Myself,Touching Yourself,Wank,Wanker,Wanking -nsfw
-Math                    ,Mathematical,Mathematically,Mathematician,Mathlete
+Math                    ,Abacus,Mathematical,Mathematically,Mathematician,Mathlete
 Mayonnaise              ,Mayo
 McDonalds               ,Hamburglar,McDonald
 Mechanic                ,Auto Shop,AutoMechanic,Autoshop,CarMechanic,Grease Monkey,Machine Shop,Machinist,Technician
-Medical                 ,Ambulance,Amputate,Amputation,Anesthesia,Anesthetic,CPR,Cancer,Cancerfree,Cancerless,Checkup,Chemo,Chemotherapy,Disease,Doctor,Dr.,Emergency Room,Epilepsy,Epileptic,Hansens Disease,Hemorrhoids,Hospital,Hospitalized,Leper,Leprosy,Lipectomy,Liposuction,MRI,Medical Procedure,Medicament,Medicine,Midwife,Mycobacterium Leprae,No Arms,No Legs,Nurse,Nursed,Nursing,Operating Room,Operation,Pain Killer,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Resuscitate,Resuscitated,Resuscitation,Rx,Surgeon,Surgery
+Medical                 ,Ambulance,Amputate,Amputated,Amputation,Amputee,Anesthesia,Anesthetic,CPR,Cancer,Cancerfree,Cancerless,Checkup,Chemo,Chemotherapy,Disease,Doctor,Dr.,Emergency Room,Epilepsy,Epileptic,Hansens Disease,Hemorrhoids,Hospital,Hospitalized,Leper,Leprosy,Lipectomy,Liposuction,MRI,Medical Procedure,Medicament,Medicine,Midwife,Mycobacterium Leprae,No Arms,No Legs,Nurse,Nursed,Nursing,Operating Room,Operation,Pain Killer,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Resuscitate,Resuscitated,Resuscitation,Rx,Surgeon,Surgery
 Medicine                ,Medicament,Pain Killer,Pharmaceutical,Prescribe,Prescribed,Prescriber,Prescribing,Prescription,Rx
 Medicine Man            ,Apothecary
 Meme                    ,Memelord,Memer
@@ -656,7 +656,7 @@ Missile                 ,AntiAircraft,Projectile,Rocket,Warhead
 Missionary              ,Missioner
 Mississippi             ,Mississippian
 Mistress                ,Concubine,Courtesan,Paramour,Slampiece -dontDoS
-Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Buyers Market,Capitation,Collateral,Credit Union,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Finance,Financed,Financial,Financially,Financing,Foreclose,Foreclosing,Foreclosure,Gilded,Gold,Golden,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paycheck,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Silver,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
+Money                   ,ATM,Bank,Borrow,Borrowed,Bull Market,Buyers Market,Capitation,Cent,Collateral,Credit Union,Currency,Deflation,Down Payment,Downtrend,Economical,Economically,Economist,Economy,Finance,Financed,Financial,Financially,Financing,Foreclose,Foreclosing,Foreclosure,Gilded,Gold,Golden,IRS,Inflation,Internal Revenue Service,Lend,Loan,Loanee,Loaner,Loanword,Lottery,Lotto,Monetary,Monopolistic,Monopoly,Monopsony,Moose Market,Mortgage,Mortgaged,Mortgagee,Mortgager,Mutual Fund,Oligopoly,Paycheck,Powerball,Repossess,Repossessed,Repossession,Sellers Market,Silver,Stock Broker,Stock Brokerage,Stock Exchange,Stock Market,Stockbroker,Stocks,Surtax,Tariff,Tax,Taxation,Taxes,Taxpayer,Tithe,Uptrend -dontDoY
 Monk                    ,Abbot,Carthusian,Cistercian,Friar,Monastery,Monastic
 Monkey                  ,Ape,Primate -dontDoY
 Monopoly                ,Monopolistic,Monopsony,Oligopoly
@@ -695,7 +695,7 @@ New Jersey              ,Jersey,New Jerseyan,New Jerseyite -dontDoY
 New Year                
 New York                ,Brooklyn,Central Park,Empire State,Erie Canal,Long Island,Manhattan,New Yorker,Staten Island
 New Zealand             ,New Zealander
-News                    ,Announcement,Columnist,Correspondent,Editorial,Interviewer,Journalism,Journalist,Meteorologist,Newsman,NewspaperNewsroom,Newsperson,Newswoman,Reporter,Tabloid,Weather Report,Weatherman,Weathermen,Weatherwoman,Weatherwomen -dontDoS
+News                    ,Announcement,Columnist,Correspondent,Editorial,Journalism,Journalist,Meteorologist,Newsman,NewspaperNewsroom,Newsperson,Newswoman,Reporter,Tabloid,Weather Report,Weatherman,Weathermen,Weatherwoman,Weatherwomen -dontDoS
 Nigeria                 ,Niger,Nigerien
 Nightclub               ,DJ,Disco,Disk Jockey,Nightlife,Nightspot
 Nightmare               
@@ -723,7 +723,7 @@ Organ Donor             ,Organ Donation,Organ Transplant,Organ Transplantation,T
 Organic Food            ,Non GMO,NonGMO,Organic Farm,Organically Farmed,Organically Grown,Sustainable Farming
 Orgasm                  ,Anorgasmia,Cumming,Ejaculation,Ejaculator -nsfw
 Orgy                    -nsfw
-Orphan                  ,Fatherless,Motherless,Orphanage,Parentless,Unparented
+Orphan                  ,Dead Parents,Fatherless,Motherless,Orphanage,Parentless,Parents Are Dead,Parents Were Dead,Unparented
 Osama Bin Laden         ,Bin Laden,BinLaden
 Overdose                ,OD,Overdosed -nsfw
 PETA                    ,People For The Ethical Treatment Of Animals
@@ -820,11 +820,11 @@ Redhead                 ,Carrottop,Ginger
 Redneck                 ,Backwood,Bumpkin,Hick,Hillbilly
 Rejection               ,Denied,Deny,Rebuff,Rebuffed,Refusal,Refuse,Refused,Renunciate,Renunciated,Renunciation
 Relationship            ,Anniversary,BF,Betroth,Betrothal,Betrothed,Boy Friend,Boyfriend,Break Up,Breakup,Bride,Bridegroom,Bridesmaid,Broke Up,Concubine,Courtesan,Date,Dating,Divorce,Divorced,Eharmony,Engagement Ring,Espouse,Ex Husband,Ex Wife,ExBoyfriend,ExGirlfriend,ExHusband,ExWife,Friend Zone,Friend Zoned,Friend Zoning,Friends With Benefits,Friendzone,Friendzoned,Friendzoning,GF,Get Hitched,Girl Friend,Girlfriend,Got Hitched,Groom,Groomsman,Groomsmen,Honeymoon,House Wife,Housewife,Hubby,Husband,Inmarry,Intermarry,Just Friends,Marriage,Married,Married Man,Married Men,Married Woman,Married Women,Marry,Matrimony,Mismarry,Missus,Mistress,Newlywed,Nuptial,Paramour,Postmarriage,Prenuptial,Remarriage,Remarry,Slampiece,Spousal,Spouse,Stay At Home Mom,StayAtHome Mom,Wedded,Wedding,Weddingmoon,Wedlock,Widow,Widowed,Widower,Wife,Wifey,Wives
-Religion                ,Abba,Abbess,Abbey,Abbot,Abrahamic,Allah,Angel,Antisemite,Antisemitic,Atheism,Atheist,Atheistic,Benediction,Blessing,Buddha,Carmelite,Carthusian,Cistercian,Cloister,Convent,Crusader,Crusades,Dalai Lama,Elohim,Friar,God,Goddess,Goddesslike,Goddessly,Godlike,Godly,Hadith,Hanukkah,Hasidic,Heaven,Heavenly,Hebrew,Hell,Hellish,Invocation,Jerusalem,Jew,Jewish,Judaism,Koran,Koranic,Menora,Menorah,Missionary,Missioner,Monastery,Monastic,Monk,Monotheism,Monotheist,Monotheistic,Mother Teresa,Nun,Nunnery,Polytheism,Polytheist,Polytheistic,Pray,Prayed,Prayer,Praying,Quran,Rabbi,Religious,Semite,Shabbat,Sunnah,Supplication,Synagogue,Theism,Theist,Theistic,Torah,Worship,Worshiping,Yahweh,Yamaka
+Religion                ,Abba,Abbess,Abbey,Abbot,Abrahamic,Allah,Angel,Antisemite,Antisemitic,Atheism,Atheist,Atheistic,Benediction,Blessing,Buddha,Carmelite,Carthusian,Cistercian,Cloister,Convent,Crusader,Crusades,Dalai Lama,Elohim,Faith,Friar,God,Goddess,Goddesslike,Goddessly,Godlike,Godly,Hadith,Hanukkah,Hasidic,Heaven,Heavenly,Hebrew,Hell,Hellish,Invocation,Jerusalem,Jew,Jewish,Judaism,Koran,Koranic,Menora,Menorah,Missionary,Missioner,Monastery,Monastic,Monk,Monotheism,Monotheist,Monotheistic,Mother Teresa,Nun,Nunnery,Polytheism,Polytheist,Polytheistic,Pray,Prayed,Prayer,Praying,Quran,Rabbi,Religious,Semite,Shabbat,Sunnah,Supplication,Synagogue,Theism,Theist,Theistic,Torah,Worship,Worshiping,Yahweh,Yamaka
 Renewable Energy        
 Rent                    ,Landlady,Landlord,Lease,Leasehold,Leasing,Lessee,Lessor,Sublease,Subleaser,Subleasing,Tenancy,Tenant
 Repairman               ,Auto Shop,AutoMechanic,Autoshop,CarMechanic,Grease Monkey,Handyman,Installer,Machine Shop,Machinist,Maintenance Man,Maintenance Men,Mechanic,Repair Shop,Repairer,Repairmen,Service Man,Service Men,Serviceman,Technician,Tinkerer,Troubleshooter
-Reporter                ,Interviewer,Newsman,Newsperson,Newswoman -dontDoER
+Reporter                ,Newsman,Newsperson,Newswoman -dontDoER
 Reptile                 ,Alligator,Caiman,Cold Blooded,ColdBlooded,Cretaceous,Croc,Crocodile,Crocodilian,Dinosaur,Gator,Jurassic,Masozoic,Reptilia,Reptilian,Scaly,Serpent,Serpentine,Serpentlike,Slithery,Snake,Snakebite,Snakelike,Snakevenom,Tortoise,Tortoiseshell,Triassic,Turtle,Turtleshell
 Republican              ,GOP,Right Wing
 Restaurant              ,Busboy,Chef,Dining,Grillroom,Menu,Sommelier,Waiter,Waitress
@@ -860,7 +860,7 @@ Secretary               ,Secretaire,Secretarial,Undersecretary
 Security                ,Bulletproof,Guard,Guarded,Guarding,NSA,Protected,Protection,Protective,Safe,Safeguard,Safety,Secure,Secured
 Self Defense            ,SelfDefense
 Semen                   ,Cum,Cummed,Cumming,Cummy,Ejaculate,Ejaculation,Ejaculator,Jizz,Jizzed,Jizzing,Precum,Seminal,Sperm,Splooge,Spunk -nsfw
-September 11            ,9/11,Sep 11,Sep 11th,Sept 11,Sept 11th,September 11th,WTC,WTC1,WTC2,WTC7,World Trade Center
+September 11            ,9/11,Sep 11,Sep 11th,Sept 11,Sept 11th,September 11th,Twin Tower,TwinTower,WTC,WTC1,WTC2,WTC7,World Trade Center
 Sex                     ,Anorgasmia,Cum,Cumming,Ejaculation,Ejaculator,Erotic,Erotica,Erotically,Eroticism,Friend with Benefit,Friends With Benefit,Hentai,Humping,In Bed,In The Bedroom,Lingerie,Make Love,Making Love,Neglegee,Nooner,One Night Stand,Orgasm,Playboy,Porn,Porno,Pornograhic,Pornographer,Pornography,Pornsite,Pornstar,STD,Screw,Screwed,Screwing,Sexbot,Sexual,Sexually,Sexy,Shag,Shagged,Shagging,Sleep Together,Sleep With,Sleeping Together,Sleeping With,Slept Together,Slept With,Viagra,XXX -nsfw
 Sex Offender            ,6 Offender,6Offender,Sexual Offender,Six Offender -nsfw
 Sex Toy                 ,Sex Shop,Sextoy -nsfw -dontDoY
@@ -963,7 +963,7 @@ Telephone               ,Answering Machine,Blackberry,Busy Signal,Callback,Cellp
 Television              ,Flat Screen,Flatscreen,HBO,Hulu,Netflix,TV
 Tennessee               ,Tennessean,Tennesseean
 Tennis                  ,Tennisball,Tenniscourt,Tennisracket,Wimbledon -dontDoS
-Terrorist               ,9/11,Ackbar,Al Qaeda,Al Quaida,AlQaeda,AlQuaida,Bin Laden,BinLaden,Extremist,ISIS,Insurgent,Jihad,Jihadist,Militant,Sep 11,Sep 11th,Sept 11,Sept 11th,September 11,September 11th,Suddam Hussien,Suicide Bomber,Terrorism,WTC,WTC1,WTC2,WTC7,World Trade Center
+Terrorist               ,9/11,Ackbar,Al Qaeda,Al Quaida,AlQaeda,AlQuaida,Bin Laden,BinLaden,Extremist,ISIS,Insurgent,Jihad,Jihadist,Militant,Sep 11,Sep 11th,Sept 11,Sept 11th,September 11,September 11th,Suddam Hussien,Suicide Bomber,Terrorism,Twin Tower,TwinTower,WTC,WTC1,WTC2,WTC7,World Trade Center
 Testicle                ,Ballsack,Bollick,Gonad,Nutsack,Scrotum,Spermatic,Spermatogenesis,Testis -nsfw
 Texas                   ,Texan -dontDoS
 Thailand                ,Thai
