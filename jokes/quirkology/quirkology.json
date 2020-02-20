@@ -3722,7 +3722,7 @@
             "joke": "How many balls of wool would it take to reach the moon. One, but it would need to be very large.",
             "length": 96,
             "source": "Quirkology",
-            "nsfw": false,
+            "nsfw": true,
             "tags": ["Animal", "Mammal", "Moon", "Sheep", "Space"]
         },
         {
