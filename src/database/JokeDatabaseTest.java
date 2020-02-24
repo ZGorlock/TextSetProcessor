@@ -65,7 +65,7 @@ public class JokeDatabaseTest {
             return;
         }
         
-        conn = DatabaseManager.connectToDatabase("jar:(jokes/db/jokes.zip)jokes");
+        conn = DatabaseManager.connectToDatabase("jar:(jokes/db/jokes-test.zip)jokes");
         if (conn == null) {
             return;
         }
@@ -278,7 +278,7 @@ public class JokeDatabaseTest {
         String typeQuery = (type.equalsIgnoreCase("ONE") ? " OFFSET 0 ROWS FETCH NEXT 1 ROW ONLY" : (type.equalsIgnoreCase("RANDOM") ? " ORDER BY RANDOM() OFFSET 0 ROWS FETCH NEXT 1 ROW ONLY" : ""));
         
         String sql = "SELECT * FROM joke WHERE id > 0" +
-                (tag.isEmpty() ? "" : (" AND id IN (SELECT joke FROM tag_" + tag.toLowerCase().replace(" ", "_") + typeQuery + ")")) +
+                (tag.isEmpty() ? "" : (" AND id IN (SELECT joke FROM tag_" + tag.toLowerCase().replace(" ", "_") + ")")) +
                 (nsfw == null ? "" : (" AND nsfw = " + (nsfw ? "true" : "false"))) +
                 (source.isEmpty() ? "" : (" AND source = (SELECT id FROM source WHERE name = '" + source + "')")) +
                 (lengthGt == null ? "" : (" AND length > " + lengthGt)) +

@@ -27,6 +27,11 @@ class Entity {
     public String body = "";
     
     /**
+     * The id of the entity.
+     */
+    public int id = 0;
+    
+    /**
      * The text of the entity.
      */
     public String text = "";
