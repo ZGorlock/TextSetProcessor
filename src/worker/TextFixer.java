@@ -129,19 +129,19 @@ public final class TextFixer {
         }
         
         text = text.replaceAll("([,.!?;:)])([^,.!?;:(){}\\-'])", "$1 $2")
-                   .replaceAll("\\.\\s*\\.(\\s*\\.)+", "...")
-                   .replaceAll("\\s+([,.!?:;])\\s+", "$1 ")
-                   .replaceAll("\\s*!(\\s*!)+", "!")
-                   .replaceAll("\\s*\\?(\\s*\\?)+", "?")
-                   .replaceAll("\\s+", " ")
-                   .replaceAll("([\"!?,])\\s+\\.\\.\\.\\s+", "$1... ")
-                   .replaceAll("\\s+\\.\\.\\.\\s+", "... ")
-                   .replaceAll("''", "\"")
-                   .replaceAll("\\\\*\"", "\\\\\"")
-                   .replaceAll("\\\\\"\\\\\"", "\\\\\" \\\\\"")
-                   .replaceAll("(\\d+)([.,:])\\s+(\\d+)", "$1$2$3")
-                   .replaceAll("[^\\x00-\\x7F]", "")
-                   .replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
+                .replaceAll("\\.\\s*\\.(\\s*\\.)+", "...")
+                .replaceAll("\\s+([,.!?:;])\\s+", "$1 ")
+                .replaceAll("\\s*!(\\s*!)+", "!")
+                .replaceAll("\\s*\\?(\\s*\\?)+", "?")
+                .replaceAll("\\s+", " ")
+                .replaceAll("([\"!?,])\\s+\\.\\.\\.\\s+", "$1... ")
+                .replaceAll("\\s+\\.\\.\\.\\s+", "... ")
+                .replaceAll("''", "\"")
+                .replaceAll("\\\\*\"", "\\\\\"")
+                .replaceAll("\\\\\"\\\\\"", "\\\\\" \\\\\"")
+                .replaceAll("(\\d+)([.,:])\\s+(\\d+)", "$1$2$3")
+                .replaceAll("[^\\x00-\\x7F]", "")
+                .replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
         
         boolean doCapitalize = true;
         for (int i = 0; i < text.length(); i++) {
@@ -257,9 +257,9 @@ public final class TextFixer {
         
         text = StringUtility.trim(text);
         text = text.replaceAll("\\s+", " ")
-                   .replaceAll("\\s([!?.])$", "$1")
-                   .replaceAll("(\\d+)([,])\\s+(\\d+)", "$1$2$3")
-                   .replace(".\\.\\\"", ".\\\"");
+                .replaceAll("\\s([!?.])$", "$1")
+                .replaceAll("(\\d+)([,])\\s+(\\d+)", "$1$2$3")
+                .replace(".\\.\\\"", ".\\\"");
         
         return StringUtility.trim(text);
     }

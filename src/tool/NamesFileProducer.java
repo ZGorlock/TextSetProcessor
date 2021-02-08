@@ -29,14 +29,14 @@ public class NamesFileProducer {
     public static void main(String[] args) {
         Filesystem.writeLines(new File("etc/dicts/names.txt"),
                 Filesystem.getFiles(new File("etc/dicts/original/names")).stream()
-                          .map(Filesystem::readLines)
-                          .flatMap(Collection::stream)
-                          .map(e -> e.substring(0, e.indexOf(',')))
-                          .filter(StringUtility::isAlphabetic)
-                          .filter(e -> e.length() > 2)
-                          .distinct()
-                          .sorted(Comparator.naturalOrder())
-                          .collect(Collectors.toList())
+                        .map(Filesystem::readLines)
+                        .flatMap(Collection::stream)
+                        .map(e -> e.substring(0, e.indexOf(',')))
+                        .filter(StringUtility::isAlphabetic)
+                        .filter(e -> e.length() > 2)
+                        .distinct()
+                        .sorted(Comparator.naturalOrder())
+                        .collect(Collectors.toList())
         );
     }
     

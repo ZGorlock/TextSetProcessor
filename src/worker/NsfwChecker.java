@@ -187,7 +187,6 @@ public final class NsfwChecker {
      *
      * @param text The string.
      * @return Whether or not the string is NSFW.
-     *
      * @see #checkNsfw(String, List)
      */
     public boolean checkNsfw(String text) {

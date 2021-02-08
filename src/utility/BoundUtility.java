@@ -53,7 +53,6 @@ public final class BoundUtility {
      * @param lower The lower bound.
      * @param upper The upper bound.
      * @return Whether the number is in the defined bounds or not.
-     *
      * @see #inBounds(Number, Number, Number, boolean, boolean)
      */
     public static boolean inBounds(Number num, Number lower, Number upper) {

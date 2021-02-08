@@ -141,7 +141,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first result from the formatted result set or null if it does not exist.
-     *
      * @see #getResult(String, int)
      */
     public Object getResult(String column) {
@@ -167,7 +166,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first string result from the formatted result set or null if it does not exist.
-     *
      * @see #getStringResult(String, int)
      */
     public String getStringResult(String column) {
@@ -193,7 +191,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first boolean result from the formatted result set or null if it does not exist.
-     *
      * @see #getBooleanResult(String, int)
      */
     public Boolean getBooleanResult(String column) {
@@ -219,7 +216,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first integer result from the formatted result set or null if it does not exist.
-     *
      * @see #getIntegerResult(String, int)
      */
     public Integer getIntegerResult(String column) {
@@ -245,7 +241,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first long result from the formatted result set or null if it does not exist.
-     *
      * @see #getLongResult(String, int)
      */
     public Long getLongResult(String column) {
@@ -271,7 +266,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first float result from the formatted result set or null if it does not exist.
-     *
      * @see #getFloatResult(String, int)
      */
     public Float getFloatResult(String column) {
@@ -297,7 +291,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first double result from the formatted result set or null if it does not exist.
-     *
      * @see #getDoubleResult(String, int)
      */
     public Double getDoubleResult(String column) {
@@ -323,7 +316,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first big decimal result from the formatted result set or null if it does not exist.
-     *
      * @see #getBigDecimalResult(String, int)
      */
     public BigDecimal getBigDecimalResult(String column) {
@@ -349,7 +341,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first date result from the formatted result set or null if it does not exist.
-     *
      * @see #getDateResult(String, int)
      */
     public Date getDateResult(String column) {
@@ -375,7 +366,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first time result from the formatted result set or null if it does not exist.
-     *
      * @see #getTimeResult(String, int)
      */
     public Time getTimeResult(String column) {
@@ -401,7 +391,6 @@ public final class FormattedResultSet {
      *
      * @param column The name of the column to retrieve the result from.
      * @return The first timestamp result from the formatted result set or null if it does not exist.
-     *
      * @see #getTimestampResult(String, int)
      */
     public Timestamp getTimestampResult(String column) {

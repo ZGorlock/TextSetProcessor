@@ -29,13 +29,13 @@ public class DictionaryFileProducer {
     public static void main(String[] args) {
         Filesystem.writeLines(new File("etc/dicts/dict.txt"),
                 Filesystem.getFiles(new File("etc/dicts/original")).stream()
-                          .map(Filesystem::readLines)
-                          .flatMap(Collection::stream)
-                          .filter(StringUtility::isAlphabetic)
-                          .map(String::toLowerCase)
-                          .distinct()
-                          .sorted(Comparator.naturalOrder())
-                          .collect(Collectors.toList())
+                        .map(Filesystem::readLines)
+                        .flatMap(Collection::stream)
+                        .filter(StringUtility::isAlphabetic)
+                        .map(String::toLowerCase)
+                        .distinct()
+                        .sorted(Comparator.naturalOrder())
+                        .collect(Collectors.toList())
         );
     }
     
